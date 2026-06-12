@@ -30,7 +30,13 @@ export default defineConfig({
         ],
       },
       workbox: {
-        // App shell is precached automatically. Data files use runtime caching:
+        // Precache the app shell, KaTeX fonts, AND all static study data (decks,
+        // library, problems, quizzes, exam) so everything works fully offline.
+        // News is excluded from precache and handled by runtime caching below,
+        // so it can still refresh online while serving the last copy offline.
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2,ttf,json}'],
+        globIgnores: ['**/data/news/**'],
+        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         runtimeCaching: [
           {
             urlPattern: ({ url }) => url.pathname.includes('/data/news/'),
@@ -39,11 +45,6 @@ export default defineConfig({
               cacheName: 'eo-news',
               expiration: { maxEntries: 30, maxAgeSeconds: 60 * 60 * 24 * 30 },
             },
-          },
-          {
-            urlPattern: ({ url }) => url.pathname.includes('/data/decks/'),
-            handler: 'StaleWhileRevalidate',
-            options: { cacheName: 'eo-decks', expiration: { maxEntries: 50 } },
           },
         ],
       },
