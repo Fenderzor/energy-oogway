@@ -1,0 +1,187 @@
+{
+  "chapterId": "ch04",
+  "chapter": 4,
+  "title": "Energy Analysis of Closed Systems",
+  "updatedAt": "2026-06-08T00:00:00Z",
+  "problems": [
+    {
+      "id": "ch04-p001",
+      "chapter": 4,
+      "difficulty": 1,
+      "title": "Constant-pressure expansion work",
+      "tags": ["boundary work", "isobaric"],
+      "kind": "numeric",
+      "scenario": "A piston–cylinder device holds gas at a constant pressure of **200 kPa**. The gas is heated and its volume rises from $V_1 = 0.10\\ \\text{m}^3$ to $V_2 = 0.30\\ \\text{m}^3$.\n\nHow much **boundary work** does the gas do?",
+      "answer": 40,
+      "unit": "kJ",
+      "tolerance": 0.5,
+      "hints": [
+        "The pressure is constant, so you don't need to integrate — there's a one-line formula for boundary work at constant pressure.",
+        "$W_b = P\\,(V_2 - V_1)$. Watch the units: $\\text{kPa}\\cdot\\text{m}^3 = \\text{kJ}$."
+      ],
+      "solution": "For a **constant-pressure** process the boundary work is the rectangle under the path on a $P$-$V$ diagram:\n\n$$W_b = P\\,(V_2 - V_1)$$\n\nSubstitute the numbers:\n\n$$W_b = 200\\ \\text{kPa} \\times (0.30 - 0.10)\\ \\text{m}^3 = 200 \\times 0.20 = 40\\ \\text{kJ}$$\n\nThe result is **positive**, so the gas does work *on* the piston as it expands. Unit check: $\\text{kPa}\\cdot\\text{m}^3 = \\text{kJ}$. ✓",
+      "equationsUsed": ["W_b = P\\,(V_2 - V_1)"],
+      "conceptLink": "ch04"
+    },
+    {
+      "id": "ch04-p002",
+      "chapter": 4,
+      "difficulty": 1,
+      "title": "Heating gas in a rigid tank",
+      "tags": ["rigid tank", "first law", "internal energy"],
+      "kind": "numeric",
+      "scenario": "**2 kg** of air sits in a **rigid, sealed tank**. It is heated from $T_1 = 300\\ \\text{K}$ to $T_2 = 400\\ \\text{K}$.\n\nHow much heat is added? Take $c_v = 0.718\\ \\text{kJ/(kg·K)}$.",
+      "answer": 143.6,
+      "unit": "kJ",
+      "tolerance": 1,
+      "hints": [
+        "\"Rigid\" is the key word — what does that tell you about the boundary work?",
+        "With $W_b = 0$, the energy balance $Q - W = \\Delta U$ collapses to $Q = \\Delta U$.",
+        "For an ideal gas, $\\Delta U = m\\,c_v\\,\\Delta T$."
+      ],
+      "solution": "A **rigid** tank means the volume can't change, so the boundary work is zero:\n\n$$W_b = 0$$\n\nThe closed-system energy balance $Q - W = \\Delta U$ then reduces to\n\n$$Q = \\Delta U = m\\,c_v\\,\\Delta T$$\n\nSubstitute:\n\n$$Q = 2\\ \\text{kg} \\times 0.718\\ \\tfrac{\\text{kJ}}{\\text{kg·K}} \\times (400 - 300)\\ \\text{K} = 143.6\\ \\text{kJ}$$\n\nAll of the heat goes into raising the internal energy because no work leaves the system.",
+      "equationsUsed": ["W_b = 0", "Q = \\Delta U = m\\,c_v\\,\\Delta T"],
+      "conceptLink": "ch04"
+    },
+    {
+      "id": "ch04-p003",
+      "chapter": 4,
+      "difficulty": 2,
+      "title": "Constant-pressure heating of air",
+      "tags": ["isobaric", "enthalpy", "first law"],
+      "kind": "numeric",
+      "scenario": "**1.5 kg** of air in a piston–cylinder is heated at **constant pressure** from $T_1 = 300\\ \\text{K}$ to $T_2 = 500\\ \\text{K}$.\n\nFind the **heat added**. Take $c_p = 1.005\\ \\text{kJ/(kg·K)}$.",
+      "answer": 301.5,
+      "unit": "kJ",
+      "tolerance": 2,
+      "hints": [
+        "There's both heat *and* boundary work here, so $Q = \\Delta U$ would be wrong. Is there a shortcut for constant pressure?",
+        "For a constant-pressure process with only boundary work, the $W_b$ and $PV$ terms combine: $Q = \\Delta H$.",
+        "$\\Delta H = m\\,c_p\\,\\Delta T$ for an ideal gas."
+      ],
+      "solution": "At **constant pressure** with only boundary work, the energy balance simplifies neatly. Starting from $Q - W_b = \\Delta U$ and using $W_b = P\\,\\Delta V$:\n\n$$Q = \\Delta U + P\\,\\Delta V = \\Delta(U + PV) = \\Delta H$$\n\nSo you can skip computing the work separately and use enthalpy directly:\n\n$$Q = \\Delta H = m\\,c_p\\,\\Delta T = 1.5 \\times 1.005 \\times (500 - 300) = 301.5\\ \\text{kJ}$$\n\nThis is why $c_p$ (not $c_v$) is the right specific heat for a constant-pressure process.",
+      "equationsUsed": ["Q = \\Delta H = m\\,c_p\\,\\Delta T", "h = u + Pv"],
+      "conceptLink": "ch04"
+    },
+    {
+      "id": "ch04-p004",
+      "chapter": 4,
+      "difficulty": 2,
+      "title": "Isothermal expansion of an ideal gas",
+      "tags": ["isothermal", "boundary work", "ideal gas"],
+      "kind": "numeric",
+      "scenario": "**0.5 kg** of air at a constant **300 K** expands in a piston–cylinder from $P_1 = 600\\ \\text{kPa}$ to $P_2 = 100\\ \\text{kPa}$.\n\nFind the **boundary work** done by the gas. Take $R = 0.287\\ \\text{kJ/(kg·K)}$.",
+      "answer": 77.1,
+      "unit": "kJ",
+      "tolerance": 1,
+      "hints": [
+        "For an ideal gas at constant temperature, $PV = \\text{const}$, so the work integral gives a logarithm.",
+        "$W_b = mRT\\ln(V_2/V_1)$, and since $T$ is constant, $V_2/V_1 = P_1/P_2$.",
+        "So $W_b = mRT\\ln(P_1/P_2)$."
+      ],
+      "solution": "For an **isothermal** expansion of an ideal gas, $PV = mRT = \\text{const}$, and the boundary work integrates to a log:\n\n$$W_b = mRT\\ln\\frac{V_2}{V_1}$$\n\nBecause $T$ is constant, $V_2/V_1 = P_1/P_2$, so we can use the (given) pressures directly:\n\n$$W_b = mRT\\ln\\frac{P_1}{P_2} = 0.5 \\times 0.287 \\times 300 \\times \\ln\\frac{600}{100}$$\n\n$$W_b = 43.05 \\times \\ln 6 = 43.05 \\times 1.792 = 77.1\\ \\text{kJ}$$\n\nNote: for an isothermal ideal-gas process $\\Delta U = 0$, so the first law gives $Q = W_b = 77.1\\ \\text{kJ}$ — all the heat added leaves as work.",
+      "equationsUsed": ["W_b = mRT\\ln\\frac{V_2}{V_1} = mRT\\ln\\frac{P_1}{P_2}", "Q = W_b \\ (\\Delta U = 0)"],
+      "conceptLink": "ch04"
+    },
+    {
+      "id": "ch04-p005",
+      "chapter": 4,
+      "difficulty": 2,
+      "title": "Boiling water at constant pressure",
+      "tags": ["phase change", "enthalpy", "latent heat"],
+      "kind": "numeric",
+      "scenario": "**2 kg** of saturated *liquid* water in a piston–cylinder at a constant **300 kPa** is heated until it becomes saturated *vapor*.\n\nUsing $h_{fg} = 2163.5\\ \\text{kJ/kg}$ at 300 kPa, find the **heat added**.",
+      "answer": 4327,
+      "unit": "kJ",
+      "tolerance": 20,
+      "hints": [
+        "This is a constant-pressure process, so the constant-pressure shortcut applies again.",
+        "$Q = \\Delta H = m\\,(h_2 - h_1)$. Going from saturated liquid to saturated vapor, $h_2 - h_1 = h_{fg}$.",
+        "So $Q = m\\,h_{fg}$."
+      ],
+      "solution": "Phase change happens at **constant pressure** (and temperature), so once again $Q = \\Delta H$. Going from saturated liquid ($h_f$) to saturated vapor ($h_g$), the enthalpy change per unit mass is exactly the latent heat of vaporization:\n\n$$h_2 - h_1 = h_g - h_f = h_{fg}$$\n\nTherefore:\n\n$$Q = m\\,h_{fg} = 2\\ \\text{kg} \\times 2163.5\\ \\tfrac{\\text{kJ}}{\\text{kg}} = 4327\\ \\text{kJ}$$\n\nThe temperature stays fixed at $T_{sat}$ during the whole process; all the heat goes into the phase change, not into raising temperature.",
+      "equationsUsed": ["Q = \\Delta H = m\\,(h_2 - h_1)", "h_2 - h_1 = h_{fg}"],
+      "conceptLink": "ch04"
+    },
+    {
+      "id": "ch04-p006",
+      "chapter": 4,
+      "difficulty": 3,
+      "title": "Polytropic compression work",
+      "tags": ["polytropic", "boundary work"],
+      "kind": "numeric",
+      "scenario": "Air in a piston–cylinder is compressed in a **polytropic** process $PV^{1.3} = \\text{const}$ from state 1 ($P_1 = 100\\ \\text{kPa}$, $V_1 = 0.20\\ \\text{m}^3$) to a final pressure $P_2 = 600\\ \\text{kPa}$.\n\nFind the **boundary work** $W_b$. Report the sign (negative = work done *on* the gas).",
+      "answer": -34.1,
+      "unit": "kJ",
+      "tolerance": 1.5,
+      "hints": [
+        "First you need $V_2$. Rearrange the polytropic relation $P_1V_1^n = P_2V_2^n$ for $V_2$.",
+        "$V_2 = V_1\\,(P_1/P_2)^{1/n} = 0.20\\,(100/600)^{1/1.3} \\approx 0.0504\\ \\text{m}^3$.",
+        "Then use $W_b = (P_2V_2 - P_1V_1)/(1-n)$ with $n = 1.3$."
+      ],
+      "solution": "**Step 1 — find $V_2$** by rearranging the polytropic relation $P_1V_1^n = P_2V_2^n$:\n\n$$V_2 = V_1\\left(\\frac{P_1}{P_2}\\right)^{1/n} = 0.20\\left(\\frac{100}{600}\\right)^{1/1.3} = 0.20 \\times (0.1667)^{0.769} = 0.0504\\ \\text{m}^3$$\n\n**Step 2 — apply the polytropic work formula** (valid for $n \\neq 1$):\n\n$$W_b = \\frac{P_2V_2 - P_1V_1}{1 - n} = \\frac{(600)(0.0504) - (100)(0.20)}{1 - 1.3}$$\n\n$$W_b = \\frac{30.24 - 20.0}{-0.3} = \\frac{10.24}{-0.3} = -34.1\\ \\text{kJ}$$\n\nThe **negative** sign means work is done *on* the gas — exactly what you expect for a compression.",
+      "equationsUsed": ["P_1V_1^n = P_2V_2^n", "V_2 = V_1\\left(\\frac{P_1}{P_2}\\right)^{1/n}", "W_b = \\frac{P_2V_2 - P_1V_1}{1-n}"],
+      "conceptLink": "ch04"
+    },
+    {
+      "id": "ch04-p007",
+      "chapter": 4,
+      "difficulty": 3,
+      "title": "Polytropic compression — full first law",
+      "tags": ["polytropic", "first law", "specific heats"],
+      "kind": "numeric",
+      "scenario": "**0.3 kg** of air is compressed polytropically ($PV^{1.3} = \\text{const}$) from $P_1 = 100\\ \\text{kPa}$, $T_1 = 300\\ \\text{K}$ to $P_2 = 500\\ \\text{kPa}$.\n\nFind the **heat transfer** $Q$ and state its direction. Take $c_v = 0.718$ and $R = 0.287\\ \\text{kJ/(kg·K)}$.",
+      "answer": -9.7,
+      "unit": "kJ",
+      "tolerance": 1.2,
+      "hints": [
+        "Three steps: find $T_2$, then $W_b$, then close the energy balance $Q = \\Delta U + W_b$.",
+        "$T_2 = T_1(P_2/P_1)^{(n-1)/n} = 300\\,(5)^{0.3/1.3} \\approx 435\\ \\text{K}$.",
+        "$W_b = mR(T_2 - T_1)/(1-n)$ for an ideal gas; then $\\Delta U = m\\,c_v\\,\\Delta T$ and $Q = \\Delta U + W_b$."
+      ],
+      "solution": "**Step 1 — exit temperature** from the polytropic $T$-$P$ relation:\n\n$$T_2 = T_1\\left(\\frac{P_2}{P_1}\\right)^{(n-1)/n} = 300\\,(5)^{0.3/1.3} = 300 \\times 1.450 = 434.9\\ \\text{K}$$\n\n**Step 2 — boundary work**, using the ideal-gas form $W_b = mR(T_2-T_1)/(1-n)$:\n\n$$W_b = \\frac{0.3 \\times 0.287 \\times (434.9 - 300)}{1 - 1.3} = \\frac{11.62}{-0.3} = -38.7\\ \\text{kJ}$$\n\n**Step 3 — internal-energy change:**\n\n$$\\Delta U = m\\,c_v\\,\\Delta T = 0.3 \\times 0.718 \\times 134.9 = 29.1\\ \\text{kJ}$$\n\n**Step 4 — close the energy balance** $Q - W = \\Delta U \\Rightarrow Q = \\Delta U + W_b$:\n\n$$Q = 29.1 + (-38.7) = -9.7\\ \\text{kJ}$$\n\nThe negative result means **heat is rejected** from the gas during the compression.",
+      "equationsUsed": ["T_2 = T_1\\left(\\frac{P_2}{P_1}\\right)^{(n-1)/n}", "W_b = \\frac{mR(T_2 - T_1)}{1-n}", "\\Delta U = m\\,c_v\\,\\Delta T", "Q = \\Delta U + W_b"],
+      "conceptLink": "ch04"
+    },
+    {
+      "id": "ch04-p008",
+      "chapter": 4,
+      "difficulty": 3,
+      "title": "Quenching an aluminum block (calorimetry)",
+      "tags": ["energy balance", "incompressible", "specific heats"],
+      "kind": "numeric",
+      "scenario": "A **2 kg** aluminum block at **200 °C** is dropped into **10 kg** of water at **20 °C** in an **insulated** container. Find the **equilibrium temperature**.\n\nTake $c_{\\text{Al}} = 0.902$ and $c_{\\text{water}} = 4.18\\ \\text{kJ/(kg·K)}$.",
+      "answer": 27.5,
+      "unit": "°C",
+      "tolerance": 0.5,
+      "hints": [
+        "Insulated + rigid → no heat or work crosses the outer boundary, so the total energy change is zero: heat lost by aluminum = heat gained by water.",
+        "For incompressible substances, $\\Delta U = m\\,c\\,\\Delta T$. Set $m_{Al}c_{Al}(T_2 - 200) + m_w c_w (T_2 - 20) = 0$.",
+        "Solve the linear equation for the single unknown $T_2$."
+      ],
+      "solution": "The container is insulated and rigid, so $Q = 0$ and $W = 0$; the combined internal energy is conserved. Heat lost by the aluminum equals heat gained by the water:\n\n$$m_{\\text{Al}}\\,c_{\\text{Al}}\\,(T_2 - 200) + m_w\\,c_w\\,(T_2 - 20) = 0$$\n\nThis uses the **incompressible** relation $\\Delta U = m\\,c\\,\\Delta T$ for each substance. Plug in:\n\n$$2(0.902)(T_2 - 200) + 10(4.18)(T_2 - 20) = 0$$\n\n$$1.804\\,T_2 - 360.8 + 41.8\\,T_2 - 836 = 0$$\n\n$$43.604\\,T_2 = 1196.8 \\quad\\Rightarrow\\quad T_2 = 27.4\\ \\text{°C}$$\n\nThe water's large mass *and* high specific heat keep the final temperature close to its starting value. (Since only temperature **differences** appear, working in °C is fine here.)",
+      "equationsUsed": ["\\Delta U_{Al} + \\Delta U_{water} = 0", "\\Delta U = m\\,c\\,\\Delta T"],
+      "conceptLink": "ch04"
+    },
+    {
+      "id": "ch04-p009",
+      "chapter": 4,
+      "difficulty": 4,
+      "title": "Two-step heating then expansion",
+      "tags": ["first law", "specific heats", "multi-step"],
+      "kind": "numeric",
+      "scenario": "**0.8 kg** of air ($c_v = 0.718$, $c_p = 1.005\\ \\text{kJ/(kg·K)}$) in a piston–cylinder undergoes two steps: (1) **constant-volume** heating from 300 K to 450 K, then (2) **constant-pressure** expansion until the volume **doubles**.\n\nFind the **total heat input**, in kJ.",
+      "answer": 448,
+      "unit": "kJ",
+      "tolerance": 6,
+      "hints": [
+        "Treat each step separately. Step 1 is rigid → $Q_1 = \\Delta U = m c_v \\Delta T$.",
+        "Step 2 is constant pressure → $Q_2 = \\Delta H = m c_p \\Delta T$. First find $T_3$: at constant $P$, doubling $V$ doubles the absolute temperature.",
+        "$T_3 = 2 T_2 = 900$ K; then sum $Q_1 + Q_2$."
+      ],
+      "solution": "**Step 1 (constant volume), 300 → 450 K:**\n\n$$Q_1 = m c_v \\Delta T = 0.8 \\times 0.718 \\times 150 = 86.2\\ \\text{kJ}$$\n\n**Step 2 (constant pressure):** doubling the volume at constant pressure doubles the absolute temperature, so $T_3 = 2 \\times 450 = 900$ K, and\n\n$$Q_2 = m c_p \\Delta T = 0.8 \\times 1.005 \\times (900 - 450) = 361.8\\ \\text{kJ}$$\n\n**Total:**\n\n$$Q = Q_1 + Q_2 = 86.2 + 361.8 = 448\\ \\text{kJ}$$\n\nUsing $c_v$ for the rigid step and $c_p$ for the constant-pressure step is the key decision.",
+      "equationsUsed": ["Q_1 = m c_v \\Delta T", "Q_2 = m c_p \\Delta T", "\\frac{V_2}{T_2} = \\frac{V_3}{T_3}"],
+      "conceptLink": "ch04"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "deckId": "ch02",
+  "title": "Ch 2 — Energy, Energy Transfer & General Energy Analysis",
+  "chapter": 2,
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 2",
+  "description": "Forms of energy, heat, work, and the first law.",
+  "owner": "local",
+  "version": 1,
+  "forkedFrom": null,
+  "updatedAt": "2026-06-06T00:00:00Z",
+  "cards": [
+    {
+      "id": "ch02-001",
+      "type": "basic",
+      "front": "What is the *total energy* E of a system, and its components?",
+      "back": "E = U + KE + PE — the sum of internal, kinetic and potential energy. Per unit mass, $e = u + \\frac{V^2}{2} + gz$ (kJ/kg).",
+      "tags": ["energy", "forms"],
+      "level": "intro"
+    },
+    {
+      "id": "ch02-002",
+      "type": "basic",
+      "front": "Distinguish *macroscopic* from *microscopic* forms of energy.",
+      "back": "Macroscopic forms are those a system possesses as a whole relative to some reference frame (kinetic and potential energy). Microscopic forms relate to molecular structure and activity; their sum is the *internal energy* U.",
+      "tags": ["energy", "internal energy"],
+      "level": "core"
+    },
+    {
+      "id": "ch02-003",
+      "type": "basic",
+      "front": "Write the kinetic and potential energy of a mass m.",
+      "back": "$KE = \\frac{1}{2}mV^2$ and $PE = mgz$ (in joules, with m in kg, V in m/s, z in m).",
+      "tags": ["kinetic", "potential"],
+      "level": "intro"
+    },
+    {
+      "id": "ch02-004",
+      "type": "basic",
+      "front": "Define *heat transfer* and name its three modes.",
+      "back": "Heat is energy transferred between systems by virtue of a temperature difference. Its three modes are conduction, convection and radiation. By convention, heat transferred *to* a system is positive.",
+      "tags": ["heat", "sign convention"],
+      "level": "intro"
+    },
+    {
+      "id": "ch02-005",
+      "type": "basic",
+      "front": "Define *work* in thermodynamics and state its sign convention.",
+      "back": "Work is the energy transfer associated with a force acting through a distance — i.e. non-heat energy crossing the boundary. Convention: work done *by* the system is positive; work done *on* the system is negative.",
+      "tags": ["work", "sign convention"],
+      "level": "intro"
+    },
+    {
+      "id": "ch02-006",
+      "type": "basic",
+      "front": "State the *first law* of thermodynamics (energy balance) for any system.",
+      "back": "$E_{in} - E_{out} = \\Delta E_{system}$. Energy is conserved — it can change form but is neither created nor destroyed.",
+      "tags": ["first law", "energy balance"],
+      "level": "core"
+    },
+    {
+      "id": "ch02-007",
+      "type": "basic",
+      "front": "Write the first law for a *closed system* in terms of Q and W.",
+      "back": "$Q_{net,in} - W_{net,out} = \\Delta U + \\Delta KE + \\Delta PE$. For a stationary closed system this reduces to $Q - W = \\Delta U$.",
+      "tags": ["first law", "closed system"],
+      "level": "core"
+    },
+    {
+      "id": "ch02-008",
+      "type": "numeric",
+      "front": "A 2 kg object moves at 10 m/s. What is its kinetic energy, in joules?",
+      "back": "$KE = \\frac{1}{2}mV^2 = \\frac{1}{2}(2)(10)^2 = 100\\ \\text{J}$.",
+      "answer": 100,
+      "unit": "J",
+      "tolerance": 0.5,
+      "tags": ["kinetic", "calculation"],
+      "level": "core"
+    },
+    {
+      "id": "ch02-009",
+      "type": "basic",
+      "front": "What is *mechanical energy*, and the mechanical energy of a flowing fluid per unit mass?",
+      "back": "Mechanical energy is the form that can be converted to mechanical work completely and directly by an ideal mechanical device (e.g. a turbine). For a flowing fluid, per unit mass: $e_{mech} = \\frac{P}{\\rho} + \\frac{V^2}{2} + gz$.",
+      "tags": ["mechanical energy", "fluids"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch02-010",
+      "type": "mcq",
+      "front": "By the usual sign convention, which quantity is *positive*?",
+      "choices": [
+        "Heat lost by the system",
+        "Work done on the system",
+        "Heat added to the system",
+        "None of these"
+      ],
+      "answerIndex": 2,
+      "back": "Heat added *to* the system is positive, and work done *by* the system is positive (so work done on it is negative).",
+      "tags": ["sign convention"],
+      "level": "core"
+    },
+    {
+      "id": "ch02-011",
+      "type": "basic",
+      "front": "Define *power* and give its SI unit.",
+      "back": "Power is the rate of energy transfer (work or heat) per unit time, e.g. $\\dot{W} = \\frac{dW}{dt}$. The SI unit is the watt (1 W = 1 J/s).",
+      "tags": ["power", "units"],
+      "level": "intro"
+    }
+  ]
+}

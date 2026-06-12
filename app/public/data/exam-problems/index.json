@@ -1,0 +1,303 @@
+{
+  "problems": [
+    {
+      "id": "ex01",
+      "title": "Isothermal helium expansion",
+      "chapters": [3, 4, 7],
+      "tags": ["ideal gas", "isothermal", "entropy"],
+      "scenario": "A piston–cylinder undergoes an **expansion at constant temperature**. The fluid is **helium** (ideal gas, $M = 4\\ \\text{kg/kmol}$, $R = 2.07\\ \\text{kJ/(kg·K)}$). The temperature is **100 °C**, the initial pressure **30 bar**, and the final pressure **1 bar**.",
+      "conceptLinks": ["ch04", "ch07"],
+      "parts": [
+        {
+          "id": "ex01-a",
+          "label": "a",
+          "prompt": "Find the **specific expansion work** $w$, in kJ/kg.",
+          "kind": "numeric",
+          "answer": 2627,
+          "unit": "kJ/kg",
+          "tolerance": 30,
+          "hint": "For an isothermal ideal-gas process, $w = RT\\ln(P_1/P_2)$. Use absolute temperature.",
+          "solution": "Isothermal ideal gas, so $Pv = RT$ is constant and the boundary work integrates to a logarithm:\n\n$$w = RT\\ln\\frac{P_1}{P_2} = 2.07 \\times 373.15 \\times \\ln\\frac{30}{1}$$\n\n$$w = 772.4 \\times 3.401 = 2627\\ \\text{kJ/kg}$$\n\n(Temperature $T = 100 + 273.15 = 373.15$ K.)"
+        },
+        {
+          "id": "ex01-b",
+          "label": "b",
+          "prompt": "Find the **specific heat** $q$ that must be transferred for the process to stay isothermal, in kJ/kg. (Is it supplied or released?)",
+          "kind": "numeric",
+          "answer": 2627,
+          "unit": "kJ/kg",
+          "tolerance": 30,
+          "fallbackNote": "If you couldn't find $w$ in (a), use $w = 2627$ kJ/kg.",
+          "hint": "For an isothermal ideal gas, internal energy doesn't change ($\\Delta u = 0$). Apply the first law $q - w = \\Delta u$.",
+          "solution": "For an ideal gas at constant temperature, $u = u(T)$ is constant, so $\\Delta u = 0$. The first law $q - w = \\Delta u$ gives:\n\n$$q = w = 2627\\ \\text{kJ/kg}$$\n\nSince $q > 0$, the heat is **supplied to** the gas — energy must flow in to replace the work it does while staying at constant temperature."
+        },
+        {
+          "id": "ex01-c",
+          "label": "c",
+          "prompt": "Find the **specific entropy change** $\\Delta s$ of the helium, in kJ/(kg·K).",
+          "kind": "numeric",
+          "answer": 7.04,
+          "unit": "kJ/(kg·K)",
+          "tolerance": 0.1,
+          "hint": "For an isothermal process you can use $\\Delta s = q/T$, or for an ideal gas directly $\\Delta s = R\\ln(P_1/P_2)$.",
+          "solution": "Two equivalent routes. Isothermal heat addition:\n\n$$\\Delta s = \\frac{q}{T} = \\frac{2627}{373.15} = 7.04\\ \\text{kJ/(kg·K)}$$\n\nOr the ideal-gas entropy relation at constant $T$ ($c_p\\ln(T_2/T_1) = 0$):\n\n$$\\Delta s = -R\\ln\\frac{P_2}{P_1} = R\\ln\\frac{P_1}{P_2} = 2.07 \\times 3.401 = 7.04\\ \\text{kJ/(kg·K)}$$\n\nEntropy rises because the gas expands to a lower pressure."
+        }
+      ]
+    },
+    {
+      "id": "ex02",
+      "title": "Mixing chamber with heat loss — exergy destruction",
+      "chapters": [5, 8],
+      "tags": ["mixing", "mass balance", "exergy"],
+      "scenario": "Water (200 kPa, 10 °C) enters a mixing chamber at **150 kg/min**, together with steam (200 kPa, 150 °C). The mixture leaves at 200 kPa, 70 °C. The chamber loses **190 kJ/min** of heat to the environment at **20 °C** ($T_0 = 293.15$ K).\n\nGiven properties:\n\n| | h (kJ/kg) | s (kJ/(kg·K)) |\n|---|---|---|\n| Water | 42.022 | 0.1511 |\n| Steam | 2769.1 | 7.2810 |\n| Mixture | 293.07 | 0.9551 |",
+      "conceptLinks": ["ch05", "ch08"],
+      "parts": [
+        {
+          "id": "ex02-a",
+          "label": "a",
+          "prompt": "Find the **mass flow rate of the steam** $\\dot m_s$, in kg/min.",
+          "kind": "numeric",
+          "answer": 15.3,
+          "unit": "kg/min",
+          "tolerance": 0.6,
+          "hint": "Combine the mass balance $\\dot m_w + \\dot m_s = \\dot m_{mix}$ with the energy balance (remember the 190 kJ/min heat loss).",
+          "solution": "Mass balance: $\\dot m_{mix} = 150 + \\dot m_s$. Energy balance (heat leaves, so it sits on the outlet side):\n\n$$\\dot m_w h_w + \\dot m_s h_s = \\dot m_{mix} h_{mix} + \\dot Q_{loss}$$\n\n$$150(42.022) + \\dot m_s(2769.1) = (150 + \\dot m_s)(293.07) + 190$$\n\n$$6303 + 2769.1\\,\\dot m_s = 44150 + 293.07\\,\\dot m_s$$\n\n$$2476.0\\,\\dot m_s = 37847 \\quad\\Rightarrow\\quad \\dot m_s = 15.3\\ \\text{kg/min}$$"
+        },
+        {
+          "id": "ex02-b",
+          "label": "b",
+          "prompt": "Find the **entropy generation rate** $\\dot S_{gen}$ of the chamber, in kJ/(min·K).",
+          "kind": "numeric",
+          "answer": 24.57,
+          "unit": "kJ/(min·K)",
+          "tolerance": 1,
+          "fallbackNote": "If you couldn't find $\\dot m_s$, use 15.3 kg/min ($\\dot m_{mix} = 165.3$ kg/min).",
+          "hint": "Entropy balance: $\\dot S_{gen} = \\sum \\dot m_{out}s_{out} - \\sum \\dot m_{in}s_{in} - \\dot Q/T_0$. The heat leaves, so $\\dot Q = -190$ kJ/min at the boundary temperature $T_0$.",
+          "solution": "Steady-flow entropy balance with heat rejected to the surroundings at $T_0$:\n\n$$\\dot S_{gen} = \\dot m_{mix}s_{mix} - \\dot m_w s_w - \\dot m_s s_s + \\frac{\\dot Q_{loss}}{T_0}$$\n\n$$= 165.3(0.9551) - 150(0.1511) - 15.3(7.2810) + \\frac{190}{293.15}$$\n\n$$= 157.87 - 22.67 - 111.30 + 0.648 = 24.57\\ \\text{kJ/(min·K)}$$\n\nIt is positive, as the second law demands for this irreversible mixing."
+        },
+        {
+          "id": "ex02-c",
+          "label": "c",
+          "prompt": "Find the **exergy destruction (exergy loss)** of the chamber, in kJ/min.",
+          "kind": "numeric",
+          "answer": 7200,
+          "unit": "kJ/min",
+          "tolerance": 250,
+          "fallbackNote": "If you couldn't find $\\dot S_{gen}$, use 24.6 kJ/(min·K).",
+          "hint": "Gouy–Stodola: exergy destroyed $= T_0\\,\\dot S_{gen}$.",
+          "solution": "Destroyed exergy is the entropy generation valued at the dead-state temperature (Gouy–Stodola):\n\n$$\\dot X_{dest} = T_0\\,\\dot S_{gen} = 293.15 \\times 24.57 = 7200\\ \\text{kJ/min}$$\n\nThis is the rate at which the mixing irreversibly wastes work potential — even though energy is conserved, this much exergy is gone."
+        }
+      ]
+    },
+    {
+      "id": "ex03",
+      "title": "Adiabatic steam turbine (ideal-gas model)",
+      "chapters": [7],
+      "tags": ["turbine", "isentropic efficiency", "entropy generation"],
+      "scenario": "In a stationary steam turbine, steam expands **adiabatically** from **500 °C, 10 bar** to a final pressure of **2 bar**. Treat the steam as an ideal gas with constant $c_p = 1.846\\ \\text{kJ/(kg·K)}$ and gas constant $R = 0.4615\\ \\text{kJ/(kg·K)}$.",
+      "conceptLinks": ["ch07"],
+      "parts": [
+        {
+          "id": "ex03-a",
+          "label": "a",
+          "prompt": "Find the **exit temperature** at an isentropic efficiency of **100%**, in K.",
+          "kind": "numeric",
+          "answer": 517,
+          "unit": "K",
+          "tolerance": 4,
+          "hint": "First get $k = c_p/(c_p - R)$, then use the isentropic relation $T_{2s} = T_1 (P_2/P_1)^{(k-1)/k}$.",
+          "solution": "Specific-heat ratio: $k = \\dfrac{c_p}{c_p - R} = \\dfrac{1.846}{1.3845} = 1.333$, so $(k-1)/k = 0.25$.\n\nIsentropic expansion from $T_1 = 773.15$ K:\n\n$$T_{2s} = T_1\\left(\\frac{P_2}{P_1}\\right)^{(k-1)/k} = 773.15\\,(0.2)^{0.25} = 773.15 \\times 0.6687 = 517\\ \\text{K}$$"
+        },
+        {
+          "id": "ex03-b",
+          "label": "b",
+          "prompt": "Find the **actual exit temperature** at an isentropic efficiency of **90%**, in K.",
+          "kind": "numeric",
+          "answer": 543,
+          "unit": "K",
+          "tolerance": 4,
+          "fallbackNote": "If you couldn't find $T_{2s}$, use 517 K.",
+          "hint": "For an ideal gas with constant $c_p$, $\\eta_T = (T_1 - T_2)/(T_1 - T_{2s})$. Solve for the actual $T_2$.",
+          "solution": "Turbine isentropic efficiency in temperature form:\n\n$$\\eta_T = \\frac{T_1 - T_2}{T_1 - T_{2s}} \\quad\\Rightarrow\\quad T_2 = T_1 - \\eta_T(T_1 - T_{2s})$$\n\n$$T_2 = 773.15 - 0.90\\,(773.15 - 517) = 773.15 - 0.90(256.1) = 543\\ \\text{K}$$\n\nThe real turbine extracts less work, so the gas leaves hotter than the isentropic 517 K."
+        },
+        {
+          "id": "ex03-c",
+          "label": "c",
+          "prompt": "Find the **irreversible entropy production** $s_{gen}$ at 90% efficiency, in kJ/(kg·K).",
+          "kind": "numeric",
+          "answer": 0.0895,
+          "unit": "kJ/(kg·K)",
+          "tolerance": 0.01,
+          "hint": "Adiabatic, so $s_{gen} = s_2 - s_1 = c_p\\ln(T_2/T_1) - R\\ln(P_2/P_1)$.",
+          "solution": "For an adiabatic device the entropy generated equals the entropy rise of the steam:\n\n$$s_{gen} = s_2 - s_1 = c_p\\ln\\frac{T_2}{T_1} - R\\ln\\frac{P_2}{P_1}$$\n\n$$= 1.846\\ln\\frac{543}{773.15} - 0.4615\\ln\\frac{2}{10}$$\n\n$$= 1.846(-0.3539) - 0.4615(-1.6094) = -0.6533 + 0.7428 = 0.0895\\ \\text{kJ/(kg·K)}$$\n\nPositive, confirming the real expansion is irreversible (the isentropic case would give exactly 0)."
+        }
+      ]
+    },
+    {
+      "id": "ex04",
+      "title": "Polytropic compression of air — full analysis",
+      "chapters": [4, 7],
+      "tags": ["polytropic", "first law", "entropy"],
+      "scenario": "**0.5 kg** of air is compressed in a closed piston–cylinder along a **polytropic** path $PV^{1.25} = \\text{const}$ from $P_1 = 100\\ \\text{kPa}$, $T_1 = 300\\ \\text{K}$ to $P_2 = 800\\ \\text{kPa}$. Take $R = 0.287$, $c_v = 0.718$, $c_p = 1.005\\ \\text{kJ/(kg·K)}$.",
+      "conceptLinks": ["ch04", "ch07"],
+      "parts": [
+        {
+          "id": "ex04-a",
+          "label": "a",
+          "prompt": "Find the **final temperature** $T_2$, in K.",
+          "kind": "numeric",
+          "answer": 454.7,
+          "unit": "K",
+          "tolerance": 4,
+          "hint": "Polytropic $T$–$P$ relation: $T_2 = T_1 (P_2/P_1)^{(n-1)/n}$ with $n = 1.25$.",
+          "solution": "$(n-1)/n = 0.25/1.25 = 0.2$, and $P_2/P_1 = 8$:\n\n$$T_2 = T_1\\left(\\frac{P_2}{P_1}\\right)^{(n-1)/n} = 300\\,(8)^{0.2} = 300 \\times 1.516 = 454.7\\ \\text{K}$$"
+        },
+        {
+          "id": "ex04-b",
+          "label": "b",
+          "prompt": "Find the **boundary work** $W_b$, in kJ (sign: negative = work on the gas).",
+          "kind": "numeric",
+          "answer": -88.8,
+          "unit": "kJ",
+          "tolerance": 3,
+          "fallbackNote": "If you couldn't find $T_2$, use 454.7 K.",
+          "hint": "For an ideal gas, $W_b = mR(T_2 - T_1)/(1 - n)$.",
+          "solution": "$$W_b = \\frac{mR(T_2 - T_1)}{1 - n} = \\frac{0.5 \\times 0.287 \\times (454.7 - 300)}{1 - 1.25}$$\n\n$$= \\frac{22.20}{-0.25} = -88.8\\ \\text{kJ}$$\n\nNegative, as expected for a compression — work is done **on** the gas."
+        },
+        {
+          "id": "ex04-c",
+          "label": "c",
+          "prompt": "Find the **heat transfer** $Q$, in kJ (state the direction).",
+          "kind": "numeric",
+          "answer": -33.3,
+          "unit": "kJ",
+          "tolerance": 3,
+          "hint": "Closed-system first law: $Q = \\Delta U + W_b$, with $\\Delta U = m c_v (T_2 - T_1)$.",
+          "solution": "$$\\Delta U = m c_v (T_2 - T_1) = 0.5 \\times 0.718 \\times 154.7 = 55.5\\ \\text{kJ}$$\n\n$$Q = \\Delta U + W_b = 55.5 + (-88.8) = -33.3\\ \\text{kJ}$$\n\nNegative → about 33 kJ of heat is **rejected** from the gas during the compression."
+        },
+        {
+          "id": "ex04-d",
+          "label": "d",
+          "prompt": "Find the **specific entropy change** $\\Delta s$ of the air, in kJ/(kg·K).",
+          "kind": "numeric",
+          "answer": -0.179,
+          "unit": "kJ/(kg·K)",
+          "tolerance": 0.02,
+          "hint": "$\\Delta s = c_p\\ln(T_2/T_1) - R\\ln(P_2/P_1)$.",
+          "solution": "$$\\Delta s = c_p\\ln\\frac{T_2}{T_1} - R\\ln\\frac{P_2}{P_1} = 1.005\\ln\\frac{454.7}{300} - 0.287\\ln 8$$\n\n$$= 1.005(0.4159) - 0.287(2.0794) = 0.418 - 0.597 = -0.179\\ \\text{kJ/(kg·K)}$$\n\nEntropy of the gas **decreases** — consistent with heat being removed during the compression."
+        }
+      ]
+    },
+    {
+      "id": "ex05",
+      "title": "Carnot heat pump vs. resistance heating",
+      "chapters": [6],
+      "tags": ["Carnot", "heat pump", "cost"],
+      "scenario": "A reversible (Carnot) **heat pump** keeps a house at **22 °C** ($T_H = 295$ K) while the outside is at **2 °C** ($T_L = 275$ K). The house loses heat at **60 000 kJ/h**, and the heat pump runs continuously to replace it. Electricity costs **€0.11/kWh**.",
+      "conceptLinks": ["ch06"],
+      "parts": [
+        {
+          "id": "ex05-a",
+          "label": "a",
+          "prompt": "Find the **coefficient of performance** $COP_{HP}$.",
+          "kind": "numeric",
+          "answer": 14.75,
+          "unit": "",
+          "tolerance": 0.3,
+          "hint": "For a reversible heat pump, $COP_{HP} = T_H/(T_H - T_L)$, temperatures in K.",
+          "solution": "$$COP_{HP} = \\frac{T_H}{T_H - T_L} = \\frac{295}{295 - 275} = \\frac{295}{20} = 14.75$$\n\nA small temperature lift gives a very high COP."
+        },
+        {
+          "id": "ex05-b",
+          "label": "b",
+          "prompt": "Find the **electric power input**, in kW.",
+          "kind": "numeric",
+          "answer": 1.13,
+          "unit": "kW",
+          "tolerance": 0.06,
+          "fallbackNote": "If you couldn't find the COP, use 14.75.",
+          "hint": "First convert the heat demand to kW: $60\\,000\\ \\text{kJ/h} \\div 3600$. Then $\\dot W = \\dot Q_H / COP_{HP}$.",
+          "solution": "Heat demand: $\\dot Q_H = 60\\,000/3600 = 16.67$ kW. Then:\n\n$$\\dot W = \\frac{\\dot Q_H}{COP_{HP}} = \\frac{16.67}{14.75} = 1.13\\ \\text{kW}$$"
+        },
+        {
+          "id": "ex05-c",
+          "label": "c",
+          "prompt": "Find the **daily electricity cost** of the heat pump, in €.",
+          "kind": "numeric",
+          "answer": 2.98,
+          "unit": "€",
+          "tolerance": 0.15,
+          "hint": "Daily energy = power × 24 h; then multiply by €0.11/kWh.",
+          "solution": "$$\\text{Cost} = \\dot W \\times 24\\ \\text{h} \\times 0.11 = 1.13 \\times 24 \\times 0.11 = €2.98\\ \\text{per day}$$"
+        },
+        {
+          "id": "ex05-d",
+          "label": "d",
+          "prompt": "Find the **daily cost if simple resistance heating** were used instead, in €.",
+          "kind": "numeric",
+          "answer": 44,
+          "unit": "€",
+          "tolerance": 1.5,
+          "hint": "Resistance heating must supply the full $\\dot Q_H$ as electricity (COP = 1).",
+          "solution": "Resistance heating converts electricity 1-to-1 into heat, so it must draw the whole 16.67 kW:\n\n$$\\text{Cost} = 16.67 \\times 24 \\times 0.11 = €44\\ \\text{per day}$$\n\nThe heat pump costs about **1/14.75** as much — the COP advantage in one number."
+        }
+      ]
+    },
+    {
+      "id": "ex06",
+      "title": "Real air turbine — exergy destruction",
+      "chapters": [7, 8],
+      "tags": ["turbine", "isentropic efficiency", "exergy"],
+      "scenario": "Air ($c_p = 1.005$, $R = 0.287\\ \\text{kJ/(kg·K)}$, $k = 1.4$) expands through an **adiabatic turbine** from **600 kPa, 800 K** to **100 kPa**, at $\\dot m = 2.0\\ \\text{kg/s}$. The isentropic efficiency is **0.85** and the environment is at $T_0 = 300$ K.",
+      "conceptLinks": ["ch07", "ch08"],
+      "parts": [
+        {
+          "id": "ex06-a",
+          "label": "a",
+          "prompt": "Find the **isentropic exit temperature** $T_{2s}$, in K.",
+          "kind": "numeric",
+          "answer": 479.4,
+          "unit": "K",
+          "tolerance": 4,
+          "hint": "$T_{2s} = T_1 (P_2/P_1)^{(k-1)/k}$, with $(k-1)/k = 0.2857$.",
+          "solution": "$$T_{2s} = T_1\\left(\\frac{P_2}{P_1}\\right)^{(k-1)/k} = 800\\left(\\frac{100}{600}\\right)^{0.2857} = 800 \\times 0.5993 = 479.4\\ \\text{K}$$"
+        },
+        {
+          "id": "ex06-b",
+          "label": "b",
+          "prompt": "Find the **actual exit temperature** $T_2$, in K.",
+          "kind": "numeric",
+          "answer": 527.5,
+          "unit": "K",
+          "tolerance": 4,
+          "fallbackNote": "If you couldn't find $T_{2s}$, use 479.4 K.",
+          "hint": "$\\eta_T = (T_1 - T_2)/(T_1 - T_{2s})$, so $T_2 = T_1 - \\eta_T(T_1 - T_{2s})$.",
+          "solution": "$$T_2 = T_1 - \\eta_T(T_1 - T_{2s}) = 800 - 0.85(800 - 479.4) = 800 - 272.5 = 527.5\\ \\text{K}$$"
+        },
+        {
+          "id": "ex06-c",
+          "label": "c",
+          "prompt": "Find the **specific entropy generation** $s_{gen}$, in kJ/(kg·K).",
+          "kind": "numeric",
+          "answer": 0.0956,
+          "unit": "kJ/(kg·K)",
+          "tolerance": 0.01,
+          "hint": "Adiabatic → $s_{gen} = s_2 - s_1 = c_p\\ln(T_2/T_1) - R\\ln(P_2/P_1)$.",
+          "solution": "$$s_{gen} = c_p\\ln\\frac{T_2}{T_1} - R\\ln\\frac{P_2}{P_1} = 1.005\\ln\\frac{527.5}{800} - 0.287\\ln\\frac{100}{600}$$\n\n$$= 1.005(-0.4165) - 0.287(-1.7918) = -0.4186 + 0.5142 = 0.0956\\ \\text{kJ/(kg·K)}$$"
+        },
+        {
+          "id": "ex06-d",
+          "label": "d",
+          "prompt": "Find the **specific exergy destroyed** $x_{dest}$, in kJ/kg.",
+          "kind": "numeric",
+          "answer": 28.7,
+          "unit": "kJ/kg",
+          "tolerance": 1.5,
+          "fallbackNote": "If you couldn't find $s_{gen}$, use 0.0956 kJ/(kg·K).",
+          "hint": "Gouy–Stodola: $x_{dest} = T_0\\,s_{gen}$.",
+          "solution": "$$x_{dest} = T_0\\,s_{gen} = 300 \\times 0.0956 = 28.7\\ \\text{kJ/kg}$$\n\nThat is the work potential lost to irreversibility in each kilogram of air — the real turbine's shortfall versus the ideal one, valued against the dead state."
+        }
+      ]
+    }
+  ]
+}

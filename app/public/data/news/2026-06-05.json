@@ -1,0 +1,204 @@
+{
+  "date": "2026-06-05",
+  "generatedAt": "2026-06-05T07:00:00+02:00",
+  "tldr": "Geopolitics dominates the energy world: disruptions around the Strait of Hormuz are keeping Brent near $106/bbl, even as the IEA projects a record $3.4 trillion of energy investment in 2026. Brussels is fine-tuning its carbon market with a €30 billion ETS booster, fusion and battery innovation keep accelerating, Finland leans further into nuclear (including small modular reactors in Helsinki), and the Netherlands juggles severe grid congestion with fresh offshore-wind funding.",
+  "sections": [
+    {
+      "id": "global",
+      "title": "Global Developments",
+      "emoji": "🌍",
+      "items": [
+        {
+          "id": "global-1",
+          "headline": "IEA: global energy investment to hit a record $3.4 trillion in 2026",
+          "summary": "The IEA expects total energy investment of about $3.4 trillion this year. Roughly $2.2 trillion is headed to grids, storage, low-emission fuels, nuclear, renewables, efficiency and electrification, versus about $1.2 trillion for oil, gas and coal.",
+          "whyItMatters": "Clean-energy spending now outweighs fossil investment by nearly two to one, signalling where the system is heading.",
+          "sourceName": "GMK Center (IEA data)",
+          "sourceUrl": "https://gmk.center/en/news/global-investment-in-the-energy-sector-will-reach-3-4-trillion-in-2026-iea/",
+          "tags": ["investment", "IEA", "transition"]
+        },
+        {
+          "id": "global-2",
+          "headline": "EIA: Brent near $106/bbl as global oil stocks draw sharply",
+          "summary": "The U.S. EIA's Short-Term Energy Outlook sees global oil inventories falling by an average of about 8.5 million barrels per day in Q2 2026, keeping Brent crude around $106 per barrel through May and June amid Persian Gulf supply disruptions.",
+          "whyItMatters": "Oil still sets marginal energy costs in many markets, so price spikes ripple across the whole economy.",
+          "sourceName": "U.S. EIA",
+          "sourceUrl": "https://www.eia.gov/outlooks/steo/",
+          "tags": ["oil", "prices", "supply"]
+        },
+        {
+          "id": "global-3",
+          "headline": "RFF Global Energy Outlook 2026: world has slipped off the 1.5 °C path",
+          "summary": "Resources for the Future's annual outlook concludes that current policies and trends leave the world off track for limiting warming to 1.5 °C, with the gap between pledges and projected emissions widening.",
+          "whyItMatters": "It frames how far and how fast the energy transition still needs to move.",
+          "sourceName": "Resources for the Future",
+          "sourceUrl": "https://www.rff.org/publications/reports/global-energy-outlook-2026/",
+          "tags": ["climate", "outlook", "emissions"]
+        }
+      ]
+    },
+    {
+      "id": "geopolitics",
+      "title": "Geopolitics",
+      "emoji": "🗺️",
+      "items": [
+        {
+          "id": "geopolitics-1",
+          "headline": "Strait of Hormuz disruptions rattle oil markets",
+          "summary": "Asymmetric tactics by Iran disrupted traffic through the Strait of Hormuz — the world's most critical oil chokepoint. Gulf producers shut in around 10.5 million barrels per day in April, the strait stayed effectively closed until late May, and shipping only began recovering in June, with oil prices well above pre-crisis levels.",
+          "whyItMatters": "Roughly a fifth of the world's oil passes through Hormuz, so disruptions there move global prices fast.",
+          "sourceName": "OilPrice",
+          "sourceUrl": "https://oilprice.com/Geopolitics/International/Four-Geopolitical-Flashpoints-Energy-Markets-Cannot-Ignore-in-2026.html",
+          "tags": ["Hormuz", "Iran", "oil"]
+        },
+        {
+          "id": "geopolitics-2",
+          "headline": "GlobalData: geopolitics is the dominant theme for oil & gas in 2026",
+          "summary": "Analysts at GlobalData expect geopolitical risk and supply-chain disruption to outweigh other disruptive themes for the oil and gas industry this year, reshaping investment and trade decisions.",
+          "whyItMatters": "Security-of-supply thinking is increasingly steering energy strategy across Europe, including the Netherlands and Finland.",
+          "sourceName": "Oilfield Technology",
+          "sourceUrl": "https://www.oilfieldtechnology.com/special-reports/05052026/geopolitics-to-outweigh-other-disruptive-themes-for-oil-and-gas-in-2026-says-globaldata/",
+          "tags": ["risk", "oil & gas", "strategy"]
+        },
+        {
+          "id": "geopolitics-3",
+          "headline": "S&P Global: geopolitical volatility forces rapid forecast revisions",
+          "summary": "S&P Global reports that 2026 oil and gas forecasts are being revised at unusual speed as geopolitical shocks ripple through prices and flows, raising uncertainty for planners and investors.",
+          "whyItMatters": "Fast-shifting forecasts make long-term energy investment decisions harder and riskier.",
+          "sourceName": "S&P Global",
+          "sourceUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/03/geopolitical-volatility-driving-rapid-shifts-in-2026-oil-and-gas-forecasts",
+          "tags": ["markets", "volatility", "forecasts"]
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "title": "Innovative Technologies",
+      "emoji": "🔬",
+      "items": [
+        {
+          "id": "technology-1",
+          "headline": "IEA 'State of Energy Innovation 2026': 150+ breakthroughs, many in Europe",
+          "summary": "The IEA flags more than 150 significant energy-innovation highlights from 2025, spanning sodium-ion batteries, perovskite solar, next-generation geothermal, solid-state cooling and fusion. A large share originated in Europe, including underground hydrogen storage and industrial electrification.",
+          "whyItMatters": "It maps which clean-energy technologies are maturing fastest — useful context for an energy-science student.",
+          "sourceName": "IEA",
+          "sourceUrl": "https://www.iea.org/reports/the-state-of-energy-innovation-2026/executive-summary",
+          "tags": ["innovation", "batteries", "hydrogen"]
+        },
+        {
+          "id": "technology-2",
+          "headline": "Fusion momentum: smaller tokamaks and a record NIF shot",
+          "summary": "Advances in high-temperature superconducting magnets are enabling smaller, more efficient tokamaks, and the IEA now features fusion in its innovation report. A 2025 shot at the National Ignition Facility produced 8.6 MJ — more than four times the 2.08 MJ of laser energy delivered to the target.",
+          "whyItMatters": "Net energy gain is the central goal of fusion, and a vivid example of energy conversion and energy balance.",
+          "sourceName": "Fusion Industry Association",
+          "sourceUrl": "https://www.fusionindustryassociation.org/iea-features-fusion-in-state-of-energy-innovation-2026-report/",
+          "tags": ["fusion", "nuclear", "research"],
+          "conceptLink": "ch02"
+        },
+        {
+          "id": "technology-3",
+          "headline": "Next-gen batteries: solid-state and sodium-ion advance",
+          "summary": "Researchers continue to push solid-state and sodium-ion batteries, targeting higher energy density, faster charging and reduced fire risk. Sodium-ion in particular promises cheaper, more abundant materials for grid storage.",
+          "whyItMatters": "Cheaper, safer storage is the flexibility backbone of a high-renewables grid.",
+          "sourceName": "IEA",
+          "sourceUrl": "https://www.iea.org/reports/the-state-of-energy-innovation-2026/executive-summary",
+          "tags": ["batteries", "storage"]
+        }
+      ]
+    },
+    {
+      "id": "regulation",
+      "title": "Regulations & Policy",
+      "emoji": "📋",
+      "items": [
+        {
+          "id": "regulation-1",
+          "headline": "EU to stagger €30 billion carbon-permit sale to protect prices",
+          "summary": "The EU plans to spread out the sale of about €30 billion of carbon permits from an 'ETS Investment Booster' (based on 400 million existing allowances) to finance industrial decarbonisation without depressing the carbon price. Details arrive with the ETS review due 15 July.",
+          "whyItMatters": "The carbon price shapes the relative economics of every energy-conversion technology.",
+          "sourceName": "Energy Connects",
+          "sourceUrl": "https://www.energyconnects.com/news/renewables/2026/june/eu-designs-30-billion-carbon-market-tool-to-avoid-permit-deluge/",
+          "tags": ["EU ETS", "carbon price", "policy"]
+        },
+        {
+          "id": "regulation-2",
+          "headline": "European Commission moves to reinforce carbon-market stability",
+          "summary": "The Commission set out measures to make the EU Emissions Trading System more stable and predictable, keeping free allocations covering roughly 75% of average emissions for industry — an estimated €4 billion benefit over 2026–2030.",
+          "whyItMatters": "Predictable carbon rules help industry plan long-lived decarbonisation investments.",
+          "sourceName": "European Commission",
+          "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_666",
+          "tags": ["EU ETS", "industry", "free allocation"]
+        }
+      ]
+    },
+    {
+      "id": "finland",
+      "title": "Finland",
+      "emoji": "🇫🇮",
+      "items": [
+        {
+          "id": "finland-1",
+          "headline": "Government report: more nuclear would lower Finnish power prices",
+          "summary": "A report submitted to Finland's climate and environment minister (25 March 2026) finds that building more nuclear capacity would reduce electricity prices long-term — an extra 2,400 MW could cut the average price by roughly €5–7/MWh in 2040–2060.",
+          "whyItMatters": "Finland is positioning nuclear as a cornerstone of affordable, low-carbon power.",
+          "sourceName": "Finnish Government",
+          "sourceUrl": "https://valtioneuvosto.fi/en/-/1410877/new-report-highlights-means-costs-and-impacts-of-increased-promotion-and-use-of-nuclear-power",
+          "tags": ["nuclear", "policy", "prices"]
+        },
+        {
+          "id": "finland-2",
+          "headline": "Helsinki eyes small modular reactors: three sites identified",
+          "summary": "Three potential sites in Helsinki have been identified for a small nuclear plant, as Finnish utility Helen completes the first phase of its SMR programme in 2026.",
+          "whyItMatters": "SMRs could bring nuclear heat and power to cities and district-heating networks.",
+          "sourceName": "World Nuclear News",
+          "sourceUrl": "https://world-nuclear-news.org/articles/potential-sites-identified-for-helsinki-smr-plant",
+          "tags": ["SMR", "Helsinki", "nuclear"]
+        },
+        {
+          "id": "finland-3",
+          "headline": "Olkiluoto 3 supplied about a quarter of Finland's electricity in 2025",
+          "summary": "Europe's largest reactor, Olkiluoto 3, produced roughly 25% of Finnish electricity in 2025, with TVO completing final acceptance in June after two years of regular operation. The next outage is planned for autumn 2026.",
+          "whyItMatters": "A real-world example of nuclear baseload anchoring a low-carbon grid — and of a steam turbine as a control volume.",
+          "sourceName": "TVO",
+          "sourceUrl": "https://www.tvo.fi/en/index/news/pressreleasesstockexchangereleases/2026/olkiluotoproducedaboutaquarteroffinnishelectricityin2025.html",
+          "tags": ["Olkiluoto", "nuclear", "baseload"],
+          "conceptLink": "ch05"
+        }
+      ]
+    },
+    {
+      "id": "netherlands",
+      "title": "Netherlands",
+      "emoji": "🇳🇱",
+      "items": [
+        {
+          "id": "netherlands-1",
+          "headline": "Grid congestion spreads nationwide as connections back up",
+          "summary": "More than 60% of Dutch substations are at or near capacity and over 9,400 businesses are waiting for grid connections, limiting new renewables and electrification. From 2026 the risk of congestion extends across the whole country.",
+          "whyItMatters": "Grid congestion has become the defining bottleneck of the Dutch energy transition.",
+          "sourceName": "ABN AMRO",
+          "sourceUrl": "https://www.abnamro.com/en/news/grid-congestion-gets-companies-negotiating-with-grid-operators",
+          "tags": ["grid congestion", "flexibility", "connections"]
+        },
+        {
+          "id": "netherlands-2",
+          "headline": "Netherlands earmarks €1 billion for 2 GW of new offshore wind",
+          "summary": "The Dutch government has reserved about €1 billion in 2026 to realise 2 GW of offshore wind farms. The country has roughly 4.7 GW operating today and aims for around 21 GW by 2030.",
+          "whyItMatters": "Offshore wind is the backbone of the Netherlands' plan for low-carbon power.",
+          "sourceName": "Megaproject",
+          "sourceUrl": "https://megaproject.com/news/powerplant/netherlands-unveils-eur1bn-plan-for-2-gw-of-offshore-wind-in-2026",
+          "tags": ["offshore wind", "investment", "North Sea"]
+        },
+        {
+          "id": "netherlands-3",
+          "headline": "New offshore bidding zone created to unblock Nederwiek 3",
+          "summary": "Facing structural congestion between an offshore platform and the onshore grid, the Netherlands will introduce a separate offshore electricity bidding zone so the Nederwiek 3 wind project can move ahead.",
+          "whyItMatters": "Market design — not just hardware — is becoming a key lever for integrating offshore wind.",
+          "sourceName": "Power Gen Advancement",
+          "sourceUrl": "https://www.powergenadvancement.com/news/netherlands-to-build-new-offshore-electricity-bidding-zone/",
+          "tags": ["offshore wind", "bidding zone", "market design"]
+        }
+      ]
+    }
+  ]
+}

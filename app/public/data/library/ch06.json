@@ -1,0 +1,68 @@
+{
+  "chapterId": "ch06",
+  "chapter": 6,
+  "title": "The Second Law of Thermodynamics",
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 6",
+  "deckId": "ch06",
+  "updatedAt": "2026-06-08T00:00:00Z",
+  "summary": "The first law says energy is conserved; it does *not* say which direction a process can go. The **second law** supplies that direction. Heat flows from hot to cold on its own, never the reverse without help; a falling weight stirs water warm, but a warm cup never cools to lift a weight. Energy has **quality** as well as quantity, and every real process degrades it.\n\nThe law is framed around devices exchanging heat with **thermal reservoirs** (bodies so large their temperature doesn't change). A **heat engine** takes heat $Q_H$ from a hot reservoir, produces net work $W_{net}$, and rejects $Q_L$ to a cold one. Its **thermal efficiency** is $\\eta_{th} = W_{net}/Q_H = 1 - Q_L/Q_H$. The **Kelvin–Planck statement** says $\\eta_{th}$ can never reach 1: some heat must always be rejected. You cannot build an engine that turns *all* its heat input into work.\n\nRun in reverse, the device is a **refrigerator** or **heat pump**, moving heat from cold to hot using work input. Their performance is a **coefficient of performance (COP)** — and because the useful effect is large relative to the work, COP is usually greater than 1. For a fridge $COP_R = Q_L/W_{net}$; for a heat pump $COP_{HP} = Q_H/W_{net}$; and they differ by exactly one, $COP_{HP} = COP_R + 1$. The **Clausius statement** says no device can move heat from cold to hot with *no* work input.\n\nThe gold standard is the **Carnot cycle** — a reversible cycle of two isothermal and two adiabatic processes. **Carnot's principles** state that (1) no real engine between two reservoirs can beat a reversible one, and (2) all reversible engines between the same two reservoirs have the *same* efficiency, set only by the reservoir temperatures. This gives the famous limits: $\\eta_{th,rev} = 1 - T_L/T_H$, with temperatures in **kelvin**. These are ceilings — real devices fall short because of friction, finite temperature differences, and other irreversibilities.\n\nThe practical use: compute a device's actual efficiency/COP from the heat and work, compare it against the Carnot limit for the same reservoir temperatures, and judge how good it is — or spot an impossible claim (efficiency above the Carnot value).",
+  "equations": [
+    {
+      "name": "Thermal efficiency of a heat engine",
+      "latex": "\\eta_{th} = \\frac{W_{net,out}}{Q_H} = 1 - \\frac{Q_L}{Q_H}",
+      "rearrangements": ["W_{net,out} = \\eta_{th}\\, Q_H", "W_{net,out} = Q_H - Q_L", "Q_L = Q_H(1 - \\eta_{th})"],
+      "useWhen": "Any heat engine (power plant, car engine). Use the $Q$ form when heats are given, the $W/Q_H$ form when work and input heat are given.",
+      "note": "$W_{net} = Q_H - Q_L$ by the first law over a cycle. Always $\\eta_{th} < 1$."
+    },
+    {
+      "name": "COP of a refrigerator",
+      "latex": "COP_R = \\frac{Q_L}{W_{net,in}} = \\frac{Q_L}{Q_H - Q_L}",
+      "rearrangements": ["W_{net,in} = \\frac{Q_L}{COP_R}", "Q_L = COP_R\\, W_{net,in}"],
+      "useWhen": "A refrigerator or air conditioner — the desired effect is *removing* heat $Q_L$ from the cold space.",
+      "note": "Can exceed 1. The desired output is the cooling, $Q_L$."
+    },
+    {
+      "name": "COP of a heat pump",
+      "latex": "COP_{HP} = \\frac{Q_H}{W_{net,in}} = \\frac{Q_H}{Q_H - Q_L}",
+      "rearrangements": ["COP_{HP} = COP_R + 1", "W_{net,in} = \\frac{Q_H}{COP_{HP}}", "Q_H = COP_{HP}\\, W_{net,in}"],
+      "useWhen": "A heat pump heating a space — the desired effect is *delivering* heat $Q_H$. Same hardware as a fridge, different goal.",
+      "note": "$COP_{HP} = COP_R + 1$, so it is always greater than 1."
+    },
+    {
+      "name": "Carnot (reversible) efficiency",
+      "latex": "\\eta_{th,rev} = 1 - \\frac{T_L}{T_H}",
+      "rearrangements": ["\\frac{Q_L}{Q_H} = \\frac{T_L}{T_H} \\ (\\text{reversible only})", "T_H = \\frac{T_L}{1 - \\eta_{th,rev}}"],
+      "useWhen": "Finding the maximum possible efficiency between two reservoirs, or checking whether a claimed engine is feasible ($\\eta_{th} \\le \\eta_{th,rev}$).",
+      "note": "Temperatures MUST be absolute (K). The substitution $Q_L/Q_H = T_L/T_H$ holds only for a reversible device."
+    },
+    {
+      "name": "Carnot COPs (reversible limits)",
+      "latex": "COP_{R,rev} = \\frac{T_L}{T_H - T_L}, \\qquad COP_{HP,rev} = \\frac{T_H}{T_H - T_L}",
+      "rearrangements": ["COP_{HP,rev} = COP_{R,rev} + 1"],
+      "useWhen": "The best possible COP for a refrigerator/heat pump between two temperatures — the benchmark a real unit is measured against.",
+      "note": "Temperatures in K. The smaller the temperature gap $T_H - T_L$, the higher the COP."
+    }
+  ],
+  "glossary": [
+    { "term": "Second law of thermodynamics", "definition": "Processes proceed in a preferred direction and energy quality always degrades; not everything allowed by the first law actually happens." },
+    { "term": "Thermal energy reservoir", "definition": "A body large enough to absorb or supply heat with no change in temperature (oceans, the atmosphere, a furnace). Source = supplies heat; sink = absorbs it." },
+    { "term": "Heat engine", "definition": "A device that converts part of a heat input $Q_H$ into net work $W_{net}$, rejecting the remainder $Q_L$ to a sink." },
+    { "term": "Thermal efficiency", "definition": "Fraction of heat input converted to work, $\\eta_{th} = W_{net}/Q_H = 1 - Q_L/Q_H$." },
+    { "term": "Refrigerator", "definition": "A device using work to move heat from a cold space to a warm one; performance measured by $COP_R = Q_L/W_{net}$." },
+    { "term": "Heat pump", "definition": "Same as a refrigerator but the goal is heating the warm space; $COP_{HP} = Q_H/W_{net} = COP_R + 1$." },
+    { "term": "Coefficient of performance (COP)", "definition": "Desired heat transfer divided by work input; can be (and usually is) greater than 1." },
+    { "term": "Kelvin–Planck statement", "definition": "No heat engine can convert all the heat it receives into work — some must be rejected ($\\eta_{th} < 1$)." },
+    { "term": "Clausius statement", "definition": "No device can transfer heat from a cooler to a hotter body without work input." },
+    { "term": "Reversible / irreversible process", "definition": "A reversible process can be undone leaving no trace; real processes are irreversible due to friction, fast expansion, finite $\\Delta T$ heat transfer, mixing." },
+    { "term": "Carnot cycle", "definition": "The ideal reversible cycle: two isothermal and two adiabatic (isentropic) processes; sets the efficiency ceiling." },
+    { "term": "Carnot principles", "definition": "(1) No engine beats a reversible one between the same reservoirs; (2) all reversible engines between the same reservoirs have equal efficiency, fixed by $T_H, T_L$." }
+  ],
+  "tips": [
+    "**Temperatures in the Carnot formulas MUST be in kelvin.** Using °C gives nonsense. This is the number-one second-law error.",
+    "**Refrigerator vs. heat pump = same machine, different desired output.** Cold side wanted → $COP_R$ ($Q_L$ on top). Hot side wanted → $COP_{HP}$ ($Q_H$ on top). They differ by exactly 1.",
+    "**Carnot values are ceilings, not predictions.** A real device gives $\\eta_{th} \\le \\eta_{th,rev}$ and $COP \\le COP_{rev}$. If a claim exceeds the Carnot limit, it's impossible.",
+    "**$Q_L/Q_H = T_L/T_H$ only for reversible devices.** For a real engine use the *energy* ratio $Q_L/Q_H$ from the data, not the temperature ratio.",
+    "**Smaller temperature gap → better COP.** Heat pumps and fridges work best when $T_H - T_L$ is small; this is why heat pumps lose efficiency on very cold days.",
+    "**Over a cycle, $W_{net} = Q_H - Q_L$.** The device returns to its initial state, so $\\Delta U_{cycle} = 0$ and the first law gives net work = net heat."
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "deckId": "ch08",
+  "title": "Ch 8 — Exergy",
+  "chapter": 8,
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 8",
+  "description": "Exergy, dead state, exergy of heat, exergy destruction, second-law efficiency.",
+  "owner": "local",
+  "version": 1,
+  "forkedFrom": null,
+  "updatedAt": "2026-06-09T00:00:00Z",
+  "cards": [
+    {
+      "id": "ch08-001",
+      "type": "basic",
+      "front": "What is *exergy* (availability)?",
+      "back": "The **maximum useful work** obtainable from a system as it reversibly comes to equilibrium with the environment (the dead state). It measures energy *quality*, not quantity.",
+      "tags": ["exergy"],
+      "level": "intro"
+    },
+    {
+      "id": "ch08-002",
+      "type": "basic",
+      "front": "What is the *dead state*?",
+      "back": "Equilibrium with the environment at $T_0$ and $P_0$ (often 25 °C, 1 atm). A system at the dead state has **zero exergy** — no more useful work can be extracted.",
+      "tags": ["dead state"],
+      "level": "intro"
+    },
+    {
+      "id": "ch08-003",
+      "type": "basic",
+      "front": "Is exergy conserved?",
+      "back": "No. Unlike energy, exergy is **destroyed** by every irreversibility. Exergy analysis tracks *where* work potential is lost.",
+      "tags": ["exergy destruction"],
+      "level": "core"
+    },
+    {
+      "id": "ch08-004",
+      "type": "basic",
+      "front": "Exergy of heat transferred from a reservoir at temperature $T$?",
+      "back": "$X_{heat} = \\left(1 - \\dfrac{T_0}{T}\\right)Q$ — the Carnot-weighted fraction. Heat at $T = T_0$ carries no exergy.",
+      "tags": ["exergy of heat"],
+      "level": "core"
+    },
+    {
+      "id": "ch08-005",
+      "type": "mcq",
+      "front": "Which carries the *most* exergy per unit of energy?",
+      "choices": ["100 kJ of work", "100 kJ of heat at 400 K ($T_0$ = 300 K)", "100 kJ of internal energy at the dead state", "100 kJ of heat at 310 K"],
+      "answerIndex": 0,
+      "back": "Work is **entirely** exergy (100% convertible). Heat is only partly exergy ($(1-T_0/T)$), and energy at the dead state has none.",
+      "tags": ["work", "exergy"],
+      "level": "core"
+    },
+    {
+      "id": "ch08-006",
+      "type": "basic",
+      "front": "Write the *flow exergy* of a stream.",
+      "back": "$\\psi = (h - h_0) - T_0(s - s_0) + \\dfrac{V^2}{2} + gz$. The $-T_0(s-s_0)$ term is the unavailable part.",
+      "tags": ["flow exergy"],
+      "level": "core"
+    },
+    {
+      "id": "ch08-007",
+      "type": "basic",
+      "front": "State the *Gouy–Stodola* relation.",
+      "back": "$X_{dest} = T_0\\,S_{gen} \\ge 0$. Destroyed exergy equals entropy generation times the dead-state temperature.",
+      "tags": ["exergy destruction", "entropy"],
+      "level": "core"
+    },
+    {
+      "id": "ch08-008",
+      "type": "numeric",
+      "front": "Heat $Q = 1000$ kJ is supplied from a reservoir at **600 K**, with $T_0 = 300$ K. Find its exergy, in kJ.",
+      "back": "$X = (1 - T_0/T)Q = (1 - 300/600)\\times 1000 = 500$ kJ.",
+      "answer": 500,
+      "unit": "kJ",
+      "tolerance": 5,
+      "tags": ["exergy of heat", "calculation"],
+      "level": "core"
+    },
+    {
+      "id": "ch08-009",
+      "type": "numeric",
+      "front": "A process generates $S_{gen} = 0.20$ kJ/(kg·K) with $T_0 = 300$ K. Find the exergy destroyed, in kJ/kg.",
+      "back": "$x_{dest} = T_0 S_{gen} = 300 \\times 0.20 = 60$ kJ/kg.",
+      "answer": 60,
+      "unit": "kJ/kg",
+      "tolerance": 1,
+      "tags": ["exergy destruction", "calculation"],
+      "level": "core"
+    },
+    {
+      "id": "ch08-010",
+      "type": "basic",
+      "front": "Define the *second-law (exergy) efficiency* $\\eta_{II}$.",
+      "back": "Exergy recovered ÷ exergy supplied. For work-producing devices $\\eta_{II} = W_u/W_{rev}$; for work-consuming ones $\\eta_{II} = W_{rev}/W_u$. It compares a device to the reversible ideal for the same task.",
+      "tags": ["second-law efficiency"],
+      "level": "advanced"
+    }
+  ]
+}

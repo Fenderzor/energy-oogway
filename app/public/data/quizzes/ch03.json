@@ -1,0 +1,258 @@
+{
+  "chapterId": "ch03",
+  "chapter": 3,
+  "title": "Properties of Pure Substances",
+  "updatedAt": "2026-06-09T00:00:00Z",
+  "questions": [
+    {
+      "id": "ch03-q01",
+      "chapter": 3,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Quality $x$ is a meaningful property only…",
+      "choices": [
+        "Inside the saturation dome (liquid–vapor mixture)",
+        "For superheated vapor",
+        "For compressed liquid",
+        "For any state of a pure substance"
+      ],
+      "answerIndex": 0,
+      "explanation": "Quality is the vapor mass fraction of a saturated mixture — outside the dome there is no mixture, so $x$ is undefined."
+    },
+    {
+      "id": "ch03-q02",
+      "chapter": 3,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "During boiling at constant pressure, the temperature of the liquid–vapor mixture…",
+      "choices": ["Rises steadily", "Falls steadily", "Stays constant at $T_{sat}$", "Oscillates"],
+      "answerIndex": 2,
+      "explanation": "Phase change at fixed pressure happens at the fixed saturation temperature — added heat goes into latent heat, not temperature rise."
+    },
+    {
+      "id": "ch03-q03",
+      "chapter": 3,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The ideal-gas model is most accurate at…",
+      "choices": [
+        "Low pressure and high temperature",
+        "High pressure and low temperature",
+        "Near the critical point",
+        "Inside the saturation dome"
+      ],
+      "answerIndex": 0,
+      "explanation": "Far from the saturation/critical region — low $P$, high $T$ — molecules barely interact and $Pv = RT$ holds well."
+    },
+    {
+      "id": "ch03-q04",
+      "chapter": 3,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Water is at **200 kPa**, where $T_{sat} = 120.2\\,°\\text{C}$. Its actual temperature is **150 °C**. Which table do you use?",
+      "choices": ["Saturation table with quality", "Superheated vapor table", "Compressed liquid table", "Ideal-gas relations only"],
+      "answerIndex": 1,
+      "explanation": "$T > T_{sat}$ at the given pressure means the water is past the dome — superheated vapor, which needs its own table."
+    },
+    {
+      "id": "ch03-q05",
+      "chapter": 3,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "You need properties of a **compressed liquid** but have no compressed-liquid table. Best approximation?",
+      "choices": [
+        "Saturated-liquid values at the given temperature ($y \\approx y_{f@T}$)",
+        "Saturated-liquid values at the given pressure",
+        "Saturated-vapor values at the given temperature",
+        "Ideal-gas law"
+      ],
+      "answerIndex": 0,
+      "explanation": "Compressed-liquid properties depend far more on temperature than pressure, so use $y_{f}$ at the given **temperature**."
+    },
+    {
+      "id": "ch03-q06",
+      "chapter": 3,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Nitrogen is at high pressure **near its critical point**. How should you get an accurate specific volume?",
+      "choices": [
+        "Correct the ideal-gas value with the compressibility factor $Z$",
+        "Use $Pv = RT$ directly",
+        "Assume quality $x = 0.5$",
+        "Use saturated-liquid values"
+      ],
+      "answerIndex": 0,
+      "explanation": "Near the critical region real gases deviate strongly from ideal behavior — use $v = ZRT/P$ with $Z$ from the generalized charts."
+    },
+    {
+      "id": "ch03-q07",
+      "chapter": 3,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve the mixture relation $v = v_f + x\\,v_{fg}$ for the **quality** $x$:",
+      "choices": [
+        "$x = \\dfrac{v - v_f}{v_g - v_f}$",
+        "$x = \\dfrac{v_f - v}{v_{fg}}$",
+        "$x = \\dfrac{v}{v_f + v_g}$",
+        "$x = v\\,(v_g - v_f)$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Subtract $v_f$ and divide by $v_{fg} = v_g - v_f$. This backwards form is how you find quality from a measured property."
+    },
+    {
+      "id": "ch03-q08",
+      "chapter": 3,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve the ideal-gas law $PV = mRT$ for the **temperature**:",
+      "choices": ["$T = \\dfrac{PV}{mR}$", "$T = \\dfrac{mR}{PV}$", "$T = PVmR$", "$T = \\dfrac{P}{VmR}$"],
+      "answerIndex": 0,
+      "explanation": "Divide both sides by $mR$. The result is in kelvin when $P$ is absolute — never plug in °C."
+    },
+    {
+      "id": "ch03-q09",
+      "chapter": 3,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The specific gas constant of a gas with molar mass $M$ is…",
+      "choices": ["$R = \\dfrac{R_u}{M}$", "$R = R_u M$", "$R = \\dfrac{M}{R_u}$", "$R = R_u + M$"],
+      "answerIndex": 0,
+      "explanation": "$R = R_u/M$ with $R_u = 8.314$ kJ/(kmol·K) — e.g. air: $8.314/28.97 = 0.287$ kJ/(kg·K)."
+    },
+    {
+      "id": "ch03-q10",
+      "chapter": 3,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A **1.0 m³** tank holds air at **200 kPa** and **350 K** ($R = 0.287\\ \\text{kJ/(kg·K)}$). Find the **mass**.",
+      "answer": 1.99,
+      "unit": "kg",
+      "tolerance": 0.05,
+      "explanation": "$m = PV/(RT) = (200)(1.0)/(0.287 \\times 350) = 200/100.45 = 1.99$ kg."
+    },
+    {
+      "id": "ch03-q11",
+      "chapter": 3,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A saturated mixture has quality **x = 0.50**, with $h_f = 500$ and $h_{fg} = 2200\\ \\text{kJ/kg}$. Find $h$.",
+      "answer": 1600,
+      "unit": "kJ/kg",
+      "tolerance": 10,
+      "explanation": "$h = h_f + x\\,h_{fg} = 500 + 0.50 \\times 2200 = 1600$ kJ/kg."
+    },
+    {
+      "id": "ch03-q12",
+      "chapter": 3,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "An ideal gas in a **rigid** tank is heated from **300 K** at **150 kPa** to **450 K**. Find the final pressure.",
+      "answer": 225,
+      "unit": "kPa",
+      "tolerance": 2,
+      "explanation": "Constant volume: $P_2 = P_1 (T_2/T_1) = 150 \\times 450/300 = 225$ kPa — absolute temperatures only."
+    },
+    {
+      "id": "ch03-q13",
+      "chapter": 3,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "At a given pressure, the **saturation temperature** is…",
+      "choices": [
+        "The temperature at which phase change occurs",
+        "Always 100 °C",
+        "The critical temperature",
+        "The triple-point temperature"
+      ],
+      "answerIndex": 0,
+      "explanation": "$T_{sat}$ is the boiling/condensing temperature for that pressure; raising the pressure raises $T_{sat}$."
+    },
+    {
+      "id": "ch03-q14",
+      "chapter": 3,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Above the **critical point**, a pure substance…",
+      "choices": [
+        "Has no distinct liquid–vapor phase change",
+        "Is always a solid",
+        "Always has quality 0.5",
+        "Cannot exist"
+      ],
+      "answerIndex": 0,
+      "explanation": "Beyond the critical point the saturated-liquid and saturated-vapor states merge — there is no longer a distinct phase boundary."
+    },
+    {
+      "id": "ch03-q15",
+      "chapter": 3,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Water is at **200 kPa** ($T_{sat} = 120.2\\,°\\text{C}$) and its temperature is **110 °C**. It is…",
+      "choices": [
+        "A compressed (subcooled) liquid",
+        "A saturated mixture",
+        "Superheated vapor",
+        "At the critical point"
+      ],
+      "answerIndex": 0,
+      "explanation": "$T < T_{sat}$ at the given pressure means a compressed liquid; approximate its properties by $y_f$ at 110 °C."
+    },
+    {
+      "id": "ch03-q16",
+      "chapter": 3,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "The relation $y = y_f + x\\,y_{fg}$ may be used only when the state is…",
+      "choices": [
+        "A saturated liquid–vapor mixture",
+        "A compressed liquid",
+        "Superheated vapor",
+        "A perfect vacuum"
+      ],
+      "answerIndex": 0,
+      "explanation": "Quality (and the mixture relation) is defined only inside the saturation dome, where liquid and vapor coexist."
+    },
+    {
+      "id": "ch03-q17",
+      "chapter": 3,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve $PV = mRT$ for the **pressure** $P$:",
+      "choices": ["$P = \\dfrac{mRT}{V}$", "$P = \\dfrac{V}{mRT}$", "$P = mRTV$", "$P = \\dfrac{mR}{VT}$"],
+      "answerIndex": 0,
+      "explanation": "Divide both sides by $V$. Use absolute temperature (K)."
+    },
+    {
+      "id": "ch03-q18",
+      "chapter": 3,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve the compressibility relation $Z = Pv/(RT)$ for the **specific volume** $v$:",
+      "choices": ["$v = \\dfrac{ZRT}{P}$", "$v = \\dfrac{P}{ZRT}$", "$v = ZRTP$", "$v = \\dfrac{Z}{PRT}$"],
+      "answerIndex": 0,
+      "explanation": "Real-gas form: $v = ZRT/P$, with $Z$ from the generalized compressibility chart."
+    },
+    {
+      "id": "ch03-q19",
+      "chapter": 3,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Oxygen has molar mass $M = 32.0\\ \\text{kg/kmol}$. Find its specific gas constant $R$ ($R_u = 8.314$), in kJ/(kg·K).",
+      "answer": 0.26,
+      "unit": "kJ/(kg·K)",
+      "tolerance": 0.005,
+      "explanation": "$R = R_u/M = 8.314/32.0 = 0.260$ kJ/(kg·K)."
+    },
+    {
+      "id": "ch03-q20",
+      "chapter": 3,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "An ideal gas in a **rigid** tank is at **250 kPa**, **400 K**. It is cooled to **300 K**. Find the final pressure, in kPa.",
+      "answer": 187.5,
+      "unit": "kPa",
+      "tolerance": 2,
+      "explanation": "Constant volume: $P_2 = P_1 (T_2/T_1) = 250 \\times 300/400 = 187.5$ kPa."
+    }
+  ]
+}

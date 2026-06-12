@@ -1,0 +1,165 @@
+{
+  "chapterId": "ch01",
+  "chapter": 1,
+  "title": "Introduction & Basic Concepts",
+  "updatedAt": "2026-06-08T00:00:00Z",
+  "problems": [
+    {
+      "id": "ch01-p001",
+      "chapter": 1,
+      "difficulty": 1,
+      "title": "Gauge to absolute pressure",
+      "tags": ["pressure", "gauge"],
+      "kind": "numeric",
+      "scenario": "A tyre-pressure gauge reads **220 kPa**. The local atmospheric pressure is $P_{\\text{atm}} = 100\\ \\text{kPa}$.\n\nWhat is the **absolute pressure** in the tyre?",
+      "answer": 320,
+      "unit": "kPa",
+      "tolerance": 1,
+      "hints": [
+        "A gauge reads pressure *relative* to the atmosphere.",
+        "$P_{\\text{abs}} = P_{\\text{atm}} + P_{\\text{gage}}$."
+      ],
+      "solution": "A gauge measures how far above atmospheric the pressure sits, so convert by adding the atmospheric value:\n\n$$P_{\\text{abs}} = P_{\\text{atm}} + P_{\\text{gage}} = 100 + 220 = 320\\ \\text{kPa}$$\n\nAlways do this conversion before using a pressure in any property relation or gas law — those require **absolute** pressure.",
+      "equationsUsed": ["P_{\\text{abs}} = P_{\\text{atm}} + P_{\\text{gage}}"],
+      "conceptLink": "ch01"
+    },
+    {
+      "id": "ch01-p002",
+      "chapter": 1,
+      "difficulty": 1,
+      "title": "Vacuum to absolute pressure",
+      "tags": ["pressure", "vacuum"],
+      "kind": "numeric",
+      "scenario": "A vacuum gauge on a condenser reads **30 kPa**, while the atmosphere is at $P_{\\text{atm}} = 98\\ \\text{kPa}$.\n\nFind the **absolute pressure** inside the condenser.",
+      "answer": 68,
+      "unit": "kPa",
+      "tolerance": 1,
+      "hints": [
+        "A vacuum gauge reads how far *below* atmospheric the pressure is.",
+        "$P_{\\text{abs}} = P_{\\text{atm}} - P_{\\text{vac}}$."
+      ],
+      "solution": "A vacuum reading is measured downward from atmospheric, so subtract it:\n\n$$P_{\\text{abs}} = P_{\\text{atm}} - P_{\\text{vac}} = 98 - 30 = 68\\ \\text{kPa}$$\n\nThe absolute pressure is below atmospheric, as expected for a vacuum.",
+      "equationsUsed": ["P_{\\text{abs}} = P_{\\text{atm}} - P_{\\text{vac}}"],
+      "conceptLink": "ch01"
+    },
+    {
+      "id": "ch01-p003",
+      "chapter": 1,
+      "difficulty": 1,
+      "title": "Density and specific volume",
+      "tags": ["density", "specific volume"],
+      "kind": "numeric",
+      "scenario": "A rigid tank of volume $0.50\\ \\text{m}^3$ holds **0.60 kg** of a gas.\n\nFind the **specific volume** of the gas.",
+      "answer": 0.833,
+      "unit": "m³/kg",
+      "tolerance": 0.01,
+      "hints": [
+        "Specific volume is volume per unit mass.",
+        "$v = V/m$ (and it equals $1/\\rho$)."
+      ],
+      "solution": "Specific volume is simply the volume occupied by each kilogram:\n\n$$v = \\frac{V}{m} = \\frac{0.50\\ \\text{m}^3}{0.60\\ \\text{kg}} = 0.833\\ \\text{m}^3/\\text{kg}$$\n\nThe density is the reciprocal, $\\rho = 1/v = 1.20\\ \\text{kg/m}^3$.",
+      "equationsUsed": ["v = \\frac{V}{m} = \\frac{1}{\\rho}"],
+      "conceptLink": "ch01"
+    },
+    {
+      "id": "ch01-p004",
+      "chapter": 1,
+      "difficulty": 2,
+      "title": "Pressure at depth in water",
+      "tags": ["hydrostatic", "manometer"],
+      "kind": "numeric",
+      "scenario": "A diver is **8.0 m** below the surface of a lake. Water density is $\\rho = 1000\\ \\text{kg/m}^3$ and the surface is at atmospheric pressure $P_{\\text{atm}} = 101\\ \\text{kPa}$. Take $g = 9.81\\ \\text{m/s}^2$.\n\nFind the **absolute pressure** acting on the diver.",
+      "answer": 179.5,
+      "unit": "kPa",
+      "tolerance": 1,
+      "hints": [
+        "Pressure rises with depth by $\\rho g h$.",
+        "$P = P_{\\text{atm}} + \\rho g h$. Careful with units: $\\rho g h$ comes out in Pa.",
+        "Divide the $\\rho g h$ term by 1000 to convert Pa → kPa."
+      ],
+      "solution": "Add the hydrostatic column to the surface pressure:\n\n$$P = P_{\\text{atm}} + \\rho g h$$\n\nThe depth term:\n\n$$\\rho g h = 1000 \\times 9.81 \\times 8.0 = 78\\,480\\ \\text{Pa} = 78.5\\ \\text{kPa}$$\n\nSo:\n\n$$P = 101 + 78.5 = 179.5\\ \\text{kPa}$$",
+      "equationsUsed": ["P = P_{\\text{atm}} + \\rho g h"],
+      "conceptLink": "ch01"
+    },
+    {
+      "id": "ch01-p005",
+      "chapter": 1,
+      "difficulty": 2,
+      "title": "Hydraulic lift",
+      "tags": ["pressure", "Pascal", "force"],
+      "kind": "numeric",
+      "scenario": "A hydraulic lift has a small input piston of area $A_1 = 0.010\\ \\text{m}^2$ and a large output piston of area $A_2 = 0.40\\ \\text{m}^2$. A car rests on the large piston, pressing down with a force of **5000 N**.\n\nWhat **input force** $F_1$ must be applied to the small piston to balance it?",
+      "answer": 125,
+      "unit": "N",
+      "tolerance": 2,
+      "hints": [
+        "The pressure is the same throughout the connected fluid (Pascal's principle).",
+        "$P = F_1/A_1 = F_2/A_2$.",
+        "Rearrange: $F_1 = F_2\\,(A_1/A_2)$."
+      ],
+      "solution": "Both pistons share the same fluid pressure, so $F_1/A_1 = F_2/A_2$. Rearranging for the input force:\n\n$$F_1 = F_2\\,\\frac{A_1}{A_2} = 5000 \\times \\frac{0.010}{0.40} = 5000 \\times 0.025 = 125\\ \\text{N}$$\n\nThe large area multiplies force by 40×, which is why a small input lifts a heavy car.",
+      "equationsUsed": ["\\frac{F_1}{A_1} = \\frac{F_2}{A_2}", "F_1 = F_2\\,\\frac{A_1}{A_2}"],
+      "conceptLink": "ch01"
+    },
+    {
+      "id": "ch01-p006",
+      "chapter": 1,
+      "difficulty": 2,
+      "title": "Gas pressure under a loaded piston",
+      "tags": ["pressure", "force balance"],
+      "kind": "numeric",
+      "scenario": "A vertical piston–cylinder contains gas. The piston has a mass of **20 kg** and a face area of $A = 0.012\\ \\text{m}^2$. The atmosphere above pushes down at $P_{\\text{atm}} = 100\\ \\text{kPa}$. Take $g = 9.81\\ \\text{m/s}^2$.\n\nFind the **absolute gas pressure** inside the cylinder.",
+      "answer": 116.35,
+      "unit": "kPa",
+      "tolerance": 0.5,
+      "hints": [
+        "Do a force balance on the piston: the gas below supports the atmosphere plus the piston's weight.",
+        "$P_{\\text{gas}}A = P_{\\text{atm}}A + mg$, so $P_{\\text{gas}} = P_{\\text{atm}} + mg/A$.",
+        "$mg/A$ is in Pa — divide by 1000 for kPa."
+      ],
+      "solution": "Balance the forces on the piston. The gas pressure below must support both the atmospheric push and the piston's weight:\n\n$$P_{\\text{gas}}A = P_{\\text{atm}}A + mg \\quad\\Rightarrow\\quad P_{\\text{gas}} = P_{\\text{atm}} + \\frac{mg}{A}$$\n\nThe weight term:\n\n$$\\frac{mg}{A} = \\frac{20 \\times 9.81}{0.012} = \\frac{196.2}{0.012} = 16\\,350\\ \\text{Pa} = 16.35\\ \\text{kPa}$$\n\nTherefore:\n\n$$P_{\\text{gas}} = 100 + 16.35 = 116.35\\ \\text{kPa}$$",
+      "equationsUsed": ["P_{\\text{gas}} = P_{\\text{atm}} + \\frac{mg}{A}", "P = \\frac{F}{A}"],
+      "conceptLink": "ch01"
+    },
+    {
+      "id": "ch01-p007",
+      "chapter": 1,
+      "difficulty": 3,
+      "title": "Multi-fluid manometer",
+      "tags": ["manometer", "hydrostatic"],
+      "kind": "numeric",
+      "scenario": "A pressurised gas tank is connected to a tube open to the atmosphere ($P_{\\text{atm}} = 100\\ \\text{kPa}$). Walking from the gas surface to the open end, you go **down** a column of oil (SG = 0.72) of height **0.20 m**, then the tube bends and goes **up** a column of mercury (SG = 13.6) of height **0.30 m**.\n\nFind the **absolute gas pressure**. Take $\\rho_{\\text{water}} = 1000\\ \\text{kg/m}^3$, $g = 9.81\\ \\text{m/s}^2$.",
+      "answer": 138.6,
+      "unit": "kPa",
+      "tolerance": 0.6,
+      "hints": [
+        "Use the manometer 'walking' rule: add $\\rho g h$ going **down** a column, subtract it going **up**.",
+        "Density from specific gravity: $\\rho = SG \\times 1000$. Oil: 720 kg/m³; mercury: 13 600 kg/m³.",
+        "$P_{\\text{gas}} + \\rho_{oil}g h_{oil} - \\rho_{Hg}g h_{Hg} = P_{\\text{atm}}$. Solve for $P_{\\text{gas}}$."
+      ],
+      "solution": "Walk from the gas to the open end, adding $\\rho g h$ when descending and subtracting when ascending, ending at atmospheric pressure:\n\n$$P_{\\text{gas}} + \\rho_{oil}\\,g\\,h_{oil} - \\rho_{Hg}\\,g\\,h_{Hg} = P_{\\text{atm}}$$\n\nSolve for the gas pressure:\n\n$$P_{\\text{gas}} = P_{\\text{atm}} - \\rho_{oil}\\,g\\,h_{oil} + \\rho_{Hg}\\,g\\,h_{Hg}$$\n\nEvaluate each column (using $\\rho = SG \\times 1000$):\n\n$$\\rho_{oil}\\,g\\,h_{oil} = 720 \\times 9.81 \\times 0.20 = 1413\\ \\text{Pa} = 1.41\\ \\text{kPa}$$\n\n$$\\rho_{Hg}\\,g\\,h_{Hg} = 13\\,600 \\times 9.81 \\times 0.30 = 40\\,025\\ \\text{Pa} = 40.02\\ \\text{kPa}$$\n\n$$P_{\\text{gas}} = 100 - 1.41 + 40.02 = 138.6\\ \\text{kPa}$$",
+      "equationsUsed": ["P_{\\text{gas}} = P_{\\text{atm}} - \\rho_{oil}g h_{oil} + \\rho_{Hg}g h_{Hg}", "\\rho = SG \\times \\rho_{\\text{water}}"],
+      "conceptLink": "ch01"
+    },
+    {
+      "id": "ch01-p008",
+      "chapter": 1,
+      "difficulty": 3,
+      "title": "Mercury differential manometer",
+      "tags": ["manometer", "pressure difference"],
+      "kind": "numeric",
+      "scenario": "A horizontal pipe carries **water** ($\\rho = 1000\\ \\text{kg/m}^3$). A mercury (SG = 13.6) differential manometer is connected between two points at the **same elevation**, and the mercury level difference is **0.45 m**. Take $g = 9.81\\ \\text{m/s}^2$.\n\nFind the **pressure difference** $P_1 - P_2$ between the two points.",
+      "answer": 55.6,
+      "unit": "kPa",
+      "tolerance": 0.6,
+      "hints": [
+        "For a differential manometer between two taps at equal elevation with a heavier measuring fluid, the connecting-fluid columns cancel.",
+        "$P_1 - P_2 = (\\rho_{Hg} - \\rho_{water})\\,g\\,h$.",
+        "Use $\\rho_{Hg} = 13\\,600$ and $\\rho_{water} = 1000\\ \\text{kg/m}^3$."
+      ],
+      "solution": "When the two pressure taps are at the same height and the manometer fluid (mercury) is heavier than the line fluid (water), the water columns on each side cancel and only the *difference* in densities matters:\n\n$$P_1 - P_2 = (\\rho_{Hg} - \\rho_{water})\\,g\\,h$$\n\nSubstitute:\n\n$$P_1 - P_2 = (13\\,600 - 1000) \\times 9.81 \\times 0.45 = 12\\,600 \\times 9.81 \\times 0.45$$\n\n$$P_1 - P_2 = 55\\,623\\ \\text{Pa} = 55.6\\ \\text{kPa}$$\n\nUsing the large density contrast of mercury keeps the column height manageable for a sizeable pressure difference.",
+      "equationsUsed": ["P_1 - P_2 = (\\rho_{Hg} - \\rho_{water})\\,g\\,h"],
+      "conceptLink": "ch01"
+    }
+  ]
+}

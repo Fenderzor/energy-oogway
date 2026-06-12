@@ -1,0 +1,278 @@
+{
+  "chapterId": "ch06",
+  "chapter": 6,
+  "title": "The Second Law of Thermodynamics",
+  "updatedAt": "2026-06-09T00:00:00Z",
+  "questions": [
+    {
+      "id": "ch06-q01",
+      "chapter": 6,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The **Kelvin–Planck statement** says no heat engine can…",
+      "choices": [
+        "Convert all of its heat input into work",
+        "Operate between two reservoirs",
+        "Reject heat to a cold sink",
+        "Have an efficiency above 50%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Some heat must always be rejected to a sink — so $\\eta_{th} < 1$ for every heat engine, no matter how well built."
+    },
+    {
+      "id": "ch06-q02",
+      "chapter": 6,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Why can a refrigerator's COP be **greater than 1** without violating any law?",
+      "choices": [
+        "It moves heat rather than converting work into heat",
+        "It can't — COP is always below 1",
+        "Because COP uses different units",
+        "Because the compressor is reversible"
+      ],
+      "answerIndex": 0,
+      "explanation": "COP compares heat *moved* to work input. Moving 4 kJ of heat with 1 kJ of work (COP = 4) creates no energy — it just transports it."
+    },
+    {
+      "id": "ch06-q03",
+      "chapter": 6,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Two **reversible** heat engines operate between the *same* two reservoirs. Their efficiencies are…",
+      "choices": [
+        "Identical, fixed by the reservoir temperatures alone",
+        "Different, depending on the working fluid",
+        "Different, depending on engine size",
+        "Both exactly 100%"
+      ],
+      "answerIndex": 0,
+      "explanation": "Carnot's second principle: all reversible engines between the same reservoirs share the same efficiency, $1 - T_L/T_H$ — fluid and design don't matter."
+    },
+    {
+      "id": "ch06-q04",
+      "chapter": 6,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "An inventor claims an engine with $\\eta_{th} = 0.80$ operating between **600 K** and **300 K**. Your verdict?",
+      "choices": [
+        "Impossible — the Carnot limit is $1 - 300/600 = 0.50$",
+        "Plausible — it's below 1",
+        "Possible if the engine is very small",
+        "Possible with a better working fluid"
+      ],
+      "answerIndex": 0,
+      "explanation": "No engine can beat the reversible limit between the same temperatures. $\\eta_{max} = 0.50 < 0.80$, so the claim violates the second law."
+    },
+    {
+      "id": "ch06-q05",
+      "chapter": 6,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "The same vapor-compression machine can cool a space or heat one. The relation between its two COPs is…",
+      "choices": [
+        "$COP_{HP} = COP_R + 1$",
+        "$COP_{HP} = COP_R - 1$",
+        "$COP_{HP} = 1/COP_R$",
+        "$COP_{HP} = COP_R$"
+      ],
+      "answerIndex": 0,
+      "explanation": "$Q_H = Q_L + W$, so $Q_H/W = Q_L/W + 1$. The heating job always scores exactly one higher because the work itself ends up as delivered heat."
+    },
+    {
+      "id": "ch06-q06",
+      "chapter": 6,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "On a very cold day, a heat pump's COP…",
+      "choices": [
+        "Decreases, because the gap $T_H - T_L$ widens",
+        "Increases, because cold air holds more 'free' heat",
+        "Stays the same — COP depends only on the machine",
+        "Becomes exactly 1"
+      ],
+      "answerIndex": 0,
+      "explanation": "$COP_{HP,rev} = T_H/(T_H - T_L)$: a larger temperature gap means a smaller COP — why heat pumps lose ground in deep cold."
+    },
+    {
+      "id": "ch06-q07",
+      "chapter": 6,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The maximum (Carnot) efficiency between reservoirs at $T_H$ and $T_L$ (in kelvin) is…",
+      "choices": [
+        "$\\eta_{rev} = 1 - \\dfrac{T_L}{T_H}$",
+        "$\\eta_{rev} = 1 - \\dfrac{T_H}{T_L}$",
+        "$\\eta_{rev} = \\dfrac{T_L}{T_H}$",
+        "$\\eta_{rev} = T_H - T_L$"
+      ],
+      "answerIndex": 0,
+      "explanation": "$\\eta_{rev} = 1 - T_L/T_H$, absolute temperatures only — using °C is the classic error."
+    },
+    {
+      "id": "ch06-q08",
+      "chapter": 6,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve $COP_R = Q_L / W_{net}$ for the required **work input**:",
+      "choices": [
+        "$W_{net} = \\dfrac{Q_L}{COP_R}$",
+        "$W_{net} = Q_L \\cdot COP_R$",
+        "$W_{net} = \\dfrac{COP_R}{Q_L}$",
+        "$W_{net} = Q_L - COP_R$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Divide the cooling load by the COP — a higher COP means less work for the same cooling."
+    },
+    {
+      "id": "ch06-q09",
+      "chapter": 6,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Over one complete **cycle**, the first law gives the net work of a heat engine as…",
+      "choices": ["$W_{net} = Q_H - Q_L$", "$W_{net} = Q_H + Q_L$", "$W_{net} = Q_L - Q_H$", "$W_{net} = Q_H / Q_L$"],
+      "answerIndex": 0,
+      "explanation": "A cycle returns to its initial state, so $\\Delta U = 0$ and the net work equals the net heat: input minus rejected."
+    },
+    {
+      "id": "ch06-q10",
+      "chapter": 6,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Find the **Carnot efficiency** between a source at **750 K** and a sink at **300 K** (decimal fraction).",
+      "answer": 0.6,
+      "unit": "",
+      "tolerance": 0.005,
+      "explanation": "$\\eta_{rev} = 1 - 300/750 = 1 - 0.4 = 0.60$."
+    },
+    {
+      "id": "ch06-q11",
+      "chapter": 6,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A refrigerator removes $Q_L = 360$ kJ while rejecting $Q_H = 480$ kJ. Find its **COP**.",
+      "answer": 3,
+      "unit": "",
+      "tolerance": 0.05,
+      "explanation": "$W = Q_H - Q_L = 120$ kJ, so $COP_R = Q_L/W = 360/120 = 3$."
+    },
+    {
+      "id": "ch06-q12",
+      "chapter": 6,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A reversible heat pump keeps a house at **300 K** while outside is **270 K**, delivering **5.0 kW** of heat. Find the **minimum power input**, in kW.",
+      "answer": 0.5,
+      "unit": "kW",
+      "tolerance": 0.02,
+      "explanation": "$COP_{HP,rev} = T_H/(T_H - T_L) = 300/30 = 10$, so $\\dot W = \\dot Q_H / COP = 5.0/10 = 0.5$ kW."
+    },
+    {
+      "id": "ch06-q13",
+      "chapter": 6,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The **Clausius statement** of the second law says…",
+      "choices": [
+        "Heat cannot flow from cold to hot with no work input",
+        "No engine can be 100% efficient",
+        "Entropy always increases",
+        "Energy is conserved"
+      ],
+      "answerIndex": 0,
+      "explanation": "Clausius: a device cannot move heat from a cooler to a hotter body without work input — why refrigerators need a compressor."
+    },
+    {
+      "id": "ch06-q14",
+      "chapter": 6,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "A **reversible** process is one that…",
+      "choices": [
+        "Can be undone leaving no trace on system or surroundings",
+        "Happens very quickly",
+        "Transfers no heat",
+        "Always returns to the same temperature"
+      ],
+      "answerIndex": 0,
+      "explanation": "Reversibility is an idealization with zero entropy generation; real processes (friction, fast expansion, finite-$\\Delta T$ heat transfer) are irreversible."
+    },
+    {
+      "id": "ch06-q15",
+      "chapter": 6,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "An engine is claimed to have $\\eta_{th} = 0.70$ between **500 K** and **300 K**. This is…",
+      "choices": [
+        "Impossible — the Carnot limit is 0.40",
+        "Possible — it's below 1",
+        "Possible with the right working fluid",
+        "Possible only at steady state"
+      ],
+      "answerIndex": 0,
+      "explanation": "$\\eta_{rev} = 1 - 300/500 = 0.40$. No engine between these reservoirs can exceed 40%, so 0.70 violates the second law."
+    },
+    {
+      "id": "ch06-q16",
+      "chapter": 6,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "To maximize a heat pump's COP, the temperature gap $T_H - T_L$ should be…",
+      "choices": ["As small as possible", "As large as possible", "Exactly zero", "Irrelevant to COP"],
+      "answerIndex": 0,
+      "explanation": "$COP_{HP,rev} = T_H/(T_H - T_L)$ — a smaller gap gives a higher COP, which is why heat pumps excel in mild climates."
+    },
+    {
+      "id": "ch06-q17",
+      "chapter": 6,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "From $\\eta_{th} = 1 - Q_L/Q_H$, the rejected heat is…",
+      "choices": [
+        "$Q_L = Q_H(1 - \\eta_{th})$",
+        "$Q_L = Q_H\\,\\eta_{th}$",
+        "$Q_L = Q_H/\\eta_{th}$",
+        "$Q_L = \\eta_{th} - Q_H$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Rearranging gives $Q_L = Q_H(1 - \\eta_{th})$ — the fraction of heat not converted to work."
+    },
+    {
+      "id": "ch06-q18",
+      "chapter": 6,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The COPs of a refrigerator and a heat pump built from the same machine are related by…",
+      "choices": [
+        "$COP_{HP} = COP_R + 1$",
+        "$COP_{HP} = COP_R - 1$",
+        "$COP_{HP} = 2\\,COP_R$",
+        "$COP_{HP} = 1/COP_R$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Since $Q_H = Q_L + W$, dividing by $W$ gives $COP_{HP} = COP_R + 1$."
+    },
+    {
+      "id": "ch06-q19",
+      "chapter": 6,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Find the **Carnot efficiency** between **600 K** and **300 K** (decimal fraction).",
+      "answer": 0.5,
+      "unit": "",
+      "tolerance": 0.005,
+      "explanation": "$\\eta_{rev} = 1 - 300/600 = 0.50$."
+    },
+    {
+      "id": "ch06-q20",
+      "chapter": 6,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A refrigerator with **COP = 3.5** removes heat at **7.0 kW**. Find the work-input power, in kW.",
+      "answer": 2,
+      "unit": "kW",
+      "tolerance": 0.05,
+      "explanation": "$\\dot W = \\dot Q_L / COP_R = 7.0/3.5 = 2.0$ kW."
+    }
+  ]
+}

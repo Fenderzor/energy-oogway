@@ -1,0 +1,238 @@
+{
+  "chapterId": "ch02",
+  "chapter": 2,
+  "title": "Energy, Energy Transfer & General Energy Analysis",
+  "updatedAt": "2026-06-09T00:00:00Z",
+  "questions": [
+    {
+      "id": "ch02-q01",
+      "chapter": 2,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "What distinguishes **heat** from **work** as an energy transfer?",
+      "choices": [
+        "Heat is driven by a temperature difference; work is any other organized transfer",
+        "Heat is stored in the system; work is not",
+        "Work is always larger than heat",
+        "Heat crosses the boundary; work does not"
+      ],
+      "answerIndex": 0,
+      "explanation": "Both cross the boundary, and neither is stored — the defining feature of heat is that a temperature difference drives it; everything else (shaft, electrical, boundary movement) is work."
+    },
+    {
+      "id": "ch02-q02",
+      "chapter": 2,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "A process is **adiabatic** when…",
+      "choices": ["$W = 0$", "$Q = 0$", "$\\Delta T = 0$", "$\\Delta U = 0$"],
+      "answerIndex": 1,
+      "explanation": "Adiabatic means no heat transfer ($Q = 0$). Temperature can still change — e.g. adiabatic compression heats a gas."
+    },
+    {
+      "id": "ch02-q03",
+      "chapter": 2,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Which of these is a **property** of a system?",
+      "choices": ["Heat", "Work", "Internal energy", "Power"],
+      "answerIndex": 2,
+      "explanation": "Internal energy is stored by the system and depends only on its state. Heat and work are transfers (path-dependent), and power is a transfer rate."
+    },
+    {
+      "id": "ch02-q04",
+      "chapter": 2,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A system **loses 5 kJ of heat** and **does 10 kJ of work**. With the convention \"$Q$ in +, $W$ out +\", what goes into the energy balance?",
+      "choices": [
+        "$Q = -5$ kJ, $W = +10$ kJ",
+        "$Q = +5$ kJ, $W = +10$ kJ",
+        "$Q = -5$ kJ, $W = -10$ kJ",
+        "$Q = +5$ kJ, $W = -10$ kJ"
+      ],
+      "answerIndex": 0,
+      "explanation": "Heat *leaving* is negative; work *done by* the system is positive. Then $\\Delta E = Q - W = -5 - 10 = -15$ kJ."
+    },
+    {
+      "id": "ch02-q05",
+      "chapter": 2,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "If the wind speed at a turbine site **doubles**, the available wind power is multiplied by…",
+      "choices": ["2", "4", "8", "16"],
+      "answerIndex": 2,
+      "explanation": "Available wind power scales with $V^3$ ($\\dot W = \\tfrac12\\rho A V^3$), so doubling the speed gives $2^3 = 8\\times$ the power."
+    },
+    {
+      "id": "ch02-q06",
+      "chapter": 2,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "An electric motor ($\\eta = 0.90$) drives a pump ($\\eta = 0.70$). The overall electricity-to-fluid efficiency is…",
+      "choices": ["0.80 (average)", "0.63 (product)", "0.90 (best stage)", "0.70 (worst stage)"],
+      "answerIndex": 1,
+      "explanation": "Chained devices multiply: $\\eta_{overall} = 0.90 \\times 0.70 = 0.63$. Each stage takes its cut of what the previous one delivers."
+    },
+    {
+      "id": "ch02-q07",
+      "chapter": 2,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve the thermal-efficiency definition $\\eta_{th} = W_{net}/Q_H$ for the required heat input $Q_H$:",
+      "choices": [
+        "$Q_H = \\dfrac{W_{net}}{\\eta_{th}}$",
+        "$Q_H = \\eta_{th}\\, W_{net}$",
+        "$Q_H = W_{net} - \\eta_{th}$",
+        "$Q_H = \\dfrac{\\eta_{th}}{W_{net}}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Multiply both sides by $Q_H$ and divide by $\\eta_{th}$: to get a desired work output you must supply $W_{net}/\\eta_{th}$ of heat."
+    },
+    {
+      "id": "ch02-q08",
+      "chapter": 2,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The kinetic energy **per unit mass** of a flow moving at velocity $V$ is…",
+      "choices": ["$\\dfrac{V^2}{2}$", "$\\dfrac{mV^2}{2}$", "$V^2$", "$\\dfrac{V}{2}$"],
+      "answerIndex": 0,
+      "explanation": "$KE = \\tfrac12 mV^2$, so per unit mass $ke = V^2/2$ (in J/kg when $V$ is in m/s)."
+    },
+    {
+      "id": "ch02-q09",
+      "chapter": 2,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The instantaneous **electrical power** drawn by a device at voltage $V$ and current $I$ is…",
+      "choices": ["$\\dot W_e = V I$", "$\\dot W_e = V / I$", "$\\dot W_e = V I \\Delta t$", "$\\dot W_e = I / V$"],
+      "answerIndex": 0,
+      "explanation": "Power is $VI$ (watts); multiplying by time $\\Delta t$ gives the *energy* $W_e = VI\\,\\Delta t$ (joules)."
+    },
+    {
+      "id": "ch02-q10",
+      "chapter": 2,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Find the **kinetic energy** of a **1000 kg** car moving at **20 m/s**, in kJ.",
+      "answer": 200,
+      "unit": "kJ",
+      "tolerance": 2,
+      "explanation": "$KE = \\tfrac12 mV^2 = 0.5 \\times 1000 \\times 400 = 200\\,000$ J $= 200$ kJ."
+    },
+    {
+      "id": "ch02-q11",
+      "chapter": 2,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A heat engine with thermal efficiency **0.30** receives **1500 kJ** of heat. How much **net work** does it produce?",
+      "answer": 450,
+      "unit": "kJ",
+      "tolerance": 2,
+      "explanation": "$W_{net} = \\eta_{th} Q_H = 0.30 \\times 1500 = 450$ kJ."
+    },
+    {
+      "id": "ch02-q12",
+      "chapter": 2,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A **2.0 kW** heater runs for **30 minutes**. How much energy does it deliver, in kJ?",
+      "answer": 3600,
+      "unit": "kJ",
+      "tolerance": 10,
+      "explanation": "$W = \\dot W \\Delta t = 2.0\\ \\text{kW} \\times 1800\\ \\text{s} = 3600$ kJ — keep time in seconds so kW·s = kJ."
+    },
+    {
+      "id": "ch02-q13",
+      "chapter": 2,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The **first law of thermodynamics** is essentially a statement of…",
+      "choices": ["Conservation of energy", "Conservation of mass", "Increase of entropy", "Conservation of momentum"],
+      "answerIndex": 0,
+      "explanation": "The first law says energy is conserved — it changes form or crosses the boundary, but is never created or destroyed."
+    },
+    {
+      "id": "ch02-q14",
+      "chapter": 2,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The **mechanical energy** of a flowing fluid ($P/\\rho + V^2/2 + gz$) deliberately excludes…",
+      "choices": ["Internal (thermal) energy", "Kinetic energy", "Potential energy", "Flow/pressure energy"],
+      "answerIndex": 0,
+      "explanation": "Mechanical energy is the part fully convertible to work; internal energy is left out because it cannot all be turned into work (second law)."
+    },
+    {
+      "id": "ch02-q15",
+      "chapter": 2,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "If wind speed **triples**, the available wind power increases by a factor of…",
+      "choices": ["3", "9", "27", "81"],
+      "answerIndex": 2,
+      "explanation": "Available power scales with $V^3$, so $3^3 = 27$."
+    },
+    {
+      "id": "ch02-q16",
+      "chapter": 2,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A real pump always needs **more** shaft power than the ideal $\\dot m g \\Delta z$ because…",
+      "choices": [
+        "Its efficiency is below 1 (friction and other losses)",
+        "Water is compressible",
+        "Gravity is stronger inside pumps",
+        "The ideal value is always wrong"
+      ],
+      "answerIndex": 0,
+      "explanation": "$\\dot W_{shaft} = \\dot W_{ideal}/\\eta$ with $\\eta < 1$, so the real input exceeds the ideal minimum."
+    },
+    {
+      "id": "ch02-q17",
+      "chapter": 2,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve $PE = mgz$ for the **height** $z$:",
+      "choices": ["$z = \\dfrac{PE}{mg}$", "$z = PE \\cdot mg$", "$z = \\dfrac{mg}{PE}$", "$z = \\dfrac{PE}{m} - g$"],
+      "answerIndex": 0,
+      "explanation": "Divide both sides by $mg$."
+    },
+    {
+      "id": "ch02-q18",
+      "chapter": 2,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve the shaft-power relation $\\dot W_{sh} = 2\\pi \\dot n\\, T$ for the **torque** $T$:",
+      "choices": [
+        "$T = \\dfrac{\\dot W_{sh}}{2\\pi \\dot n}$",
+        "$T = 2\\pi \\dot n\\, \\dot W_{sh}$",
+        "$T = \\dfrac{2\\pi \\dot n}{\\dot W_{sh}}$",
+        "$T = \\dot W_{sh} - 2\\pi \\dot n$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Divide by $2\\pi \\dot n$ (with $\\dot n$ in rev/s)."
+    },
+    {
+      "id": "ch02-q19",
+      "chapter": 2,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Find the **potential energy** gained when a 200 kg load is lifted 10 m ($g = 9.81\\ \\text{m/s}^2$), in kJ.",
+      "answer": 19.62,
+      "unit": "kJ",
+      "tolerance": 0.2,
+      "explanation": "$PE = mgz = 200 \\times 9.81 \\times 10 = 19\\,620$ J $= 19.62$ kJ."
+    },
+    {
+      "id": "ch02-q20",
+      "chapter": 2,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A hydro plant has $\\dot m = 300\\ \\text{kg/s}$, head **60 m**, and overall efficiency **0.80** ($g = 9.81$). Find the electric power, in kW.",
+      "answer": 141.3,
+      "unit": "kW",
+      "tolerance": 2,
+      "explanation": "$\\dot W = \\eta\\, \\dot m g \\Delta z = 0.80 \\times 300 \\times 9.81 \\times 60 = 141\\,264$ W $\\approx 141.3$ kW."
+    }
+  ]
+}

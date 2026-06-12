@@ -1,0 +1,119 @@
+{
+  "deckId": "ch03",
+  "title": "Ch 3 — Properties of Pure Substances",
+  "chapter": 3,
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 3",
+  "description": "Phases, phase change, property tables, ideal gas and compressibility.",
+  "owner": "local",
+  "version": 1,
+  "forkedFrom": null,
+  "updatedAt": "2026-06-06T00:00:00Z",
+  "cards": [
+    {
+      "id": "ch03-001",
+      "type": "basic",
+      "front": "What is a *pure substance*?",
+      "back": "A substance that has a fixed chemical composition throughout (e.g. water, nitrogen, or air treated as one pseudo-substance). It may exist in several phases, but the composition stays uniform.",
+      "tags": ["pure substance"],
+      "level": "intro"
+    },
+    {
+      "id": "ch03-002",
+      "type": "basic",
+      "front": "Name the states across a liquid→vapor phase change.",
+      "back": "*Compressed (subcooled) liquid* → *saturated liquid* (about to vaporize) → *saturated liquid–vapor mixture* → *saturated vapor* (about to condense) → *superheated vapor*.",
+      "tags": ["phase change"],
+      "level": "core"
+    },
+    {
+      "id": "ch03-003",
+      "type": "basic",
+      "front": "Define *saturation temperature* and *saturation pressure*.",
+      "back": "At a given pressure, the temperature at which phase change occurs is the saturation temperature $T_{sat}$; at a given temperature, the corresponding pressure is the saturation pressure $P_{sat}$. They are dependent: $T_{sat}=f(P_{sat})$.",
+      "tags": ["saturation"],
+      "level": "core"
+    },
+    {
+      "id": "ch03-004",
+      "type": "basic",
+      "front": "Define *quality* x of a saturated mixture.",
+      "back": "$x = \\dfrac{m_{vapor}}{m_{total}}$. It ranges from 0 (saturated liquid) to 1 (saturated vapor) and is only defined inside the saturation dome.",
+      "tags": ["quality"],
+      "level": "core"
+    },
+    {
+      "id": "ch03-005",
+      "type": "basic",
+      "front": "How do you get any property of a saturated mixture from quality?",
+      "back": "For any specific property y (v, u, h, s): $y = y_f + x\\,y_{fg}$, where $y_{fg} = y_g - y_f$. For example $v = v_f + x\\,v_{fg}$.",
+      "tags": ["quality", "tables"],
+      "level": "core"
+    },
+    {
+      "id": "ch03-006",
+      "type": "basic",
+      "front": "Why is *enthalpy* called a combination property?",
+      "back": "Because $h = u + Pv$ (kJ/kg) — it combines internal energy and the flow/pressure term, and arises naturally in constant-pressure and flow processes.",
+      "tags": ["enthalpy"],
+      "level": "core"
+    },
+    {
+      "id": "ch03-007",
+      "type": "basic",
+      "front": "What are the *critical point* and the *triple point*?",
+      "back": "Critical point: the state where saturated-liquid and saturated-vapor states become identical (above it there is no distinct phase change). Triple point: the unique state where solid, liquid and vapor coexist in equilibrium.",
+      "tags": ["critical point", "triple point"],
+      "level": "core"
+    },
+    {
+      "id": "ch03-008",
+      "type": "basic",
+      "front": "State the ideal-gas equation of state.",
+      "back": "$Pv = RT$, equivalently $PV = mRT = N R_u T$, where the gas constant $R = R_u/M$ and the universal gas constant $R_u = 8.314\\ \\text{kJ/(kmol·K)}$.",
+      "tags": ["ideal gas"],
+      "level": "core"
+    },
+    {
+      "id": "ch03-009",
+      "type": "numeric",
+      "front": "Air has molar mass M = 28.97 kg/kmol. Find its gas constant R in kJ/(kg·K). (Use $R_u = 8.314$.)",
+      "back": "$R = R_u/M = 8.314/28.97 = 0.287\\ \\text{kJ/(kg·K)}$.",
+      "answer": 0.287,
+      "unit": "kJ/(kg·K)",
+      "tolerance": 0.005,
+      "tags": ["ideal gas", "calculation"],
+      "level": "core"
+    },
+    {
+      "id": "ch03-010",
+      "type": "basic",
+      "front": "What is the *compressibility factor* Z?",
+      "back": "$Z = \\dfrac{Pv}{RT}$, a measure of deviation from ideal-gas behavior. $Z = 1$ for an ideal gas; gases approach this at low pressure and high temperature (far from the critical point).",
+      "tags": ["compressibility"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch03-011",
+      "type": "mcq",
+      "front": "When is the ideal-gas model most accurate?",
+      "choices": [
+        "High pressure, low temperature",
+        "Low pressure, high temperature",
+        "Near the critical point",
+        "During a phase change"
+      ],
+      "answerIndex": 1,
+      "back": "Gases behave most ideally at low pressures and high temperatures — far from the saturation/critical region.",
+      "tags": ["ideal gas"],
+      "level": "core"
+    },
+    {
+      "id": "ch03-012",
+      "type": "basic",
+      "front": "What is *latent heat*?",
+      "back": "The energy absorbed or released during a phase change at constant T and P. Latent heat of vaporization $h_{fg}$ (liquid↔vapor); latent heat of fusion (solid↔liquid).",
+      "tags": ["latent heat"],
+      "level": "intro"
+    }
+  ]
+}

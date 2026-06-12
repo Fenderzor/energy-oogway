@@ -1,0 +1,126 @@
+{
+  "deckId": "ch06",
+  "title": "Ch 6 — The Second Law of Thermodynamics",
+  "chapter": 6,
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 6",
+  "description": "Heat engines, refrigerators, reversibility, and the Carnot cycle.",
+  "owner": "local",
+  "version": 1,
+  "forkedFrom": null,
+  "updatedAt": "2026-06-06T00:00:00Z",
+  "cards": [
+    {
+      "id": "ch06-001",
+      "type": "basic",
+      "front": "What is a *thermal energy reservoir*?",
+      "back": "A body with a very large thermal capacity that can supply or absorb heat without a change in temperature (e.g. oceans, the atmosphere, a furnace). A *source* supplies heat; a *sink* absorbs it.",
+      "tags": ["reservoir"],
+      "level": "intro"
+    },
+    {
+      "id": "ch06-002",
+      "type": "basic",
+      "front": "Define the *thermal efficiency* of a heat engine.",
+      "back": "$\\eta_{th} = \\dfrac{W_{net,out}}{Q_H} = 1 - \\dfrac{Q_L}{Q_H}$, where $Q_H$ is heat received from the source and $Q_L$ heat rejected to the sink.",
+      "tags": ["heat engine", "efficiency"],
+      "level": "core"
+    },
+    {
+      "id": "ch06-003",
+      "type": "basic",
+      "front": "State the *Kelvin–Planck* statement of the second law.",
+      "back": "No heat engine can convert all the heat it receives into work — it must reject some heat to a low-temperature sink. So thermal efficiency is always less than 100%.",
+      "tags": ["Kelvin-Planck"],
+      "level": "core"
+    },
+    {
+      "id": "ch06-004",
+      "type": "basic",
+      "front": "State the *Clausius* statement of the second law.",
+      "back": "Heat cannot, of itself, flow from a colder body to a hotter one. A refrigerator or heat pump requires work input to move heat from low to high temperature.",
+      "tags": ["Clausius"],
+      "level": "core"
+    },
+    {
+      "id": "ch06-005",
+      "type": "basic",
+      "front": "Coefficient of performance of a *refrigerator*?",
+      "back": "$COP_R = \\dfrac{Q_L}{W_{net,in}} = \\dfrac{Q_L}{Q_H - Q_L}$ — desired cooling per unit work input. It can exceed 1.",
+      "tags": ["refrigerator", "COP"],
+      "level": "core"
+    },
+    {
+      "id": "ch06-006",
+      "type": "basic",
+      "front": "Coefficient of performance of a *heat pump*, and its link to $COP_R$?",
+      "back": "$COP_{HP} = \\dfrac{Q_H}{W_{net,in}} = \\dfrac{Q_H}{Q_H - Q_L}$, and $COP_{HP} = COP_R + 1$.",
+      "tags": ["heat pump", "COP"],
+      "level": "core"
+    },
+    {
+      "id": "ch06-007",
+      "type": "basic",
+      "front": "*Reversible* vs *irreversible* process — and sources of irreversibility?",
+      "back": "A reversible process can be undone with no trace left on the system or surroundings; real processes are irreversible. Causes: friction, unrestrained (free) expansion, mixing, and heat transfer across a finite temperature difference.",
+      "tags": ["reversibility"],
+      "level": "core"
+    },
+    {
+      "id": "ch06-008",
+      "type": "basic",
+      "front": "What four processes make up the *Carnot cycle*?",
+      "back": "All reversible: (1) isothermal heat addition at $T_H$, (2) isentropic (reversible adiabatic) expansion, (3) isothermal heat rejection at $T_L$, (4) isentropic compression.",
+      "tags": ["Carnot"],
+      "level": "core"
+    },
+    {
+      "id": "ch06-009",
+      "type": "basic",
+      "front": "State the two *Carnot principles*.",
+      "back": "(1) No engine is more efficient than a reversible engine operating between the same two reservoirs. (2) All reversible engines between the same two reservoirs have the same efficiency.",
+      "tags": ["Carnot principles"],
+      "level": "core"
+    },
+    {
+      "id": "ch06-010",
+      "type": "basic",
+      "front": "Carnot (reversible) efficiency in terms of temperatures?",
+      "back": "For a reversible engine $\\dfrac{Q_L}{Q_H} = \\dfrac{T_L}{T_H}$, so $\\eta_{th,rev} = 1 - \\dfrac{T_L}{T_H}$ (absolute temperatures, in K).",
+      "tags": ["Carnot", "efficiency"],
+      "level": "core"
+    },
+    {
+      "id": "ch06-011",
+      "type": "numeric",
+      "front": "A reversible heat engine operates between 800 K and 300 K. What is its maximum thermal efficiency (as a fraction)?",
+      "back": "$\\eta_{th,rev} = 1 - \\dfrac{T_L}{T_H} = 1 - \\dfrac{300}{800} = 0.625$ (i.e. 62.5%).",
+      "answer": 0.625,
+      "tolerance": 0.01,
+      "tags": ["Carnot", "calculation"],
+      "level": "core"
+    },
+    {
+      "id": "ch06-012",
+      "type": "basic",
+      "front": "Reversible (Carnot) limits for COP?",
+      "back": "$COP_{R,rev} = \\dfrac{1}{T_H/T_L - 1}$ and $COP_{HP,rev} = \\dfrac{1}{1 - T_L/T_H}$ (temperatures in K).",
+      "tags": ["Carnot", "COP"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch06-013",
+      "type": "mcq",
+      "front": "Which device would violate the second law?",
+      "choices": [
+        "An engine that rejects some heat to a sink",
+        "An engine that converts 100% of its heat input into work",
+        "A refrigerator driven by work input",
+        "A reversible engine between two reservoirs"
+      ],
+      "answerIndex": 1,
+      "back": "A heat engine converting all received heat into work (no rejection) violates the Kelvin–Planck statement.",
+      "tags": ["Kelvin-Planck"],
+      "level": "core"
+    }
+  ]
+}

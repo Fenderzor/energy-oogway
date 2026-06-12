@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "energy-oogway",
+      "runtimeExecutable": "C:\\Users\\oskar\\Documents\\dev\\Energy Report News Agent\\app\\dev-preview.cmd",
+      "runtimeArgs": [],
+      "port": 5173
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "chapterId": "ch05",
+  "chapter": 5,
+  "title": "Mass & Energy Analysis of Control Volumes",
+  "updatedAt": "2026-06-08T00:00:00Z",
+  "problems": [
+    {
+      "id": "ch05-p001",
+      "chapter": 5,
+      "difficulty": 1,
+      "title": "Mass flow rate in a pipe",
+      "tags": ["mass flow", "continuity"],
+      "kind": "numeric",
+      "scenario": "Water ($\\rho = 1000\\ \\text{kg/m}^3$) flows through a pipe of diameter **5.0 cm** at an average velocity of **3.0 m/s**.\n\nFind the **mass flow rate**, in kg/s.",
+      "answer": 5.89,
+      "unit": "kg/s",
+      "tolerance": 0.1,
+      "hints": [
+        "$\\dot m = \\rho V A$, with $A = \\pi D^2/4$.",
+        "$D = 0.05\\ \\text{m}$, so $A = \\pi(0.05)^2/4 = 1.963\\times10^{-3}\\ \\text{m}^2$."
+      ],
+      "solution": "The cross-sectional area:\n\n$$A = \\frac{\\pi D^2}{4} = \\frac{\\pi(0.05)^2}{4} = 1.963\\times10^{-3}\\ \\text{m}^2$$\n\nThen the mass flow rate:\n\n$$\\dot m = \\rho V A = 1000 \\times 3.0 \\times 1.963\\times10^{-3} = 5.89\\ \\text{kg/s}$$",
+      "equationsUsed": ["\\dot m = \\rho V A", "A = \\frac{\\pi D^2}{4}"],
+      "conceptLink": "ch05"
+    },
+    {
+      "id": "ch05-p002",
+      "chapter": 5,
+      "difficulty": 1,
+      "title": "Velocity from mass flow",
+      "tags": ["mass flow", "specific volume"],
+      "kind": "numeric",
+      "scenario": "Air with specific volume $v = 0.80\\ \\text{m}^3/\\text{kg}$ flows at $\\dot m = 0.50\\ \\text{kg/s}$ through a duct of cross-sectional area **0.010 m²**.\n\nFind the **average velocity**, in m/s.",
+      "answer": 40,
+      "unit": "m/s",
+      "tolerance": 1,
+      "hints": [
+        "$\\dot m = VA/v$. Rearrange for $V$.",
+        "$V = \\dot m\\,v / A$."
+      ],
+      "solution": "Starting from $\\dot m = \\dfrac{VA}{v}$ and solving for velocity:\n\n$$V = \\frac{\\dot m\\,v}{A} = \\frac{0.50 \\times 0.80}{0.010} = \\frac{0.40}{0.010} = 40\\ \\text{m/s}$$\n\nUsing specific volume here is handy because gas tables list $v$ directly.",
+      "equationsUsed": ["\\dot m = \\frac{VA}{v}", "V = \\frac{\\dot m\\,v}{A}"],
+      "conceptLink": "ch05"
+    },
+    {
+      "id": "ch05-p003",
+      "chapter": 5,
+      "difficulty": 2,
+      "title": "Nozzle exit velocity",
+      "tags": ["nozzle", "SFEE", "kinetic energy"],
+      "kind": "numeric",
+      "scenario": "Steam enters an adiabatic nozzle at **30 m/s**, and its specific enthalpy drops by **20 kJ/kg** as it accelerates.\n\nFind the **exit velocity**, in m/s. (Neglect potential energy; no work.)",
+      "answer": 202.2,
+      "unit": "m/s",
+      "tolerance": 2,
+      "hints": [
+        "For a nozzle ($\\dot W = 0$, adiabatic): $h_1 + V_1^2/2 = h_2 + V_2^2/2$.",
+        "Rearrange: $V_2 = \\sqrt{V_1^2 + 2(h_1 - h_2)}$.",
+        "Convert the enthalpy drop to J/kg: $20\\ \\text{kJ/kg} = 20\\,000\\ \\text{J/kg}$."
+      ],
+      "solution": "A nozzle trades enthalpy for kinetic energy with no work and no heat:\n\n$$h_1 + \\frac{V_1^2}{2} = h_2 + \\frac{V_2^2}{2} \\quad\\Rightarrow\\quad V_2 = \\sqrt{V_1^2 + 2(h_1 - h_2)}$$\n\nWith $h_1 - h_2 = 20\\,000\\ \\text{J/kg}$ (note the unit conversion — enthalpy in **J/kg** to match $V^2$ in m²/s²):\n\n$$V_2 = \\sqrt{(30)^2 + 2(20\\,000)} = \\sqrt{900 + 40\\,000} = \\sqrt{40\\,900} = 202.2\\ \\text{m/s}$$",
+      "equationsUsed": ["h_1 + \\frac{V_1^2}{2} = h_2 + \\frac{V_2^2}{2}", "V_2 = \\sqrt{V_1^2 + 2(h_1 - h_2)}"],
+      "conceptLink": "ch05"
+    },
+    {
+      "id": "ch05-p004",
+      "chapter": 5,
+      "difficulty": 2,
+      "title": "Adiabatic steam turbine power",
+      "tags": ["turbine", "SFEE"],
+      "kind": "numeric",
+      "scenario": "Steam enters an adiabatic turbine at $h_1 = 3248\\ \\text{kJ/kg}$ and leaves at $h_2 = 2378\\ \\text{kJ/kg}$, with mass flow $\\dot m = 3.0\\ \\text{kg/s}$. Neglect kinetic and potential energy.\n\nFind the **power output**, in kW.",
+      "answer": 2610,
+      "unit": "kW",
+      "tolerance": 10,
+      "hints": [
+        "For an adiabatic turbine with negligible KE/PE: $\\dot W = \\dot m(h_1 - h_2)$.",
+        "Just substitute the enthalpies and mass flow."
+      ],
+      "solution": "The steady-flow energy equation for an adiabatic turbine (no heat, negligible KE/PE) reduces to:\n\n$$\\dot W = \\dot m\\,(h_1 - h_2) = 3.0 \\times (3248 - 2378) = 3.0 \\times 870 = 2610\\ \\text{kW}$$\n\nThe enthalpy drop across the turbine is what becomes shaft work.",
+      "equationsUsed": ["\\dot W = \\dot m\\,(h_1 - h_2)"],
+      "conceptLink": "ch05"
+    },
+    {
+      "id": "ch05-p005",
+      "chapter": 5,
+      "difficulty": 2,
+      "title": "Pump power for a liquid",
+      "tags": ["pump", "incompressible"],
+      "kind": "numeric",
+      "scenario": "A pump raises the pressure of water from **100 kPa** to **5000 kPa** at $\\dot m = 10\\ \\text{kg/s}$. Water's specific volume is $v = 0.001\\ \\text{m}^3/\\text{kg}$.\n\nFind the **pump power**, in kW.",
+      "answer": 49,
+      "unit": "kW",
+      "tolerance": 0.5,
+      "hints": [
+        "A liquid's specific volume barely changes, so $\\Delta h \\approx v\\,\\Delta P$.",
+        "$\\dot W_{pump} = \\dot m\\,v\\,(P_2 - P_1)$.",
+        "$\\text{kg/s} \\times \\text{m}^3/\\text{kg} \\times \\text{kPa} = \\text{kW}$."
+      ],
+      "solution": "For an (incompressible) liquid the pump's enthalpy rise is essentially $v\\,\\Delta P$, giving the shortcut:\n\n$$\\dot W_{pump} = \\dot m\\,v\\,(P_2 - P_1) = 10 \\times 0.001 \\times (5000 - 100)$$\n\n$$\\dot W_{pump} = 10 \\times 0.001 \\times 4900 = 49\\ \\text{kW}$$\n\nThis avoids needing compressed-liquid enthalpy tables — a big practical time-saver.",
+      "equationsUsed": ["\\dot W_{pump} = \\dot m\\,v\\,(P_2 - P_1)"],
+      "conceptLink": "ch05"
+    },
+    {
+      "id": "ch05-p006",
+      "chapter": 5,
+      "difficulty": 3,
+      "title": "Throttling valve — exit quality",
+      "tags": ["throttle", "quality", "tables"],
+      "kind": "numeric",
+      "scenario": "Refrigerant R-134a, saturated liquid at **0.80 MPa** ($h_1 = 95.47\\ \\text{kJ/kg}$), is throttled to **0.12 MPa**. At 0.12 MPa, $h_f = 22.49$ and $h_{fg} = 214.48\\ \\text{kJ/kg}$.\n\nFind the **quality** at the valve exit.",
+      "answer": 0.34,
+      "unit": "",
+      "tolerance": 0.01,
+      "hints": [
+        "A throttling valve is isenthalpic: $h_2 = h_1$.",
+        "At the exit pressure the fluid is a mixture, so $h_2 = h_f + x\\,h_{fg}$.",
+        "Rearrange: $x = (h_2 - h_f)/h_{fg}$."
+      ],
+      "solution": "Throttling conserves enthalpy ($\\dot W = 0$, adiabatic, negligible KE/PE):\n\n$$h_2 = h_1 = 95.47\\ \\text{kJ/kg}$$\n\nAt the downstream pressure the refrigerant is a saturated mixture, so apply the quality relation and rearrange:\n\n$$h_2 = h_f + x\\,h_{fg} \\quad\\Rightarrow\\quad x = \\frac{h_2 - h_f}{h_{fg}}$$\n\n$$x = \\frac{95.47 - 22.49}{214.48} = \\frac{72.98}{214.48} = 0.340$$\n\nThe sudden pressure drop flashes ~34% of the liquid into vapour — exactly how the expansion valve in a fridge works.",
+      "equationsUsed": ["h_1 = h_2", "x = \\frac{h_2 - h_f}{h_{fg}}"],
+      "conceptLink": "ch05"
+    },
+    {
+      "id": "ch05-p007",
+      "chapter": 5,
+      "difficulty": 3,
+      "title": "Mixing chamber",
+      "tags": ["mixing", "mass balance", "SFEE"],
+      "kind": "numeric",
+      "scenario": "Saturated steam at 100 kPa ($h_1 = 2675\\ \\text{kJ/kg}$) enters a mixing chamber at $\\dot m_1 = 1.0\\ \\text{kg/s}$ and mixes with cold water at $h_2 = 84\\ \\text{kJ/kg}$. The mixture leaves at $h_3 = 209\\ \\text{kJ/kg}$.\n\nFind the **cold-water flow rate** $\\dot m_2$, in kg/s. (Adiabatic, no work.)",
+      "answer": 19.7,
+      "unit": "kg/s",
+      "tolerance": 0.4,
+      "hints": [
+        "Mass balance: $\\dot m_3 = \\dot m_1 + \\dot m_2$.",
+        "Energy balance: $\\dot m_1 h_1 + \\dot m_2 h_2 = (\\dot m_1 + \\dot m_2) h_3$.",
+        "Solve for $\\dot m_2$: $\\dot m_2 = \\dot m_1 (h_1 - h_3)/(h_3 - h_2)$."
+      ],
+      "solution": "Combine the mass balance $\\dot m_3 = \\dot m_1 + \\dot m_2$ with the (adiabatic, no-work) energy balance:\n\n$$\\dot m_1 h_1 + \\dot m_2 h_2 = (\\dot m_1 + \\dot m_2)\\,h_3$$\n\nGroup the $\\dot m_2$ terms and solve:\n\n$$\\dot m_2 = \\dot m_1\\,\\frac{h_1 - h_3}{h_3 - h_2} = 1.0 \\times \\frac{2675 - 209}{209 - 84} = \\frac{2466}{125} = 19.7\\ \\text{kg/s}$$\n\nIt takes about 20 kg/s of cold water to cool 1 kg/s of steam down to the 209 kJ/kg mixture.",
+      "equationsUsed": ["\\dot m_1 + \\dot m_2 = \\dot m_3", "\\dot m_1 h_1 + \\dot m_2 h_2 = \\dot m_3 h_3", "\\dot m_2 = \\dot m_1\\,\\frac{h_1 - h_3}{h_3 - h_2}"],
+      "conceptLink": "ch05"
+    },
+    {
+      "id": "ch05-p008",
+      "chapter": 5,
+      "difficulty": 3,
+      "title": "Compressor with heat loss",
+      "tags": ["compressor", "SFEE", "heat loss"],
+      "kind": "numeric",
+      "scenario": "Air enters a compressor at $h_1 = 300.19\\ \\text{kJ/kg}$ and leaves at $h_2 = 503.02\\ \\text{kJ/kg}$, at $\\dot m = 0.20\\ \\text{kg/s}$. The compressor also **loses 15 kW** of heat to the surroundings. Neglect KE/PE.\n\nFind the **power input** required, in kW.",
+      "answer": 55.6,
+      "unit": "kW",
+      "tolerance": 0.5,
+      "hints": [
+        "Energy balance: $\\dot Q - \\dot W = \\dot m(h_2 - h_1)$. Heat loss makes $\\dot Q = -15\\ \\text{kW}$.",
+        "Solve for $\\dot W$: $\\dot W = \\dot Q - \\dot m(h_2 - h_1)$.",
+        "A negative $\\dot W$ means work is done *on* the gas — report its magnitude."
+      ],
+      "solution": "Apply the steady-flow energy balance with $\\dot Q = -15\\ \\text{kW}$ (heat leaves):\n\n$$\\dot Q - \\dot W = \\dot m\\,(h_2 - h_1)$$\n\n$$\\dot W = \\dot Q - \\dot m\\,(h_2 - h_1) = -15 - 0.20(503.02 - 300.19)$$\n\n$$\\dot W = -15 - 0.20(202.83) = -15 - 40.57 = -55.6\\ \\text{kW}$$\n\nThe negative sign confirms work is supplied *to* the compressor, so the **power input is 55.6 kW**. (Both the enthalpy rise *and* the heat loss must be paid for by the shaft work.)",
+      "equationsUsed": ["\\dot Q - \\dot W = \\dot m\\,(h_2 - h_1)", "\\dot W = \\dot Q - \\dot m\\,(h_2 - h_1)"],
+      "conceptLink": "ch05"
+    }
+  ]
+}

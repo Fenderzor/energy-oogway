@@ -1,0 +1,258 @@
+{
+  "chapterId": "ch04",
+  "chapter": 4,
+  "title": "Energy Analysis of Closed Systems",
+  "updatedAt": "2026-06-09T00:00:00Z",
+  "questions": [
+    {
+      "id": "ch04-q01",
+      "chapter": 4,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "On a $P$-$V$ diagram, the boundary work of a quasi-equilibrium process equals…",
+      "choices": [
+        "The area under the process path",
+        "The slope of the process path",
+        "The area enclosed by the axes",
+        "The vertical distance between end states"
+      ],
+      "answerIndex": 0,
+      "explanation": "$W_b = \\int P\\,dV$ is geometrically the area under the path — which is why the route between two states matters, not just the endpoints."
+    },
+    {
+      "id": "ch04-q02",
+      "chapter": 4,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Two different processes connect the same states 1 → 2. Which quantity is **the same** for both?",
+      "choices": ["The boundary work $W_b$", "The heat transfer $Q$", "$\\Delta U$", "All of them"],
+      "answerIndex": 2,
+      "explanation": "Internal energy is a property — fixed by the end states. Work and heat are path functions and differ between routes."
+    },
+    {
+      "id": "ch04-q03",
+      "chapter": 4,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Why is $c_p$ always **larger** than $c_v$ for an ideal gas?",
+      "choices": [
+        "At constant pressure, part of the heat also does boundary work",
+        "Pressure increases the molecular mass",
+        "At constant volume the gas absorbs no heat",
+        "It isn't — they're equal"
+      ],
+      "answerIndex": 0,
+      "explanation": "Heating at constant pressure must supply the expansion work on top of raising $u$, so more energy per degree is needed: $c_p = c_v + R$."
+    },
+    {
+      "id": "ch04-q04",
+      "chapter": 4,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Gas in a **rigid sealed tank** is heated. Which reduced energy balance applies?",
+      "choices": ["$Q = \\Delta U$", "$Q = \\Delta H$", "$Q = W_b$", "$Q = 0$"],
+      "answerIndex": 0,
+      "explanation": "Rigid → $\\Delta V = 0$ → $W_b = 0$, so all the heat raises internal energy: $Q = \\Delta U = mc_v\\Delta T$."
+    },
+    {
+      "id": "ch04-q05",
+      "chapter": 4,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A gas is heated in a piston–cylinder at **constant pressure** (boundary work only). The shortcut for the heat is…",
+      "choices": ["$Q = \\Delta H$", "$Q = \\Delta U$", "$Q = 0$", "$Q = P\\,\\Delta V$"],
+      "answerIndex": 0,
+      "explanation": "At constant $P$, the $W_b$ and $PV$ terms combine: $Q = \\Delta U + P\\Delta V = \\Delta H = mc_p\\Delta T$."
+    },
+    {
+      "id": "ch04-q06",
+      "chapter": 4,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A polytropic process $PV^n = \\text{const}$ with **n = 1** for an ideal gas is the same as…",
+      "choices": ["An isothermal process", "A constant-pressure process", "A constant-volume process", "An isentropic process"],
+      "answerIndex": 0,
+      "explanation": "$PV = \\text{const}$ with $PV = mRT$ means $T$ is constant. ($n=0$: isobaric, $n=k$: isentropic, $n\\to\\infty$: isochoric.)"
+    },
+    {
+      "id": "ch04-q07",
+      "chapter": 4,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Boundary work for a **constant-pressure** process:",
+      "choices": [
+        "$W_b = P\\,(V_2 - V_1)$",
+        "$W_b = mRT\\ln(V_2/V_1)$",
+        "$W_b = \\dfrac{P_2V_2 - P_1V_1}{1-n}$",
+        "$W_b = 0$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Constant $P$ pulls out of the integral: $W_b = P\\Delta V$. The log form is isothermal; the $(1-n)$ form is polytropic; zero is constant volume."
+    },
+    {
+      "id": "ch04-q08",
+      "chapter": 4,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve $\\Delta U = m\\,c_v\\,(T_2 - T_1)$ for the final temperature $T_2$:",
+      "choices": [
+        "$T_2 = T_1 + \\dfrac{\\Delta U}{m c_v}$",
+        "$T_2 = T_1 - \\dfrac{\\Delta U}{m c_v}$",
+        "$T_2 = \\dfrac{\\Delta U}{m c_v}$",
+        "$T_2 = T_1 \\cdot \\dfrac{\\Delta U}{m c_v}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Divide by $mc_v$ and add $T_1$ — the standard move when the energy balance gives you $\\Delta U$ and you need the temperature."
+    },
+    {
+      "id": "ch04-q09",
+      "chapter": 4,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The polytropic boundary-work formula (valid for $n \\neq 1$) is…",
+      "choices": [
+        "$W_b = \\dfrac{P_2V_2 - P_1V_1}{1-n}$",
+        "$W_b = \\dfrac{P_1V_1 - P_2V_2}{n}$",
+        "$W_b = P_2V_2 - P_1V_1$",
+        "$W_b = mRT\\ln\\dfrac{P_1}{P_2}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Integrating $P = C/V^n$ gives $(P_2V_2 - P_1V_1)/(1-n)$; for an ideal gas this also equals $mR(T_2-T_1)/(1-n)$."
+    },
+    {
+      "id": "ch04-q10",
+      "chapter": 4,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A gas at constant **150 kPa** expands from **0.10 m³** to **0.40 m³**. Find the boundary work.",
+      "answer": 45,
+      "unit": "kJ",
+      "tolerance": 0.5,
+      "explanation": "$W_b = P\\Delta V = 150 \\times 0.30 = 45$ kJ (kPa·m³ = kJ)."
+    },
+    {
+      "id": "ch04-q11",
+      "chapter": 4,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "**1.5 kg** of air in a **rigid tank** is heated by **100 K** ($c_v = 0.718\\ \\text{kJ/(kg·K)}$). Find the heat added.",
+      "answer": 107.7,
+      "unit": "kJ",
+      "tolerance": 1,
+      "explanation": "Rigid → $Q = \\Delta U = mc_v\\Delta T = 1.5 \\times 0.718 \\times 100 = 107.7$ kJ."
+    },
+    {
+      "id": "ch04-q12",
+      "chapter": 4,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "**2.0 kg** of air is heated at **constant pressure** by **50 K** ($c_p = 1.005\\ \\text{kJ/(kg·K)}$). Find the heat added.",
+      "answer": 100.5,
+      "unit": "kJ",
+      "tolerance": 1,
+      "explanation": "Constant pressure → $Q = \\Delta H = mc_p\\Delta T = 2.0 \\times 1.005 \\times 50 = 100.5$ kJ."
+    },
+    {
+      "id": "ch04-q13",
+      "chapter": 4,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Which statement is correct about a closed-system process?",
+      "choices": [
+        "$\\Delta U$ depends only on the end states; $W_b$ depends on the path",
+        "Both $\\Delta U$ and $W_b$ depend only on the end states",
+        "Both depend on the path",
+        "$\\Delta U$ depends on the path; $W_b$ does not"
+      ],
+      "answerIndex": 0,
+      "explanation": "Internal energy is a property (state function); boundary work is a path function — different routes between the same states give different $W_b$."
+    },
+    {
+      "id": "ch04-q14",
+      "chapter": 4,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "For an ideal gas, $\\Delta u = c_v\\,\\Delta T$ is valid for…",
+      "choices": [
+        "Any process",
+        "Constant-volume processes only",
+        "Constant-pressure processes only",
+        "Isothermal processes only"
+      ],
+      "answerIndex": 0,
+      "explanation": "Since $u$ of an ideal gas depends on temperature alone, $\\Delta u = c_v\\Delta T$ holds for every process — not just constant volume."
+    },
+    {
+      "id": "ch04-q15",
+      "chapter": 4,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "For an **isothermal** expansion of an ideal gas, the energy balance gives…",
+      "choices": ["$Q = W_b$ (since $\\Delta U = 0$)", "$Q = \\Delta U$", "$Q = 0$", "$W_b = 0$"],
+      "answerIndex": 0,
+      "explanation": "Isothermal ideal gas → $\\Delta U = 0$, so all the heat added leaves as boundary work: $Q = W_b$."
+    },
+    {
+      "id": "ch04-q16",
+      "chapter": 4,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A polytropic process $PV^n = \\text{const}$ with **n = k** (the specific-heat ratio) corresponds to…",
+      "choices": [
+        "An isentropic (reversible adiabatic) process",
+        "An isothermal process",
+        "A constant-pressure process",
+        "A constant-volume process"
+      ],
+      "answerIndex": 0,
+      "explanation": "When $n = k$, $PV^k = $ const is the isentropic process of an ideal gas."
+    },
+    {
+      "id": "ch04-q17",
+      "chapter": 4,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Isothermal ideal-gas boundary work $W_b = mRT\\ln(V_2/V_1)$ can equivalently be written as…",
+      "choices": [
+        "$mRT\\ln(P_1/P_2)$",
+        "$mRT\\ln(P_2/P_1)$",
+        "$mRT\\,(V_2 - V_1)$",
+        "$mR(T_2 - T_1)$"
+      ],
+      "answerIndex": 0,
+      "explanation": "At constant $T$, $V_2/V_1 = P_1/P_2$, so the volume ratio swaps for the inverse pressure ratio."
+    },
+    {
+      "id": "ch04-q18",
+      "chapter": 4,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "From the ideal-gas relation $c_p = c_v + R$, the constant-volume specific heat is…",
+      "choices": ["$c_v = c_p - R$", "$c_v = c_p + R$", "$c_v = R - c_p$", "$c_v = c_p \\cdot R$"],
+      "answerIndex": 0,
+      "explanation": "Subtract $R$: e.g. air $c_v = 1.005 - 0.287 = 0.718$ kJ/(kg·K)."
+    },
+    {
+      "id": "ch04-q19",
+      "chapter": 4,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "**0.40 kg** of air at **320 K** expands isothermally until its volume triples ($V_2/V_1 = 3$). Find the boundary work ($R = 0.287$), in kJ.",
+      "answer": 40.4,
+      "unit": "kJ",
+      "tolerance": 1,
+      "explanation": "$W_b = mRT\\ln(V_2/V_1) = 0.40 \\times 0.287 \\times 320 \\times \\ln 3 = 36.74 \\times 1.0986 = 40.4$ kJ."
+    },
+    {
+      "id": "ch04-q20",
+      "chapter": 4,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "**3.0 kg** of saturated-liquid water is boiled to saturated vapor at constant pressure ($h_{fg} = 2202\\ \\text{kJ/kg}$). Find the heat added, in kJ.",
+      "answer": 6606,
+      "unit": "kJ",
+      "tolerance": 30,
+      "explanation": "Constant pressure: $Q = \\Delta H = m\\,h_{fg} = 3.0 \\times 2202 = 6606$ kJ."
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "date": "2026-06-11",
+  "generatedAt": "2026-06-11T07:30:00+02:00",
+  "tldr": "The US-Iran conflict's closure of the Strait of Hormuz continues to dominate global energy markets, cutting 9.7 million barrels per day from OPEC production and keeping Brent crude above $105/b. Renewables are approaching half of global power capacity as the EU tightens its carbon market framework ahead of a July ETS review. Finland's Onkalo nuclear waste repository has begun trial operations — a world first — while a Dutch consortium launched an offshore hydrogen feasibility study in the North Sea.",
+  "sections": [
+    {
+      "id": "global",
+      "title": "Global Developments",
+      "emoji": "🌍",
+      "items": [
+        {
+          "id": "global-1",
+          "headline": "OPEC+ Approves Fourth Output Quota Hike Since Strait of Hormuz Closure",
+          "summary": "OPEC+ agreed on 7 June to a fourth consecutive monthly increase in output quotas, raising collective targets by nearly 600,000 barrels per day since April. Despite the paper increases, actual production has collapsed to around 33.2 million bpd — down from 42.8 million bpd in February — because Gulf members cannot export through the blocked strait. Analysts warn the quota increases are largely symbolic until the chokepoint reopens.",
+          "whyItMatters": "The disconnect between OPEC quota decisions and actual output underlines how heavily global oil supply depends on a single maritime corridor, with reopening timelines driving both near-term price and longer-term glut risk.",
+          "sourceName": "CNBC",
+          "sourceUrl": "https://www.cnbc.com/2026/06/07/opec-set-for-fourth-oil-quota-hike-since-strait-of-hormuz-closure.html",
+          "tags": ["oil", "opec", "supply", "hormuz"]
+        },
+        {
+          "id": "global-2",
+          "headline": "EIA June STEO: Brent to Average $105/b This Summer, Easing to $79 in 2027",
+          "summary": "The U.S. Energy Information Administration's June Short-Term Energy Outlook projects Brent crude at an average of $105 per barrel in June and July 2026 as Strait of Hormuz shipping remains largely halted. Global oil demand is forecast to decline by 1.1 million barrels per day in 2026 versus 2025 levels. Once Hormuz flows incrementally resume — expected in Q3 2026 — prices are projected to fall to around $79/b by 2027.",
+          "whyItMatters": "The EIA trajectory shows markets remain acutely supply-constrained in the near term but face a potential sharp correction if the strait reopens faster than expected.",
+          "sourceName": "U.S. Energy Information Administration",
+          "sourceUrl": "https://www.eia.gov/outlooks/steo/",
+          "tags": ["oil", "prices", "eia", "outlook"]
+        },
+        {
+          "id": "global-3",
+          "headline": "Renewables Reach 49% of Global Power Capacity, Led by Record Solar Additions",
+          "summary": "Renewable energy sources now account for approximately 49% of global installed power capacity, driven by record-breaking solar PV additions. Annual global renewable capacity additions rose to 800 GW in 2025, with solar contributing roughly 75% of that total. Combined solar and wind capacity is expected to reach 4,000 GW in 2026, exceeding total coal and gas-fired capacity for the first time.",
+          "whyItMatters": "The milestone confirms renewables are now the dominant installed technology globally, though intermittency and grid integration remain key challenges for translating capacity into reliable energy delivery.",
+          "sourceName": "IEA / Ecofin Agency",
+          "sourceUrl": "https://www.ecofinagency.com/news-industry/0404-54410-renewables-hit-49-of-global-power-capacity-led-by-solar",
+          "tags": ["renewables", "solar", "wind", "capacity"],
+          "conceptLink": "ch06"
+        },
+        {
+          "id": "global-4",
+          "headline": "IEA Global Energy Review 2026: Solar PV Generation Growth Overtakes Wind and Nuclear",
+          "summary": "The IEA's Global Energy Review 2026 finds that solar PV generation added 620 TWh year-on-year in 2025 — up from 450 TWh in 2024 — surpassing wind and nuclear in annual growth terms. Renewables as a whole now supply around 36% of global electricity, compared to just 32% from coal, the lowest coal share in over a century. Battery storage additions grew 40% to nearly 110 GW in 2025, more than the highest-ever annual additions from natural gas.",
+          "whyItMatters": "Solar PV's ascent to the top of electricity growth rankings signals a structural shift in global power supply, with direct implications for fossil fuel demand curves and grid investment priorities.",
+          "sourceName": "IEA",
+          "sourceUrl": "https://www.iea.org/reports/global-energy-review-2026/key-findings",
+          "tags": ["solar", "generation", "iea", "electricity"]
+        }
+      ]
+    },
+    {
+      "id": "geopolitics",
+      "title": "Geopolitics",
+      "emoji": "🗺️",
+      "items": [
+        {
+          "id": "geopolitics-1",
+          "headline": "Strait of Hormuz Remains Blocked Four Months After US-Iran War Began",
+          "summary": "Shipping through the Strait of Hormuz has been effectively halted since late February 2026, when the United States and Israel launched air strikes against Iran and its supreme leader was killed. The closure has cut exports of roughly 20% of globally traded oil, forcing Asian and European importers to seek alternative supplies at a steep premium. Brookings analysts project the strait will not return to pre-conflict traffic levels until early 2027.",
+          "whyItMatters": "The prolonged closure of the world's most critical oil chokepoint is the single largest supply shock in decades, reshaping trade routes and accelerating energy security diversification across importers.",
+          "sourceName": "Brookings Institution",
+          "sourceUrl": "https://www.brookings.edu/articles/from-chokepoint-to-crisis-the-strait-of-hormuz-and-global-oil-markets/",
+          "tags": ["iran", "hormuz", "oil", "energy-security"]
+        },
+        {
+          "id": "geopolitics-2",
+          "headline": "OFAC Sanctions Iran-Linked Procurement Network as Ceasefire Talks Stall",
+          "summary": "On 29 May 2026, the U.S. Office of Foreign Assets Control (OFAC) designated individuals and entities allegedly connected to an Iran-based procurement network. The latest sanctions update (8 June) notes continued escalating OFAC enforcement pressure as US-Iran ceasefire negotiations have stalled. Energy firms with any exposure to Iranian counterparties face heightened compliance scrutiny and risk of secondary sanctions.",
+          "whyItMatters": "Tightening sanctions enforcement limits Iran's ability to rehabilitate its oil and gas sector even if a ceasefire is reached, extending the supply disruption horizon beyond any diplomatic settlement.",
+          "sourceName": "Steptoe",
+          "sourceUrl": "https://www.steptoe.com/en/news-publications/international-compliance-blog/weekly-sanctions-update-june-8-2026.html",
+          "tags": ["sanctions", "iran", "ofac", "compliance"]
+        },
+        {
+          "id": "geopolitics-3",
+          "headline": "Energy Trade Fragmenting Into Politically Aligned Blocs as Globalization Retreats",
+          "summary": "Analysis from Time and Moody's describes energy as having re-emerged as a primary geopolitical weapon, with investment and trade flows increasingly channelled within US-aligned, China-aligned, or non-aligned groupings. Governments are deploying industrial policy, export controls, tariffs, and sanctions to direct energy supply chains toward strategic partners. The Middle East crisis has accelerated a fragmentation trend that predates the current conflict.",
+          "whyItMatters": "Bloc-based energy fragmentation raises long-run supply costs and reduces efficiency gains from open trade, posing structural risks for countries dependent on cross-bloc energy imports.",
+          "sourceName": "Time",
+          "sourceUrl": "https://time.com/article/2026/04/03/energy-geopolitics-united-states-iran-china/",
+          "tags": ["geopolitics", "trade", "energy-security", "fragmentation"]
+        },
+        {
+          "id": "geopolitics-4",
+          "headline": "Russia Oil Exports Persist via Shadow Fleet as Western Sanctions Compliance Challenges Mount",
+          "summary": "Russian crude continues to flow primarily to China and India via tanker fleets operating outside Western insurance and banking systems, with volumes holding relatively stable despite price-cap enforcement efforts. The Atlantic Council's Energy Sanctions Dashboard tracks ongoing designation activity against shadow-fleet operators, but enforcement remains difficult at scale. The Hormuz crisis has directed more European demand — and premium pricing — toward non-Russian alternatives, indirectly constraining Russia's market reach in Europe.",
+          "whyItMatters": "Russia's continued ability to monetise oil exports through alternative channels blunts the full impact of Western sanctions and keeps the global oil market structurally divided.",
+          "sourceName": "Atlantic Council",
+          "sourceUrl": "https://www.atlanticcouncil.org/energy-sanctions-dashboard/",
+          "tags": ["russia", "sanctions", "oil", "shadow-fleet"]
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "title": "Innovative Technologies",
+      "emoji": "🔬",
+      "items": [
+        {
+          "id": "technology-1",
+          "headline": "Battery Storage Additions Hit 110 GW in 2025, Outpacing Record Gas Capacity Builds",
+          "summary": "IEA's Electricity 2026 report confirms battery energy storage additions grew by approximately 40% in 2025, reaching nearly 110 GW — exceeding the highest-ever annual capacity additions from natural gas in a single year. Lithium iron phosphate (LFP) chemistry is rapidly displacing nickel–manganese–cobalt (NMC) cells for grid applications due to lower cost and improved safety. Long-duration pilots including 100-hour iron-air and 48-hour hydrogen–lithium hybrid systems are also advancing toward commercial scale.",
+          "whyItMatters": "Battery storage is scaling fast enough to begin structurally supporting variable renewable integration at grid level, reducing dependence on gas peakers and enabling higher renewable penetration without reliability losses.",
+          "sourceName": "IEA",
+          "sourceUrl": "https://www.iea.org/reports/electricity-2026/executive-summary",
+          "tags": ["battery-storage", "grid", "lfp", "energy-storage"],
+          "conceptLink": "ch02"
+        },
+        {
+          "id": "technology-2",
+          "headline": "Green Hydrogen Reaches Make-or-Break Moment with 2 Mtpa FID Expected in 2026",
+          "summary": "BloombergNEF estimates that 2 million tonnes per annum (Mtpa) of green hydrogen capacity is positioned for final investment decision (FID) in 2026 — double the 2025 figure. China's developers took FID on over 70% of global green hydrogen capacity last year, defying negative sentiment seen elsewhere. Total clean hydrogen production is projected to rise to 5 Mtpa by 2030, a sixfold increase over five years.",
+          "whyItMatters": "The surge in FIDs, particularly from China, signals that green hydrogen is transitioning from pilot to commercial scale, which will shape electrolyser supply chains and the economics of green steel, ammonia, and shipping fuel.",
+          "sourceName": "BloombergNEF",
+          "sourceUrl": "https://about.bnef.com/insights/clean-energy/progress-despite-fragmentation-the-energy-transition-to-2030/",
+          "tags": ["hydrogen", "green-hydrogen", "electrolysis", "fid"],
+          "conceptLink": "ch05"
+        },
+        {
+          "id": "technology-3",
+          "headline": "IEA State of Energy Innovation 2026 Highlights Fusion and Underground Hydrogen Storage",
+          "summary": "The IEA's inaugural State of Energy Innovation 2026 report identifies fusion energy, underground hydrogen storage, and industrial electrification as three critical emerging frontiers. Underground hydrogen storage in salt caverns and depleted fields is advancing through pilot projects in Europe and North America, potentially providing seasonal-scale balancing to complement variable renewables. Private investment in fusion surged again in 2025, though commercial timelines remain uncertain.",
+          "whyItMatters": "Long-duration and seasonal storage — including underground hydrogen — is essential to fully decarbonising electricity systems with high renewable penetration, and early-stage innovation today determines commercial availability in the 2030s.",
+          "sourceName": "IEA",
+          "sourceUrl": "https://www.iea.org/reports/the-state-of-energy-innovation-2026/executive-summary",
+          "tags": ["fusion", "hydrogen-storage", "innovation", "electrification"]
+        },
+        {
+          "id": "technology-4",
+          "headline": "India Achieves 500 GW Non-Fossil Electricity Capacity Five Years Ahead of Schedule",
+          "summary": "India reached 500 GW of non-fossil electricity capacity — a target originally set for 2030 — by early 2026, according to the World Economic Forum. Installed renewable energy capacity crossed 250 GW in late 2025, with solar PV and wind accounting for the bulk of additions. Grid integration and storage infrastructure still lag generation capacity growth, creating curtailment and reliability challenges.",
+          "whyItMatters": "India's ahead-of-schedule milestone demonstrates that large emerging economies can drive rapid clean energy deployment, but infrastructure gaps risk stranding installed capacity without commensurate storage and grid investment.",
+          "sourceName": "World Economic Forum",
+          "sourceUrl": "https://www.weforum.org/stories/2026/02/how-india-is-scaling-its-energy-technology-innovation-ecosystem/",
+          "tags": ["india", "renewables", "solar", "capacity"],
+          "conceptLink": "ch06"
+        }
+      ]
+    },
+    {
+      "id": "regulation",
+      "title": "Regulations & Policy",
+      "emoji": "📋",
+      "items": [
+        {
+          "id": "regulation-1",
+          "headline": "EU Designs €30 Billion ETS Stabilisation Tool to Prevent Carbon Permit Deluge",
+          "summary": "The European Commission is designing a €30 billion instrument funded through 400 million EU ETS allowances to buffer carbon markets against a potential flood of permits once Hormuz-driven industrial output normalises. The tool aims to maintain carbon price stability and prevent the kind of price collapse that would undermine industrial decarbonisation incentives. A public consultation on the mechanism opened in June 2026.",
+          "whyItMatters": "A stable, predictable carbon price is critical for triggering long-term industrial investments in low-carbon technologies; market-stabilisation tools protect against abrupt price swings that deter capital allocation.",
+          "sourceName": "Energy Connects",
+          "sourceUrl": "https://www.energyconnects.com/news/renewables/2026/june/eu-designs-30-billion-carbon-market-tool-to-avoid-permit-deluge/",
+          "tags": ["ets", "carbon-market", "eu", "climate"]
+        },
+        {
+          "id": "regulation-2",
+          "headline": "European Commission Updates ETS Benchmarks, Delivering €4 Billion Benefit to Industry",
+          "summary": "The Commission finalised a consultation on updated EU ETS product benchmarks in late May 2026, with adoption expected by end of June. The revised benchmarks reflect technological improvements and align free allocation levels with current best-in-class industrial performance. Across the 2026–2030 period, the adjustments are expected to deliver an estimated financial benefit of approximately €4 billion for energy-intensive industries while maintaining emissions reduction pressure.",
+          "whyItMatters": "Calibrated benchmarks reduce carbon leakage risk for European manufacturers competing against non-EU rivals not subject to equivalent carbon costs, making the ETS more compatible with industrial competitiveness.",
+          "sourceName": "Global Environmental & Land Resources",
+          "sourceUrl": "https://www.globalelr.com/2026/05/eu-ets-european-commission-announces-additional-flexibilities-including-updated-benchmarks/",
+          "tags": ["ets", "benchmarks", "industry", "eu"]
+        },
+        {
+          "id": "regulation-3",
+          "headline": "EU ETS Full System Review Due by July 2026",
+          "summary": "The European Commission is undertaking a comprehensive review of the EU Emissions Trading System with findings expected to be published by July 2026. The review will assess whether the ETS structure remains aligned with the EU's 2030 climate targets and industrial competitiveness goals, including the interplay with the Carbon Border Adjustment Mechanism (CBAM). A separate proposal to amend the Market Stability Reserve was tabled in April 2026 to improve the system's responsiveness to supply shocks.",
+          "whyItMatters": "The ETS review will shape the carbon pricing landscape for the rest of the decade, influencing long-term investment decisions across European heavy industry and power generation.",
+          "sourceName": "Open Access Government",
+          "sourceUrl": "https://www.openaccessgovernment.org/eu-makes-moves-that-will-support-the-carbon-market-and-industrial-decarbonisation/209210/",
+          "tags": ["ets", "review", "policy", "eu"]
+        },
+        {
+          "id": "regulation-4",
+          "headline": "CBAM Fully Operational Since January 2026 for Steel, Cement, Aluminium and Electricity",
+          "summary": "The EU's Carbon Border Adjustment Mechanism (CBAM) entered full application in January 2026, requiring importers of steel, cement, aluminium, fertilisers, hydrogen, and electricity to purchase certificates matching the carbon price that would have been paid under the EU ETS. Bruegel analysts are debating whether the electricity provisions should be delayed, citing implementation complexity in cross-border power flows. The mechanism is the first major trade-linked carbon pricing instrument globally.",
+          "whyItMatters": "CBAM's full activation sets a precedent that other major trading blocs may eventually follow, and its electricity provisions in particular could affect how neighbouring countries integrate with European power markets.",
+          "sourceName": "Bruegel",
+          "sourceUrl": "https://www.bruegel.org/analysis/case-delaying-application-eus-carbon-border-levy-electricity",
+          "tags": ["cbam", "carbon-border", "trade", "eu"]
+        }
+      ]
+    },
+    {
+      "id": "finland",
+      "title": "Finland",
+      "emoji": "🇫🇮",
+      "items": [
+        {
+          "id": "finland-1",
+          "headline": "Onkalo Repository Begins Trial Run as World's First Permanent Nuclear Waste Facility",
+          "summary": "Finland's Onkalo spent-fuel repository at Eurajoki has begun its trial run, with the Finnish Radiation and Nuclear Safety Authority (STUK) expected to issue its final safety assessment by end of June 2026. The facility is carved 430 m into 1.9-billion-year-old bedrock and will store 6,500 tonnes of uranium in copper canisters encased in bentonite clay. If STUK delivers a positive assessment this month, the operating licence could follow and Onkalo could receive its first fuel assemblies by late 2026 or early 2027.",
+          "whyItMatters": "Onkalo is the world's first facility to demonstrate a workable solution to permanent high-level nuclear waste disposal — a milestone that could unblock new nuclear projects globally by resolving a key public-acceptance barrier.",
+          "sourceName": "American Nuclear Society",
+          "sourceUrl": "https://www.ans.org/news/article-6349/finland-begins-trial-run-of-onkalo-repository/",
+          "tags": ["nuclear", "waste-disposal", "finland", "storage"],
+          "conceptLink": "ch01"
+        },
+        {
+          "id": "finland-2",
+          "headline": "EU VP Ribera and Commissioner Jørgensen Visit Finland to Discuss Electrification and Energy Security",
+          "summary": "Executive Vice-President Teresa Ribera and Energy Commissioner Dan Jørgensen visited Finland on 3 June 2026 for the Eurelectric Power Summit, focusing on how electrification can strengthen energy security and industrial competitiveness. Commissioner Jørgensen also visited a small nuclear reactor pilot facility built inside a former coal-fired power plant in Helsinki, designed to produce waste heat for district heating. Discussions centred on balancing grid reliability with the rapid phase-out of fossil fuel generation.",
+          "whyItMatters": "The high-level EU visit highlights Finland's role as a test bed for nuclear integration and district heating electrification as the bloc accelerates its clean energy transition.",
+          "sourceName": "European Commission",
+          "sourceUrl": "https://energy.ec.europa.eu/news/executive-vice-president-ribera-and-commissioner-jorgensen-finland-discuss-clean-energy-transition-2026-06-03_en",
+          "tags": ["eu", "electrification", "nuclear", "energy-security"]
+        },
+        {
+          "id": "finland-3",
+          "headline": "Finnish Energy Day 2026 Convenes in Helsinki Amid Geopolitical and Market Turbulence",
+          "summary": "The Finnish Energy Day 2026, organised by Montel, took place in Helsinki on 11 June, bringing together industry leaders, policymakers, and market analysts. Key themes include managing electricity price volatility from the US-Iran conflict, Finland's integration in the Nordic electricity market, and the buildout of new wind and nuclear capacity. Finland's energy-intensive industries — paper, metals, chemicals — are among the most exposed to current global price shocks.",
+          "whyItMatters": "Finland's heavy industrial base and high per-capita electricity consumption make it particularly sensitive to energy price swings, making this forum a bellwether for Nordic energy policy direction.",
+          "sourceName": "Montel Energy",
+          "sourceUrl": "https://montel.energy/resources/academy/conferences/finnish-energy-day-2026",
+          "tags": ["finland", "energy-market", "policy", "conference"]
+        },
+        {
+          "id": "finland-4",
+          "headline": "Olkiluoto Produced ~25% of Finnish Electricity in 2025, TVO Confirms",
+          "summary": "Teollisuuden Voima (TVO) confirmed that the Olkiluoto nuclear power plant — comprising units OL1, OL2, and the newly fully-operational 1,600 MW EPR reactor OL3 — produced approximately 25% of Finland's total electricity consumption in 2025. OL3 completed its first full calendar year of commercial operation in 2025, materially boosting Finland's low-carbon generation base. Olkiluoto is now Finland's single largest electricity source.",
+          "whyItMatters": "A quarter of Finnish electricity from a single site demonstrates the outsized contribution that large nuclear units make to low-carbon grid stability, reinforcing the case for Finland's nuclear-heavy energy mix.",
+          "sourceName": "TVO",
+          "sourceUrl": "https://www.tvo.fi/en/index/news/pressreleasesstockexchangereleases/2026/olkiluotoproducedaboutaquarteroffinnishelectricityin2025.html",
+          "tags": ["nuclear", "finland", "olkiluoto", "electricity"]
+        }
+      ]
+    },
+    {
+      "id": "netherlands",
+      "title": "Netherlands",
+      "emoji": "🇳🇱",
+      "items": [
+        {
+          "id": "netherlands-1",
+          "headline": "H2DO Launches Offshore Wind-to-Hydrogen Feasibility Study in Dutch North Sea",
+          "summary": "Hydrogen of Dutch Origin (H2DO) and partners launched a feasibility and concept-design study on 9 June 2026 for a 30–50 MW offshore green hydrogen installation linked to North Sea wind farms. The project examines producing hydrogen at sea via electrolysis and transporting it to shore by pipeline, reducing onshore grid congestion caused by the Netherlands' rapidly expanding offshore wind capacity. The ambition is to have a FEED-entry-ready design completed with the project operational by 2031.",
+          "whyItMatters": "Offshore electrolysis could allow the Netherlands to unlock more of its North Sea wind resource by bypassing congested onshore electricity infrastructure, building a domestic green hydrogen supply chain in the process.",
+          "sourceName": "Offshore Wind Biz",
+          "sourceUrl": "https://www.offshorewind.biz/2026/06/09/h2do-launches-offshore-wind-to-hydrogen-study-in-dutch-north-sea/",
+          "tags": ["hydrogen", "offshore-wind", "north-sea", "netherlands"],
+          "conceptLink": "ch05"
+        },
+        {
+          "id": "netherlands-2",
+          "headline": "Netherlands Announces €967 Million Package to Cushion Fuel Price Surge",
+          "summary": "The Dutch government presented a €967 million action plan in response to fuel price surges driven by the Strait of Hormuz disruption, comprising €627 million in spending measures and €340 million in targeted tax relief. The plan raises the tax-free mileage allowance to €0.25/km, allocates €180 million for the National Heat Fund to support home insulation, and adds €25 million in electric vehicle subsidies. The Netherlands has simultaneously activated Phase 1 of its National Oil Crisis Plan, releasing strategic reserves to ease shortages.",
+          "whyItMatters": "The Dutch package illustrates how a heavily trade-dependent open economy must balance immediate household relief against longer-term structural shifts away from fossil fuel dependence.",
+          "sourceName": "Enerdata",
+          "sourceUrl": "https://www.enerdata.net/publications/daily-energy-news/netherlands-announces-eur967m-plan-mitigate-rising-fuel-prices.html",
+          "tags": ["netherlands", "energy-prices", "policy", "oil-crisis"]
+        },
+        {
+          "id": "netherlands-3",
+          "headline": "Microsoft and Google Withhold Dutch Data Centre Energy Data Despite EU Reporting Deadline",
+          "summary": "A report published in June 2026 revealed that Microsoft and Google have not submitted required energy and water usage data for their Dutch data centres, despite the EU Energy Efficiency Directive requiring facilities with 500 kW or more of installed IT capacity to report to national authorities by 15 May 2026. The Netherlands hosts some of Europe's largest data centre clusters, which together account for several percentage points of total Dutch electricity consumption. Regulators are weighing enforcement options against the non-compliant hyperscalers.",
+          "whyItMatters": "Non-compliance by major hyperscalers undermines EU transparency goals on data centre energy demand, which is growing rapidly and complicating Dutch grid planning and national decarbonisation targets.",
+          "sourceName": "Data Centre Dynamics",
+          "sourceUrl": "https://www.datacenterdynamics.com/en/news/microsoft-and-google-withhold-dutch-data-center-energy-data-despite-eu-rules-report/",
+          "tags": ["data-centres", "transparency", "eu", "netherlands"]
+        }
+      ]
+    }
+  ]
+}

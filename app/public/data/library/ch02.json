@@ -1,0 +1,80 @@
+{
+  "chapterId": "ch02",
+  "chapter": 2,
+  "title": "Energy, Energy Transfer & General Energy Analysis",
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 2",
+  "deckId": "ch02",
+  "updatedAt": "2026-06-08T00:00:00Z",
+  "summary": "Energy comes in many **forms**, and thermodynamics groups them in two ways. *Macroscopic* energy is energy the whole system has relative to some outside frame — **kinetic energy** $KE = \\tfrac12 mV^2$ from motion and **potential energy** $PE = mgz$ from elevation. *Microscopic* energy is the energy of the molecules themselves; summed up, it is the **internal energy** $U$. Together these make the **total energy** $E = U + KE + PE$. In most closed-system problems the system isn't moving or changing height, so only $U$ changes.\n\nEnergy crosses a boundary in just three ways: **heat**, **work**, and (for open systems) **mass flow**. **Heat** $Q$ is energy transfer driven by a temperature difference; **work** $W$ is every other organized energy transfer (a moving piston, a rotating shaft, electric current, a spring). Both are *transfers*, not properties — a system contains energy, never \"heat\" or \"work\". A process with no heat transfer is **adiabatic**.\n\nThe sign convention used here (the formal one): heat *added to* the system is positive, work *done by* the system is positive. The unifying statement is the **first law**, written as an **energy balance**: $E_{in} - E_{out} = \\Delta E_{system}$. Energy is never created or destroyed, only converted or moved across the boundary. The rate form, $\\dot E_{in} - \\dot E_{out} = dE_{system}/dt$, is what you use for power and flow problems.\n\nSome work modes recur constantly: **electrical work** $W_e = VI\\,\\Delta t$, **shaft work** $W_{sh} = 2\\pi n T$ (a torque turning at $n$ revolutions), boundary work (Ch 4), and spring work. The **mechanical energy** of a flowing fluid — the part that can be fully converted to work by an ideal device — is $e_{mech} = P/\\rho + V^2/2 + gz$, the basis for pump and turbine analysis.\n\nFinally, real devices waste energy, captured by **efficiency**. Thermal efficiency relates useful output to energy input; mechanical/pump/turbine and motor/generator efficiencies chain together multiplicatively for a combined device. Efficiency is where the *quality* of energy (Ch 6) first shows up: you never get all of a high-temperature heat input back as work.",
+  "equations": [
+    {
+      "name": "Total energy & its parts",
+      "latex": "E = U + KE + PE, \\qquad e = u + \\frac{V^2}{2} + gz",
+      "rearrangements": ["KE = \\tfrac{1}{2}mV^2", "PE = mgz", "\\Delta E = \\Delta U + \\Delta KE + \\Delta PE"],
+      "useWhen": "Setting up any energy balance. For a stationary closed system $\\Delta KE = \\Delta PE = 0$, so $\\Delta E = \\Delta U$ — the usual simplification.",
+      "note": "Lower-case $e, u$ are per-unit-mass (specific) energies; multiply by $m$ for totals."
+    },
+    {
+      "name": "Energy balance (first law)",
+      "latex": "E_{in} - E_{out} = \\Delta E_{system}",
+      "rearrangements": ["Q_{net,in} - W_{net,out} = \\Delta E_{system}", "Q - W = \\Delta U + \\Delta KE + \\Delta PE"],
+      "useWhen": "The master equation for *every* thermodynamics problem. Start here, then cancel the terms that are zero for your specific system.",
+      "note": "Sign convention: $Q$ in is +, $W$ out is +. Units: kJ."
+    },
+    {
+      "name": "Rate form (power)",
+      "latex": "\\dot E_{in} - \\dot E_{out} = \\frac{dE_{system}}{dt}",
+      "rearrangements": ["\\dot Q - \\dot W = \\frac{dE_{system}}{dt}", "\\dot E_{in} = \\dot E_{out}\\ \\text{(steady)}"],
+      "useWhen": "Anything stated as a rate or power (kW), or any steady-operation device. At steady state the right-hand side is zero.",
+      "note": "A dot means \"per unit time\": $\\dot Q$ in kW, $\\dot W$ in kW, $\\dot m$ in kg/s."
+    },
+    {
+      "name": "Electrical work",
+      "latex": "W_e = V I\\,\\Delta t",
+      "rearrangements": ["\\dot W_e = V I", "I = \\frac{\\dot W_e}{V}"],
+      "useWhen": "A resistor, heater, or electric device is inside the system. $\\dot W_e = VI$ gives the instantaneous power.",
+      "note": "$V$ = voltage, $I$ = current. This is work done *on* the system (negative in the by-system convention)."
+    },
+    {
+      "name": "Shaft work",
+      "latex": "\\dot W_{sh} = 2\\pi \\dot n \\, T",
+      "rearrangements": ["W_{sh} = 2\\pi n T", "T = \\frac{\\dot W_{sh}}{2\\pi \\dot n}"],
+      "useWhen": "A rotating shaft transmits power — fans, turbines, mixers. $\\dot n$ is revolutions per unit time, $T$ is torque.",
+      "note": "Watch units: if $\\dot n$ is in rev/s and $T$ in N·m, $\\dot W_{sh}$ comes out in W."
+    },
+    {
+      "name": "Mechanical energy of a flow",
+      "latex": "e_{mech} = \\frac{P}{\\rho} + \\frac{V^2}{2} + gz",
+      "rearrangements": ["\\dot E_{mech} = \\dot m\\, e_{mech}", "\\Delta e_{mech} = \\frac{P_2-P_1}{\\rho} + \\frac{V_2^2-V_1^2}{2} + g(z_2-z_1)"],
+      "useWhen": "Pumps, turbines, hydro and wind problems — the fully-convertible (work-grade) part of a fluid's energy.",
+      "note": "No thermal term: mechanical energy excludes internal energy, which can't be fully turned into work."
+    },
+    {
+      "name": "Efficiency (general & combined)",
+      "latex": "\\eta = \\frac{\\text{desired output}}{\\text{required input}}",
+      "rearrangements": ["\\eta_{th} = \\frac{W_{net,out}}{Q_{in}}", "\\eta_{pump} = \\frac{\\Delta \\dot E_{mech}}{\\dot W_{shaft,in}}", "\\eta_{turbine} = \\frac{\\dot W_{shaft,out}}{|\\Delta \\dot E_{mech}|}", "\\eta_{combined} = \\eta_1 \\eta_2 \\cdots"],
+      "useWhen": "Converting between an ideal (reversible) amount of work and the real machine's input/output, or chaining device efficiencies (e.g. motor × pump).",
+      "note": "Always < 1 for real devices. Multiply component efficiencies for an overall figure."
+    }
+  ],
+  "glossary": [
+    { "term": "Total energy E", "definition": "All energy a system holds: $E = U + KE + PE$. On a per-mass basis, $e = u + V^2/2 + gz$." },
+    { "term": "Internal energy U", "definition": "The sum of all microscopic energies (molecular translation, rotation, vibration, intermolecular forces). A property of the system." },
+    { "term": "Kinetic & potential energy", "definition": "Macroscopic energies from motion ($KE = \\tfrac12 mV^2$) and elevation ($PE = mgz$), measured relative to an external reference." },
+    { "term": "Heat (Q)", "definition": "Energy transferred across a boundary purely because of a temperature difference. A transfer, not a stored quantity." },
+    { "term": "Work (W)", "definition": "Any organized energy transfer across a boundary that is not heat — boundary, shaft, electrical, spring work, etc." },
+    { "term": "Adiabatic process", "definition": "A process with no heat transfer ($Q = 0$), either because the system is insulated or because it happens too fast." },
+    { "term": "Power", "definition": "Energy transfer per unit time (kW). Denoted with a dot: $\\dot W$, $\\dot Q$." },
+    { "term": "First law / energy balance", "definition": "Conservation of energy: $E_{in} - E_{out} = \\Delta E_{system}$. The backbone of every analysis." },
+    { "term": "Mechanical energy", "definition": "The portion of a fluid's energy that an ideal device can fully convert to work: $P/\\rho + V^2/2 + gz$. Excludes internal energy." },
+    { "term": "Thermal efficiency", "definition": "Net work output divided by heat input, $\\eta_{th} = W_{net,out}/Q_{in}$. Capped below 1 by the second law." },
+    { "term": "Sign convention", "definition": "Heat *into* the system is positive; work *done by* the system is positive. Be consistent across the whole problem." }
+  ],
+  "tips": [
+    "**Start every problem with the energy balance** $E_{in}-E_{out}=\\Delta E_{system}$, then strike out the zero terms. It stops you from guessing which formula to use.",
+    "**Heat and work are transfers, not properties.** A system never \"contains heat\". It contains energy ($U$); heat and work are how that energy crosses the boundary.",
+    "**Drop $\\Delta KE$ and $\\Delta PE$ unless told otherwise.** For most closed systems they're negligible next to $\\Delta U$ — but state the assumption.",
+    "**Keep one sign convention.** Mixing \"work in positive\" with \"work out positive\" mid-problem is a classic source of sign errors. The book uses: $Q$ in +, $W$ out +.",
+    "**Check the units bridge.** Power in kW × time in s = kJ; $1\\ \\text{kPa·m}^3 = 1\\ \\text{kJ}$; $V\\cdot I$ in volts·amps = watts."
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "chapterId": "ch07",
+  "chapter": 7,
+  "title": "Entropy",
+  "updatedAt": "2026-06-08T00:00:00Z",
+  "problems": [
+    {
+      "id": "ch07-p001",
+      "chapter": 7,
+      "difficulty": 1,
+      "title": "Entropy change of heated water",
+      "tags": ["entropy", "incompressible"],
+      "kind": "numeric",
+      "scenario": "**10 kg** of liquid water is heated from **20 °C** to **80 °C**. Take $c = 4.18\\ \\text{kJ/(kg·K)}$.\n\nFind the **entropy change** of the water, in kJ/K.",
+      "answer": 7.79,
+      "unit": "kJ/K",
+      "tolerance": 0.1,
+      "hints": [
+        "For an incompressible substance, $\\Delta S = m\\,c\\,\\ln(T_2/T_1)$.",
+        "Use absolute temperatures: $T_1 = 293\\ \\text{K}$, $T_2 = 353\\ \\text{K}$."
+      ],
+      "solution": "Water is incompressible, so its entropy change depends only on the temperature ratio:\n\n$$\\Delta S = m\\,c\\,\\ln\\frac{T_2}{T_1} = 10 \\times 4.18 \\times \\ln\\frac{353}{293}$$\n\n$$\\Delta S = 41.8 \\times \\ln(1.2048) = 41.8 \\times 0.1864 = 7.79\\ \\text{kJ/K}$$\n\nThe logarithm needs **absolute** temperatures — a ratio of °C values would be wrong.",
+      "equationsUsed": ["\\Delta S = m\\,c\\,\\ln\\frac{T_2}{T_1}"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p002",
+      "chapter": 7,
+      "difficulty": 1,
+      "title": "Isentropic temperature rise",
+      "tags": ["isentropic", "ideal gas"],
+      "kind": "numeric",
+      "scenario": "Air at **300 K** and **100 kPa** is compressed **isentropically** to **600 kPa**. Take $k = 1.4$.\n\nFind the **exit temperature**, in K.",
+      "answer": 500.6,
+      "unit": "K",
+      "tolerance": 3,
+      "hints": [
+        "Use the isentropic $T$–$P$ relation for an ideal gas.",
+        "$T_2 = T_1 (P_2/P_1)^{(k-1)/k}$.",
+        "Exponent $(k-1)/k = 0.4/1.4 = 0.2857$."
+      ],
+      "solution": "For an isentropic process with constant specific heats:\n\n$$T_2 = T_1\\left(\\frac{P_2}{P_1}\\right)^{(k-1)/k} = 300\\left(\\frac{600}{100}\\right)^{0.4/1.4}$$\n\n$$T_2 = 300 \\times 6^{0.2857} = 300 \\times 1.6685 = 500.6\\ \\text{K}$$\n\nCompressing a gas isentropically always raises its temperature.",
+      "equationsUsed": ["T_2 = T_1\\left(\\frac{P_2}{P_1}\\right)^{(k-1)/k}"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p003",
+      "chapter": 7,
+      "difficulty": 2,
+      "title": "Entropy change of air (T, P known)",
+      "tags": ["entropy", "ideal gas"],
+      "kind": "numeric",
+      "scenario": "Air changes from **300 K, 100 kPa** to **500 K, 500 kPa**. Take $c_p = 1.005$ and $R = 0.287\\ \\text{kJ/(kg·K)}$.\n\nFind the **specific entropy change** $\\Delta s$, in kJ/(kg·K).",
+      "answer": 0.0515,
+      "unit": "kJ/(kg·K)",
+      "tolerance": 0.005,
+      "hints": [
+        "With temperature and pressure given, use the $(T,P)$ form.",
+        "$\\Delta s = c_p\\ln(T_2/T_1) - R\\ln(P_2/P_1)$.",
+        "The pressure term is *subtracted* — rising pressure lowers entropy."
+      ],
+      "solution": "Choose the entropy form that matches the given data ($T$ and $P$):\n\n$$\\Delta s = c_p\\ln\\frac{T_2}{T_1} - R\\ln\\frac{P_2}{P_1}$$\n\nEvaluate each term:\n\n$$c_p\\ln\\frac{T_2}{T_1} = 1.005\\ln\\frac{500}{300} = 1.005 \\times 0.5108 = 0.5134$$\n\n$$R\\ln\\frac{P_2}{P_1} = 0.287\\ln 5 = 0.287 \\times 1.6094 = 0.4619$$\n\n$$\\Delta s = 0.5134 - 0.4619 = 0.0515\\ \\text{kJ/(kg·K)}$$\n\nThe heating raises entropy while the compression lowers it; here the net is slightly positive.",
+      "equationsUsed": ["\\Delta s = c_p\\ln\\frac{T_2}{T_1} - R\\ln\\frac{P_2}{P_1}"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p004",
+      "chapter": 7,
+      "difficulty": 2,
+      "title": "Isentropic expansion (volume ratio)",
+      "tags": ["isentropic", "ideal gas"],
+      "kind": "numeric",
+      "scenario": "Air at **800 K** expands isentropically until its volume is **8 times** larger ($v_2/v_1 = 8$). Take $k = 1.4$.\n\nFind the **final temperature**, in K.",
+      "answer": 348.2,
+      "unit": "K",
+      "tolerance": 3,
+      "hints": [
+        "Use the isentropic $T$–$v$ relation: $T_2 = T_1 (v_1/v_2)^{k-1}$.",
+        "Note the volume ratio is inverted ($v_1/v_2 = 1/8$).",
+        "Exponent $k - 1 = 0.4$."
+      ],
+      "solution": "For an isentropic process the temperature–volume relation is:\n\n$$T_2 = T_1\\left(\\frac{v_1}{v_2}\\right)^{k-1} = 800\\left(\\frac{1}{8}\\right)^{0.4}$$\n\n$$T_2 = 800 \\times (0.125)^{0.4} = 800 \\times 0.4353 = 348.2\\ \\text{K}$$\n\nExpanding a gas isentropically cools it — the basis of how a turbine drops temperature.",
+      "equationsUsed": ["T_2 = T_1\\left(\\frac{v_1}{v_2}\\right)^{k-1}"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p005",
+      "chapter": 7,
+      "difficulty": 2,
+      "title": "Entropy generation in heat transfer",
+      "tags": ["entropy generation", "reservoirs"],
+      "kind": "numeric",
+      "scenario": "**500 kJ** of heat is transferred directly from a source at **800 K** to a sink at **300 K**.\n\nFind the total **entropy generated**, in kJ/K.",
+      "answer": 1.042,
+      "unit": "kJ/K",
+      "tolerance": 0.02,
+      "hints": [
+        "Each reservoir changes entropy by $Q/T$: the sink gains $+Q/T_L$, the source loses $-Q/T_H$.",
+        "$S_{gen} = Q/T_L - Q/T_H$.",
+        "Use absolute temperatures."
+      ],
+      "solution": "Heat leaves the source (entropy $-Q/T_H$) and enters the sink (entropy $+Q/T_L$). The total entropy change of everything is the generation:\n\n$$S_{gen} = \\frac{Q}{T_L} - \\frac{Q}{T_H} = \\frac{500}{300} - \\frac{500}{800}$$\n\n$$S_{gen} = 1.6667 - 0.625 = 1.042\\ \\text{kJ/K}$$\n\nIt's positive, as the second law demands — heat flowing across a finite temperature difference is irreversible and *generates* entropy.",
+      "equationsUsed": ["S_{gen} = \\frac{Q}{T_L} - \\frac{Q}{T_H} \\ge 0"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p006",
+      "chapter": 7,
+      "difficulty": 3,
+      "title": "Turbine isentropic efficiency",
+      "tags": ["isentropic efficiency", "turbine"],
+      "kind": "numeric",
+      "scenario": "Steam enters a turbine at $h_1 = 3231\\ \\text{kJ/kg}$. For an isentropic expansion to the exit pressure, the exit enthalpy would be $h_{2s} = 2200\\ \\text{kJ/kg}$. The turbine's isentropic efficiency is **0.85**.\n\nFind the **actual work output** per kg, in kJ/kg.",
+      "answer": 876.4,
+      "unit": "kJ/kg",
+      "tolerance": 5,
+      "hints": [
+        "Isentropic (ideal) work is the enthalpy drop to $h_{2s}$: $w_s = h_1 - h_{2s}$.",
+        "Turbine efficiency = actual work ÷ ideal work, so $w_{act} = \\eta_T (h_1 - h_{2s})$.",
+        "$w_{act} = 0.85 \\times (3231 - 2200)$."
+      ],
+      "solution": "The ideal (isentropic) work is the full enthalpy drop to $h_{2s}$:\n\n$$w_s = h_1 - h_{2s} = 3231 - 2200 = 1031\\ \\text{kJ/kg}$$\n\nThe real turbine delivers a fraction $\\eta_T$ of that:\n\n$$w_{act} = \\eta_T\\,(h_1 - h_{2s}) = 0.85 \\times 1031 = 876.4\\ \\text{kJ/kg}$$\n\nIrreversibilities mean the actual exit enthalpy is higher (less work extracted) than the ideal case.",
+      "equationsUsed": ["\\eta_T = \\frac{h_1 - h_2}{h_1 - h_{2s}}", "w_{act} = \\eta_T\\,(h_1 - h_{2s})"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p007",
+      "chapter": 7,
+      "difficulty": 3,
+      "title": "Compressor isentropic efficiency",
+      "tags": ["isentropic efficiency", "compressor"],
+      "kind": "numeric",
+      "scenario": "Air enters a compressor at $h_1 = 300.19\\ \\text{kJ/kg}$. The isentropic (ideal) exit enthalpy is $h_{2s} = 430.0\\ \\text{kJ/kg}$. The compressor's isentropic efficiency is **0.80**.\n\nFind the **actual work input** per kg, in kJ/kg.",
+      "answer": 162.3,
+      "unit": "kJ/kg",
+      "tolerance": 2,
+      "hints": [
+        "For a compressor the efficiency ratio is *inverted* vs a turbine: $\\eta_C = w_s/w_{act}$.",
+        "Ideal work $w_s = h_{2s} - h_1$.",
+        "$w_{act} = (h_{2s} - h_1)/\\eta_C$."
+      ],
+      "solution": "For a compressor, the *ideal* (isentropic) work is the smaller one, so efficiency is ideal ÷ actual:\n\n$$\\eta_C = \\frac{h_{2s} - h_1}{h_2 - h_1} = \\frac{w_s}{w_{act}} \\quad\\Rightarrow\\quad w_{act} = \\frac{h_{2s} - h_1}{\\eta_C}$$\n\nThe ideal work:\n\n$$w_s = h_{2s} - h_1 = 430.0 - 300.19 = 129.81\\ \\text{kJ/kg}$$\n\nSo the actual input is larger:\n\n$$w_{act} = \\frac{129.81}{0.80} = 162.3\\ \\text{kJ/kg}$$\n\nNote the efficiency ratio flips between turbines (actual/ideal) and compressors (ideal/actual) — getting this backwards is a classic mistake.",
+      "equationsUsed": ["\\eta_C = \\frac{h_{2s} - h_1}{h_2 - h_1}", "w_{act} = \\frac{h_{2s} - h_1}{\\eta_C}"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p008",
+      "chapter": 7,
+      "difficulty": 3,
+      "title": "Entropy generated by mixing water",
+      "tags": ["entropy generation", "mixing", "incompressible"],
+      "kind": "numeric",
+      "scenario": "**2 kg** of water at **80 °C** is mixed with **2 kg** of water at **20 °C** in an insulated container. Take $c = 4.18\\ \\text{kJ/(kg·K)}$.\n\nFind the **entropy generated** by the mixing, in kJ/K.",
+      "answer": 0.073,
+      "unit": "kJ/K",
+      "tolerance": 0.006,
+      "hints": [
+        "Equal masses, same fluid → equilibrium temperature is the average: $T_{eq} = (353 + 293)/2 = 323\\ \\text{K}$.",
+        "Each stream's entropy change is $m c \\ln(T_{eq}/T_i)$; sum them.",
+        "$S_{gen} = m c[\\ln(T_{eq}/T_1) + \\ln(T_{eq}/T_2)]$, all in kelvin."
+      ],
+      "solution": "**Step 1 — equilibrium temperature.** Equal masses of the same fluid average out:\n\n$$T_{eq} = \\frac{T_1 + T_2}{2} = \\frac{353 + 293}{2} = 323\\ \\text{K}$$\n\n**Step 2 — entropy change of each stream**, summed (insulated → no entropy transfer, so the total *is* the generation):\n\n$$S_{gen} = m c\\ln\\frac{T_{eq}}{T_1} + m c\\ln\\frac{T_{eq}}{T_2}$$\n\n$$S_{gen} = 2(4.18)\\left[\\ln\\frac{323}{353} + \\ln\\frac{323}{293}\\right] = 8.36\\,[-0.0888 + 0.0975]$$\n\n$$S_{gen} = 8.36 \\times 0.00869 = 0.073\\ \\text{kJ/K}$$\n\nThe hot stream *loses* entropy and the cold one *gains* more, so the total is positive — mixing is irreversible.",
+      "equationsUsed": ["T_{eq} = \\frac{T_1 + T_2}{2}", "S_{gen} = m c\\ln\\frac{T_{eq}}{T_1} + m c\\ln\\frac{T_{eq}}{T_2} \\ge 0"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p009",
+      "chapter": 7,
+      "difficulty": 4,
+      "title": "Real turbine work via isentropic efficiency",
+      "tags": ["isentropic", "isentropic efficiency", "multi-step"],
+      "kind": "numeric",
+      "scenario": "Air expands through an **adiabatic turbine** from **700 kPa, 750 K** to **100 kPa**, with an isentropic efficiency of **0.88**. Take $c_p = 1.005$, $R = 0.287\\ \\text{kJ/(kg·K)}$, $k = 1.4$.\n\nFind the **actual specific work output**, in kJ/kg.",
+      "answer": 283,
+      "unit": "kJ/kg",
+      "tolerance": 5,
+      "hints": [
+        "Step 1: isentropic exit temperature $T_{2s} = T_1 (P_2/P_1)^{(k-1)/k}$.",
+        "Step 2: ideal work $w_s = c_p (T_1 - T_{2s})$.",
+        "Step 3: actual work $w = \\eta_T\\, w_s$."
+      ],
+      "solution": "**Step 1 — isentropic exit temperature** $((k-1)/k = 0.2857)$:\n\n$$T_{2s} = 750\\left(\\frac{100}{700}\\right)^{0.2857} = 750 \\times 0.5735 = 430.1\\ \\text{K}$$\n\n**Step 2 — ideal (isentropic) work:**\n\n$$w_s = c_p(T_1 - T_{2s}) = 1.005(750 - 430.1) = 321.5\\ \\text{kJ/kg}$$\n\n**Step 3 — actual work** via the isentropic efficiency:\n\n$$w = \\eta_T\\, w_s = 0.88 \\times 321.5 = 283\\ \\text{kJ/kg}$$",
+      "equationsUsed": ["T_{2s} = T_1\\left(\\frac{P_2}{P_1}\\right)^{(k-1)/k}", "w_s = c_p(T_1 - T_{2s})", "w = \\eta_T\\, w_s"],
+      "conceptLink": "ch07"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "chapters": [
+    {
+      "chapterId": "ch01",
+      "chapter": 1,
+      "title": "Introduction & Basic Concepts",
+      "topics": "Systems, properties, units, temperature, pressure",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    },
+    {
+      "chapterId": "ch02",
+      "chapter": 2,
+      "title": "Energy, Energy Transfer & General Energy Analysis",
+      "topics": "Forms of energy, heat, work, energy balance",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    },
+    {
+      "chapterId": "ch03",
+      "chapter": 3,
+      "title": "Properties of Pure Substances",
+      "topics": "Phases, property tables, quality, ideal gas",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    },
+    {
+      "chapterId": "ch04",
+      "chapter": 4,
+      "title": "Energy Analysis of Closed Systems",
+      "topics": "Boundary work, first law (closed), specific heats",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    },
+    {
+      "chapterId": "ch05",
+      "chapter": 5,
+      "title": "Mass & Energy Analysis of Control Volumes",
+      "topics": "Mass balance, flow work, steady-flow devices",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    },
+    {
+      "chapterId": "ch06",
+      "chapter": 6,
+      "title": "The Second Law of Thermodynamics",
+      "topics": "Heat engines, refrigerators, COP, Carnot",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    },
+    {
+      "chapterId": "ch07",
+      "chapter": 7,
+      "title": "Entropy",
+      "topics": "Entropy balance, T ds, isentropic processes",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    },
+    {
+      "chapterId": "ch08",
+      "chapter": 8,
+      "title": "Exergy — A Measure of Work Potential",
+      "topics": "Dead state, exergy of heat, destruction, 2nd-law efficiency",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    }
+  ]
+}

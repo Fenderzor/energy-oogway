@@ -1,0 +1,73 @@
+{
+  "chapterId": "ch08",
+  "chapter": 8,
+  "title": "Exergy — A Measure of Work Potential",
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 8",
+  "deckId": "ch08",
+  "updatedAt": "2026-06-09T00:00:00Z",
+  "summary": "The first law counts energy; the second law judges its **quality**. **Exergy** (also called *availability*) puts a number on that quality: it is the **maximum useful work** that can be obtained from a system as it comes to equilibrium with its environment through *reversible* processes. Energy is conserved, but exergy is not — every real process **destroys** some of it. Exergy analysis is how engineers find *where* work potential is being wasted.\n\nEverything is measured relative to the **dead state**: the environment's temperature and pressure $T_0, P_0$ (often 25 °C, 1 atm). A system in equilibrium with the dead state has zero exergy — it can do no more useful work, even if it still holds plenty of energy. This is why a vast lake of lukewarm water has enormous internal energy but almost no exergy.\n\nDifferent energy forms carry different exergy. **Work** is entirely exergy (it is already organized, fully usable). **Kinetic and potential energy** are fully exergy too. **Heat**, however, is only partly exergy: heat $Q$ supplied from a reservoir at temperature $T$ carries exergy $(1 - T_0/T)\\,Q$ — the Carnot fraction. The hotter the source relative to the environment, the more of its heat can become work; heat at the dead-state temperature carries no exergy at all. For matter, the **flow exergy** of a stream is $\\psi = (h - h_0) - T_0(s - s_0) + V^2/2 + gz$, and a closed system has the analogous non-flow exergy $\\phi$ with a $P_0(v - v_0)$ term for the work done against the atmosphere.\n\nThe central result is the **exergy balance**: exergy in − exergy out − exergy destroyed = change in the system's exergy. The destruction term is always positive for real processes and is tied directly to entropy generation by the **Gouy–Stodola relation**, $X_{dest} = T_0\\,S_{gen} \\ge 0$. Anywhere entropy is generated — friction, unrestrained expansion, heat transfer across a finite temperature difference, mixing — exergy is irreversibly lost.\n\nFinally, performance is judged by the **second-law (exergy) efficiency** $\\eta_{II}$: useful exergy output over exergy supplied. Unlike thermal efficiency, it compares a device to the *reversible ideal* for the same task, so a 40%-efficient power plant might still be 70% efficient in second-law terms. The workflow: pick the dead state, tally the exergy of each stream/heat/work interaction, and either close the balance for the destruction or compute $T_0 S_{gen}$ directly.",
+  "equations": [
+    {
+      "name": "Exergy of heat transfer",
+      "latex": "X_{heat} = \\left(1 - \\frac{T_0}{T}\\right) Q",
+      "rearrangements": ["\\dot X_{heat} = \\left(1 - \\frac{T_0}{T}\\right)\\dot Q", "Q = \\frac{X_{heat}}{1 - T_0/T}"],
+      "useWhen": "Finding the work potential of heat supplied from (or rejected to) a reservoir at temperature $T$. It is the Carnot-weighted part of the heat.",
+      "note": "$T, T_0$ absolute. Heat at the dead-state temperature ($T = T_0$) carries zero exergy."
+    },
+    {
+      "name": "Flow (stream) exergy",
+      "latex": "\\psi = (h - h_0) - T_0(s - s_0) + \\frac{V^2}{2} + gz",
+      "rearrangements": ["\\Delta\\psi = (h_2 - h_1) - T_0(s_2 - s_1) + \\frac{V_2^2 - V_1^2}{2} + g(z_2 - z_1)"],
+      "useWhen": "Exergy carried by a flowing stream in a control volume (turbines, compressors, heat exchangers). Use the *change* $\\Delta\\psi$ between inlet and outlet.",
+      "note": "Subscript 0 = dead state. The $-T_0(s-s_0)$ term is the unavailable part."
+    },
+    {
+      "name": "Closed-system (non-flow) exergy",
+      "latex": "\\phi = (u - u_0) + P_0(v - v_0) - T_0(s - s_0) + \\frac{V^2}{2} + gz",
+      "rearrangements": ["\\Delta X = (U_2 - U_1) + P_0(V_2 - V_1) - T_0(S_2 - S_1)"],
+      "useWhen": "Work potential of a fixed mass relative to the dead state. The $P_0(v - v_0)$ term subtracts work done uselessly against the atmosphere.",
+      "note": "Per unit mass ($\\phi$) or total ($X = m\\phi$)."
+    },
+    {
+      "name": "Exergy destruction (Gouy–Stodola)",
+      "latex": "X_{dest} = T_0\\, S_{gen} \\ge 0",
+      "rearrangements": ["\\dot X_{dest} = T_0\\,\\dot S_{gen}", "S_{gen} = \\frac{X_{dest}}{T_0}"],
+      "useWhen": "The fastest route to wasted work: compute entropy generation, multiply by the dead-state temperature. Works for any process or device.",
+      "note": "Always $\\ge 0$; zero only for reversible processes. Pinpoints *where* exergy is lost."
+    },
+    {
+      "name": "Exergy balance (steady control volume)",
+      "latex": "\\sum \\dot X_{in} - \\sum \\dot X_{out} - \\dot X_{dest} = 0",
+      "rearrangements": ["\\dot W_{rev} = \\dot X_{in} - \\dot X_{out}", "\\dot X_{dest} = \\sum\\left(1-\\tfrac{T_0}{T_k}\\right)\\dot Q_k - \\dot W + \\sum \\dot m_{in}\\psi_{in} - \\sum \\dot m_{out}\\psi_{out}"],
+      "useWhen": "Accounting for all exergy flows (by heat, work, and mass) across a device to find the destruction or the reversible work.",
+      "note": "Exergy enters/leaves with heat ($(1-T_0/T)Q$), work ($W$), and mass ($\\dot m\\psi$); the imbalance is destroyed."
+    },
+    {
+      "name": "Second-law (exergy) efficiency",
+      "latex": "\\eta_{II} = \\frac{\\text{exergy recovered}}{\\text{exergy supplied}}",
+      "rearrangements": ["\\eta_{II} = \\frac{\\dot W_{u}}{\\dot W_{rev}}\\ (\\text{work-producing})", "\\eta_{II} = \\frac{\\dot W_{rev}}{\\dot W_{u}}\\ (\\text{work-consuming})", "\\eta_{II} = 1 - \\frac{\\dot X_{dest}}{\\dot X_{supplied}}"],
+      "useWhen": "Judging a device against the reversible ideal for the *same task* — a fairer score than first-law efficiency.",
+      "note": "Ranges 0–1; the gap from 1 is the fraction of supplied exergy destroyed."
+    }
+  ],
+  "glossary": [
+    { "term": "Exergy (availability)", "definition": "The maximum useful work obtainable from a system as it reversibly reaches equilibrium with the environment. A measure of energy *quality*, not quantity." },
+    { "term": "Dead state", "definition": "Equilibrium with the environment at $T_0, P_0$ (often 25 °C, 1 atm). A system at the dead state has zero exergy." },
+    { "term": "Exergy of heat", "definition": "Work potential of heat from a reservoir at $T$: $(1 - T_0/T)Q$ — the Carnot fraction. Zero when $T = T_0$." },
+    { "term": "Flow exergy (ψ)", "definition": "Exergy carried by a flowing stream: $(h - h_0) - T_0(s - s_0) + V^2/2 + gz$." },
+    { "term": "Non-flow exergy (φ)", "definition": "Exergy of a closed system, including a $P_0(v - v_0)$ term for work done against the atmosphere." },
+    { "term": "Exergy destruction", "definition": "Work potential irreversibly lost, $X_{dest} = T_0 S_{gen} \\ge 0$. Caused by every irreversibility." },
+    { "term": "Gouy–Stodola relation", "definition": "$X_{dest} = T_0\\,S_{gen}$ — links destroyed exergy directly to entropy generation." },
+    { "term": "Reversible work", "definition": "The maximum work output (or minimum work input) for a given change of state, achieved with no irreversibilities." },
+    { "term": "Irreversibility (I)", "definition": "The difference between reversible and actual useful work, $I = W_{rev} - W_u = X_{dest}$." },
+    { "term": "Second-law efficiency (η_II)", "definition": "Useful exergy output over exergy supplied; compares a device to the reversible ideal for the same task." }
+  ],
+  "tips": [
+    "**Fix the dead state first.** Every exergy term is measured relative to $T_0$ (and $P_0$). Note them at the start and use $T_0$ in all $(1 - T_0/T)$ and $T_0 S_{gen}$ terms — in **kelvin**.",
+    "**Fastest destruction route:** find $S_{gen}$ from an entropy balance, then $X_{dest} = T_0 S_{gen}$. Usually quicker than a full exergy balance.",
+    "**Heat ≠ exergy.** Only $(1 - T_0/T)$ of a heat input is convertible work potential. High-temperature heat is 'high quality'; near-ambient heat is nearly worthless.",
+    "**Work and KE/PE are pure exergy** (100% convertible). Internal/thermal energy is only partly exergy — that asymmetry is the whole point of the chapter.",
+    "**$\\eta_{II}$ flips for consumers.** Work-*producing* devices: $W_u/W_{rev}$. Work-*consuming* devices (pumps, compressors): $W_{rev}/W_u$. Same idea — useful exergy over what you paid.",
+    "**Exergy is destroyed, not transferred away.** A positive $X_{dest}$ is lost forever; it doesn't reappear elsewhere. Minimizing $S_{gen}$ is minimizing this loss."
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "chapterId": "ch02",
+  "chapter": 2,
+  "title": "Energy, Energy Transfer & General Energy Analysis",
+  "updatedAt": "2026-06-08T00:00:00Z",
+  "problems": [
+    {
+      "id": "ch02-p001",
+      "chapter": 2,
+      "difficulty": 1,
+      "title": "Kinetic energy of a car",
+      "tags": ["kinetic energy"],
+      "kind": "numeric",
+      "scenario": "A **1200 kg** car travels at **25 m/s**.\n\nFind its **kinetic energy** in kJ.",
+      "answer": 375,
+      "unit": "kJ",
+      "tolerance": 2,
+      "hints": [
+        "$KE = \\tfrac{1}{2}mV^2$ — the result is in joules.",
+        "Divide by 1000 to convert J → kJ."
+      ],
+      "solution": "Apply the kinetic-energy formula:\n\n$$KE = \\tfrac{1}{2}mV^2 = \\tfrac{1}{2}(1200)(25)^2 = 0.5 \\times 1200 \\times 625 = 375\\,000\\ \\text{J} = 375\\ \\text{kJ}$$\n\nNote it scales with the *square* of speed: doubling the speed quadruples the kinetic energy.",
+      "equationsUsed": ["KE = \\tfrac{1}{2}mV^2"],
+      "conceptLink": "ch02"
+    },
+    {
+      "id": "ch02-p002",
+      "chapter": 2,
+      "difficulty": 1,
+      "title": "Potential energy lift",
+      "tags": ["potential energy"],
+      "kind": "numeric",
+      "scenario": "A crane raises a **50 kg** load by **8.0 m**. Take $g = 9.81\\ \\text{m/s}^2$.\n\nFind the gain in **potential energy** in kJ.",
+      "answer": 3.924,
+      "unit": "kJ",
+      "tolerance": 0.05,
+      "hints": [
+        "$PE = mgz$ — in joules.",
+        "Convert J → kJ by dividing by 1000."
+      ],
+      "solution": "$$PE = mgz = 50 \\times 9.81 \\times 8.0 = 3924\\ \\text{J} = 3.924\\ \\text{kJ}$$\n\nThis is the minimum work the crane must do against gravity (ignoring friction and acceleration).",
+      "equationsUsed": ["PE = mgz"],
+      "conceptLink": "ch02"
+    },
+    {
+      "id": "ch02-p003",
+      "chapter": 2,
+      "difficulty": 1,
+      "title": "Energy from an electric heater",
+      "tags": ["electrical work", "power"],
+      "kind": "numeric",
+      "scenario": "A **2000 W** electric heater runs for **15 minutes**.\n\nHow much **electrical energy** does it consume, in kJ?",
+      "answer": 1800,
+      "unit": "kJ",
+      "tolerance": 5,
+      "hints": [
+        "Energy = power × time. Watts × seconds = joules.",
+        "Convert 15 min to seconds first: $15 \\times 60 = 900\\ \\text{s}$."
+      ],
+      "solution": "Electrical work is power multiplied by the running time:\n\n$$W_e = \\dot W_e\\,\\Delta t = 2000\\ \\text{W} \\times (15 \\times 60)\\ \\text{s} = 2000 \\times 900 = 1\\,800\\,000\\ \\text{J} = 1800\\ \\text{kJ}$$\n\nKeep time in **seconds** so that W·s = J.",
+      "equationsUsed": ["W_e = \\dot W_e\\,\\Delta t"],
+      "conceptLink": "ch02"
+    },
+    {
+      "id": "ch02-p004",
+      "chapter": 2,
+      "difficulty": 2,
+      "title": "Ideal pumping power",
+      "tags": ["mechanical energy", "pump"],
+      "kind": "numeric",
+      "scenario": "A pump raises water at $\\dot m = 20\\ \\text{kg/s}$ to a reservoir **15 m** higher, with negligible change in pressure and velocity. Take $g = 9.81\\ \\text{m/s}^2$.\n\nFind the **ideal (minimum) power** required, in kW.",
+      "answer": 2.943,
+      "unit": "kW",
+      "tolerance": 0.05,
+      "hints": [
+        "The only mechanical-energy change here is potential energy.",
+        "$\\dot W = \\dot m\\,\\Delta e_{mech} = \\dot m\\,g\\,\\Delta z$.",
+        "Result is in watts — divide by 1000 for kW."
+      ],
+      "solution": "With pressure and velocity unchanged, the pump only adds potential energy to the flow:\n\n$$\\dot W = \\dot m\\,g\\,\\Delta z = 20 \\times 9.81 \\times 15 = 2943\\ \\text{W} = 2.943\\ \\text{kW}$$\n\nThis is the *ideal* power; a real pump needs more (see the next problem).",
+      "equationsUsed": ["\\dot W = \\dot m\\,g\\,\\Delta z"],
+      "conceptLink": "ch02"
+    },
+    {
+      "id": "ch02-p005",
+      "chapter": 2,
+      "difficulty": 2,
+      "title": "Pump with efficiency",
+      "tags": ["efficiency", "pump"],
+      "kind": "numeric",
+      "scenario": "The pump from the previous problem (ideal power **2.943 kW**) has a **mechanical efficiency of 0.75**.\n\nFind the **actual shaft power** that must be supplied, in kW.",
+      "answer": 3.924,
+      "unit": "kW",
+      "tolerance": 0.05,
+      "hints": [
+        "Efficiency = useful output ÷ required input.",
+        "$\\eta_{pump} = \\dot W_{ideal}/\\dot W_{shaft}$, so rearrange for the input.",
+        "$\\dot W_{shaft} = \\dot W_{ideal}/\\eta$."
+      ],
+      "solution": "The pump efficiency relates the useful (ideal) power to the shaft power supplied:\n\n$$\\eta_{pump} = \\frac{\\dot W_{ideal}}{\\dot W_{shaft}} \\quad\\Rightarrow\\quad \\dot W_{shaft} = \\frac{\\dot W_{ideal}}{\\eta_{pump}}$$\n\n$$\\dot W_{shaft} = \\frac{2.943}{0.75} = 3.924\\ \\text{kW}$$\n\nThe extra 0.98 kW is lost to friction and other irreversibilities inside the pump.",
+      "equationsUsed": ["\\eta_{pump} = \\frac{\\dot W_{ideal}}{\\dot W_{shaft}}", "\\dot W_{shaft} = \\frac{\\dot W_{ideal}}{\\eta_{pump}}"],
+      "conceptLink": "ch02"
+    },
+    {
+      "id": "ch02-p006",
+      "chapter": 2,
+      "difficulty": 3,
+      "title": "Available wind power",
+      "tags": ["wind", "mechanical energy", "mass flow"],
+      "kind": "numeric",
+      "scenario": "Wind at **10 m/s** blows through a turbine rotor of diameter **50 m**. Air density is $\\rho = 1.2\\ \\text{kg/m}^3$.\n\nFind the **total available power** in the wind passing through the rotor, in kW.",
+      "answer": 1178,
+      "unit": "kW",
+      "tolerance": 25,
+      "hints": [
+        "The available power is the kinetic energy flux: $\\dot W = \\tfrac{1}{2}\\dot m V^2$ with $\\dot m = \\rho A V$.",
+        "Combine them: $\\dot W = \\tfrac{1}{2}\\rho A V^3$. Swept area $A = \\pi D^2/4$.",
+        "$A = \\pi (50)^2/4 \\approx 1963\\ \\text{m}^2$."
+      ],
+      "solution": "The kinetic energy carried by the wind per unit time uses the mass flow $\\dot m = \\rho A V$:\n\n$$\\dot W = \\tfrac{1}{2}\\dot m V^2 = \\tfrac{1}{2}\\rho A V^3$$\n\nThe swept area:\n\n$$A = \\frac{\\pi D^2}{4} = \\frac{\\pi (50)^2}{4} = 1963.5\\ \\text{m}^2$$\n\nThen:\n\n$$\\dot W = \\tfrac{1}{2}(1.2)(1963.5)(10)^3 = 0.5 \\times 1.2 \\times 1963.5 \\times 1000 = 1\\,178\\,000\\ \\text{W} \\approx 1178\\ \\text{kW}$$\n\nA real turbine can extract at most 59% of this (the Betz limit), and less in practice.",
+      "equationsUsed": ["\\dot W = \\tfrac{1}{2}\\rho A V^3", "\\dot m = \\rho A V", "A = \\frac{\\pi D^2}{4}"],
+      "conceptLink": "ch02"
+    },
+    {
+      "id": "ch02-p007",
+      "chapter": 2,
+      "difficulty": 3,
+      "title": "Hydroelectric power output",
+      "tags": ["hydro", "efficiency", "mechanical energy"],
+      "kind": "numeric",
+      "scenario": "Water falls **90 m** through a hydroelectric plant at $\\dot m = 500\\ \\text{kg/s}$. The combined turbine–generator efficiency is **0.84**. Take $g = 9.81\\ \\text{m/s}^2$.\n\nFind the **electric power output**, in kW.",
+      "answer": 370.8,
+      "unit": "kW",
+      "tolerance": 3,
+      "hints": [
+        "First find the ideal power from the drop: $\\dot W_{ideal} = \\dot m\\,g\\,\\Delta z$.",
+        "Then multiply by the efficiency (output = η × input).",
+        "$\\dot W_{elec} = \\eta\\,\\dot m\\,g\\,\\Delta z$."
+      ],
+      "solution": "The available mechanical power from the falling water is:\n\n$$\\dot W_{ideal} = \\dot m\\,g\\,\\Delta z = 500 \\times 9.81 \\times 90 = 441\\,450\\ \\text{W} = 441.5\\ \\text{kW}$$\n\nThe turbine–generator converts a fraction of it to electricity:\n\n$$\\dot W_{elec} = \\eta\\,\\dot W_{ideal} = 0.84 \\times 441.5 = 370.8\\ \\text{kW}$$",
+      "equationsUsed": ["\\dot W_{elec} = \\eta\\,\\dot m\\,g\\,\\Delta z"],
+      "conceptLink": "ch02"
+    },
+    {
+      "id": "ch02-p008",
+      "chapter": 2,
+      "difficulty": 3,
+      "title": "Combined motor–pump efficiency",
+      "tags": ["combined efficiency"],
+      "kind": "numeric",
+      "scenario": "An electric **motor** (efficiency 0.90) drives a **pump** (efficiency 0.70). The useful mechanical power delivered to the fluid is **4.0 kW**.\n\nFind the **electrical power** drawn from the grid, in kW.",
+      "answer": 6.35,
+      "unit": "kW",
+      "tolerance": 0.1,
+      "hints": [
+        "Component efficiencies multiply: $\\eta_{overall} = \\eta_{motor}\\,\\eta_{pump}$.",
+        "$\\dot W_{elec} = \\dot W_{useful}/\\eta_{overall}$.",
+        "$\\eta_{overall} = 0.90 \\times 0.70 = 0.63$."
+      ],
+      "solution": "Chain the two devices: electricity → motor → pump → fluid. The overall efficiency is the product:\n\n$$\\eta_{overall} = \\eta_{motor}\\,\\eta_{pump} = 0.90 \\times 0.70 = 0.63$$\n\nThe electrical input needed for 4.0 kW of useful output is:\n\n$$\\dot W_{elec} = \\frac{\\dot W_{useful}}{\\eta_{overall}} = \\frac{4.0}{0.63} = 6.35\\ \\text{kW}$$\n\nLosses compound — each stage takes its cut, so the grid must supply far more than the useful 4 kW.",
+      "equationsUsed": ["\\eta_{overall} = \\eta_{motor}\\,\\eta_{pump}", "\\dot W_{elec} = \\frac{\\dot W_{useful}}{\\eta_{overall}}"],
+      "conceptLink": "ch02"
+    }
+  ]
+}

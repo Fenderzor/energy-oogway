@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+app/node_modules/
+
+# Build output (Vercel rebuilds this)
+dist/
+app/dist/
+app/dev-dist/
+
+# Copyrighted source material — DO NOT publish
+External Material/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

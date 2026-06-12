@@ -1,0 +1,238 @@
+{
+  "chapterId": "ch01",
+  "chapter": 1,
+  "title": "Introduction & Basic Concepts",
+  "updatedAt": "2026-06-09T00:00:00Z",
+  "questions": [
+    {
+      "id": "ch01-q01",
+      "chapter": 1,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Which of these is an **intensive** property?",
+      "choices": ["Mass", "Total volume", "Temperature", "Total energy"],
+      "answerIndex": 2,
+      "explanation": "Intensive properties are independent of system size — temperature, pressure, density. Mass, total volume and total energy scale with the amount of matter (extensive)."
+    },
+    {
+      "id": "ch01-q02",
+      "chapter": 1,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "What can cross the boundary of a **closed system**?",
+      "choices": ["Mass only", "Energy only", "Both mass and energy", "Neither"],
+      "answerIndex": 1,
+      "explanation": "A closed system (control mass) keeps its matter fixed — heat and work may cross the boundary, but mass cannot. 'Neither' describes an isolated system."
+    },
+    {
+      "id": "ch01-q03",
+      "chapter": 1,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The **zeroth law** of thermodynamics is the basis for measuring…",
+      "choices": ["Pressure", "Temperature", "Density", "Internal energy"],
+      "answerIndex": 1,
+      "explanation": "If two bodies are each in thermal equilibrium with a third (the thermometer), they are in equilibrium with each other — which is what makes temperature measurement meaningful."
+    },
+    {
+      "id": "ch01-q04",
+      "chapter": 1,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A tyre gauge reads **250 kPa** and the atmosphere is at **100 kPa**. Which pressure do you plug into the ideal-gas law?",
+      "choices": ["250 kPa", "150 kPa", "350 kPa", "100 kPa"],
+      "answerIndex": 2,
+      "explanation": "Property relations need absolute pressure: $P_{abs} = P_{atm} + P_{gage} = 100 + 250 = 350$ kPa."
+    },
+    {
+      "id": "ch01-q05",
+      "chapter": 1,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Two connected tanks of very different shapes are filled with the same static fluid. How do the pressures compare at points on the **same horizontal level**?",
+      "choices": [
+        "Higher in the larger tank",
+        "Higher in the taller tank",
+        "Equal in both",
+        "Depends on the tank wall material"
+      ],
+      "answerIndex": 2,
+      "explanation": "In a connected static fluid, pressure depends only on depth — all points on one horizontal plane share the same pressure, regardless of container shape."
+    },
+    {
+      "id": "ch01-q06",
+      "chapter": 1,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A manometer problem gives the fluid as \"mercury, SG = 13.6\". What is the first conversion you should make?",
+      "choices": [
+        "$\\rho = 13.6 \\times 1000 = 13\\,600\\ \\text{kg/m}^3$",
+        "$\\rho = 13.6\\ \\text{kg/m}^3$",
+        "$\\rho = 1000 / 13.6\\ \\text{kg/m}^3$",
+        "No conversion — use 13.6 directly in $\\rho g h$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Specific gravity is density relative to water: $\\rho = SG \\times \\rho_{water} = 13.6 \\times 1000$ kg/m³. Only then can you use it in $\\rho g h$."
+    },
+    {
+      "id": "ch01-q07",
+      "chapter": 1,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve the manometer relation $P = P_{atm} + \\rho g h$ for the column height $h$:",
+      "choices": [
+        "$h = \\dfrac{P - P_{atm}}{\\rho g}$",
+        "$h = \\dfrac{P + P_{atm}}{\\rho g}$",
+        "$h = \\rho g (P - P_{atm})$",
+        "$h = \\dfrac{\\rho g}{P - P_{atm}}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Subtract $P_{atm}$ from both sides, then divide by $\\rho g$: the height is the gauge pressure divided by $\\rho g$."
+    },
+    {
+      "id": "ch01-q08",
+      "chapter": 1,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Given specific volume $v = V/m$, which expression equals the **density** $\\rho$?",
+      "choices": ["$\\rho = \\dfrac{m}{V} = \\dfrac{1}{v}$", "$\\rho = \\dfrac{V}{m} = v$", "$\\rho = mV$", "$\\rho = \\dfrac{v}{m}$"],
+      "answerIndex": 0,
+      "explanation": "Density is mass per volume, the exact reciprocal of specific volume: $\\rho = m/V = 1/v$."
+    },
+    {
+      "id": "ch01-q09",
+      "chapter": 1,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "From the definition of pressure, the force a gas at pressure $P$ exerts on a piston face of area $A$ is…",
+      "choices": ["$F = P A$", "$F = P / A$", "$F = A / P$", "$F = P A^2$"],
+      "answerIndex": 0,
+      "explanation": "$P = F/A$ rearranges to $F = PA$ — the workhorse of piston force balances."
+    },
+    {
+      "id": "ch01-q10",
+      "chapter": 1,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A pressure gauge on a vessel reads **150 kPa** while the local atmosphere is **101 kPa**. Find the **absolute pressure**.",
+      "answer": 251,
+      "unit": "kPa",
+      "tolerance": 1,
+      "explanation": "$P_{abs} = P_{atm} + P_{gage} = 101 + 150 = 251$ kPa."
+    },
+    {
+      "id": "ch01-q11",
+      "chapter": 1,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "How much does pressure increase **5.0 m** below the surface of water ($\\rho = 1000\\ \\text{kg/m}^3$, $g = 9.81\\ \\text{m/s}^2$)? Answer in kPa.",
+      "answer": 49.05,
+      "unit": "kPa",
+      "tolerance": 0.5,
+      "explanation": "$\\Delta P = \\rho g h = 1000 \\times 9.81 \\times 5.0 = 49\\,050$ Pa $= 49.05$ kPa."
+    },
+    {
+      "id": "ch01-q12",
+      "chapter": 1,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "An oil has specific gravity **SG = 0.80**. What is the mass of **0.050 m³** of this oil? ($\\rho_{water} = 1000\\ \\text{kg/m}^3$)",
+      "answer": 40,
+      "unit": "kg",
+      "tolerance": 0.5,
+      "explanation": "$\\rho = SG \\times 1000 = 800$ kg/m³, then $m = \\rho V = 800 \\times 0.050 = 40$ kg."
+    },
+    {
+      "id": "ch01-q13",
+      "chapter": 1,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Which of these is an **extensive** property?",
+      "choices": ["Temperature", "Pressure", "Total volume", "Density"],
+      "answerIndex": 2,
+      "explanation": "Extensive properties scale with the amount of matter — total volume, mass, total energy. Temperature, pressure and density are intensive."
+    },
+    {
+      "id": "ch01-q14",
+      "chapter": 1,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "What can cross the boundary of an **open system** (control volume)?",
+      "choices": ["Mass only", "Energy only", "Both mass and energy", "Neither"],
+      "answerIndex": 2,
+      "explanation": "A control volume lets both mass and energy flow across its boundary — e.g. a turbine or nozzle. A closed system allows energy only."
+    },
+    {
+      "id": "ch01-q15",
+      "chapter": 1,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A vacuum gauge reads **20 kPa** where the atmosphere is **100 kPa**. The absolute pressure is…",
+      "choices": ["120 kPa", "80 kPa", "20 kPa", "100 kPa"],
+      "answerIndex": 1,
+      "explanation": "A vacuum reading is below atmospheric: $P_{abs} = P_{atm} - P_{vac} = 100 - 20 = 80$ kPa."
+    },
+    {
+      "id": "ch01-q16",
+      "chapter": 1,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Why does the **quasi-equilibrium** idealization matter?",
+      "choices": [
+        "It lets us draw the process on a diagram and compute work",
+        "It guarantees there is no heat transfer",
+        "It makes the process happen faster",
+        "It removes the need for absolute temperatures"
+      ],
+      "answerIndex": 0,
+      "explanation": "Only a quasi-equilibrium (infinitely slow) process passes through well-defined states, so its path can be drawn and $\\int P\\,dV$ evaluated."
+    },
+    {
+      "id": "ch01-q17",
+      "chapter": 1,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve the specific-gravity definition $SG = \\rho / \\rho_{water}$ for the **density** $\\rho$:",
+      "choices": [
+        "$\\rho = SG \\cdot \\rho_{water}$",
+        "$\\rho = \\rho_{water} / SG$",
+        "$\\rho = SG / \\rho_{water}$",
+        "$\\rho = SG + \\rho_{water}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Multiply both sides by $\\rho_{water}$: e.g. oil with $SG = 0.8$ gives $\\rho = 800$ kg/m³."
+    },
+    {
+      "id": "ch01-q18",
+      "chapter": 1,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "From $\\rho = m/V$, the mass contained in volume $V$ is…",
+      "choices": ["$m = \\rho V$", "$m = \\rho / V$", "$m = V / \\rho$", "$m = \\rho + V$"],
+      "answerIndex": 0,
+      "explanation": "Multiply both sides by $V$: mass is density times volume."
+    },
+    {
+      "id": "ch01-q19",
+      "chapter": 1,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A hydraulic lift has input area $A_1 = 0.02\\ \\text{m}^2$ and output area $A_2 = 0.50\\ \\text{m}^2$. What input force balances an **8000 N** load on the output piston?",
+      "answer": 320,
+      "unit": "N",
+      "tolerance": 5,
+      "explanation": "Equal pressure across the fluid: $F_1 = F_2 (A_1/A_2) = 8000 \\times 0.02/0.50 = 320$ N."
+    },
+    {
+      "id": "ch01-q20",
+      "chapter": 1,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A gas gauge pressure of **40 kPa** is read off a water column ($\\rho = 1000\\ \\text{kg/m}^3$, $g = 9.81\\ \\text{m/s}^2$). Find the column height, in m.",
+      "answer": 4.08,
+      "unit": "m",
+      "tolerance": 0.1,
+      "explanation": "$h = P_{gage}/(\\rho g) = 40\\,000/(1000 \\times 9.81) = 4.08$ m."
+    }
+  ]
+}

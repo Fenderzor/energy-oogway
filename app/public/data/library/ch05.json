@@ -1,0 +1,89 @@
+{
+  "chapterId": "ch05",
+  "chapter": 5,
+  "title": "Mass & Energy Analysis of Control Volumes",
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 5",
+  "deckId": "ch05",
+  "updatedAt": "2026-06-08T00:00:00Z",
+  "summary": "Now mass is allowed to flow across the boundary: we analyse a **control volume** (open system) — a turbine, nozzle, pump, pipe. Two balances govern it. The **mass balance**, $\\dot m_{in} - \\dot m_{out} = dm_{cv}/dt$, simply says mass is conserved. The **mass flow rate** through a cross-section is $\\dot m = \\rho V A = VA/v$, where $V$ is the average velocity, $A$ the area, $v$ the specific volume.\n\nFlowing fluid carries energy in an extra way: to push a fluid element into the control volume the upstream fluid must do **flow work**, $w_{flow} = Pv$ per unit mass. Adding this to internal, kinetic and potential energy gives the energy a *flowing* stream transports — and $u + Pv$ is exactly enthalpy, so the natural carrier is $\\theta = h + V^2/2 + gz$. This is why enthalpy, not internal energy, appears in every flow equation.\n\nMost devices run at **steady state**: nothing in the control volume changes with time, so $dm_{cv}/dt = 0$ and $dE_{cv}/dt = 0$. Mass in equals mass out, and the **steady-flow energy equation (SFEE)** for a single stream becomes $\\dot Q - \\dot W = \\dot m\\big[(h_2 - h_1) + \\tfrac{V_2^2 - V_1^2}{2} + g(z_2 - z_1)\\big]$. Everything in the chapter is this one equation with terms switched off.\n\nThe art is knowing **which terms vanish for each device**. A **nozzle/diffuser** does no work and is ~adiabatic, trading enthalpy for kinetic energy: $h_1 + V_1^2/2 = h_2 + V_2^2/2$. A **turbine** or **compressor/pump** is adiabatic with negligible $\\Delta KE,\\Delta PE$, so $\\dot W = \\dot m(h_1 - h_2)$. A **throttling valve** has no work and no heat, giving the signature result $h_1 = h_2$ (enthalpy is preserved, temperature usually drops). **Heat exchangers** and **mixing chambers** apply the mass and energy balances across multiple streams.\n\nThe workflow mirrors Ch 4: write both balances, declare the steady-state and device assumptions, cancel the dead terms, and solve.",
+  "equations": [
+    {
+      "name": "Mass flow rate",
+      "latex": "\\dot m = \\rho V A = \\frac{V A}{v}",
+      "rearrangements": ["V = \\frac{\\dot m\\, v}{A}", "A = \\frac{\\dot m\\, v}{V}", "\\dot V = V A = \\dot m\\, v"],
+      "useWhen": "Relating velocity, cross-sectional area, and flow rate at any inlet or outlet — e.g. sizing a pipe or finding exit velocity from a nozzle.",
+      "note": "$V$ = average velocity, $v$ = specific volume, $\\dot V = VA$ = volume flow rate."
+    },
+    {
+      "name": "Mass balance (steady)",
+      "latex": "\\sum_{in} \\dot m = \\sum_{out} \\dot m",
+      "rearrangements": ["\\dot m_1 = \\dot m_2 \\ (\\text{single stream})", "\\rho_1 V_1 A_1 = \\rho_2 V_2 A_2", "\\frac{V_1 A_1}{v_1} = \\frac{V_2 A_2}{v_2}"],
+      "useWhen": "Any steady-flow device. For one inlet and one outlet the mass flow is the same at both — the basis for nozzle/diffuser velocity changes.",
+      "note": "General (unsteady) form: $\\dot m_{in} - \\dot m_{out} = dm_{cv}/dt$."
+    },
+    {
+      "name": "Flow work & flowing-fluid energy",
+      "latex": "\\theta = h + \\frac{V^2}{2} + gz",
+      "rearrangements": ["w_{flow} = Pv", "\\theta = u + Pv + \\frac{V^2}{2} + gz"],
+      "useWhen": "Whenever a stream crosses the boundary. The flow-work term $Pv$ merges with $u$ into enthalpy $h$ — the reason $h$ appears in flow problems.",
+      "note": "This is why open systems use $h$ where closed systems used $u$."
+    },
+    {
+      "name": "Steady-flow energy equation (single stream)",
+      "latex": "\\dot Q - \\dot W = \\dot m\\left[(h_2 - h_1) + \\frac{V_2^2 - V_1^2}{2} + g(z_2 - z_1)\\right]",
+      "rearrangements": ["q - w = \\Delta h + \\Delta ke + \\Delta pe", "\\dot W = \\dot m(h_1 - h_2) \\ (\\text{adiabatic, } \\Delta ke,\\Delta pe \\approx 0)"],
+      "useWhen": "The master equation for one-inlet/one-outlet steady devices. Cancel the terms that are zero for the specific device, then solve.",
+      "note": "Per unit mass, divide through by $\\dot m$. Sign convention: $\\dot Q$ in +, $\\dot W$ out +."
+    },
+    {
+      "name": "Nozzle / diffuser",
+      "latex": "h_1 + \\frac{V_1^2}{2} = h_2 + \\frac{V_2^2}{2}",
+      "rearrangements": ["V_2 = \\sqrt{V_1^2 + 2(h_1 - h_2)}", "h_2 = h_1 + \\frac{V_1^2 - V_2^2}{2}"],
+      "useWhen": "A nozzle (speeds flow up) or diffuser (slows it down): no work, ~adiabatic, $\\Delta pe \\approx 0$. Enthalpy and kinetic energy trade off.",
+      "note": "Nozzle: $h$ drops, $V$ rises. Diffuser: the reverse."
+    },
+    {
+      "name": "Turbine / compressor / pump",
+      "latex": "\\dot W = \\dot m\\,(h_1 - h_2)",
+      "rearrangements": ["\\dot W_{turbine} = \\dot m(h_1 - h_2) > 0", "\\dot W_{comp,in} = \\dot m(h_2 - h_1)", "h_2 = h_1 - \\frac{\\dot W}{\\dot m}"],
+      "useWhen": "Adiabatic work devices with negligible $\\Delta KE, \\Delta PE$. Turbine: output work, $h$ drops. Compressor/pump: input work, $h$ rises.",
+      "note": "For a liquid pump, $\\dot W_{pump} \\approx \\dot m\\, v(P_2 - P_1)$ since $\\Delta h \\approx v\\Delta P$."
+    },
+    {
+      "name": "Throttling valve",
+      "latex": "h_1 = h_2",
+      "rearrangements": ["u_1 + P_1 v_1 = u_2 + P_2 v_2"],
+      "useWhen": "Flow through a valve, capillary, or porous plug: no work, ~adiabatic, negligible $\\Delta KE,\\Delta PE$. The defining isenthalpic process.",
+      "note": "Pressure drops sharply; for most fluids temperature also drops (the basis of refrigeration)."
+    },
+    {
+      "name": "Heat exchanger / mixing chamber",
+      "latex": "\\sum_{in} \\dot m h = \\sum_{out} \\dot m h",
+      "rearrangements": ["\\dot m_1 h_1 + \\dot m_2 h_2 = \\dot m_3 h_3 \\ (\\text{mixing})", "\\dot m_{hot}(h_{1}-h_{2}) = \\dot m_{cold}(h_{4}-h_{3})"],
+      "useWhen": "Multiple streams exchange or combine energy with no external work and (for the whole device) no net heat loss. Combine with the mass balance.",
+      "note": "Choose the control volume so external $\\dot Q$ and $\\dot W$ vanish; then energy in = energy out."
+    }
+  ],
+  "glossary": [
+    { "term": "Control volume", "definition": "A region in space chosen for analysis, with mass and energy allowed to cross its boundary (control surface). An open system." },
+    { "term": "Mass flow rate", "definition": "Mass passing a cross-section per unit time, $\\dot m = \\rho V A = VA/v$ (kg/s)." },
+    { "term": "Volume flow rate", "definition": "Volume passing per unit time, $\\dot V = V A = \\dot m\\, v$ (m³/s)." },
+    { "term": "Flow (flow) work", "definition": "Work needed to push unit mass across the boundary, $w_{flow} = Pv$. Combines with $u$ to form enthalpy." },
+    { "term": "Steady-flow process", "definition": "Conditions at every point of the control volume stay constant in time: $dm_{cv}/dt = 0$ and $dE_{cv}/dt = 0$." },
+    { "term": "Steady-flow energy equation (SFEE)", "definition": "Energy balance for a steady control volume: $\\dot Q - \\dot W = \\dot m[\\Delta h + \\Delta ke + \\Delta pe]$." },
+    { "term": "Nozzle / diffuser", "definition": "Devices that change flow velocity with no work; enthalpy and kinetic energy trade off ($h_1 + V_1^2/2 = h_2 + V_2^2/2$)." },
+    { "term": "Turbine", "definition": "Extracts shaft work from a flowing fluid as its enthalpy drops; $\\dot W = \\dot m(h_1 - h_2)$." },
+    { "term": "Compressor / pump", "definition": "Adds energy to a fluid using input work, raising its pressure/enthalpy." },
+    { "term": "Throttling valve", "definition": "A flow restriction that drops pressure with no work or heat; isenthalpic, $h_1 = h_2$." },
+    { "term": "Heat exchanger", "definition": "Transfers heat between two streams that don't mix; overall energy in = energy out." },
+    { "term": "Mixing chamber", "definition": "Combines two or more streams into one; solved with mass and energy balances together." }
+  ],
+  "tips": [
+    "**Two balances, every time.** Write the mass balance *and* the energy balance. For mixing chambers and heat exchangers the mass balance supplies the relation you need to close the energy balance.",
+    "**Learn the device → cancellation map.** Nozzle/diffuser: $\\dot W = 0$. Turbine/compressor: $\\dot Q \\approx 0$, $\\Delta ke,\\Delta pe \\approx 0$. Throttle: $\\dot W = \\dot Q = 0$ → $h_1 = h_2$. This is the heart of the chapter.",
+    "**Enthalpy, not internal energy.** Flow work folds into $h$, so open-system equations carry $h$. Don't reach for $u$ in a steady-flow device.",
+    "**Only keep $\\Delta KE$ when velocities are large** (nozzles, diffusers, high-speed jets). For turbines, pumps, heat exchangers it's usually negligible — but $\\Delta KE$ is the *whole point* of a nozzle.",
+    "**Throttling is isenthalpic, not isothermal.** $h$ is constant; temperature generally changes (usually drops). Use the table to find the downstream state from $h_2 = h_1$.",
+    "**Pump shortcut for liquids:** $\\dot W_{pump} \\approx \\dot m\\,v(P_2 - P_1)$, because a liquid's specific volume barely changes."
+  ]
+}

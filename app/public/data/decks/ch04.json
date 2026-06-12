@@ -1,0 +1,119 @@
+{
+  "deckId": "ch04",
+  "title": "Ch 4 — Energy Analysis of Closed Systems",
+  "chapter": 4,
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 4",
+  "description": "Boundary work, the closed-system first law, and specific heats.",
+  "owner": "local",
+  "version": 1,
+  "forkedFrom": null,
+  "updatedAt": "2026-06-06T00:00:00Z",
+  "cards": [
+    {
+      "id": "ch04-001",
+      "type": "basic",
+      "front": "Write the *moving boundary work* for a closed system.",
+      "back": "$W_b = \\displaystyle\\int_1^2 P\\,dV$ — the area under the process path on a P-V diagram.",
+      "tags": ["boundary work"],
+      "level": "core"
+    },
+    {
+      "id": "ch04-002",
+      "type": "basic",
+      "front": "Boundary work for a *constant-pressure* process?",
+      "back": "$W_b = P_0\\,(V_2 - V_1)$, since P is constant and comes out of the integral.",
+      "tags": ["boundary work", "isobaric"],
+      "level": "core"
+    },
+    {
+      "id": "ch04-003",
+      "type": "basic",
+      "front": "Boundary work for *isothermal* expansion of an ideal gas?",
+      "back": "$W_b = mRT\\,\\ln\\dfrac{V_2}{V_1} = P_1 V_1 \\ln\\dfrac{V_2}{V_1}$ (since PV = const at constant T).",
+      "tags": ["boundary work", "isothermal"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch04-004",
+      "type": "basic",
+      "front": "Boundary work for a *polytropic* process $PV^n=\\text{const}$?",
+      "back": "$W_b = \\dfrac{P_2 V_2 - P_1 V_1}{1 - n}$ for $n \\ne 1$; for $n = 1$ it reduces to $W_b = P_1 V_1 \\ln(V_2/V_1)$.",
+      "tags": ["boundary work", "polytropic"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch04-005",
+      "type": "basic",
+      "front": "State the first law (energy balance) for a closed system.",
+      "back": "$Q_{net,in} - W_{net,out} = \\Delta U + \\Delta KE + \\Delta PE$. For a stationary closed system: $Q - W = \\Delta U = m(u_2 - u_1)$.",
+      "tags": ["first law", "closed system"],
+      "level": "core"
+    },
+    {
+      "id": "ch04-006",
+      "type": "basic",
+      "front": "Define the specific heats $c_v$ and $c_p$.",
+      "back": "$c_v = \\left(\\dfrac{\\partial u}{\\partial T}\\right)_v$ and $c_p = \\left(\\dfrac{\\partial h}{\\partial T}\\right)_P$. $c_p > c_v$ because constant-pressure heating also does boundary work.",
+      "tags": ["specific heats"],
+      "level": "core"
+    },
+    {
+      "id": "ch04-007",
+      "type": "basic",
+      "front": "For an ideal gas, what do u and h depend on?",
+      "back": "Temperature only: $u = u(T)$ and $h = h(T)$. (They do not depend on pressure or specific volume.)",
+      "tags": ["ideal gas", "internal energy"],
+      "level": "core"
+    },
+    {
+      "id": "ch04-008",
+      "type": "basic",
+      "front": "Δu and Δh for an ideal gas (average specific heats)?",
+      "back": "$\\Delta u = c_v\\,\\Delta T$ and $\\Delta h = c_p\\,\\Delta T$.",
+      "tags": ["ideal gas", "specific heats"],
+      "level": "core"
+    },
+    {
+      "id": "ch04-009",
+      "type": "basic",
+      "front": "Relation between $c_p$, $c_v$ and R for an ideal gas, and the ratio k?",
+      "back": "$c_p - c_v = R$ (Mayer's relation), and the specific-heat ratio $k = \\dfrac{c_p}{c_v}$.",
+      "tags": ["specific heats", "ideal gas"],
+      "level": "core"
+    },
+    {
+      "id": "ch04-010",
+      "type": "numeric",
+      "front": "For air, $c_p = 1.005$ and $R = 0.287$ kJ/(kg·K). Find $c_v$.",
+      "back": "$c_v = c_p - R = 1.005 - 0.287 = 0.718\\ \\text{kJ/(kg·K)}$.",
+      "answer": 0.718,
+      "unit": "kJ/(kg·K)",
+      "tolerance": 0.005,
+      "tags": ["specific heats", "calculation"],
+      "level": "core"
+    },
+    {
+      "id": "ch04-011",
+      "type": "basic",
+      "front": "Specific heats and property changes for *incompressible* substances (solids/liquids)?",
+      "back": "$c_p = c_v = c$. Then $\\Delta u = c\\,\\Delta T$ and $\\Delta h = c\\,\\Delta T + v\\,\\Delta P$ (the $v\\,\\Delta P$ term is often negligible).",
+      "tags": ["incompressible", "specific heats"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch04-012",
+      "type": "mcq",
+      "front": "Which process has *zero* boundary work?",
+      "choices": [
+        "Constant-pressure expansion",
+        "Isothermal expansion",
+        "Constant-volume (rigid tank)",
+        "Polytropic with n = 1"
+      ],
+      "answerIndex": 2,
+      "back": "$W_b = \\int P\\,dV = 0$ when the volume is constant (a rigid tank).",
+      "tags": ["boundary work"],
+      "level": "core"
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "date": "2026-06-09",
+  "generatedAt": "2026-06-09T13:25:00+02:00",
+  "tldr": "Oil stays firm on a Strait of Hormuz risk premium even as physical supply looks ample, while European gas eases on stronger wind. Brussels is finalising its ETS benchmarks, a €30bn ETS investment booster and the new CBAM border levy. Technology momentum runs through solid-state/sodium-ion batteries, green hydrogen and fusion, and the Nordics–Low Countries split is on display: Finland's grid is 96% clean (wind now its second-largest source) while the Netherlands scales offshore wind and hydrogen but hits hard grid-congestion limits.",
+  "sections": [
+    {
+      "id": "global",
+      "title": "Global Developments",
+      "emoji": "🌍",
+      "items": [
+        {
+          "id": "global-1",
+          "headline": "Oil firms on Gulf risk premium but ample supply caps gains",
+          "summary": "Brent crude rose about 1% to around $96/bbl and WTI to roughly $93.8/bbl as Gulf tensions added a risk premium. Both benchmarks remain softer over the week because physical markets still point to ample supply.",
+          "whyItMatters": "Prices are now driven more by geopolitical risk than by fundamentals, leaving markets volatile to any Middle East headline.",
+          "sourceName": "Fortune",
+          "sourceUrl": "https://fortune.com/article/price-of-oil-06-09-2026/",
+          "tags": ["oil", "prices", "brent"]
+        },
+        {
+          "id": "global-2",
+          "headline": "EIA sees Q2 oil inventories drawing down sharply",
+          "summary": "The US EIA expects global oil inventories to fall by an average of about 8.5 million barrels per day in the second quarter of 2026, supporting Brent near $106/bbl across May and June. Residential electricity prices are projected to rise roughly 5% this year.",
+          "whyItMatters": "A steep inventory draw signals a tightening market that could keep both fuel and power bills elevated through the year.",
+          "sourceName": "U.S. EIA",
+          "sourceUrl": "https://www.eia.gov/outlooks/steo/",
+          "tags": ["inventories", "outlook", "electricity"]
+        },
+        {
+          "id": "global-3",
+          "headline": "European gas eases as stronger wind cuts power-sector demand",
+          "summary": "UK and continental gas prices fell, led by the prompt, as a more balanced weather outlook and a jump in north-west European wind reduced the call on gas for power generation. The UK NBP day-ahead settled around 115.7 p/therm.",
+          "whyItMatters": "It shows how rising wind output directly displaces gas burn, softening prices when the weather cooperates.",
+          "sourceName": "Prestige Business",
+          "sourceUrl": "https://www.prestigebusiness.energy/marketreports/energy-market-update03june2026",
+          "tags": ["natural gas", "wind", "power"],
+          "conceptLink": "ch06"
+        }
+      ]
+    },
+    {
+      "id": "geopolitics",
+      "title": "Geopolitics",
+      "emoji": "🗺️",
+      "items": [
+        {
+          "id": "geopolitics-1",
+          "headline": "Strait of Hormuz disruption chokes global oil and LNG flows",
+          "summary": "Flows through the Strait of Hormuz — normally about 20–25% of seaborne oil and roughly 20% of LNG trade — have fallen to a fraction of normal levels. Gulf producers shut in around 10.5 million barrels per day of crude in April.",
+          "whyItMatters": "Hormuz is the world's most critical oil chokepoint, so any sustained disruption there reverberates across every importing economy.",
+          "sourceName": "Moody's",
+          "sourceUrl": "https://www.moodys.com/web/en/us/kyc/resources/insights/how-geopolitics-and-sanctions-affect-energy-trade-routes-and-supply-chains.html",
+          "tags": ["hormuz", "oil", "lng"]
+        },
+        {
+          "id": "geopolitics-2",
+          "headline": "Philippines declares energy emergency after Hormuz blockage",
+          "summary": "The Philippines became the first country to declare a national energy emergency following the Strait of Hormuz disruption. Importing over 96% of its crude from the Middle East in 2025, it saw diesel and gasoline prices roughly double within a month.",
+          "whyItMatters": "It illustrates how import-dependent economies are the first to feel an energy-security shock turn into a cost-of-living crisis.",
+          "sourceName": "Focus Gazette",
+          "sourceUrl": "https://www.focusgazette.com/geopolitics-of-energy-in-2026-global-shifts-implications/",
+          "tags": ["import dependence", "energy security", "asia"]
+        },
+        {
+          "id": "geopolitics-3",
+          "headline": "US moves from financial sanctions to physical oil interdiction",
+          "summary": "Washington has gone beyond traditional sanctions to physically interdict Venezuelan oil shipments, asserting control over the movement of energy itself. Sanctions are increasingly hard to enforce against large producer-consumers like Russia, China and India.",
+          "whyItMatters": "A shift toward physically blocking cargoes marks an escalation that further fragments global trade routes and supply chains.",
+          "sourceName": "CSIS",
+          "sourceUrl": "https://www.csis.org/analysis/oil-market-interventions-and-consequences",
+          "tags": ["sanctions", "venezuela", "trade routes"]
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "title": "Innovative Technologies",
+      "emoji": "🔬",
+      "items": [
+        {
+          "id": "technology-1",
+          "headline": "Solid-state and sodium-ion batteries push past lithium-ion limits",
+          "summary": "Developers are scaling solid-state, sodium-ion and flow-battery chemistries that trade off energy density, safety and cost differently from lithium-ion. The IEA logged over 150 significant energy-innovation highlights during 2025.",
+          "whyItMatters": "A broader battery toolkit lets grids and EVs match the chemistry to the job, accelerating cheaper and safer storage.",
+          "sourceName": "IEA",
+          "sourceUrl": "https://www.iea.org/reports/the-state-of-energy-innovation-2026/executive-summary",
+          "tags": ["batteries", "storage", "solid-state"],
+          "conceptLink": "ch02"
+        },
+        {
+          "id": "technology-2",
+          "headline": "Green hydrogen edges from pilot to industrial scale",
+          "summary": "Cheaper renewable power, more durable electrolyser stacks and firm climate targets have matured electrolysis, with global capacity up more than twenty-five-fold from 2021 to 2024. Steelmakers are signing hydrogen supply contracts into the 2030s and ports are retrofitting for ammonia.",
+          "whyItMatters": "Industrial offtake contracts are the signal that green hydrogen is becoming a real fuel rather than a demonstration.",
+          "sourceName": "IEA",
+          "sourceUrl": "https://www.iea.org/reports/the-state-of-energy-innovation-2026/executive-summary",
+          "tags": ["hydrogen", "electrolysis", "industry"]
+        },
+        {
+          "id": "technology-3",
+          "headline": "Fusion logs net-gain milestone but stays a 2030s prospect",
+          "summary": "The National Ignition Facility delivered 8.6 MJ of fusion output from a 2.08 MJ laser input — more than four times the input — while advances in superconducting magnets enable smaller, more efficient tokamaks. Even aggressive roadmaps see no significant commercial capacity before the 2030s.",
+          "whyItMatters": "Repeatable net energy gain is the threshold fusion must cross before it can ever contribute to the grid.",
+          "sourceName": "World Economic Forum",
+          "sourceUrl": "https://www.weforum.org/stories/2026/02/nuclear-fusion-science-explained/",
+          "tags": ["fusion", "net energy gain", "tokamak"],
+          "conceptLink": "ch06"
+        }
+      ]
+    },
+    {
+      "id": "regulation",
+      "title": "Regulations & Policy",
+      "emoji": "📋",
+      "items": [
+        {
+          "id": "regulation-1",
+          "headline": "EU finalising ETS free-allocation benchmarks",
+          "summary": "New EU ETS benchmark values are out for public and member-state consultation, with adoption expected by the end of June, setting how many free carbon allowances industries receive. Support for electrification could lift benchmarks and deliver around €4bn of benefit to industry over 2026–2030.",
+          "whyItMatters": "Benchmarks decide how much of their carbon bill heavy industry pays, shaping competitiveness and the pace of decarbonisation.",
+          "sourceName": "Open Access Government",
+          "sourceUrl": "https://www.openaccessgovernment.org/eu-makes-moves-that-will-support-the-carbon-market-and-industrial-decarbonisation/209210/",
+          "tags": ["eu ets", "carbon", "industry"]
+        },
+        {
+          "id": "regulation-2",
+          "headline": "EU unveils €30bn ETS investment booster",
+          "summary": "Commission President von der Leyen announced a €30bn ETS investment booster financed through 400 million carbon allowances. Details will accompany the flagship cap-and-trade review due on 15 July.",
+          "whyItMatters": "Recycling allowance revenue into clean-tech investment is becoming the EU's main lever to fund the transition.",
+          "sourceName": "Energy Connects",
+          "sourceUrl": "https://www.energyconnects.com/news/renewables/2026/june/eu-designs-30-billion-carbon-market-tool-to-avoid-permit-deluge/",
+          "tags": ["eu ets", "investment", "policy"]
+        },
+        {
+          "id": "regulation-3",
+          "headline": "CBAM carbon border levy now applies to imports",
+          "summary": "Since January 2026 the EU has charged a tariff on the carbon emissions embedded in imported steel, cement and aluminium, as well as cross-border electricity trade. A full review of the ETS framework is due by July 2026.",
+          "whyItMatters": "The border levy reshapes trade incentives by pricing the carbon content of imports, with global ripple effects on exporters.",
+          "sourceName": "Bruegel",
+          "sourceUrl": "https://www.bruegel.org/analysis/case-delaying-application-eus-carbon-border-levy-electricity",
+          "tags": ["cbam", "carbon border", "trade"]
+        }
+      ]
+    },
+    {
+      "id": "finland",
+      "title": "Finland",
+      "emoji": "🇫🇮",
+      "items": [
+        {
+          "id": "finland-1",
+          "headline": "Wind becomes Finland's second-largest power source",
+          "summary": "Wind power supplied nearly 28% of Finland's electricity generation, making it the country's second-largest source behind nuclear. The share of clean electricity reached about 96% last year.",
+          "whyItMatters": "Finland is approaching a near-fully decarbonised grid, a benchmark for other cold-climate economies.",
+          "sourceName": "Suomen uusiutuvat",
+          "sourceUrl": "https://suomenuusiutuvat.fi/en/wind-power-becomes-finlands-second-largest-source-of-electricity/",
+          "tags": ["wind", "clean electricity"]
+        },
+        {
+          "id": "finland-2",
+          "headline": "Olkiluoto supplied about 27.5% of Finnish electricity in 2025",
+          "summary": "Plant operator TVO reported that the Olkiluoto nuclear station produced roughly 27.5% of Finland's electricity needs in 2025, with the OL3 EPR's first 18-month fuel cycle now underway. The next OL3 outage is planned for autumn 2026.",
+          "whyItMatters": "A single nuclear site covering over a quarter of national demand underpins the stability of Finland's clean grid.",
+          "sourceName": "TVO",
+          "sourceUrl": "https://www.tvo.fi/en/index/news/pressreleasesstockexchangereleases/2026/olkiluotoproduced27.5percentoffinland8217selectricityneedslastyear.html",
+          "tags": ["nuclear", "olkiluoto", "baseload"],
+          "conceptLink": "ch06"
+        },
+        {
+          "id": "finland-3",
+          "headline": "Loviisa nuclear plant readies major turbine modernisation",
+          "summary": "Fortum's Loviisa plant will begin several investment-programme projects during its 2026 annual outage, including modernising the low-pressure turbines, renewing turbine automation, and replacing the main seawater pumps and motors.",
+          "whyItMatters": "Turbine upgrades can lift output and extend plant life, squeezing more clean power from existing reactors.",
+          "sourceName": "Fortum",
+          "sourceUrl": "https://www.fortum.com/media/2026/01/preparations-underway-major-modernisation-projects-loviisa-nuclear-power-plant",
+          "tags": ["nuclear", "turbines", "loviisa"],
+          "conceptLink": "ch05"
+        }
+      ]
+    },
+    {
+      "id": "netherlands",
+      "title": "Netherlands",
+      "emoji": "🇳🇱",
+      "items": [
+        {
+          "id": "netherlands-1",
+          "headline": "Dutch offshore wind targets 21 GW by 2030",
+          "summary": "The Netherlands has around 4.7 GW of operational offshore wind across 10 farms and aims for roughly 21 GW by 2030. The 2 GW Doordewind 1, about 77 km off the coast, is the largest upcoming project.",
+          "whyItMatters": "Quadrupling offshore capacity is central to the Dutch plan to decarbonise power and supply green hydrogen.",
+          "sourceName": "NedZero",
+          "sourceUrl": "https://nedzero.nl/en/offshore-wind-facts",
+          "tags": ["offshore wind", "capacity"]
+        },
+        {
+          "id": "netherlands-2",
+          "headline": "500 MW offshore green-hydrogen project planned in the North Sea",
+          "summary": "An auction for a 500 MW offshore green-hydrogen project is expected in 2026 or 2027, while a Vattenfall–Copenhagen Infrastructure Partners venture plans floating solar and a large electrolyser at the Port of Rotterdam. National electrolyser capacity is targeted at 4 GW by 2030.",
+          "whyItMatters": "Co-locating electrolysers with offshore wind is the model for turning surplus renewable power into storable hydrogen.",
+          "sourceName": "Reccessary",
+          "sourceUrl": "https://www.reccessary.com/en/news/netherlands-plans-build-500-mw-offshore-green-hydrogen-project-north-sea",
+          "tags": ["hydrogen", "electrolyser", "rotterdam"]
+        },
+        {
+          "id": "netherlands-3",
+          "headline": "Grid congestion becomes the binding constraint",
+          "summary": "Dutch grid congestion is now a major brake on the transition, with most substations near capacity and thousands of businesses waiting for connections. Estimates put grid-upgrade needs in the tens of billions of euros by 2030.",
+          "whyItMatters": "Without faster grid expansion, new renewable and electrification projects cannot connect, stalling the whole transition.",
+          "sourceName": "Bird & Bird",
+          "sourceUrl": "https://www.twobirds.com/en/insights/2025/netherlands/general-dutch-energy-law-updates",
+          "tags": ["grid", "congestion", "infrastructure"]
+        }
+      ]
+    }
+  ]
+}

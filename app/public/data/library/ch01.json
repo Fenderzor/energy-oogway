@@ -1,0 +1,85 @@
+{
+  "chapterId": "ch01",
+  "chapter": 1,
+  "title": "Introduction & Basic Concepts",
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 1",
+  "deckId": "ch01",
+  "updatedAt": "2026-06-08T00:00:00Z",
+  "summary": "**Thermodynamics** is the science of energy — its forms, its transformations, and the rules that govern them. The name fuses *therme* (heat) and *dynamis* (power), reflecting its origin in turning heat into work. Two pillars hold up everything that follows: the **first law** says energy is conserved (it changes form but is never created or destroyed), and the **second law** says energy has *quality* as well as quantity, and real processes always degrade that quality.\n\nTo analyse anything, you first draw a boundary. The **system** is the matter or region you choose to study; everything outside is the **surroundings**, and the **boundary** separates them. A **closed system** (control mass) keeps the same matter — energy may cross the boundary, but mass cannot. An **open system** (control volume) lets *both* mass and energy flow across; a nozzle, turbine or pipe section is analysed this way. An **isolated system** exchanges neither.\n\nThe condition of a system is described by its **properties**. *Intensive* properties (temperature, pressure, density) are independent of size; *extensive* properties (mass, total volume, total energy) scale with it. Divide an extensive property by mass and you get a **specific** property — itself intensive — such as specific volume $v = V/m$. A complete set of property values fixes the **state**; the **state postulate** says that for a simple compressible system, just *two* independent intensive properties are enough.\n\nWhen properties stop changing, the system is in **equilibrium** (thermal, mechanical, phase and chemical). A **process** is any change of state, and the series of states it passes through is the **path**. The idealised **quasi-equilibrium** process stays infinitesimally close to equilibrium throughout — important because it is the kind of process we can draw on a diagram and for which work is well defined. A **cycle** returns the system to its initial state.\n\nFinally, the chapter pins down two everyday-but-subtle properties. **Temperature** is grounded by the **zeroth law**: if two bodies are each in thermal equilibrium with a third, they are in equilibrium with each other — which is what lets a thermometer work. **Pressure** is normal force per unit area; in a static fluid it rises with depth as $\\Delta P = \\rho g \\Delta h$, the principle behind manometers and barometers. Throughout, keep your **units** consistent (SI: kg, m, s, N, Pa, J) — a surprising share of thermodynamics mistakes are really unit mistakes.",
+  "equations": [
+    {
+      "name": "Specific volume & density",
+      "latex": "v = \\frac{V}{m} = \\frac{1}{\\rho}",
+      "rearrangements": ["\\rho = \\frac{m}{V}", "m = \\rho V = \\frac{V}{v}", "V = m v"],
+      "useWhen": "Converting between total volume $V$ and mass $m$, or switching between density and specific volume — which you do constantly once property tables (which list $v$) enter the picture.",
+      "note": "Specific volume is volume per unit mass; it is the reciprocal of density $\\rho$. Both are intensive."
+    },
+    {
+      "name": "Specific gravity",
+      "latex": "SG = \\frac{\\rho}{\\rho_{\\text{H}_2\\text{O}}}",
+      "rearrangements": ["\\rho = SG \\cdot \\rho_{\\text{H}_2\\text{O}}"],
+      "useWhen": "A fluid is given by its specific gravity (e.g. manometer oil, $SG = 0.85$) and you need an actual density to use in $\\rho g h$.",
+      "note": "Density relative to water at 4 °C ($\\rho_{\\text{H}_2\\text{O}} \\approx 1000\\ \\text{kg/m}^3$). Dimensionless."
+    },
+    {
+      "name": "Celsius ↔ Kelvin",
+      "latex": "T(\\text{K}) = T(^\\circ\\text{C}) + 273.15",
+      "rearrangements": ["T(^\\circ\\text{C}) = T(\\text{K}) - 273.15"],
+      "useWhen": "Before plugging temperature into *any* gas law or property relation. Reach for it automatically whenever a temperature appears in °C.",
+      "note": "A *temperature difference* is the same number in K and °C, so $\\Delta T$ never needs converting."
+    },
+    {
+      "name": "Pressure (definition)",
+      "latex": "P = \\frac{F}{A}",
+      "rearrangements": ["F = P A", "A = \\frac{F}{P}"],
+      "useWhen": "A force is spread over an area — pistons, hydraulic lifts, a weight resting on a gas. Equate pressures across a piston to find an unknown force or area.",
+      "note": "Normal force per unit area. SI unit: pascal, $1\\ \\text{Pa} = 1\\ \\text{N/m}^2$. Bridge: $1\\ \\text{kPa·m}^3 = 1\\ \\text{kJ}$."
+    },
+    {
+      "name": "Gauge & vacuum pressure",
+      "latex": "P_{\\text{gage}} = P_{\\text{abs}} - P_{\\text{atm}}",
+      "rearrangements": ["P_{\\text{abs}} = P_{\\text{atm}} + P_{\\text{gage}}", "P_{\\text{abs}} = P_{\\text{atm}} - P_{\\text{vac}}"],
+      "useWhen": "A pressure comes from a gauge or is labelled \"vacuum\". Convert to absolute *first*, because every property relation needs absolute pressure.",
+      "note": "Gauges read relative to local atmospheric pressure; $P_{\\text{vac}} = P_{\\text{atm}} - P_{\\text{abs}}$."
+    },
+    {
+      "name": "Hydrostatic pressure variation",
+      "latex": "\\Delta P = \\rho g \\, \\Delta h",
+      "rearrangements": ["\\Delta h = \\frac{\\Delta P}{\\rho g}", "\\rho = \\frac{\\Delta P}{g\\,\\Delta h}"],
+      "useWhen": "Pressure changes with depth in a static liquid — dams, tanks, finding a depth from a pressure difference.",
+      "note": "Pressure is the same at all points on a horizontal level within a connected static fluid."
+    },
+    {
+      "name": "Manometer relation",
+      "latex": "P = P_{\\text{atm}} + \\rho g h",
+      "rearrangements": ["P_{\\text{gage}} = \\rho g h", "h = \\frac{P - P_{\\text{atm}}}{\\rho g}"],
+      "useWhen": "Reading a gas/vessel pressure off a liquid column height $h$, or the reverse. Barometer is the special case $P_{\\text{atm}} = \\rho g h$.",
+      "note": "Add a $\\rho g h$ term going *down* each fluid column and subtract going *up*."
+    }
+  ],
+  "glossary": [
+    { "term": "Thermodynamics", "definition": "The science of energy and its transformations, built on conservation of energy (first law) and the direction/quality of processes (second law)." },
+    { "term": "System", "definition": "The quantity of matter or region in space chosen for study." },
+    { "term": "Surroundings & boundary", "definition": "Everything outside the system is the *surroundings*; the real or imaginary surface separating them is the *boundary* (it can be fixed or movable)." },
+    { "term": "Closed system (control mass)", "definition": "A fixed amount of matter: energy can cross the boundary, but mass cannot." },
+    { "term": "Open system (control volume)", "definition": "A region that both mass and energy can flow into and out of — e.g. a nozzle, turbine, or compressor." },
+    { "term": "Isolated system", "definition": "A system that exchanges neither mass nor energy with its surroundings." },
+    { "term": "Property", "definition": "Any characteristic of a system (e.g. $P$, $T$, $V$, $m$). *Intensive* properties are size-independent; *extensive* properties scale with mass." },
+    { "term": "Specific property", "definition": "An extensive property per unit mass (e.g. specific volume $v = V/m$); it is itself intensive." },
+    { "term": "State & state postulate", "definition": "The set of all property values at a given condition. For a simple compressible system, two independent intensive properties fix the state." },
+    { "term": "Equilibrium", "definition": "No unbalanced potentials within the system: thermal, mechanical, phase and chemical equilibrium together give *thermodynamic equilibrium*." },
+    { "term": "Process & path", "definition": "A *process* is a change from one state to another; the *path* is the series of states passed through." },
+    { "term": "Quasi-equilibrium process", "definition": "An idealised process that remains infinitesimally close to equilibrium throughout, so it can be drawn on property diagrams and yields the maximum work output." },
+    { "term": "Cycle", "definition": "A process (or series of processes) that returns the system to its initial state." },
+    { "term": "Zeroth law of thermodynamics", "definition": "If two bodies are each in thermal equilibrium with a third, they are in thermal equilibrium with each other — the basis of temperature measurement." },
+    { "term": "Pressure", "definition": "Normal force exerted by a fluid per unit area. Distinguish *absolute*, *gauge*, and *vacuum* pressure." },
+    { "term": "Continuum", "definition": "The assumption that matter is continuously distributed, so properties like density are defined at a point — valid when the mean free path is small relative to the system." }
+  ],
+  "tips": [
+    "**Convert to absolute units first.** Gas laws and property tables need absolute temperature (K) and absolute pressure — not °C or gauge pressure. This is the single most common Ch 1 mistake.",
+    "**Gauge vs absolute pressure.** A tyre gauge reading 200 kPa means $P_{\\text{abs}} \\approx 301$ kPa. Add $P_{\\text{atm}}$ unless the problem already gives absolute pressure.",
+    "**Intensive vs extensive.** If doubling the amount of substance doubles the quantity, it's extensive (mass, volume, energy). Dividing by mass turns it intensive (a *specific* property).",
+    "**Watch your unit bridges.** $1\\ \\text{N} = 1\\ \\text{kg·m/s}^2$ and $1\\ \\text{kJ} = 1\\ \\text{kPa·m}^3$. Carrying units through the algebra catches most numerical errors.",
+    "**Quasi-equilibrium is an idealisation.** Real fast processes are *not* quasi-equilibrium; you only get to draw a smooth path and compute reversible work when the process is (assumed) quasi-static."
+  ]
+}

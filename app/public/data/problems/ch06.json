@@ -1,0 +1,165 @@
+{
+  "chapterId": "ch06",
+  "chapter": 6,
+  "title": "The Second Law of Thermodynamics",
+  "updatedAt": "2026-06-08T00:00:00Z",
+  "problems": [
+    {
+      "id": "ch06-p001",
+      "chapter": 6,
+      "difficulty": 1,
+      "title": "Thermal efficiency of an engine",
+      "tags": ["heat engine", "efficiency"],
+      "kind": "numeric",
+      "scenario": "A heat engine receives **1000 kJ** of heat and produces **400 kJ** of net work.\n\nFind its **thermal efficiency** (as a decimal fraction).",
+      "answer": 0.4,
+      "unit": "",
+      "tolerance": 0.01,
+      "hints": [
+        "$\\eta_{th} = W_{net}/Q_H$.",
+        "Just divide the work by the heat input."
+      ],
+      "solution": "Thermal efficiency is the fraction of heat input turned into work:\n\n$$\\eta_{th} = \\frac{W_{net}}{Q_H} = \\frac{400}{1000} = 0.40$$\n\nSo 40% becomes work and the other 600 kJ is rejected to the sink.",
+      "equationsUsed": ["\\eta_{th} = \\frac{W_{net}}{Q_H}"],
+      "conceptLink": "ch06"
+    },
+    {
+      "id": "ch06-p002",
+      "chapter": 6,
+      "difficulty": 1,
+      "title": "Work from efficiency",
+      "tags": ["heat engine", "efficiency"],
+      "kind": "numeric",
+      "scenario": "A power plant has a thermal efficiency of **0.35** and receives **500 kJ** of heat.\n\nFind the **net work** produced, in kJ.",
+      "answer": 175,
+      "unit": "kJ",
+      "tolerance": 1,
+      "hints": [
+        "Rearrange $\\eta_{th} = W_{net}/Q_H$ for the work.",
+        "$W_{net} = \\eta_{th}\\,Q_H$."
+      ],
+      "solution": "Rearrange the efficiency definition for work:\n\n$$W_{net} = \\eta_{th}\\,Q_H = 0.35 \\times 500 = 175\\ \\text{kJ}$$\n\nThe remaining $Q_L = Q_H - W_{net} = 325\\ \\text{kJ}$ is rejected.",
+      "equationsUsed": ["W_{net} = \\eta_{th}\\,Q_H"],
+      "conceptLink": "ch06"
+    },
+    {
+      "id": "ch06-p003",
+      "chapter": 6,
+      "difficulty": 2,
+      "title": "Carnot efficiency",
+      "tags": ["Carnot", "efficiency"],
+      "kind": "numeric",
+      "scenario": "A reversible heat engine operates between a source at **800 K** and a sink at **300 K**.\n\nFind its **(Carnot) thermal efficiency**, as a decimal fraction.",
+      "answer": 0.625,
+      "unit": "",
+      "tolerance": 0.005,
+      "hints": [
+        "$\\eta_{th,rev} = 1 - T_L/T_H$.",
+        "Temperatures must be absolute (they're in K).",
+        "$1 - 300/800$."
+      ],
+      "solution": "The maximum possible efficiency between two reservoirs is the Carnot value:\n\n$$\\eta_{th,rev} = 1 - \\frac{T_L}{T_H} = 1 - \\frac{300}{800} = 1 - 0.375 = 0.625$$\n\nNo real engine between these two temperatures can beat 62.5%.",
+      "equationsUsed": ["\\eta_{th,rev} = 1 - \\frac{T_L}{T_H}"],
+      "conceptLink": "ch06"
+    },
+    {
+      "id": "ch06-p004",
+      "chapter": 6,
+      "difficulty": 2,
+      "title": "Refrigerator COP",
+      "tags": ["refrigerator", "COP"],
+      "kind": "numeric",
+      "scenario": "A refrigerator removes **400 kJ** of heat from the cold space using **100 kJ** of work input.\n\nFind its **coefficient of performance** $COP_R$.",
+      "answer": 4,
+      "unit": "",
+      "tolerance": 0.05,
+      "hints": [
+        "For a fridge, the desired output is the heat removed $Q_L$.",
+        "$COP_R = Q_L/W_{net,in}$."
+      ],
+      "solution": "A refrigerator's performance is the cooling delivered per unit of work:\n\n$$COP_R = \\frac{Q_L}{W_{net,in}} = \\frac{400}{100} = 4$$\n\nA COP above 1 is normal — you're *moving* heat, not creating it, so you get more cooling than the work you put in.",
+      "equationsUsed": ["COP_R = \\frac{Q_L}{W_{net,in}}"],
+      "conceptLink": "ch06"
+    },
+    {
+      "id": "ch06-p005",
+      "chapter": 6,
+      "difficulty": 2,
+      "title": "Heat pump work input",
+      "tags": ["heat pump", "COP"],
+      "kind": "numeric",
+      "scenario": "A heat pump delivers **8.0 kW** of heating to a house and has a coefficient of performance $COP_{HP} = 2.5$.\n\nFind the **electric power input**, in kW.",
+      "answer": 3.2,
+      "unit": "kW",
+      "tolerance": 0.05,
+      "hints": [
+        "For a heat pump the desired output is the heat delivered $\\dot Q_H$.",
+        "$COP_{HP} = \\dot Q_H/\\dot W$, so rearrange for $\\dot W$.",
+        "$\\dot W = \\dot Q_H/COP_{HP}$."
+      ],
+      "solution": "Rearrange the heat-pump COP for the work input:\n\n$$COP_{HP} = \\frac{\\dot Q_H}{\\dot W} \\quad\\Rightarrow\\quad \\dot W = \\frac{\\dot Q_H}{COP_{HP}} = \\frac{8.0}{2.5} = 3.2\\ \\text{kW}$$\n\nThe other $8.0 - 3.2 = 4.8\\ \\text{kW}$ is heat drawn from the cold outdoor air — which is why a heat pump beats a resistance heater.",
+      "equationsUsed": ["COP_{HP} = \\frac{\\dot Q_H}{\\dot W}", "\\dot W = \\frac{\\dot Q_H}{COP_{HP}}"],
+      "conceptLink": "ch06"
+    },
+    {
+      "id": "ch06-p006",
+      "chapter": 6,
+      "difficulty": 3,
+      "title": "Carnot refrigerator power",
+      "tags": ["Carnot", "refrigerator", "COP"],
+      "kind": "numeric",
+      "scenario": "A reversible (Carnot) refrigerator keeps a cold room at **−8 °C** while rejecting heat to surroundings at **25 °C**. It removes heat at **5.0 kW**.\n\nFind the **minimum power input**, in kW.",
+      "answer": 0.623,
+      "unit": "kW",
+      "tolerance": 0.03,
+      "hints": [
+        "Convert temperatures to kelvin first: $T_L = 265\\ \\text{K}$, $T_H = 298\\ \\text{K}$.",
+        "Carnot fridge COP: $COP_{R,rev} = T_L/(T_H - T_L)$.",
+        "Then $\\dot W = \\dot Q_L / COP_{R,rev}$."
+      ],
+      "solution": "**Step 1 — kelvin:** $T_L = -8 + 273 = 265\\ \\text{K}$, $T_H = 25 + 273 = 298\\ \\text{K}$.\n\n**Step 2 — best possible COP** (reversible):\n\n$$COP_{R,rev} = \\frac{T_L}{T_H - T_L} = \\frac{265}{298 - 265} = \\frac{265}{33} = 8.03$$\n\n**Step 3 — minimum power** for 5.0 kW of cooling:\n\n$$\\dot W = \\frac{\\dot Q_L}{COP_{R,rev}} = \\frac{5.0}{8.03} = 0.623\\ \\text{kW}$$\n\nAny real fridge between these temperatures needs *more* than 0.62 kW.",
+      "equationsUsed": ["COP_{R,rev} = \\frac{T_L}{T_H - T_L}", "\\dot W = \\frac{\\dot Q_L}{COP_{R,rev}}"],
+      "conceptLink": "ch06"
+    },
+    {
+      "id": "ch06-p007",
+      "chapter": 6,
+      "difficulty": 3,
+      "title": "Maximum work from a heat source",
+      "tags": ["Carnot", "heat engine"],
+      "kind": "numeric",
+      "scenario": "A heat engine takes **2000 kJ** of heat from a source at **900 K** and rejects heat to a sink at **300 K**.\n\nFind the **maximum possible work** output, in kJ.",
+      "answer": 1333,
+      "unit": "kJ",
+      "tolerance": 10,
+      "hints": [
+        "Maximum work comes from a reversible (Carnot) engine.",
+        "$W_{max} = \\eta_{th,rev}\\,Q_H$ with $\\eta_{th,rev} = 1 - T_L/T_H$.",
+        "$\\eta_{th,rev} = 1 - 300/900$."
+      ],
+      "solution": "The most work you can extract corresponds to the Carnot efficiency:\n\n$$\\eta_{th,rev} = 1 - \\frac{T_L}{T_H} = 1 - \\frac{300}{900} = 0.6667$$\n\n$$W_{max} = \\eta_{th,rev}\\,Q_H = 0.6667 \\times 2000 = 1333\\ \\text{kJ}$$\n\nThe unavoidable $2000 - 1333 = 667\\ \\text{kJ}$ must be rejected to the sink — the second law forbids doing better.",
+      "equationsUsed": ["\\eta_{th,rev} = 1 - \\frac{T_L}{T_H}", "W_{max} = \\eta_{th,rev}\\,Q_H"],
+      "conceptLink": "ch06"
+    },
+    {
+      "id": "ch06-p008",
+      "chapter": 6,
+      "difficulty": 3,
+      "title": "Carnot heat pump for a house",
+      "tags": ["Carnot", "heat pump", "COP"],
+      "kind": "numeric",
+      "scenario": "A house is kept at **22 °C** while the outside air is at **−5 °C**. The house loses heat at **60 000 kJ/h**. A reversible (Carnot) heat pump supplies the heating.\n\nFind the **minimum power input**, in kW.",
+      "answer": 1.525,
+      "unit": "kW",
+      "tolerance": 0.05,
+      "hints": [
+        "Convert temperatures to kelvin and the heat loss to kW: $60\\,000\\ \\text{kJ/h} \\div 3600 = 16.67\\ \\text{kW}$.",
+        "Carnot heat-pump COP: $COP_{HP,rev} = T_H/(T_H - T_L)$, with $T_H = 295$, $T_L = 268\\ \\text{K}$.",
+        "$\\dot W = \\dot Q_H/COP_{HP,rev}$."
+      ],
+      "solution": "**Step 1 — convert units:** $T_H = 295\\ \\text{K}$, $T_L = 268\\ \\text{K}$; heat demand $\\dot Q_H = 60\\,000/3600 = 16.67\\ \\text{kW}$ (the steady loss must be replaced).\n\n**Step 2 — best COP:**\n\n$$COP_{HP,rev} = \\frac{T_H}{T_H - T_L} = \\frac{295}{295 - 268} = \\frac{295}{27} = 10.93$$\n\n**Step 3 — minimum power:**\n\n$$\\dot W = \\frac{\\dot Q_H}{COP_{HP,rev}} = \\frac{16.67}{10.93} = 1.525\\ \\text{kW}$$\n\nA small temperature gap gives a huge COP — only ~1.5 kW of electricity replaces 16.7 kW of heat loss.",
+      "equationsUsed": ["COP_{HP,rev} = \\frac{T_H}{T_H - T_L}", "\\dot W = \\frac{\\dot Q_H}{COP_{HP,rev}}"],
+      "conceptLink": "ch06"
+    }
+  ]
+}

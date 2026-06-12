@@ -1,0 +1,60 @@
+{
+  "decks": [
+    {
+      "deckId": "ch01",
+      "title": "Ch 1 — Introduction & Basic Concepts",
+      "chapter": 1,
+      "description": "Systems, properties, units, temperature and pressure.",
+      "cardCount": 8
+    },
+    {
+      "deckId": "ch02",
+      "title": "Ch 2 — Energy, Energy Transfer & General Energy Analysis",
+      "chapter": 2,
+      "description": "Forms of energy, heat, work, and the first law.",
+      "cardCount": 11
+    },
+    {
+      "deckId": "ch03",
+      "title": "Ch 3 — Properties of Pure Substances",
+      "chapter": 3,
+      "description": "Phases, phase change, property tables, ideal gas and compressibility.",
+      "cardCount": 12
+    },
+    {
+      "deckId": "ch04",
+      "title": "Ch 4 — Energy Analysis of Closed Systems",
+      "chapter": 4,
+      "description": "Boundary work, the closed-system first law, and specific heats.",
+      "cardCount": 12
+    },
+    {
+      "deckId": "ch05",
+      "title": "Ch 5 — Mass & Energy Analysis of Control Volumes",
+      "chapter": 5,
+      "description": "Mass conservation, flow work, the steady-flow energy equation, and devices.",
+      "cardCount": 12
+    },
+    {
+      "deckId": "ch06",
+      "title": "Ch 6 — The Second Law of Thermodynamics",
+      "chapter": 6,
+      "description": "Heat engines, refrigerators, reversibility, and the Carnot cycle.",
+      "cardCount": 13
+    },
+    {
+      "deckId": "ch07",
+      "title": "Ch 7 — Entropy",
+      "chapter": 7,
+      "description": "Entropy, the increase principle, T ds relations, and isentropic processes.",
+      "cardCount": 13
+    },
+    {
+      "deckId": "ch08",
+      "title": "Ch 8 — Exergy",
+      "chapter": 8,
+      "description": "Exergy, dead state, exergy of heat, exergy destruction, second-law efficiency.",
+      "cardCount": 10
+    }
+  ]
+}

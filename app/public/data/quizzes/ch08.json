@@ -1,0 +1,136 @@
+{
+  "chapterId": "ch08",
+  "chapter": 8,
+  "title": "Exergy",
+  "updatedAt": "2026-06-09T00:00:00Z",
+  "questions": [
+    {
+      "id": "ch08-q01",
+      "chapter": 8,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "**Exergy** of a system is best described as…",
+      "choices": ["The maximum useful work obtainable as it reaches the dead state", "Its total internal energy", "The heat it can release", "Its entropy"],
+      "answerIndex": 0,
+      "explanation": "Exergy is the maximum useful work available as a system reversibly equilibrates with the environment — a quality measure, not total energy."
+    },
+    {
+      "id": "ch08-q02",
+      "chapter": 8,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "A large lake of lukewarm water at the environment temperature has…",
+      "choices": ["Large internal energy but essentially zero exergy", "Large exergy", "Zero internal energy", "Infinite exergy"],
+      "answerIndex": 0,
+      "explanation": "At the dead state ($T = T_0$) there is no temperature difference to exploit, so the work potential (exergy) is ~zero despite huge internal energy."
+    },
+    {
+      "id": "ch08-q03",
+      "chapter": 8,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Unlike energy, exergy in a real process is…",
+      "choices": ["Destroyed", "Conserved", "Created", "Unchanged"],
+      "answerIndex": 0,
+      "explanation": "Energy is conserved; exergy is destroyed by irreversibilities ($X_{dest} = T_0 S_{gen} > 0$)."
+    },
+    {
+      "id": "ch08-q04",
+      "chapter": 8,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Which heat source has the **highest** exergy per kJ, with $T_0 = 300$ K?",
+      "choices": ["Heat at 900 K", "Heat at 600 K", "Heat at 400 K", "Heat at 310 K"],
+      "answerIndex": 0,
+      "explanation": "Exergy fraction is $1 - T_0/T$, which grows with $T$. At 900 K it is $1 - 300/900 = 0.67$, the highest here."
+    },
+    {
+      "id": "ch08-q05",
+      "chapter": 8,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "To locate where a power plant wastes the most work potential, you should compute…",
+      "choices": ["The exergy destruction ($T_0 S_{gen}$) in each component", "The energy of each stream", "The total mass flow", "The first-law efficiency only"],
+      "answerIndex": 0,
+      "explanation": "Component-by-component exergy destruction pinpoints the biggest irreversibilities — something a first-law (energy) balance can't reveal."
+    },
+    {
+      "id": "ch08-q06",
+      "chapter": 8,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A 40%-efficient power plant has a second-law efficiency of about 70%. This means…",
+      "choices": ["It captures 70% of the exergy actually available for its task", "It is impossible", "It violates the first law", "Its thermal efficiency is wrong"],
+      "answerIndex": 0,
+      "explanation": "Second-law efficiency compares output to the reversible ideal for the same source/sink, so it is higher than the thermal efficiency — only 70% of the *available* work is captured."
+    },
+    {
+      "id": "ch08-q07",
+      "chapter": 8,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The exergy of heat $Q$ from a reservoir at $T$ (environment $T_0$) is…",
+      "choices": ["$\\left(1 - \\dfrac{T_0}{T}\\right)Q$", "$\\left(1 - \\dfrac{T}{T_0}\\right)Q$", "$\\dfrac{T_0}{T}Q$", "$\\dfrac{Q}{T - T_0}$"],
+      "answerIndex": 0,
+      "explanation": "The Carnot factor $(1 - T_0/T)$ weights the heat by its convertibility to work."
+    },
+    {
+      "id": "ch08-q08",
+      "chapter": 8,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The exergy destroyed in a process is…",
+      "choices": ["$X_{dest} = T_0\\, S_{gen}$", "$X_{dest} = S_{gen}/T_0$", "$X_{dest} = T_0/S_{gen}$", "$X_{dest} = Q - W$"],
+      "answerIndex": 0,
+      "explanation": "Gouy–Stodola: destroyed exergy is entropy generation valued at the dead-state temperature."
+    },
+    {
+      "id": "ch08-q09",
+      "chapter": 8,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The flow exergy of a stream (neglecting KE/PE) is…",
+      "choices": [
+        "$\\psi = (h - h_0) - T_0(s - s_0)$",
+        "$\\psi = (h - h_0) + T_0(s - s_0)$",
+        "$\\psi = (h - h_0)$",
+        "$\\psi = T_0(s - s_0) - (h - h_0)$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Flow exergy subtracts the unavailable part $T_0(s - s_0)$ from the enthalpy difference relative to the dead state."
+    },
+    {
+      "id": "ch08-q10",
+      "chapter": 8,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Heat $Q = 800$ kJ is supplied from a source at **500 K** with $T_0 = 300$ K. Find its exergy, in kJ.",
+      "answer": 320,
+      "unit": "kJ",
+      "tolerance": 4,
+      "explanation": "$X = (1 - 300/500)\\times 800 = 0.4 \\times 800 = 320$ kJ."
+    },
+    {
+      "id": "ch08-q11",
+      "chapter": 8,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A device generates entropy at $\\dot S_{gen} = 0.5$ kW/K with $T_0 = 290$ K. Find the rate of exergy destruction, in kW.",
+      "answer": 145,
+      "unit": "kW",
+      "tolerance": 2,
+      "explanation": "$\\dot X_{dest} = T_0 \\dot S_{gen} = 290 \\times 0.5 = 145$ kW."
+    },
+    {
+      "id": "ch08-q12",
+      "chapter": 8,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A turbine produces 820 kJ/kg of useful work; the reversible work for the same inlet/exit is 1000 kJ/kg. Find the second-law efficiency (decimal fraction).",
+      "answer": 0.82,
+      "unit": "",
+      "tolerance": 0.01,
+      "explanation": "Work-producing device: $\\eta_{II} = W_u/W_{rev} = 820/1000 = 0.82$."
+    }
+  ]
+}

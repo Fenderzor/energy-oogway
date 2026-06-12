@@ -1,0 +1,258 @@
+{
+  "chapterId": "ch05",
+  "chapter": 5,
+  "title": "Mass & Energy Analysis of Control Volumes",
+  "updatedAt": "2026-06-09T00:00:00Z",
+  "questions": [
+    {
+      "id": "ch05-q01",
+      "chapter": 5,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Why does **enthalpy** (not internal energy) appear in flow-system energy balances?",
+      "choices": [
+        "Flow work $Pv$ combines with $u$ into $h = u + Pv$",
+        "Enthalpy is easier to measure",
+        "Internal energy is zero for flowing fluids",
+        "It's a historical convention with no physical basis"
+      ],
+      "answerIndex": 0,
+      "explanation": "Pushing fluid across the boundary takes flow work $Pv$ per unit mass; bundling it with $u$ gives enthalpy — so streams carry $h + V^2/2 + gz$."
+    },
+    {
+      "id": "ch05-q02",
+      "chapter": 5,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "**Steady-flow** operation means…",
+      "choices": [
+        "Properties at every point in the control volume are constant in time",
+        "The fluid moves at constant velocity everywhere",
+        "No heat is transferred",
+        "Mass accumulates at a steady rate"
+      ],
+      "answerIndex": 0,
+      "explanation": "Nothing changes with time inside the control volume: $dm_{cv}/dt = 0$ and $dE_{cv}/dt = 0$ — so mass in = mass out and energy in = energy out."
+    },
+    {
+      "id": "ch05-q03",
+      "chapter": 5,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Across an ideal **throttling valve**, which property is conserved?",
+      "choices": ["Enthalpy", "Pressure", "Temperature", "Entropy"],
+      "answerIndex": 0,
+      "explanation": "No work, no heat, negligible KE/PE → $h_1 = h_2$. Pressure drops sharply, temperature usually drops, and entropy *increases*."
+    },
+    {
+      "id": "ch05-q04",
+      "chapter": 5,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Which device converts a flow's **enthalpy into kinetic energy** with no work or heat transfer?",
+      "choices": ["Nozzle", "Turbine", "Compressor", "Heat exchanger"],
+      "answerIndex": 0,
+      "explanation": "A nozzle accelerates the flow: $h_1 + V_1^2/2 = h_2 + V_2^2/2$ — enthalpy drops, velocity rises. A diffuser does the reverse."
+    },
+    {
+      "id": "ch05-q05",
+      "chapter": 5,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "For an **adiabatic turbine** with negligible $\\Delta KE$ and $\\Delta PE$, the SFEE reduces to…",
+      "choices": [
+        "$\\dot W = \\dot m\\,(h_1 - h_2)$",
+        "$\\dot W = \\dot m\\,(h_2 - h_1)$",
+        "$\\dot W = \\dot Q$",
+        "$h_1 = h_2$"
+      ],
+      "answerIndex": 0,
+      "explanation": "With $\\dot Q \\approx 0$ and KE/PE dropped, the enthalpy drop becomes shaft work out: $\\dot W = \\dot m(h_1 - h_2) > 0$ for a turbine."
+    },
+    {
+      "id": "ch05-q06",
+      "chapter": 5,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Saturated-liquid refrigerant passes through an expansion valve. At the exit you expect…",
+      "choices": [
+        "Lower pressure, lower temperature, partly vaporized",
+        "Lower pressure, same temperature, still all liquid",
+        "Higher pressure and temperature",
+        "Lower pressure, higher temperature, all vapor"
+      ],
+      "answerIndex": 0,
+      "explanation": "Throttling keeps $h$ constant while $P$ drops; part of the liquid flashes to vapor and the temperature falls to the new $T_{sat}$ — the heart of refrigeration."
+    },
+    {
+      "id": "ch05-q07",
+      "chapter": 5,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve the mass-flow relation $\\dot m = \\rho V A$ for the **velocity**:",
+      "choices": [
+        "$V = \\dfrac{\\dot m}{\\rho A}$",
+        "$V = \\dot m\\,\\rho A$",
+        "$V = \\dfrac{\\rho A}{\\dot m}$",
+        "$V = \\dfrac{A}{\\dot m \\rho}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Divide by $\\rho A$. Equivalently $V = \\dot m\\,v/A$ when you're given specific volume instead of density."
+    },
+    {
+      "id": "ch05-q08",
+      "chapter": 5,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "For an adiabatic nozzle (no work, $\\Delta pe \\approx 0$), the exit velocity is…",
+      "choices": [
+        "$V_2 = \\sqrt{V_1^2 + 2(h_1 - h_2)}$",
+        "$V_2 = \\sqrt{2(h_2 - h_1)}$",
+        "$V_2 = V_1 + (h_1 - h_2)$",
+        "$V_2 = \\sqrt{V_1^2 - 2(h_1 - h_2)}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "From $h_1 + V_1^2/2 = h_2 + V_2^2/2$, solve for $V_2$ — with $h$ in **J/kg** so the units match $V^2$."
+    },
+    {
+      "id": "ch05-q09",
+      "chapter": 5,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The work per unit mass to pump an (incompressible) **liquid** from $P_1$ to $P_2$ is approximately…",
+      "choices": ["$w = v\\,(P_2 - P_1)$", "$w = c_p \\Delta T$", "$w = RT\\ln(P_2/P_1)$", "$w = h_{fg}$"],
+      "answerIndex": 0,
+      "explanation": "For a liquid, $v$ is nearly constant, so $\\Delta h \\approx v\\Delta P$ — no property tables needed."
+    },
+    {
+      "id": "ch05-q10",
+      "chapter": 5,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Water ($\\rho = 1000\\ \\text{kg/m}^3$) flows at **2.0 m/s** through a pipe of area **0.005 m²**. Find $\\dot m$.",
+      "answer": 10,
+      "unit": "kg/s",
+      "tolerance": 0.2,
+      "explanation": "$\\dot m = \\rho V A = 1000 \\times 2.0 \\times 0.005 = 10$ kg/s."
+    },
+    {
+      "id": "ch05-q11",
+      "chapter": 5,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Steam flows through an adiabatic turbine at $\\dot m = 4.0\\ \\text{kg/s}$, entering at $h_1 = 3000$ and leaving at $h_2 = 2400\\ \\text{kJ/kg}$. Find the power output.",
+      "answer": 2400,
+      "unit": "kW",
+      "tolerance": 20,
+      "explanation": "$\\dot W = \\dot m(h_1 - h_2) = 4.0 \\times 600 = 2400$ kW."
+    },
+    {
+      "id": "ch05-q12",
+      "chapter": 5,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A pump raises water ($v = 0.001\\ \\text{m}^3/\\text{kg}$) from **100 kPa** to **3000 kPa**. Find the pump work per kg.",
+      "answer": 2.9,
+      "unit": "kJ/kg",
+      "tolerance": 0.05,
+      "explanation": "$w = v\\,(P_2 - P_1) = 0.001 \\times 2900 = 2.9$ kJ/kg."
+    },
+    {
+      "id": "ch05-q13",
+      "chapter": 5,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "For a **single-stream steady-flow** device, the mass balance requires…",
+      "choices": ["$\\dot m_{in} = \\dot m_{out}$", "$\\dot m_{in} > \\dot m_{out}$", "$\\dot m_{out} = 0$", "Mass to accumulate in the device"],
+      "answerIndex": 0,
+      "explanation": "Steady state means no mass accumulates, so the inlet and outlet mass-flow rates are equal."
+    },
+    {
+      "id": "ch05-q14",
+      "chapter": 5,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The **flow work** per unit mass needed to push fluid across a boundary is…",
+      "choices": ["$Pv$", "$\\tfrac12 V^2$", "$gz$", "$c_p T$"],
+      "answerIndex": 0,
+      "explanation": "Flow work is $Pv$; combined with internal energy it forms enthalpy, $h = u + Pv$ — why $h$ appears in flow equations."
+    },
+    {
+      "id": "ch05-q15",
+      "chapter": 5,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A **diffuser** (no work, adiabatic)…",
+      "choices": [
+        "Slows the flow and raises its enthalpy",
+        "Speeds the flow and lowers its enthalpy",
+        "Adds shaft work to the flow",
+        "Keeps velocity constant"
+      ],
+      "answerIndex": 0,
+      "explanation": "A diffuser is a nozzle in reverse: kinetic energy converts back to enthalpy, so velocity drops and $h$ rises."
+    },
+    {
+      "id": "ch05-q16",
+      "chapter": 5,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Which steady-flow device is characterized by $h_1 = h_2$?",
+      "choices": ["Throttling valve", "Turbine", "Pump", "Nozzle"],
+      "answerIndex": 0,
+      "explanation": "A throttle has no work, no heat and negligible KE/PE, so enthalpy is conserved — the defining isenthalpic device."
+    },
+    {
+      "id": "ch05-q17",
+      "chapter": 5,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Solve $\\dot m = VA/v$ for the flow **area** $A$:",
+      "choices": [
+        "$A = \\dfrac{\\dot m\\, v}{V}$",
+        "$A = \\dfrac{V}{\\dot m\\, v}$",
+        "$A = \\dot m\\, v\\, V$",
+        "$A = \\dfrac{\\dot m}{vV}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Rearranged continuity: $A = \\dot m v / V$ — used for sizing pipe or nozzle cross-sections."
+    },
+    {
+      "id": "ch05-q18",
+      "chapter": 5,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "For an adiabatic **compressor** (negligible KE/PE), the power input is…",
+      "choices": [
+        "$\\dot W_{in} = \\dot m\\,(h_2 - h_1)$",
+        "$\\dot W_{in} = \\dot m\\,(h_1 - h_2)$",
+        "$\\dot W_{in} = \\dot m\\,h_2$",
+        "$\\dot W_{in} = 0$"
+      ],
+      "answerIndex": 0,
+      "explanation": "A compressor raises enthalpy, so the input work is $\\dot m(h_2 - h_1)$ — the reverse of the turbine form."
+    },
+    {
+      "id": "ch05-q19",
+      "chapter": 5,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Steam enters an adiabatic nozzle at **20 m/s** and its enthalpy drops by **15 kJ/kg**. Find the exit velocity, in m/s.",
+      "answer": 174.4,
+      "unit": "m/s",
+      "tolerance": 2,
+      "explanation": "$V_2 = \\sqrt{V_1^2 + 2(h_1-h_2)} = \\sqrt{400 + 2(15\\,000)} = \\sqrt{30\\,400} = 174.4$ m/s (enthalpy in J/kg)."
+    },
+    {
+      "id": "ch05-q20",
+      "chapter": 5,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A pump raises water ($v = 0.001\\ \\text{m}^3/\\text{kg}$) from **200 kPa** to **4000 kPa** at $\\dot m = 5.0\\ \\text{kg/s}$. Find the pump power, in kW.",
+      "answer": 19,
+      "unit": "kW",
+      "tolerance": 0.5,
+      "explanation": "$\\dot W = \\dot m\\, v\\,(P_2 - P_1) = 5.0 \\times 0.001 \\times 3800 = 19$ kW."
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "chapters": [
+    {
+      "chapterId": "ch01",
+      "chapter": 1,
+      "title": "Introduction & Basic Concepts",
+      "topics": "Pressure, manometers, units",
+      "count": 8,
+      "byDifficulty": {
+        "1": 3,
+        "2": 3,
+        "3": 2,
+        "4": 0
+      }
+    },
+    {
+      "chapterId": "ch02",
+      "chapter": 2,
+      "title": "Energy, Energy Transfer & General Energy Analysis",
+      "topics": "Energy balance, efficiency, power",
+      "count": 8,
+      "byDifficulty": {
+        "1": 3,
+        "2": 2,
+        "3": 3,
+        "4": 0
+      }
+    },
+    {
+      "chapterId": "ch03",
+      "chapter": 3,
+      "title": "Properties of Pure Substances",
+      "topics": "Quality, tables, ideal gas",
+      "count": 8,
+      "byDifficulty": {
+        "1": 2,
+        "2": 3,
+        "3": 3,
+        "4": 0
+      }
+    },
+    {
+      "chapterId": "ch04",
+      "chapter": 4,
+      "title": "Energy Analysis of Closed Systems",
+      "topics": "Boundary work, first law, specific heats",
+      "count": 9,
+      "byDifficulty": {
+        "1": 2,
+        "2": 3,
+        "3": 3,
+        "4": 1
+      }
+    },
+    {
+      "chapterId": "ch05",
+      "chapter": 5,
+      "title": "Mass & Energy Analysis of Control Volumes",
+      "topics": "SFEE, turbines, nozzles, throttles",
+      "count": 8,
+      "byDifficulty": {
+        "1": 2,
+        "2": 3,
+        "3": 3,
+        "4": 0
+      }
+    },
+    {
+      "chapterId": "ch06",
+      "chapter": 6,
+      "title": "The Second Law of Thermodynamics",
+      "topics": "Efficiency, COP, Carnot",
+      "count": 8,
+      "byDifficulty": {
+        "1": 2,
+        "2": 3,
+        "3": 3,
+        "4": 0
+      }
+    },
+    {
+      "chapterId": "ch07",
+      "chapter": 7,
+      "title": "Entropy",
+      "topics": "Entropy change, isentropic efficiency",
+      "count": 9,
+      "byDifficulty": {
+        "1": 2,
+        "2": 3,
+        "3": 3,
+        "4": 1
+      }
+    },
+    {
+      "chapterId": "ch08",
+      "chapter": 8,
+      "title": "Exergy",
+      "topics": "Exergy of heat, destruction, second-law eff.",
+      "count": 8,
+      "byDifficulty": {
+        "1": 0,
+        "2": 2,
+        "3": 3,
+        "4": 3
+      }
+    }
+  ]
+}

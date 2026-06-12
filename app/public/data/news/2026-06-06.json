@@ -1,0 +1,244 @@
+{
+  "date": "2026-06-06",
+  "generatedAt": "2026-06-06T08:35:00+02:00",
+  "tldr": "Wind and solar overtook gas globally in electricity generation for the first time ever in April 2026, a landmark milestone in the energy transition. Oil markets remain strained as Strait of Hormuz traffic resumes only partially after months of closure due to the Iran–US conflict. Europe advances decarbonisation with a new €30 billion ETS Investment Booster, while Finland makes global headlines with its near-operational Onkalo nuclear waste repository and Helsinki SMR district-heating pilot.",
+  "sections": [
+    {
+      "id": "global",
+      "title": "Global Developments",
+      "emoji": "🌍",
+      "items": [
+        {
+          "id": "global-1",
+          "headline": "Wind and Solar Overtake Gas in Global Electricity Generation for First Time",
+          "summary": "In April 2026, wind and solar together generated 531 TWh of electricity worldwide, surpassing gas-fired generation of 477 TWh—a historic first. Combined renewables reached 22% of global electricity output versus gas at 20%. Global installed solar and wind capacity is on track to exceed 4,000 GW in 2026, overtaking coal and gas combined for the first time.",
+          "whyItMatters": "The first month in which variable renewables out-generated fossil gas marks a structural shift in the global power mix, signalling the energy transition has reached an inflection point.",
+          "sourceName": "Electrek",
+          "sourceUrl": "https://electrek.co/2026/05/20/in-a-first-wind-solar-generated-more-power-than-gas-globally-april-2026/",
+          "tags": ["renewables", "solar", "wind", "milestone"],
+          "conceptLink": "ch06"
+        },
+        {
+          "id": "global-2",
+          "headline": "Brent Crude Near $106/b as Hormuz Disruption Keeps Oil Tight",
+          "summary": "Brent crude has averaged around $106 per barrel in May–June 2026, driven by the near-closure of the Strait of Hormuz, which handles roughly one-fifth of global oil trade. The EIA forecasts prices to ease to $89/b by Q4 2026 and $79/b in 2027 as Middle East production gradually recovers. Gulf states collectively curtailed approximately 10.5 million barrels per day of output in April.",
+          "whyItMatters": "Elevated oil prices are propagating through transport fuel, petrochemical, and electricity costs globally, with full Hormuz recovery now delayed to at least early 2027.",
+          "sourceName": "U.S. Energy Information Administration",
+          "sourceUrl": "https://www.eia.gov/outlooks/steo/",
+          "tags": ["oil", "prices", "hormuz", "opec"]
+        },
+        {
+          "id": "global-3",
+          "headline": "LNG Supply Wave to Add 300 bcm/year by 2030, Pushing Prices Into Slump",
+          "summary": "New LNG export capacity is expected to grow by 300 billion cubic metres per year between 2025 and 2030, with roughly 45% from the United States and Qatar. Global LNG prices are entering a prolonged slump as this wave of supply ramps up through 2026. The abundance contrasts sharply with the tight LNG market of 2021–2022.",
+          "whyItMatters": "Cheaper LNG eases energy costs in Europe and Asia but risks reducing incentives for gas-to-renewables switching and complicating carbon pricing ambitions.",
+          "sourceName": "EnergyNow",
+          "sourceUrl": "https://energynow.com/2026/01/five-energy-market-trends-to-track-in-2026-the-year-of-the-glut/",
+          "tags": ["lng", "gas", "supply", "prices"]
+        },
+        {
+          "id": "global-4",
+          "headline": "China Solar Capacity on Track to Surpass Coal for the First Time in 2026",
+          "summary": "China's installed solar capacity reached 1,200 GW by end-2025—up 35% year-on-year—and is set to eclipse coal capacity in 2026. Combined wind and solar now stands at 1,840 GW in China, with non-fossil sources projected to account for about 63% of total installed power capacity by end-2026. Coal is expected to fall to roughly 31% of China's total fleet.",
+          "whyItMatters": "A solar-over-coal inflection point in the world's largest electricity market accelerates global decarbonisation timelines and reshapes demand for thermal coal.",
+          "sourceName": "Saurenergy",
+          "sourceUrl": "https://www.saurenergy.com/solar-energy-news/china-nears-historic-power-shift-as-solar-overtakes-coal-in-2026-11071748",
+          "tags": ["solar", "china", "coal", "capacity"]
+        }
+      ]
+    },
+    {
+      "id": "geopolitics",
+      "title": "Geopolitics",
+      "emoji": "🗺️",
+      "items": [
+        {
+          "id": "geopolitics-1",
+          "headline": "Strait of Hormuz Sees Limited Traffic Resumption After Three-Month Blockade",
+          "summary": "Following Iran's blockade of the Strait of Hormuz since 28 February 2026—triggered by the US–Israel air campaign against Iran—oil and LNG tanker traffic is beginning to resume on a limited basis in late May and early June. Shipping insurance premiums remain up to 20 times pre-war levels, and ADNOC CEO Sultan Al Jaber has warned full oil flows may not return before Q1–Q2 2027. The strait normally handles roughly one-fifth of global oil trade.",
+          "whyItMatters": "Even partial restoration of Hormuz traffic is critical for Middle Eastern producers, but persistent security risks and insurance costs mean the supply shock will linger well into 2027.",
+          "sourceName": "Gulf News",
+          "sourceUrl": "https://gulfnews.com/business/energy/is-strait-of-hormuz-now-open-more-oil-lng-tankers-cross-gulf-chokepoint-1.500552390",
+          "tags": ["iran", "oil", "shipping", "hormuz"]
+        },
+        {
+          "id": "geopolitics-2",
+          "headline": "UK Bans Maritime Services for Russian LNG, Including Third-Country Routes",
+          "summary": "New UK sanctions effective 20 May 2026 prohibit maritime transportation, insurance, and financial services related to Russian LNG, including ship-to-ship transfers and third-country-to-third-country trade. The measures align the UK with existing EU restrictions and cover terminals such as Yamal and Arctic LNG. Long-term contracts signed before 17 June 2025 have a wind-down period until 1 January 2027.",
+          "whyItMatters": "The UK's alignment with EU LNG sanctions closes a legal gap that previously allowed some Russian LNG to continue flowing via UK-flagged or UK-insured vessels, tightening the sanctions net around Moscow.",
+          "sourceName": "Trade Compliance Resource Hub",
+          "sourceUrl": "https://www.tradecomplianceresourcehub.com/2026/05/20/uk-imposes-new-russia-sanctions-mirroring-of-eu-position-on-the-maritime-transport-of-lng-and-refined-petroleum-products-derived-from-russian-crude/",
+          "tags": ["russia", "lng", "sanctions", "uk"]
+        },
+        {
+          "id": "geopolitics-3",
+          "headline": "US Physically Interdicts Venezuelan Oil Shipments in Escalation of Energy Coercion",
+          "summary": "The United States has moved beyond financial sanctions to physically interdict Venezuelan oil tankers at sea, asserting direct control over the movement of energy cargoes rather than only their financing. The tactic is part of a broader 2026 strategy in which energy has re-emerged as both a geopolitical weapon and an economic fault line between major powers. Iran's Hormuz blockade and US interdiction of Venezuelan cargoes both signal a shift toward kinetic energy statecraft.",
+          "whyItMatters": "Physical interdiction of oil shipments sets a new escalation threshold in energy geopolitics, raising counterparty risk for all maritime energy trade routes.",
+          "sourceName": "TIME",
+          "sourceUrl": "https://time.com/article/2026/04/03/energy-geopolitics-united-states-iran-china/",
+          "tags": ["venezuela", "oil", "sanctions", "usa"]
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "title": "Innovative Technologies",
+      "emoji": "🔬",
+      "items": [
+        {
+          "id": "technology-1",
+          "headline": "Google to Deploy World's Largest Iron-Air Battery — 300 MW / 30 GWh — in Minnesota",
+          "summary": "Google has reached a definitive agreement with Xcel Energy to install a 300 MW / 30 GWh iron-air battery system at a Minnesota site, using technology from Form Energy, which is set to become the world's largest battery by energy capacity. Iron-air cells react iron with atmospheric oxygen to discharge and reverse the reaction to charge, at projected costs well below lithium-ion for long-duration storage. Form Energy's West Virginia manufacturing facility is expected to deliver its first commercial systems by late 2026.",
+          "whyItMatters": "The deployment demonstrates iron-air long-duration storage is moving from pilot to utility scale, offering a sub-$50/kWh pathway for seasonal storage that could make deeply renewable grids economically viable.",
+          "sourceName": "PV Magazine USA",
+          "sourceUrl": "https://pv-magazine-usa.com/2026/02/24/google-to-deploy-worlds-largest-iron-air-battery-for-minnesota-data-center/",
+          "tags": ["battery", "storage", "iron-air", "grid"],
+          "conceptLink": "ch02"
+        },
+        {
+          "id": "technology-2",
+          "headline": "MIT Demonstrates Iron-Air Cell With 100-Hour Storage and 72% Round-Trip Efficiency",
+          "summary": "Researchers at MIT have published a new iron-air battery architecture capable of storing electricity for up to 100 hours with a round-trip efficiency of 72%, maintaining stable performance over 3,000 charge–discharge cycles. The projected cost is approximately one-tenth that of lithium-ion on an energy-capacity basis. The advance targets seasonal and multi-day storage applications for which lithium-ion is currently uneconomic.",
+          "whyItMatters": "A 72% round-trip efficiency over 3,000 cycles at low cost would make iron-air cells competitive for long-duration grid storage — the missing piece needed to integrate very high shares of variable renewables.",
+          "sourceName": "Energy Storage News",
+          "sourceUrl": "https://www.energystoragenews.org/articles/mit-iron-air-battery-100-hours-storage",
+          "tags": ["battery", "research", "iron-air", "efficiency"],
+          "conceptLink": "ch06"
+        },
+        {
+          "id": "technology-3",
+          "headline": "Barrow Green Hydrogen 30 MW Project Reaches Final Investment Decision",
+          "summary": "A 30 MW green hydrogen production facility in Barrow-in-Furness, Cumbria, UK reached final investment decision (FID) in May 2026, with Plug Power supplying proton-exchange-membrane electrolysers. The plant is designed to produce approximately 100 GWh of green hydrogen per year to supply Kimberly-Clark's manufacturing operations. The IEA counts 4.2 Mtpa of hydrogen projects that have now globally cleared FID.",
+          "whyItMatters": "Industrial hydrogen offtake agreements paired with electrolysis FIDs are the critical step for scaling the green hydrogen supply chain, and this project pairs commercial offtake with proven electrolyser technology.",
+          "sourceName": "GlobeNewswire",
+          "sourceUrl": "https://www.globenewswire.com/news-release/2026/05/20/3298326/9619/en/30-MW-Barrow-Green-Hydrogen-Project-Achieves-Final-Investment-Decision-with-Plug-Power-Electrolyzer-Supply/default.aspx",
+          "tags": ["hydrogen", "electrolyzer", "uk", "fid"],
+          "conceptLink": "ch05"
+        },
+        {
+          "id": "technology-4",
+          "headline": "Sungrow Completes World's First Large-Scale Grid-Forming Extreme Test",
+          "summary": "Sungrow announced the successful completion of the world's first large-scale full-condition grid-forming extreme test, validating stable frequency and voltage control across integrated solar, wind, and battery storage systems under severe grid disturbance scenarios. The result supports deployment of inverter-based resources in systems that previously required synchronous generators to maintain stability. Sungrow showcased the capability at its Global Renewable Energy Summit (GRES) 2026.",
+          "whyItMatters": "Grid-forming inverter technology is essential for high-renewable power systems to remain stable without fossil fuel plants, removing a key technical barrier to near-100% renewable grids.",
+          "sourceName": "PR Newswire",
+          "sourceUrl": "https://www.prnewswire.com/news-releases/sungrow-hosts-gres-2026-showcasing-value-driven-innovation-across-full-energy-scenarios-302755262.html",
+          "tags": ["grid", "solar", "storage", "inverter"]
+        }
+      ]
+    },
+    {
+      "id": "regulation",
+      "title": "Regulations & Policy",
+      "emoji": "📋",
+      "items": [
+        {
+          "id": "regulation-1",
+          "headline": "EU Designs €30 Billion ETS Investment Booster to Prevent Carbon Permit Price Collapse",
+          "summary": "The European Commission unveiled on 4 June 2026 a plan to stagger the sale of 400 million ETS allowances—worth approximately €30 billion—to finance industrial decarbonisation without crashing carbon prices. The ETS Investment Booster will allocate funding on a first-come, first-served basis with guaranteed access for lower-income member states. Full design details will accompany the scheduled ETS review on 15 July 2026.",
+          "whyItMatters": "Coordinating the pace of permit sales protects the carbon price signal that drives clean-technology investment, while directing revenue back into the low-carbon transition.",
+          "sourceName": "Energy Connects",
+          "sourceUrl": "https://www.energyconnects.com/news/renewables/2026/june/eu-designs-30-billion-carbon-market-tool-to-avoid-permit-deluge/",
+          "tags": ["eu", "ets", "carbon-market", "decarbonisation"]
+        },
+        {
+          "id": "regulation-2",
+          "headline": "ETS Booster to Join €100 Billion EU Industrial Decarbonization Bank",
+          "summary": "The ETS Investment Booster will form part of a broader €100 billion EU Industrial Decarbonization Bank designed to mobilise public and private capital for hard-to-abate sectors. Lower-income EU member states will have guaranteed access, addressing equity concerns around transition costs. The Commission noted that carbon costs currently account for about 11% of average EU electricity prices, rising to 24% in Poland.",
+          "whyItMatters": "Embedding the booster within a larger bank structure signals a shift from ad-hoc climate measures to institutionalised industrial transition finance at EU scale.",
+          "sourceName": "Carbon Pulse",
+          "sourceUrl": "https://carbon-pulse.com/495517/",
+          "tags": ["eu", "decarbonisation", "industry", "carbon-price"]
+        },
+        {
+          "id": "regulation-3",
+          "headline": "EU Reinforces ETS Stability with Updated Benchmarks Ahead of July Review",
+          "summary": "The European Commission announced additional ETS flexibilities including updated free-allocation benchmarks for heavy industry, to keep carbon leakage protections current while the broader reform is finalised. A medium-term ETS review is scheduled for 15 July 2026 with the stated goal of modernising the system for the 2030 climate targets. The Commission also proposed adjustments to the Market Stability Reserve rules to better manage allowance balances.",
+          "whyItMatters": "Benchmark updates determine how much free carbon allocation heavy industry receives, directly affecting the investment case for switching to low-carbon production processes before 2030.",
+          "sourceName": "European Commission",
+          "sourceUrl": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_666",
+          "tags": ["eu", "ets", "carbon-market", "policy"]
+        }
+      ]
+    },
+    {
+      "id": "finland",
+      "title": "Finland",
+      "emoji": "🇫🇮",
+      "items": [
+        {
+          "id": "finland-1",
+          "headline": "Onkalo Nuclear Waste Repository Nears Operations — A World First for Spent Fuel Disposal",
+          "summary": "Finland's Onkalo repository in Eurajoki is on the verge of becoming the world's first operational permanent repository for spent nuclear fuel, expected to begin receiving waste by late 2026 or early 2027. Located 433 metres below ground in stable Precambrian bedrock, Onkalo will ultimately store up to 6,500 tonnes of spent fuel in corrosion-resistant copper canisters surrounded by bentonite clay. The repository is engineered to isolate radioactivity for at least 100,000 years.",
+          "whyItMatters": "Onkalo's opening resolves the longest-standing unresolved challenge in nuclear power—permanent waste disposal—and may unlock renewed public and political support for nuclear energy globally.",
+          "sourceName": "Republic World",
+          "sourceUrl": "https://www.republicworld.com/science/finlands-onkalo-repository-the-worlds-first-nuclear-waste-tomb-nears-operation-why-it-s-a-game-changer-2026-06-02-126567",
+          "tags": ["nuclear", "waste", "repository", "finland"]
+        },
+        {
+          "id": "finland-2",
+          "headline": "Steady Energy Pours First Concrete for SMR Pilot Inside Helsinki Coal Plant",
+          "summary": "Finnish startup Steady Energy poured first concrete in February 2026 for a small modular reactor (SMR) pilot at the Salmisaari B coal power plant in Helsinki, converting the former turbine hall into a test facility for its LDR-50 reactor design. The pilot uses electric resistors rather than nuclear fuel to simulate the reactor's thermal output for Helen Oy's district heating network, with commercial deployment targeted for 2028. Finland could accommodate an estimated 20–30 such SMR units for urban district heating.",
+          "whyItMatters": "Repurposing a decommissioned coal plant for a nuclear district-heating pilot demonstrates a practical pathway for SMRs to decarbonise urban heat networks while reusing existing infrastructure.",
+          "sourceName": "NucNet",
+          "sourceUrl": "https://www.nucnet.org/news/finland-s-steady-energy-pours-first-concrete-for-pilot-reactor-in-helsinki-2-2-2026",
+          "tags": ["smr", "nuclear", "district-heating", "finland"],
+          "conceptLink": "ch05"
+        },
+        {
+          "id": "finland-3",
+          "headline": "EU Energy Leaders Gather in Helsinki for Eurelectric Power Summit",
+          "summary": "EU Executive Vice-President Teresa Ribera and Energy Commissioner Dan Jørgensen visited Helsinki on 3–4 June 2026 for the Eurelectric Power Summit, discussing electrification, energy security, affordability, and competitiveness. Commissioner Jørgensen toured the Steady Energy SMR pilot, citing Finland's leading role in nuclear innovation. Finland's Minister of Climate Sari Multala participated in stage discussions on the country's clean energy transition.",
+          "whyItMatters": "The summit's focus on electrification and energy security in Helsinki—an EU member with a high share of nuclear and renewable power—reflects growing momentum for Finland's energy model as a reference for other EU states.",
+          "sourceName": "European Commission Energy",
+          "sourceUrl": "https://energy.ec.europa.eu/news/executive-vice-president-ribera-and-commissioner-jorgensen-finland-discuss-clean-energy-transition-2026-06-03_en",
+          "tags": ["eu", "electrification", "energy-security", "finland"]
+        },
+        {
+          "id": "finland-4",
+          "headline": "Olkiluoto Nuclear Complex Generated About 25% of Finnish Electricity in 2025",
+          "summary": "Teollisuuden Voima (TVO) reported that the Olkiluoto nuclear power plant—comprising units OL1, OL2, and the recently commissioned OL3—generated approximately one quarter of Finland's total electricity in 2025. The three-unit site has an aggregate capacity of about 2.8 GW, making it the largest power station in the Nordic countries. Finland's electricity mix is among the lowest in carbon intensity in Europe as a result.",
+          "whyItMatters": "Olkiluoto's output underscores how nuclear baseload anchors Finland's low-carbon grid and provides stable generation that complements variable wind and hydro resources.",
+          "sourceName": "TVO",
+          "sourceUrl": "https://www.tvo.fi/en/index/news/pressreleasesstockexchangereleases/2026/olkiluotoproducedaboutaquarteroffinnishelectricityin2025.html",
+          "tags": ["nuclear", "electricity", "olkiluoto", "finland"],
+          "conceptLink": "ch06"
+        }
+      ]
+    },
+    {
+      "id": "netherlands",
+      "title": "Netherlands",
+      "emoji": "🇳🇱",
+      "items": [
+        {
+          "id": "netherlands-1",
+          "headline": "Dutch Onshore Wind Growth Falls to Weakest Since 2017 — Net Capacity Decline Looms in 2026",
+          "summary": "The Netherlands added just 96 MW of onshore wind capacity in 2025—the smallest annual increase since 2017—as grid congestion, lengthy permitting, and rising costs suppressed new installations. A net capacity decline is projected for 2026 as approximately 190 MW of ageing turbines in Flevoland and North Holland are scheduled for decommissioning while new builds fail to keep pace. The country still operates about 7 GW of onshore wind across roughly 2,550 turbines.",
+          "whyItMatters": "A contracting onshore wind fleet in a country with ambitious 2030 renewable targets signals a structural policy failure, heightening pressure on offshore wind and solar to compensate.",
+          "sourceName": "WindpowerNL",
+          "sourceUrl": "https://windpowernl.com/2026/05/11/netherlands-adds-just-96-mw-to-onshore-wind-capacity-in-weakest-growth-since-2017/",
+          "tags": ["wind", "netherlands", "grid-congestion", "permits"]
+        },
+        {
+          "id": "netherlands-2",
+          "headline": "Grid Congestion Leaves Over 9,400 Dutch Businesses Awaiting Connection",
+          "summary": "TenneT's January 2026 update reported that over 60% of substations in the Netherlands are operating at or near capacity, leaving more than 9,400 businesses waiting for grid connections as of Q1 2026. Electricity prices for small consumers rose approximately 18% year-on-year in early 2026. The Dutch Authority for Consumers and Markets (ACM) has warned of 'structural energy stagnation' without urgent grid upgrades.",
+          "whyItMatters": "Grid congestion is the primary bottleneck for the Netherlands' energy transition, blocking industrial electrification and new renewable connections despite a strong project pipeline.",
+          "sourceName": "Enlit World",
+          "sourceUrl": "https://www.enlit.world/library/lessons-from-grid-bottlenecks-in-germany-and-the-netherlands",
+          "tags": ["grid", "congestion", "netherlands", "electricity"]
+        },
+        {
+          "id": "netherlands-3",
+          "headline": "Dutch Offshore Wind 2026 Tender Scaled to 1 GW; Gamma-A Site Delayed to December",
+          "summary": "The Netherlands scaled back its 2026 offshore wind tender from 2 GW to 1 GW following advice from the Netherlands Environmental Assessment Agency (PBL) that available budget was insufficient for a larger round. The IJmuiden Ver Gamma-A site tender has been delayed from September–October to December 2026 to give developers more preparation time. A temporary subsidy mechanism was introduced to support the scaled-back tender.",
+          "whyItMatters": "Consecutive delays and budget-driven scale-backs in offshore wind tendering jeopardise the Netherlands' target of 21 GW of offshore wind by 2030, which is already demanding given supply chain constraints.",
+          "sourceName": "Offshore Wind Biz",
+          "sourceUrl": "https://www.offshorewind.biz/2026/01/19/dutch-govt-plans-single-site-tender-in-september-temporary-subsidy-mechanism-to-support-1-gw-of-offshore-wind/",
+          "tags": ["offshore-wind", "netherlands", "tender", "delay"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "deckId": "ch07",
+  "title": "Ch 7 — Entropy",
+  "chapter": 7,
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 7",
+  "description": "Entropy, the increase principle, T ds relations, and isentropic processes.",
+  "owner": "local",
+  "version": 1,
+  "forkedFrom": null,
+  "updatedAt": "2026-06-06T00:00:00Z",
+  "cards": [
+    {
+      "id": "ch07-001",
+      "type": "basic",
+      "front": "State the *Clausius inequality*.",
+      "back": "$\\displaystyle\\oint \\frac{\\delta Q}{T} \\le 0$ for any cycle. Equality holds for internally reversible cycles; this inequality is the basis for defining entropy.",
+      "tags": ["Clausius inequality"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch07-002",
+      "type": "basic",
+      "front": "Define *entropy* (differential form).",
+      "back": "$dS = \\left(\\dfrac{\\delta Q}{T}\\right)_{int,rev}$ (kJ/K). Entropy is a property, so $\\Delta S$ between two states is independent of the path.",
+      "tags": ["entropy"],
+      "level": "core"
+    },
+    {
+      "id": "ch07-003",
+      "type": "basic",
+      "front": "State the *increase of entropy principle*.",
+      "back": "The entropy of an isolated system can never decrease: $S_{gen} \\ge 0$. $S_{gen} = 0$ for reversible processes, $> 0$ for irreversible ones; $S_{gen} < 0$ is impossible.",
+      "tags": ["entropy generation"],
+      "level": "core"
+    },
+    {
+      "id": "ch07-004",
+      "type": "basic",
+      "front": "Entropy of a saturated liquid–vapor mixture?",
+      "back": "Like other properties: $s = s_f + x\\,s_{fg}$, read from the saturation tables.",
+      "tags": ["entropy", "tables"],
+      "level": "core"
+    },
+    {
+      "id": "ch07-005",
+      "type": "basic",
+      "front": "Write the two *T ds (Gibbs) relations*.",
+      "back": "$T\\,ds = du + P\\,dv$ and $T\\,ds = dh - v\\,dP$.",
+      "tags": ["T ds relations"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch07-006",
+      "type": "basic",
+      "front": "Entropy change of an ideal gas (constant specific heats)?",
+      "back": "$\\Delta s = c_v \\ln\\dfrac{T_2}{T_1} + R\\ln\\dfrac{v_2}{v_1} = c_p \\ln\\dfrac{T_2}{T_1} - R\\ln\\dfrac{P_2}{P_1}$.",
+      "tags": ["entropy", "ideal gas"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch07-007",
+      "type": "basic",
+      "front": "What is an *isentropic* process and what is it used to model?",
+      "back": "A reversible and adiabatic process, for which $\\Delta s = 0$. It is the ideal benchmark for adiabatic turbines, compressors, pumps and nozzles.",
+      "tags": ["isentropic"],
+      "level": "core"
+    },
+    {
+      "id": "ch07-008",
+      "type": "basic",
+      "front": "Isentropic relations for an ideal gas (constant specific heats)?",
+      "back": "$\\dfrac{T_2}{T_1} = \\left(\\dfrac{P_2}{P_1}\\right)^{(k-1)/k} = \\left(\\dfrac{v_1}{v_2}\\right)^{k-1}$, and $Pv^k = \\text{const}$.",
+      "tags": ["isentropic", "ideal gas"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch07-009",
+      "type": "basic",
+      "front": "Entropy change of liquids and solids (incompressible)?",
+      "back": "$\\Delta s = c\\,\\ln\\dfrac{T_2}{T_1}$. An isentropic process of an incompressible substance is therefore also isothermal.",
+      "tags": ["entropy", "incompressible"],
+      "level": "core"
+    },
+    {
+      "id": "ch07-010",
+      "type": "basic",
+      "front": "Isentropic efficiency of a *turbine*?",
+      "back": "$\\eta_T = \\dfrac{\\text{actual work}}{\\text{isentropic work}} = \\dfrac{h_1 - h_{2a}}{h_1 - h_{2s}}$.",
+      "tags": ["isentropic efficiency", "turbine"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch07-011",
+      "type": "basic",
+      "front": "Isentropic efficiency of a *compressor*?",
+      "back": "$\\eta_C = \\dfrac{\\text{isentropic work}}{\\text{actual work}} = \\dfrac{h_{2s} - h_1}{h_{2a} - h_1}$.",
+      "tags": ["isentropic efficiency", "compressor"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch07-012",
+      "type": "basic",
+      "front": "Reversible steady-flow work?",
+      "back": "$w_{rev} = -\\displaystyle\\int_1^2 v\\,dP$ (plus ΔKE, ΔPE). For incompressible flow this gives $w_{rev} = -v(P_2 - P_1) - \\Delta ke - \\Delta pe$.",
+      "tags": ["steady-flow work"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch07-013",
+      "type": "numeric",
+      "front": "A thermal reservoir at 500 K receives 1000 kJ of heat. What is its entropy change (kJ/K)?",
+      "back": "$\\Delta S = \\dfrac{Q}{T} = \\dfrac{1000}{500} = 2.0\\ \\text{kJ/K}$ (positive, since heat is added).",
+      "answer": 2.0,
+      "unit": "kJ/K",
+      "tolerance": 0.05,
+      "tags": ["entropy", "calculation"],
+      "level": "core"
+    }
+  ]
+}

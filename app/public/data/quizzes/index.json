@@ -1,0 +1,100 @@
+{
+  "chapters": [
+    {
+      "chapterId": "ch01",
+      "chapter": 1,
+      "title": "Introduction & Basic Concepts",
+      "count": 20,
+      "byCategory": {
+        "concept": 5,
+        "applied": 5,
+        "equation": 5,
+        "problem": 5
+      }
+    },
+    {
+      "chapterId": "ch02",
+      "chapter": 2,
+      "title": "Energy, Energy Transfer & General Energy Analysis",
+      "count": 20,
+      "byCategory": {
+        "concept": 5,
+        "applied": 5,
+        "equation": 5,
+        "problem": 5
+      }
+    },
+    {
+      "chapterId": "ch03",
+      "chapter": 3,
+      "title": "Properties of Pure Substances",
+      "count": 20,
+      "byCategory": {
+        "concept": 5,
+        "applied": 5,
+        "equation": 5,
+        "problem": 5
+      }
+    },
+    {
+      "chapterId": "ch04",
+      "chapter": 4,
+      "title": "Energy Analysis of Closed Systems",
+      "count": 20,
+      "byCategory": {
+        "concept": 5,
+        "applied": 5,
+        "equation": 5,
+        "problem": 5
+      }
+    },
+    {
+      "chapterId": "ch05",
+      "chapter": 5,
+      "title": "Mass & Energy Analysis of Control Volumes",
+      "count": 20,
+      "byCategory": {
+        "concept": 5,
+        "applied": 5,
+        "equation": 5,
+        "problem": 5
+      }
+    },
+    {
+      "chapterId": "ch06",
+      "chapter": 6,
+      "title": "The Second Law of Thermodynamics",
+      "count": 20,
+      "byCategory": {
+        "concept": 5,
+        "applied": 5,
+        "equation": 5,
+        "problem": 5
+      }
+    },
+    {
+      "chapterId": "ch07",
+      "chapter": 7,
+      "title": "Entropy",
+      "count": 20,
+      "byCategory": {
+        "concept": 5,
+        "applied": 5,
+        "equation": 5,
+        "problem": 5
+      }
+    },
+    {
+      "chapterId": "ch08",
+      "chapter": 8,
+      "title": "Exergy",
+      "count": 12,
+      "byCategory": {
+        "concept": 3,
+        "applied": 3,
+        "equation": 3,
+        "problem": 3
+      }
+    }
+  ]
+}

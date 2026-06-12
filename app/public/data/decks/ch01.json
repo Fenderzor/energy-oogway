@@ -1,0 +1,85 @@
+{
+  "deckId": "ch01",
+  "title": "Ch 1 — Introduction & Basic Concepts",
+  "chapter": 1,
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 1",
+  "description": "Systems, properties, units, temperature and pressure.",
+  "owner": "local",
+  "version": 1,
+  "forkedFrom": null,
+  "updatedAt": "2026-06-05T00:00:00Z",
+  "cards": [
+    {
+      "id": "ch01-001",
+      "type": "basic",
+      "front": "What is a thermodynamic *system*?",
+      "back": "A quantity of matter or a region in space chosen for study. Everything outside it is the *surroundings*; the real or imaginary surface separating them is the *boundary*.",
+      "hint": "Defined relative to its boundary and surroundings.",
+      "tags": ["systems"],
+      "level": "intro"
+    },
+    {
+      "id": "ch01-002",
+      "type": "basic",
+      "front": "Distinguish a *closed system* from an *open system* (control volume).",
+      "back": "Closed system: fixed mass — no mass crosses the boundary, though energy (heat/work) can. Open system / control volume: both mass and energy can cross the boundary (e.g. a turbine, compressor, or nozzle).",
+      "tags": ["systems", "control volume"],
+      "level": "intro"
+    },
+    {
+      "id": "ch01-003",
+      "type": "basic",
+      "front": "What is the difference between *intensive* and *extensive* properties?",
+      "back": "Intensive properties are independent of the amount of mass (temperature, pressure, density). Extensive properties depend on system size (total mass, total volume, total energy). An extensive property per unit mass becomes intensive — a *specific* property.",
+      "hint": "Cut the system in half — what changes?",
+      "tags": ["properties"],
+      "level": "core"
+    },
+    {
+      "id": "ch01-004",
+      "type": "basic",
+      "front": "Define *density* and *specific volume*, with SI units.",
+      "back": "Density ρ = mass / volume [kg/m³]. Specific volume v = volume / mass = 1/ρ [m³/kg].",
+      "tags": ["properties", "density"],
+      "level": "intro"
+    },
+    {
+      "id": "ch01-005",
+      "type": "basic",
+      "front": "State the *Zeroth Law of Thermodynamics*.",
+      "back": "If two bodies are each in thermal equilibrium with a third body, then they are in thermal equilibrium with each other. It is the basis for temperature measurement.",
+      "tags": ["temperature", "zeroth law"],
+      "level": "intro"
+    },
+    {
+      "id": "ch01-006",
+      "type": "basic",
+      "front": "How are absolute, gauge, and vacuum pressure related?",
+      "back": "P_abs = P_gauge + P_atm. Gauge pressure is measured relative to local atmospheric pressure; vacuum pressure P_vac = P_atm − P_abs (used when P_abs < P_atm).",
+      "hint": "Everything is referenced to atmospheric pressure.",
+      "tags": ["pressure"],
+      "level": "core"
+    },
+    {
+      "id": "ch01-007",
+      "type": "numeric",
+      "front": "Convert 25 °C to kelvin.",
+      "back": "T(K) = T(°C) + 273.15 = 25 + 273.15 = 298.15 K.",
+      "answer": 298.15,
+      "unit": "K",
+      "tolerance": 0.5,
+      "tags": ["temperature", "units"],
+      "level": "intro"
+    },
+    {
+      "id": "ch01-008",
+      "type": "mcq",
+      "front": "Which of the following is an *intensive* property?",
+      "choices": ["Total volume", "Mass", "Temperature", "Total internal energy"],
+      "answerIndex": 2,
+      "back": "Temperature is intensive — independent of system size. Volume, mass, and total internal energy are all extensive.",
+      "tags": ["properties"],
+      "level": "core"
+    }
+  ]
+}

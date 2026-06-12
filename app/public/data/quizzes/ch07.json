@@ -1,0 +1,278 @@
+{
+  "chapterId": "ch07",
+  "chapter": 7,
+  "title": "Entropy",
+  "updatedAt": "2026-06-09T00:00:00Z",
+  "questions": [
+    {
+      "id": "ch07-q01",
+      "chapter": 7,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Unlike energy, entropy is **not conserved**. For any real process, the entropy generated is…",
+      "choices": ["Always positive", "Always zero", "Always negative", "Positive or negative depending on direction"],
+      "answerIndex": 0,
+      "explanation": "$S_{gen} > 0$ for every real (irreversible) process, $= 0$ only in the reversible limit, and $< 0$ never — that would violate the second law."
+    },
+    {
+      "id": "ch07-q02",
+      "chapter": 7,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "An **isentropic** process is one that is…",
+      "choices": [
+        "Both adiabatic and reversible",
+        "Adiabatic only",
+        "Reversible only",
+        "Constant temperature"
+      ],
+      "answerIndex": 0,
+      "explanation": "Both conditions are needed for $\\Delta s = 0$: no entropy enters (adiabatic) and none is generated (reversible). Adiabatic alone isn't enough."
+    },
+    {
+      "id": "ch07-q03",
+      "chapter": 7,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Entropy is transferred across a boundary by…",
+      "choices": [
+        "Heat (and mass flow), but never by work",
+        "Work, but never by heat",
+        "Both heat and work equally",
+        "Neither — entropy cannot cross a boundary"
+      ],
+      "answerIndex": 0,
+      "explanation": "Heat carries entropy $Q/T$ (and streams carry $\\dot m s$); work is fully organized energy and carries none — that asymmetry *is* the second law."
+    },
+    {
+      "id": "ch07-q04",
+      "chapter": 7,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "An ideal-gas process gives you **temperatures and pressures**. Which $\\Delta s$ form fits the data directly?",
+      "choices": [
+        "$\\Delta s = c_p\\ln\\frac{T_2}{T_1} - R\\ln\\frac{P_2}{P_1}$",
+        "$\\Delta s = c_v\\ln\\frac{T_2}{T_1} + R\\ln\\frac{v_2}{v_1}$",
+        "$\\Delta s = c\\ln\\frac{T_2}{T_1}$",
+        "$\\Delta s = \\frac{Q}{T}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Match the form to the givens: the $(T,P)$ version uses $c_p$ and subtracts the pressure term; the $(T,v)$ version uses $c_v$."
+    },
+    {
+      "id": "ch07-q05",
+      "chapter": 7,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A throttling valve is essentially adiabatic, yet the fluid's entropy **increases**. Why?",
+      "choices": [
+        "The process is highly irreversible, so entropy is generated internally",
+        "Heat leaks in through the valve body",
+        "Entropy is carried in by the work input",
+        "It doesn't — adiabatic always means isentropic"
+      ],
+      "answerIndex": 0,
+      "explanation": "No entropy enters with heat, but the uncontrolled expansion generates it inside. Adiabatic + irreversible → $s_2 > s_1$."
+    },
+    {
+      "id": "ch07-q06",
+      "chapter": 7,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A real adiabatic turbine expands to the same exit pressure as its isentropic ideal. The actual exit enthalpy $h_2$ is…",
+      "choices": [
+        "Higher than $h_{2s}$ — less work is extracted",
+        "Lower than $h_{2s}$ — more work is extracted",
+        "Equal to $h_{2s}$",
+        "Zero"
+      ],
+      "answerIndex": 0,
+      "explanation": "Irreversibilities leave energy in the steam, so $h_2 > h_{2s}$ and the actual work $h_1 - h_2$ is smaller than ideal — that ratio is $\\eta_T$."
+    },
+    {
+      "id": "ch07-q07",
+      "chapter": 7,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "For an isentropic ideal-gas process, the temperature–pressure relation is…",
+      "choices": [
+        "$\\frac{T_2}{T_1} = \\left(\\frac{P_2}{P_1}\\right)^{(k-1)/k}$",
+        "$\\frac{T_2}{T_1} = \\left(\\frac{P_2}{P_1}\\right)^{k}$",
+        "$\\frac{T_2}{T_1} = \\frac{P_2}{P_1}$",
+        "$\\frac{T_2}{T_1} = \\left(\\frac{P_1}{P_2}\\right)^{(k-1)/k}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "The exponent is $(k-1)/k$ (≈ 0.286 for air). Raising the pressure ratio to it gives the temperature ratio for $s = $ const."
+    },
+    {
+      "id": "ch07-q08",
+      "chapter": 7,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The entropy change of an **incompressible** substance (solid or liquid) is…",
+      "choices": [
+        "$\\Delta s = c\\ln\\frac{T_2}{T_1}$",
+        "$\\Delta s = c\\,(T_2 - T_1)$",
+        "$\\Delta s = c_p\\ln\\frac{T_2}{T_1} - R\\ln\\frac{P_2}{P_1}$",
+        "$\\Delta s = \\frac{c}{T_2 - T_1}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "With $dv \\approx 0$, $T\\,ds = c\\,dT$ integrates to the log form — absolute temperatures in the ratio."
+    },
+    {
+      "id": "ch07-q09",
+      "chapter": 7,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The isentropic efficiency of a **turbine** is…",
+      "choices": [
+        "$\\eta_T = \\dfrac{h_1 - h_2}{h_1 - h_{2s}}$",
+        "$\\eta_T = \\dfrac{h_1 - h_{2s}}{h_1 - h_2}$",
+        "$\\eta_T = \\dfrac{h_{2s} - h_1}{h_2 - h_1}$",
+        "$\\eta_T = \\dfrac{h_2}{h_{2s}}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Actual work over ideal work. For a compressor the ratio flips (ideal over actual) — mixing these up is a classic exam slip."
+    },
+    {
+      "id": "ch07-q10",
+      "chapter": 7,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "**5.0 kg** of water ($c = 4.18\\ \\text{kJ/(kg·K)}$) is heated from **300 K** to **350 K**. Find $\\Delta S$, in kJ/K.",
+      "answer": 3.22,
+      "unit": "kJ/K",
+      "tolerance": 0.05,
+      "explanation": "$\\Delta S = mc\\ln(T_2/T_1) = 5 \\times 4.18 \\times \\ln(350/300) = 20.9 \\times 0.1542 = 3.22$ kJ/K."
+    },
+    {
+      "id": "ch07-q11",
+      "chapter": 7,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Air at **300 K** is compressed **isentropically** through a pressure ratio of **8** ($k = 1.4$). Find the exit temperature, in K.",
+      "answer": 543.4,
+      "unit": "K",
+      "tolerance": 5,
+      "explanation": "$T_2 = T_1 (P_2/P_1)^{(k-1)/k} = 300 \\times 8^{0.2857} = 300 \\times 1.811 = 543$ K."
+    },
+    {
+      "id": "ch07-q12",
+      "chapter": 7,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "**200 kJ** of heat flows directly from a reservoir at **500 K** to one at **250 K**. Find the entropy generated, in kJ/K.",
+      "answer": 0.4,
+      "unit": "kJ/K",
+      "tolerance": 0.01,
+      "explanation": "$S_{gen} = \\frac{Q}{T_L} - \\frac{Q}{T_H} = \\frac{200}{250} - \\frac{200}{500} = 0.8 - 0.4 = 0.4$ kJ/K — positive, as it must be."
+    },
+    {
+      "id": "ch07-q13",
+      "chapter": 7,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The entropy of an **isolated system**…",
+      "choices": [
+        "Can only increase or stay the same",
+        "Can only decrease",
+        "Is always constant",
+        "Can increase or decrease freely"
+      ],
+      "answerIndex": 0,
+      "explanation": "The increase-of-entropy principle: with no transfers across its boundary, an isolated system's entropy never decreases ($S_{gen} \\ge 0$)."
+    },
+    {
+      "id": "ch07-q14",
+      "chapter": 7,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "How much entropy does **work** carry across a boundary?",
+      "choices": ["None", "The same as heat", "$W/T$", "It depends on the temperature"],
+      "answerIndex": 0,
+      "explanation": "Work is fully organized energy and transfers zero entropy; only heat ($Q/T$) and mass flow carry entropy."
+    },
+    {
+      "id": "ch07-q15",
+      "chapter": 7,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "You're given an ideal gas's **temperatures and specific volumes**. Which $\\Delta s$ form fits directly?",
+      "choices": [
+        "$c_v\\ln\\frac{T_2}{T_1} + R\\ln\\frac{v_2}{v_1}$",
+        "$c_p\\ln\\frac{T_2}{T_1} - R\\ln\\frac{P_2}{P_1}$",
+        "$c\\ln\\frac{T_2}{T_1}$",
+        "$\\frac{Q}{T}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Match the form to the data: with $T$ and $v$, use the $c_v$ version with the $R\\ln(v_2/v_1)$ term."
+    },
+    {
+      "id": "ch07-q16",
+      "chapter": 7,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "The isentropic efficiency of a **compressor** is defined as…",
+      "choices": [
+        "Ideal work ÷ actual work",
+        "Actual work ÷ ideal work",
+        "Actual work ÷ heat input",
+        "Always 1 for real compressors"
+      ],
+      "answerIndex": 0,
+      "explanation": "For a compressor $\\eta_C = w_s/w_{act}$ (ideal over actual) — the reverse of a turbine, where it's actual over ideal."
+    },
+    {
+      "id": "ch07-q17",
+      "chapter": 7,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "For an isentropic ideal-gas process, the temperature–**volume** relation is…",
+      "choices": [
+        "$\\frac{T_2}{T_1} = \\left(\\frac{v_1}{v_2}\\right)^{k-1}$",
+        "$\\frac{T_2}{T_1} = \\left(\\frac{v_2}{v_1}\\right)^{k-1}$",
+        "$\\frac{T_2}{T_1} = \\left(\\frac{v_1}{v_2}\\right)^{k}$",
+        "$\\frac{T_2}{T_1} = \\frac{v_1}{v_2}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "$Tv^{k-1} = $ const, so $T_2/T_1 = (v_1/v_2)^{k-1}$ — expansion (larger $v_2$) cools the gas."
+    },
+    {
+      "id": "ch07-q18",
+      "chapter": 7,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "Which is a correct **T ds (Gibbs) relation**?",
+      "choices": [
+        "$T\\,ds = dh - v\\,dP$",
+        "$T\\,ds = dh + v\\,dP$",
+        "$T\\,ds = du - P\\,dv$",
+        "$T\\,ds = dh - P\\,dv$"
+      ],
+      "answerIndex": 0,
+      "explanation": "The two Gibbs relations are $T\\,ds = du + P\\,dv$ and $T\\,ds = dh - v\\,dP$."
+    },
+    {
+      "id": "ch07-q19",
+      "chapter": 7,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "**8.0 kg** of water ($c = 4.18\\ \\text{kJ/(kg·K)}$) is heated from **290 K** to **340 K**. Find $\\Delta S$, in kJ/K.",
+      "answer": 5.32,
+      "unit": "kJ/K",
+      "tolerance": 0.1,
+      "explanation": "$\\Delta S = mc\\ln(T_2/T_1) = 8.0 \\times 4.18 \\times \\ln(340/290) = 33.44 \\times 0.1592 = 5.32$ kJ/K."
+    },
+    {
+      "id": "ch07-q20",
+      "chapter": 7,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "**300 kJ** of heat flows from a reservoir at **600 K** to one at **300 K**. Find the entropy generated, in kJ/K.",
+      "answer": 0.5,
+      "unit": "kJ/K",
+      "tolerance": 0.01,
+      "explanation": "$S_{gen} = \\frac{Q}{T_L} - \\frac{Q}{T_H} = \\frac{300}{300} - \\frac{300}{600} = 1.0 - 0.5 = 0.5$ kJ/K."
+    }
+  ]
+}

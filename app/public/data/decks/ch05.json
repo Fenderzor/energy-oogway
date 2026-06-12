@@ -1,0 +1,114 @@
+{
+  "deckId": "ch05",
+  "title": "Ch 5 — Mass & Energy Analysis of Control Volumes",
+  "chapter": 5,
+  "source": "Cengel, Boles & Kanoglu — Thermodynamics: An Engineering Approach, Ch. 5",
+  "description": "Mass conservation, flow work, the steady-flow energy equation, and devices.",
+  "owner": "local",
+  "version": 1,
+  "forkedFrom": null,
+  "updatedAt": "2026-06-06T00:00:00Z",
+  "cards": [
+    {
+      "id": "ch05-001",
+      "type": "basic",
+      "front": "Write the *mass flow rate* through a cross-section.",
+      "back": "$\\dot{m} = \\rho V A = \\dfrac{V A}{v}$, with V the average velocity, A the area and v the specific volume. Volume flow rate $\\dot{V} = V A$.",
+      "tags": ["mass flow"],
+      "level": "core"
+    },
+    {
+      "id": "ch05-002",
+      "type": "basic",
+      "front": "Conservation of mass for *steady flow*?",
+      "back": "$\\sum_{in}\\dot{m} = \\sum_{out}\\dot{m}$. For a single stream, $\\dot{m}_1 = \\dot{m}_2$, i.e. $\\rho_1 A_1 V_1 = \\rho_2 A_2 V_2$.",
+      "tags": ["mass conservation", "steady flow"],
+      "level": "core"
+    },
+    {
+      "id": "ch05-003",
+      "type": "basic",
+      "front": "What is *flow work*?",
+      "back": "The work needed to push a unit mass of fluid across the control-volume boundary: $w_{flow} = Pv$.",
+      "tags": ["flow work"],
+      "level": "core"
+    },
+    {
+      "id": "ch05-004",
+      "type": "basic",
+      "front": "Why does enthalpy appear in the energy of a flowing fluid?",
+      "back": "The energy of a flowing fluid per unit mass is $\\theta = h + \\dfrac{V^2}{2} + gz$, where $h = u + Pv$ already bundles internal energy with the flow work $Pv$.",
+      "tags": ["enthalpy", "flow energy"],
+      "level": "core"
+    },
+    {
+      "id": "ch05-005",
+      "type": "basic",
+      "front": "Write the *steady-flow energy equation* (general form).",
+      "back": "$\\dot{Q} - \\dot{W} = \\displaystyle\\sum_{out}\\dot{m}\\Big(h+\\tfrac{V^2}{2}+gz\\Big) - \\sum_{in}\\dot{m}\\Big(h+\\tfrac{V^2}{2}+gz\\Big)$.",
+      "tags": ["energy balance", "steady flow"],
+      "level": "core"
+    },
+    {
+      "id": "ch05-006",
+      "type": "basic",
+      "front": "Single-stream steady-flow energy equation (per unit mass)?",
+      "back": "$q - w = \\Delta h + \\dfrac{V_2^2 - V_1^2}{2} + g(z_2 - z_1)$.",
+      "tags": ["energy balance", "steady flow"],
+      "level": "core"
+    },
+    {
+      "id": "ch05-007",
+      "type": "basic",
+      "front": "Energy analysis of a *nozzle/diffuser*?",
+      "back": "Assume $\\dot{Q}\\approx0$, $\\dot{W}=0$, $\\Delta PE\\approx0$. Then $h_1 + \\dfrac{V_1^2}{2} = h_2 + \\dfrac{V_2^2}{2}$ — enthalpy is traded for kinetic energy (nozzle accelerates, diffuser decelerates).",
+      "tags": ["nozzle", "diffuser"],
+      "level": "core"
+    },
+    {
+      "id": "ch05-008",
+      "type": "basic",
+      "front": "Energy analysis of a *turbine/compressor*?",
+      "back": "Usually $\\Delta KE,\\,\\Delta PE\\approx0$ and adiabatic, so $w = h_1 - h_2$. A turbine produces work (w > 0); a compressor/pump consumes it (w < 0).",
+      "tags": ["turbine", "compressor"],
+      "level": "core"
+    },
+    {
+      "id": "ch05-009",
+      "type": "basic",
+      "front": "What characterizes a *throttling valve*?",
+      "back": "It is essentially isenthalpic: $h_1 \\approx h_2$ (no work, ~adiabatic, negligible ΔKE/ΔPE). Pressure drops sharply; for real gases the temperature usually drops too (Joule–Thomson).",
+      "tags": ["throttling"],
+      "level": "core"
+    },
+    {
+      "id": "ch05-010",
+      "type": "basic",
+      "front": "Modeling *heat exchangers* and *mixing chambers*?",
+      "back": "Both have no work and ~no pressure drop. A heat exchanger transfers heat between separate streams; a mixing chamber combines streams into one. Solve with mass + energy balances (include $\\dot{Q}$ if heat crosses the chosen boundary).",
+      "tags": ["heat exchanger", "mixing chamber"],
+      "level": "core"
+    },
+    {
+      "id": "ch05-011",
+      "type": "numeric",
+      "front": "Air (ρ = 1.2 kg/m³) flows at 5 m/s through a duct of area 0.10 m². Find the mass flow rate.",
+      "back": "$\\dot{m} = \\rho V A = 1.2 \\times 5 \\times 0.10 = 0.6\\ \\text{kg/s}$.",
+      "answer": 0.6,
+      "unit": "kg/s",
+      "tolerance": 0.02,
+      "tags": ["mass flow", "calculation"],
+      "level": "core"
+    },
+    {
+      "id": "ch05-012",
+      "type": "mcq",
+      "front": "A throttling valve is best modeled as which process?",
+      "choices": ["Isothermal", "Isentropic", "Isenthalpic", "Isochoric"],
+      "answerIndex": 2,
+      "back": "Throttling is isenthalpic: $h_1 = h_2$.",
+      "tags": ["throttling"],
+      "level": "core"
+    }
+  ]
+}
