@@ -80,8 +80,12 @@ sketching.
   cloud cron. Don't re-propose it. Fresh news reaches the hosted app only via a
   `git push` of new `data/news/*.json` (local scheduled task generates it for free
   using the Claude subscription; pushing is the missing free step if they want it).
-- Commit only when asked; if asked, the user usually runs `git push` themselves
-  (credentials are on their machine). Co-author trailer: `Claude Opus 4.8`.
+- Commit only when asked — but when you do commit, **also `git push` in the same
+  step** (push works from this machine; verified 2026-06-18, commit `b6d9f1f`).
+  The user is phone-first and wants updates to reach the hosted PWA automatically,
+  so don't leave a commit sitting unpushed or hand them a `git push` to run.
+  Co-author trailer: `Claude Opus 4.8`. After pushing, remind them to open the app
+  online (the service worker updates on next launch; may need one reopen).
 
 ## Current direction (next work)
 Expand learning **beyond thermodynamics** into the user's career-critical topics:
