@@ -1,0 +1,125 @@
+{
+  "deckId": "et01",
+  "title": "Energy Technologies",
+  "chapter": 3,
+  "track": "energy-systems",
+  "source": "Energy Systems & Power Markets — Module 3",
+  "description": "Generation roles, storage (batteries, pumped hydro, hydrogen), duration vs power, round-trip efficiency, and demand-side flexibility.",
+  "owner": "local",
+  "version": 1,
+  "forkedFrom": null,
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "cards": [
+    {
+      "id": "et01-001",
+      "type": "basic",
+      "front": "Three questions that sort almost any energy technology?",
+      "back": "1) **Can you control it?** (dispatchable vs variable). 2) **How fast can it change?** (ramp rate). 3) **Can it store energy, and for how long?** (power vs energy capacity / duration).",
+      "tags": ["framework"],
+      "level": "intro"
+    },
+    {
+      "id": "et01-002",
+      "type": "basic",
+      "front": "Difference between a **CCGT** and an **OCGT**?",
+      "back": "**CCGT** (combined-cycle) adds a steam turbine to recover exhaust heat → ~55–60% efficient, fairly flexible workhorse. **OCGT** (open-cycle) is a single turbine → less efficient but starts fast, so it's a peaker that often sets the price.",
+      "tags": ["CCGT", "OCGT"],
+      "level": "core"
+    },
+    {
+      "id": "et01-003",
+      "type": "mcq",
+      "front": "A battery is rated **50 MW / 200 MWh**. For how long can it deliver full power?",
+      "choices": ["4 hours", "200 hours", "50 hours", "0.25 hours"],
+      "answerIndex": 0,
+      "back": "Duration $t = E/P = 200/50 = 4$ h. Power (MW) and energy (MWh) are rated separately; their ratio is the duration.",
+      "tags": ["duration", "storage"],
+      "level": "core"
+    },
+    {
+      "id": "et01-004",
+      "type": "basic",
+      "front": "What is **round-trip efficiency**, and rough values for Li-ion, pumped hydro, hydrogen?",
+      "back": "Energy out ÷ energy in over a charge–discharge cycle. **Li-ion ~85–95%**, **pumped hydro ~70–85%**, **hydrogen ~30–40%**. Lower = more loss per cycle.",
+      "tags": ["round-trip efficiency"],
+      "level": "core"
+    },
+    {
+      "id": "et01-005",
+      "type": "basic",
+      "front": "Why does hydrogen's low round-trip efficiency still make sense for some storage?",
+      "back": "Its ~30–40% efficiency would be ruinous for *daily* cycling, but it's acceptable for **long-duration / seasonal** storage that runs only a few times a year — where cheap energy capacity and long discharge matter more than per-cycle loss.",
+      "tags": ["hydrogen", "long-duration"],
+      "level": "advanced"
+    },
+    {
+      "id": "et01-006",
+      "type": "basic",
+      "front": "Why is **pumped hydro** still ~95% of the world's storage?",
+      "back": "It's cheap per kWh, long-lived, and very large-scale — pump water uphill when power is cheap, release it through turbines when needed. Main limit: it needs the right **geography**.",
+      "tags": ["pumped hydro"],
+      "level": "core"
+    },
+    {
+      "id": "et01-007",
+      "type": "basic",
+      "front": "What is **inertia**, and why is it becoming a concern?",
+      "back": "Rotational kinetic energy in large synchronous generators that resists sudden frequency changes. Inverter-based wind/solar provide little of it, so as synchronous plants retire, frequency stability (and **grid-forming** inverters) becomes a real constraint.",
+      "tags": ["inertia", "grid-forming"],
+      "level": "advanced"
+    },
+    {
+      "id": "et01-008",
+      "type": "mcq",
+      "front": "Match the storage duration to the right technology.",
+      "choices": [
+        "Daily peaks → Li-ion; multi-day/seasonal lulls → hydrogen/thermal",
+        "Daily peaks → hydrogen; seasonal → Li-ion",
+        "Both → only pumped hydro",
+        "Neither needs storage"
+      ],
+      "answerIndex": 0,
+      "back": "Match the *duration of the problem* to the *duration of the technology*: short frequent gaps suit fast batteries; long rare lulls suit hydrogen, thermal or CAES.",
+      "tags": ["duration", "storage"],
+      "level": "core"
+    },
+    {
+      "id": "et01-009",
+      "type": "basic",
+      "front": "What is **demand response**, and why is it valuable?",
+      "back": "Paying consumers (industry, EV charging, heat pumps, data centres) to shift or shed load at key moments — flexing demand to match supply. Often the **cheapest 'capacity'** on the system and a bridge to grid-and-compute.",
+      "tags": ["demand response"],
+      "level": "core"
+    },
+    {
+      "id": "et01-010",
+      "type": "basic",
+      "front": "What is **power-to-X**?",
+      "back": "Using (surplus) electricity to make other carriers — hydrogen, ammonia, synthetic fuels, heat. It soaks up cheap surplus power, links the grid to industry, and enables long-duration storage.",
+      "tags": ["power-to-X"],
+      "level": "advanced"
+    },
+    {
+      "id": "et01-011",
+      "type": "numeric",
+      "front": "A battery is charged with 100 MWh and later discharges 90 MWh. Find its round-trip efficiency (decimal).",
+      "back": "$\\eta_{RT} = E_{out}/E_{in} = 90/100 = 0.90$ (90%).",
+      "answer": 0.90,
+      "unit": "",
+      "tolerance": 0.01,
+      "tags": ["round-trip efficiency", "calculation"],
+      "level": "core"
+    },
+    {
+      "id": "et01-012",
+      "type": "numeric",
+      "front": "A storage plant is rated 50 MW with 4 hours of duration. What is its energy capacity, in MWh?",
+      "back": "$E = P\\times t = 50\\times 4 = 200$ MWh.",
+      "answer": 200,
+      "unit": "MWh",
+      "tolerance": 1,
+      "tags": ["duration", "calculation"],
+      "level": "core"
+    }
+  ]
+}

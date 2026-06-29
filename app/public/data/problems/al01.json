@@ -1,0 +1,229 @@
+{
+  "chapterId": "al01",
+  "chapter": 1,
+  "track": "algebra",
+  "title": "Rearranging Formulas",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "problems": [
+    {
+      "id": "al01-p001",
+      "chapter": 1,
+      "difficulty": 1,
+      "title": "One-step then divide",
+      "tags": ["linear", "isolate"],
+      "kind": "numeric",
+      "scenario": "Solve for $x$:\n\n$$2x + 5 = 17$$",
+      "answer": 6,
+      "unit": "",
+      "tolerance": 0.001,
+      "hints": [
+        "Undo the **+5** first — subtract 5 from both sides.",
+        "Then undo the **×2** — divide both sides by 2."
+      ],
+      "solution": "Peel off the added term first, then the coefficient:\n\n$$2x + 5 = 17$$\n$$2x = 17 - 5 = 12 \\quad(\\text{subtract 5 from both sides})$$\n$$x = \\frac{12}{2} = 6 \\quad(\\text{divide both sides by 2})$$\n\nCheck: $2(6) + 5 = 17$ ✓.",
+      "equationsUsed": ["2x + 5 = 17"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p002",
+      "chapter": 1,
+      "difficulty": 1,
+      "title": "Solve for acceleration",
+      "tags": ["rearrange", "kinematics"],
+      "kind": "numeric",
+      "scenario": "The equation $v = u + at$ links velocity, initial velocity, acceleration and time.\n\nGiven $v = 20$, $u = 5$ and $t = 3$, find $a$.",
+      "answer": 5,
+      "unit": "",
+      "tolerance": 0.01,
+      "hints": [
+        "First rearrange: subtract $u$, then divide by $t$ → $a = (v-u)/t$.",
+        "Substitute $v=20,\\,u=5,\\,t=3$."
+      ],
+      "solution": "Rearrange for $a$, then substitute:\n\n$$v = u + at \\;\\Rightarrow\\; a = \\frac{v - u}{t}$$\n$$a = \\frac{20 - 5}{3} = \\frac{15}{3} = 5$$\n\nDoing the algebra *before* plugging in numbers keeps it clean and reusable.",
+      "equationsUsed": ["a = \\frac{v - u}{t}"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p003",
+      "chapter": 1,
+      "difficulty": 1,
+      "title": "Make a the subject",
+      "tags": ["rearrange", "subject", "symbolic"],
+      "kind": "open",
+      "scenario": "Make $a$ the subject of\n\n$$v = u + at$$\n\nWrite the rearranged formula.",
+      "hints": [
+        "The term $at$ is added — remove $u$ from both sides first.",
+        "Then $a$ is multiplied by $t$ — divide both sides by $t$."
+      ],
+      "solution": "Undo the addition, then the multiplication:\n\n$$v = u + at$$\n$$v - u = at \\quad(\\text{subtract } u)$$\n$$a = \\frac{v - u}{t} \\quad(\\text{divide by } t)$$",
+      "equationsUsed": ["a = \\frac{v - u}{t}"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p004",
+      "chapter": 1,
+      "difficulty": 2,
+      "title": "Density: find the mass",
+      "tags": ["rearrange", "denominator"],
+      "kind": "numeric",
+      "scenario": "Density is $\\rho = \\dfrac{m}{V}$.\n\nA fluid has density $\\rho = 800\\ \\text{kg/m}^3$ in a volume $V = 0.5\\ \\text{m}^3$. Find the mass $m$, in kg.",
+      "answer": 400,
+      "unit": "kg",
+      "tolerance": 0.5,
+      "hints": [
+        "$m$ is divided by $V$ — multiply both sides by $V$.",
+        "$m = \\rho V$."
+      ],
+      "solution": "Multiply both sides by $V$ to free $m$:\n\n$$\\rho = \\frac{m}{V} \\;\\Rightarrow\\; m = \\rho V$$\n$$m = 800 \\times 0.5 = 400\\ \\text{kg}$$",
+      "equationsUsed": ["m = \\rho V"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p005",
+      "chapter": 1,
+      "difficulty": 2,
+      "title": "Variable in the denominator",
+      "tags": ["rearrange", "denominator", "symbolic"],
+      "kind": "open",
+      "scenario": "Make $V$ the subject of\n\n$$\\rho = \\frac{m}{V}$$",
+      "hints": [
+        "$V$ is underneath — multiply both sides by $V$ first to lift it up.",
+        "Then divide both sides by $\\rho$."
+      ],
+      "solution": "Lift $V$ out of the denominator, then isolate it:\n\n$$\\rho = \\frac{m}{V}$$\n$$\\rho V = m \\quad(\\text{multiply both sides by } V)$$\n$$V = \\frac{m}{\\rho} \\quad(\\text{divide both sides by } \\rho)$$",
+      "equationsUsed": ["V = \\frac{m}{\\rho}"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p006",
+      "chapter": 1,
+      "difficulty": 2,
+      "title": "Spot the correct rearrangement",
+      "tags": ["rearrange", "squared", "mcq"],
+      "kind": "mcq",
+      "scenario": "The area of a circle is $A = \\pi r^2$. Which correctly makes $r$ the subject?",
+      "choices": [
+        "$r = \\sqrt{\\dfrac{A}{\\pi}}$",
+        "$r = \\dfrac{A}{\\pi^2}$",
+        "$r = \\sqrt{A\\pi}$",
+        "$r = \\left(\\dfrac{A}{\\pi}\\right)^2$"
+      ],
+      "answerIndex": 0,
+      "hints": [
+        "First divide both sides by $\\pi$ to get $r^2$ alone.",
+        "Then take the square root of both sides — the inverse of squaring."
+      ],
+      "solution": "Divide by $\\pi$, then square-root:\n\n$$A = \\pi r^2 \\;\\Rightarrow\\; \\frac{A}{\\pi} = r^2 \\;\\Rightarrow\\; r = \\sqrt{\\frac{A}{\\pi}}$$\n\nThe square root undoes the square; you apply it to the *whole* of $A/\\pi$.",
+      "equationsUsed": ["r = \\sqrt{A/\\pi}"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p007",
+      "chapter": 1,
+      "difficulty": 3,
+      "title": "Circle area: find the radius",
+      "tags": ["rearrange", "squared", "root"],
+      "kind": "numeric",
+      "scenario": "A circle has area $A = 50.27\\ \\text{m}^2$. Using $A = \\pi r^2$, find its radius $r$, in m.",
+      "answer": 4,
+      "unit": "m",
+      "tolerance": 0.05,
+      "hints": [
+        "Rearrange to $r = \\sqrt{A/\\pi}$.",
+        "$A/\\pi \\approx 16$, and $\\sqrt{16} = 4$."
+      ],
+      "solution": "Rearrange, then substitute:\n\n$$r = \\sqrt{\\frac{A}{\\pi}} = \\sqrt{\\frac{50.27}{3.1416}} = \\sqrt{16.0} = 4\\ \\text{m}$$\n\nKeep the positive root — a radius can't be negative.",
+      "equationsUsed": ["r = \\sqrt{A/\\pi}"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p008",
+      "chapter": 1,
+      "difficulty": 3,
+      "title": "Ideal gas: make T the subject",
+      "tags": ["rearrange", "subject", "symbolic"],
+      "kind": "open",
+      "scenario": "The ideal-gas law is $pV = nRT$.\n\nMake $T$ the subject.",
+      "hints": [
+        "$T$ is multiplied by $n$ and by $R$ on the right.",
+        "Divide both sides by the product $nR$."
+      ],
+      "solution": "$T$ is multiplied by both $n$ and $R$, so divide both sides by their product:\n\n$$pV = nRT \\;\\Rightarrow\\; T = \\frac{pV}{nR}$$\n\nEverything that multiplied $T$ moves underneath as a division.",
+      "equationsUsed": ["T = \\frac{pV}{nR}"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p009",
+      "chapter": 1,
+      "difficulty": 3,
+      "title": "Kinetic energy: find the speed",
+      "tags": ["rearrange", "squared", "root"],
+      "kind": "numeric",
+      "scenario": "Kinetic energy is $KE = \\tfrac{1}{2} m v^2$.\n\nA body of mass $m = 2\\ \\text{kg}$ has $KE = 100\\ \\text{J}$. Find its speed $v$, in m/s.",
+      "answer": 10,
+      "unit": "m/s",
+      "tolerance": 0.05,
+      "hints": [
+        "Rearrange: $v = \\sqrt{\\dfrac{2\\,KE}{m}}$ (multiply by 2, divide by $m$, then root).",
+        "$\\dfrac{2\\times 100}{2} = 100$, and $\\sqrt{100} = 10$."
+      ],
+      "solution": "Undo the $\\tfrac12$ and $m$, then the square:\n\n$$KE = \\tfrac{1}{2}mv^2 \\;\\Rightarrow\\; v^2 = \\frac{2\\,KE}{m} \\;\\Rightarrow\\; v = \\sqrt{\\frac{2\\,KE}{m}}$$\n$$v = \\sqrt{\\frac{2 \\times 100}{2}} = \\sqrt{100} = 10\\ \\text{m/s}$$",
+      "equationsUsed": ["v = \\sqrt{\\frac{2\\,KE}{m}}"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p010",
+      "chapter": 1,
+      "difficulty": 3,
+      "title": "Variable on both sides",
+      "tags": ["linear", "collect"],
+      "kind": "numeric",
+      "scenario": "Solve for $x$:\n\n$$5x - 3 = 2x + 9$$",
+      "answer": 4,
+      "unit": "",
+      "tolerance": 0.001,
+      "hints": [
+        "Collect the $x$ terms on one side — subtract $2x$ from both sides.",
+        "Then deal with the constant, and divide by the coefficient."
+      ],
+      "solution": "Gather the unknowns, then isolate:\n\n$$5x - 3 = 2x + 9$$\n$$3x - 3 = 9 \\quad(\\text{subtract } 2x)$$\n$$3x = 12 \\quad(\\text{add } 3)$$\n$$x = 4 \\quad(\\text{divide by } 3)$$\n\nCheck: $5(4)-3 = 17$ and $2(4)+9 = 17$ ✓.",
+      "equationsUsed": ["5x - 3 = 2x + 9"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p011",
+      "chapter": 1,
+      "difficulty": 4,
+      "title": "Pendulum: make L the subject",
+      "tags": ["rearrange", "root", "multi-step", "symbolic"],
+      "kind": "open",
+      "scenario": "The period of a pendulum is\n\n$$T = 2\\pi\\sqrt{\\frac{L}{g}}.$$\n\nMake $L$ the subject.",
+      "hints": [
+        "Divide both sides by $2\\pi$ to isolate the square root.",
+        "Square both sides to remove the root, then multiply by $g$."
+      ],
+      "solution": "Strip the $2\\pi$, undo the root by squaring, then free $L$:\n\n$$T = 2\\pi\\sqrt{\\frac{L}{g}}$$\n$$\\frac{T}{2\\pi} = \\sqrt{\\frac{L}{g}} \\quad(\\text{divide by } 2\\pi)$$\n$$\\left(\\frac{T}{2\\pi}\\right)^2 = \\frac{L}{g} \\quad(\\text{square both sides})$$\n$$L = g\\left(\\frac{T}{2\\pi}\\right)^2 \\quad(\\text{multiply by } g)$$",
+      "equationsUsed": ["L = g\\left(\\frac{T}{2\\pi}\\right)^2"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p012",
+      "chapter": 1,
+      "difficulty": 4,
+      "title": "Parallel resistors",
+      "tags": ["rearrange", "denominator", "fractions"],
+      "kind": "numeric",
+      "scenario": "Two resistors in parallel satisfy $\\dfrac{1}{R} = \\dfrac{1}{R_1} + \\dfrac{1}{R_2}$.\n\nWith $R_1 = 3\\ \\Omega$ and $R_2 = 6\\ \\Omega$, find the combined resistance $R$, in Ω.",
+      "answer": 2,
+      "unit": "Ω",
+      "tolerance": 0.01,
+      "hints": [
+        "Add the right-hand fractions over a common denominator first.",
+        "You'll get $1/R$; the unknown is in the denominator, so take the reciprocal at the end."
+      ],
+      "solution": "Combine the fractions, then invert (the variable is in the denominator):\n\n$$\\frac{1}{R} = \\frac{1}{3} + \\frac{1}{6} = \\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6} = \\frac{1}{2}$$\n$$R = 2\\ \\Omega$$\n\nBecause $1/R = 1/2$, taking the reciprocal of both sides gives $R = 2$.",
+      "equationsUsed": ["\\frac{1}{R} = \\frac{1}{R_1} + \\frac{1}{R_2}"],
+      "conceptLink": "al01"
+    }
+  ]
+}

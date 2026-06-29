@@ -10,6 +10,7 @@ import type { ProblemProgressMap } from '../lib/problemProgress'
 import { getQuizScores } from '../lib/quizScores'
 import type { QuizScoreMap } from '../lib/quizScores'
 import { currentUserId } from '../lib/user'
+import { DEFAULT_TRACK, groupByTrack, trackMeta } from '../lib/tracks'
 import type { Difficulty, ExamProblem, ProblemSetSummary, QuizBankSummary } from '../types'
 
 const DIFFS: Difficulty[] = [1, 2, 3, 4]
@@ -61,11 +62,20 @@ export default function Practice() {
   const solvedInChapter = (chapterId: string) =>
     Object.entries(progress).filter(([id, s]) => id.startsWith(`${chapterId}-`) && s.solved).length
 
+  // The 'by difficulty' quick-picker is the thermo exam-prep tool — keep other
+  // tracks out of it (they're practised via their own per-chapter sections below).
   const diffTotals: Record<Difficulty, number> = { 1: 0, 2: 0, 3: 0, 4: 0 }
-  chapters?.forEach((c) => DIFFS.forEach((d) => (diffTotals[d] += c.byDifficulty[d] ?? 0)))
+  chapters
+    ?.filter((c) => (c.track ?? DEFAULT_TRACK) === DEFAULT_TRACK)
+    .forEach((c) => DIFFS.forEach((d) => (diffTotals[d] += c.byDifficulty[d] ?? 0)))
+
+  const quizGroups = quizzes ? groupByTrack(quizzes) : []
+  const showQuizHeaders = quizGroups.length > 1
+  const chapterGroups = chapters ? groupByTrack(chapters) : []
+  const showChapterHeaders = chapterGroups.length > 1
 
   return (
-    <Page title="Practice" subtitle="Problem-solving · Cengel Ch 1–8">
+    <Page title="Practice" subtitle="Problems, quizzes & exams">
       <StatsBar />
       {error && <div className="card error">{error}</div>}
       {!chapters && !error && <p className="muted">Loading problems…</p>}
@@ -82,23 +92,30 @@ export default function Practice() {
               {scores['exam'] ? `Best ${scores['exam'].bestPct}%` : 'Not taken'}
             </span>
           </Link>
-          <div className="quiz-grid">
-            {quizzes.map((qz) => {
-              const rec = scores[qz.chapterId]
-              return (
-                <Link
-                  key={qz.chapterId}
-                  to={`/practice/quiz/${qz.chapterId}`}
-                  className="card quiz-chip"
-                >
-                  <span className="quiz-chip-ch">Ch {qz.chapter}</span>
-                  <span className={`quiz-chip-score${rec ? '' : ' quiz-chip-score--none'}`}>
-                    {rec ? `${rec.bestPct}%` : '—'}
-                  </span>
-                </Link>
-              )
-            })}
-          </div>
+          {quizGroups.map((group) => (
+            <div key={group.meta.id} className="track-subsection">
+              {showQuizHeaders && <h3 className="section-sub muted">{group.meta.label}</h3>}
+              <div className="quiz-grid">
+                {group.items.map((qz) => {
+                  const rec = scores[qz.chapterId]
+                  return (
+                    <Link
+                      key={qz.chapterId}
+                      to={`/practice/quiz/${qz.chapterId}`}
+                      className="card quiz-chip"
+                    >
+                      <span className="quiz-chip-ch">
+                        {trackMeta(qz.track).chip} {qz.chapter}
+                      </span>
+                      <span className={`quiz-chip-score${rec ? '' : ' quiz-chip-score--none'}`}>
+                        {rec ? `${rec.bestPct}%` : '—'}
+                      </span>
+                    </Link>
+                  )
+                })}
+              </div>
+            </div>
+          ))}
         </section>
       )}
 
@@ -167,13 +184,18 @@ export default function Practice() {
 
           <section className="practice-section">
             <h2 className="section-title">Problems by chapter</h2>
+            {chapterGroups.map((group) => (
+            <div key={group.meta.id} className="track-subsection">
+            {showChapterHeaders && <h3 className="section-sub muted">{group.meta.label}</h3>}
             <div className="chapter-list">
-              {chapters.map((c) => {
+              {group.items.map((c) => {
                 const ready = c.count > 0
                 const solved = solvedInChapter(c.chapterId)
                 const row = (
                   <>
-                    <span className="chip">Ch {c.chapter}</span>
+                    <span className="chip">
+                      {trackMeta(c.track).chip} {c.chapter}
+                    </span>
                     <div className="chapter-text">
                       <h3 className="chapter-title">{c.title}</h3>
                       {c.topics && <p className="muted">{c.topics}</p>}
@@ -208,6 +230,8 @@ export default function Practice() {
                 )
               })}
             </div>
+            </div>
+            ))}
           </section>
         </>
       )}

@@ -95,6 +95,58 @@
         "equation": 3,
         "problem": 3
       }
+    },
+    {
+      "chapterId": "pm01",
+      "chapter": 1,
+      "track": "energy-systems",
+      "title": "Power Markets & Market Design",
+      "count": 16,
+      "byCategory": {
+        "concept": 5,
+        "applied": 5,
+        "equation": 3,
+        "problem": 3
+      }
+    },
+    {
+      "chapterId": "re01",
+      "chapter": 2,
+      "track": "energy-systems",
+      "title": "Renewable Deployment",
+      "count": 16,
+      "byCategory": {
+        "concept": 6,
+        "applied": 6,
+        "equation": 2,
+        "problem": 2
+      }
+    },
+    {
+      "chapterId": "et01",
+      "chapter": 3,
+      "track": "energy-systems",
+      "title": "Energy Technologies",
+      "count": 16,
+      "byCategory": {
+        "concept": 6,
+        "applied": 6,
+        "equation": 2,
+        "problem": 2
+      }
+    },
+    {
+      "chapterId": "gr01",
+      "chapter": 4,
+      "track": "energy-systems",
+      "title": "Grids & Grid-and-Compute",
+      "count": 16,
+      "byCategory": {
+        "concept": 6,
+        "applied": 6,
+        "equation": 2,
+        "problem": 2
+      }
     }
   ]
 }

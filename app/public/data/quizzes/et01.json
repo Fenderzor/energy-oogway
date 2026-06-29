@@ -1,0 +1,241 @@
+{
+  "chapterId": "et01",
+  "chapter": 3,
+  "track": "energy-systems",
+  "title": "Energy Technologies",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "questions": [
+    {
+      "id": "et01-q01",
+      "chapter": 3,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "A **dispatchable** plant is one that…",
+      "choices": [
+        "Can be controlled and scheduled on demand",
+        "Only runs when the wind blows",
+        "Has the highest efficiency",
+        "Never needs fuel"
+      ],
+      "answerIndex": 0,
+      "explanation": "Dispatchability — controllable, schedulable output — is the property the grid most values for balancing."
+    },
+    {
+      "id": "et01-q02",
+      "chapter": 3,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The key difference between a **CCGT** and an **OCGT** is that the CCGT…",
+      "choices": [
+        "Recovers exhaust heat in a steam cycle, so it is more efficient",
+        "Burns coal instead of gas",
+        "Cannot be dispatched",
+        "Has no turbine"
+      ],
+      "answerIndex": 0,
+      "explanation": "The combined cycle adds a steam turbine on the gas turbine's exhaust, reaching ~55–60% efficiency; the OCGT is simpler and starts faster but is less efficient."
+    },
+    {
+      "id": "et01-q03",
+      "chapter": 3,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "**Round-trip efficiency** of storage is…",
+      "choices": [
+        "Energy discharged ÷ energy charged",
+        "Power ÷ energy",
+        "Cost ÷ cycles",
+        "Energy charged ÷ duration"
+      ],
+      "answerIndex": 0,
+      "explanation": "It captures the loss over a charge–discharge cycle: Li-ion ~85–95%, pumped hydro ~70–85%, hydrogen ~30–40%."
+    },
+    {
+      "id": "et01-q04",
+      "chapter": 3,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "A storage asset's **duration** is determined by…",
+      "choices": [
+        "Its energy capacity divided by its power rating (E/P)",
+        "Its round-trip efficiency",
+        "Its self-discharge rate",
+        "The price of electricity"
+      ],
+      "answerIndex": 0,
+      "explanation": "Power (MW) and energy (MWh) are rated separately; duration t = E/P is how long it can deliver rated power."
+    },
+    {
+      "id": "et01-q05",
+      "chapter": 3,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "**Inertia** in a power system comes mainly from…",
+      "choices": [
+        "Rotating mass in large synchronous generators",
+        "Solar inverters",
+        "Battery chemistry",
+        "The price signal"
+      ],
+      "answerIndex": 0,
+      "explanation": "Spinning synchronous machines store kinetic energy that resists frequency changes; inverter-based renewables provide little, raising stability concerns."
+    },
+    {
+      "id": "et01-q06",
+      "chapter": 3,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "**Green** hydrogen is hydrogen produced by…",
+      "choices": [
+        "Electrolysing water with renewable electricity",
+        "Reforming natural gas without capture",
+        "Burning coal",
+        "Distilling oil"
+      ],
+      "answerIndex": 0,
+      "explanation": "Green = electrolysis powered by renewables (clean); grey = unabated gas reforming; blue = grey plus carbon capture."
+    },
+    {
+      "id": "et01-q07",
+      "chapter": 3,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "You need to cover a daily evening peak of a few hours. The best-fit storage is…",
+      "choices": [
+        "Lithium-ion (~1–4 h)",
+        "Seasonal hydrogen storage",
+        "A thermal store sized for weeks",
+        "No storage is possible"
+      ],
+      "answerIndex": 0,
+      "explanation": "Match duration to the problem: a short, frequent gap suits fast, efficient Li-ion, not long-duration hydrogen."
+    },
+    {
+      "id": "et01-q08",
+      "chapter": 3,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Why can hydrogen's low (~35%) round-trip efficiency still be acceptable for some storage?",
+      "choices": [
+        "It is used for rare, long-duration (seasonal) discharge, not daily cycling",
+        "It is actually the most efficient option",
+        "Efficiency never affects cost",
+        "It eliminates the need for generation"
+      ],
+      "answerIndex": 0,
+      "explanation": "For storage that cycles only a few times a year to cover long lulls, per-cycle loss matters less than cheap, large energy capacity."
+    },
+    {
+      "id": "et01-q09",
+      "chapter": 3,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Which resource is often the **cheapest** way to add system flexibility?",
+      "choices": [
+        "Demand response (flexing load)",
+        "A new nuclear plant",
+        "More transmission lines only",
+        "A new OCGT fleet"
+      ],
+      "answerIndex": 0,
+      "explanation": "Shifting or shedding existing flexible load (industry, EVs, heat pumps, data centres) is frequently cheaper than building new supply."
+    },
+    {
+      "id": "et01-q10",
+      "chapter": 3,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "As synchronous plants retire and inverter-based renewables grow, a rising technical concern is…",
+      "choices": [
+        "Falling inertia and the need for grid-forming inverters",
+        "Too much fuel being burned",
+        "Excessive baseload",
+        "Batteries having too long a duration"
+      ],
+      "answerIndex": 0,
+      "explanation": "Less spinning mass means weaker frequency stability; grid-forming inverters can provide synthetic inertia to compensate."
+    },
+    {
+      "id": "et01-q11",
+      "chapter": 3,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A flow battery's main structural advantage over a standard Li-ion pack is that…",
+      "choices": [
+        "Power and energy scale independently (easy long-duration sizing)",
+        "It has 100% round-trip efficiency",
+        "It needs no electrolyte",
+        "It cannot self-discharge"
+      ],
+      "answerIndex": 0,
+      "explanation": "Sizing the tanks (energy) separately from the stack (power) makes flow batteries well suited to longer durations."
+    },
+    {
+      "id": "et01-q12",
+      "chapter": 3,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "**Power-to-X** primarily refers to…",
+      "choices": [
+        "Using surplus electricity to make hydrogen, ammonia, fuels or heat",
+        "Exporting power abroad",
+        "Raising the grid frequency",
+        "A type of capacity auction"
+      ],
+      "answerIndex": 0,
+      "explanation": "Power-to-X converts (often surplus) electricity into other carriers, linking the grid to industry and enabling long-duration storage."
+    },
+    {
+      "id": "et01-q13",
+      "chapter": 3,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The round-trip efficiency of storage is…",
+      "choices": [
+        "$\\eta_{RT} = \\dfrac{E_{out}}{E_{in}}$",
+        "$\\eta_{RT} = \\dfrac{E_{in}}{E_{out}}$",
+        "$\\eta_{RT} = E_{in}\\times E_{out}$",
+        "$\\eta_{RT} = \\dfrac{P}{E}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Energy out divided by energy in over a charge–discharge cycle."
+    },
+    {
+      "id": "et01-q14",
+      "chapter": 3,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The energy capacity of a storage asset is…",
+      "choices": [
+        "$E = P\\times t$",
+        "$E = P/t$",
+        "$E = t/P$",
+        "$E = P + t$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Energy = power × duration; rearranged, the duration is t = E/P."
+    },
+    {
+      "id": "et01-q15",
+      "chapter": 3,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A battery is charged with 100 MWh and discharges 90 MWh. Find its round-trip efficiency (decimal).",
+      "answer": 0.90,
+      "unit": "",
+      "tolerance": 0.01,
+      "explanation": "$\\eta_{RT} = 90/100 = 0.90$."
+    },
+    {
+      "id": "et01-q16",
+      "chapter": 3,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A 50 MW battery has 4 hours of storage duration. Find its energy capacity, in MWh.",
+      "answer": 200,
+      "unit": "MWh",
+      "tolerance": 1,
+      "explanation": "$E = P\\times t = 50\\times 4 = 200$ MWh."
+    }
+  ]
+}

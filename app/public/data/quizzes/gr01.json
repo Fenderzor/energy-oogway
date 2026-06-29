@@ -1,0 +1,241 @@
+{
+  "chapterId": "gr01",
+  "chapter": 4,
+  "track": "energy-systems",
+  "title": "Grids & Grid-and-Compute",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "questions": [
+    {
+      "id": "gr01-q01",
+      "chapter": 4,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "A **TSO** (e.g. TenneT) is responsible for…",
+      "choices": [
+        "The high-voltage backbone: balancing, frequency and system security",
+        "Billing household customers",
+        "Selling gas",
+        "Only local last-mile delivery"
+      ],
+      "answerIndex": 0,
+      "explanation": "The TSO runs transmission, keeps supply and demand balanced at 50 Hz, and maintains security; the DSO handles local distribution."
+    },
+    {
+      "id": "gr01-q02",
+      "chapter": 4,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Power is transmitted at **high voltage** mainly to…",
+      "choices": [
+        "Reduce current and therefore resistive losses over distance",
+        "Increase the frequency",
+        "Make it safer to touch",
+        "Avoid using transformers"
+      ],
+      "answerIndex": 0,
+      "explanation": "Higher voltage means lower current for the same power, cutting I²R losses over long distances."
+    },
+    {
+      "id": "gr01-q03",
+      "chapter": 4,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "If demand exceeds generation on the grid, the frequency…",
+      "choices": [
+        "Falls below 50 Hz",
+        "Rises above 50 Hz",
+        "Stays exactly 50 Hz automatically",
+        "Doubles"
+      ],
+      "answerIndex": 0,
+      "explanation": "A supply shortfall slows the synchronous machines, dropping frequency; reserves are activated to restore it."
+    },
+    {
+      "id": "gr01-q04",
+      "chapter": 4,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "**Redispatch** is…",
+      "choices": [
+        "Paying one plant down and another up to relieve congestion",
+        "A type of long-term contract",
+        "Restarting the grid after a blackout",
+        "A renewable subsidy"
+      ],
+      "answerIndex": 0,
+      "explanation": "When the market dispatch would overload a line, the TSO redispatches generation across the constraint to keep flows within limits."
+    },
+    {
+      "id": "gr01-q05",
+      "chapter": 4,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The **N-1 security criterion** means the grid must…",
+      "choices": [
+        "Withstand the loss of any single element without cascading",
+        "Have at least N+1 generators",
+        "Run one line at a time",
+        "Never import power"
+      ],
+      "answerIndex": 0,
+      "explanation": "N-1 is the standard that the system survives any single failure — the basis for spare transmission and generation margin."
+    },
+    {
+      "id": "gr01-q06",
+      "chapter": 4,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Under **zonal** pricing (as in Europe), internal congestion is…",
+      "choices": [
+        "Handled outside the market via redispatch",
+        "Priced at every individual node",
+        "Always ignored",
+        "Eliminated by HVDC"
+      ],
+      "answerIndex": 0,
+      "explanation": "Zonal markets set one price per zone and resolve internal congestion operationally through redispatch; nodal markets price it at each node."
+    },
+    {
+      "id": "gr01-q07",
+      "chapter": 4,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A region keeps building cheap wind but can't deliver it to cities. The most likely issue is…",
+      "choices": [
+        "Transmission congestion / connection-queue limits",
+        "The wind is too cheap",
+        "Frequency is too high",
+        "Too little demand response on the wind farm"
+      ],
+      "answerIndex": 0,
+      "explanation": "Generation outrunning the wires shows up as congestion, rising redispatch cost and connection queues — the grid is the bottleneck."
+    },
+    {
+      "id": "gr01-q08",
+      "chapter": 4,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "The **grid-and-compute** thesis argues that data centres should be…",
+      "choices": [
+        "Sited where grid/renewable headroom exists and operated flexibly to help balance the system",
+        "Built only in city centres regardless of grid",
+        "Run at constant full load with no grid awareness",
+        "Banned from connecting to the grid"
+      ],
+      "answerIndex": 0,
+      "explanation": "Treating siteable, flexible compute as a grid resource lets it monetise spare/curtailed renewables and provide demand response instead of straining the grid."
+    },
+    {
+      "id": "gr01-q09",
+      "chapter": 4,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Why can a large data centre be an **asset** to the grid rather than just a burden?",
+      "choices": [
+        "It is siteable and partly flexible, so it can absorb curtailed power and provide demand response",
+        "It produces its own electricity",
+        "It lowers the grid frequency",
+        "It never draws power at peak"
+      ],
+      "answerIndex": 0,
+      "explanation": "Flexible, well-sited compute can soak up otherwise-curtailed renewables and shift load — firming demand instead of forcing reinforcement."
+    },
+    {
+      "id": "gr01-q10",
+      "chapter": 4,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "**Co-locating** a data centre with generation (behind-the-meter) primarily helps by…",
+      "choices": [
+        "Cutting transmission need and connection delay",
+        "Raising the grid frequency",
+        "Removing the need for cooling",
+        "Eliminating its electricity demand"
+      ],
+      "answerIndex": 0,
+      "explanation": "Serving the load on-site avoids loading the transmission grid and sidesteps multi-year connection queues."
+    },
+    {
+      "id": "gr01-q11",
+      "chapter": 4,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A load with a **high load factor** (like a data centre) is notable because it…",
+      "choices": [
+        "Uses grid and generation capacity efficiently (steady, around-the-clock demand)",
+        "Only runs a few hours a year",
+        "Has no impact on peak",
+        "Needs no grid connection"
+      ],
+      "answerIndex": 0,
+      "explanation": "A flat, steady load uses expensive capacity efficiently — attractive economically, but also a large, constant draw on the grid."
+    },
+    {
+      "id": "gr01-q12",
+      "chapter": 4,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Rising **redispatch costs** in a system are best read as a signal that…",
+      "choices": [
+        "Generation has outrun the transmission grid (congestion)",
+        "Demand has disappeared",
+        "Frequency control has been switched off",
+        "Renewables are too expensive"
+      ],
+      "answerIndex": 0,
+      "explanation": "Growing redispatch spend means the cheapest flows repeatedly overload lines — an argument for grid build-out, storage, or siting load near supply."
+    },
+    {
+      "id": "gr01-q13",
+      "chapter": 4,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The **load factor** of a system is…",
+      "choices": [
+        "$\\dfrac{P_{avg}}{P_{peak}}$",
+        "$\\dfrac{P_{peak}}{P_{avg}}$",
+        "$P_{avg}\\times P_{peak}$",
+        "$\\dfrac{E}{P_{peak}}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Average load divided by peak load — high means flat/efficient use of capacity, low means peaky."
+    },
+    {
+      "id": "gr01-q14",
+      "chapter": 4,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The energy drawn by a steady load over a period is…",
+      "choices": [
+        "$E = P\\times t$",
+        "$E = P/t$",
+        "$E = t/P$",
+        "$E = P - t$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Energy = power × time; for a varying load use the average power over the period."
+    },
+    {
+      "id": "gr01-q15",
+      "chapter": 4,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A system has average load 600 MW and peak load 1000 MW. Find its load factor (decimal).",
+      "answer": 0.60,
+      "unit": "",
+      "tolerance": 0.01,
+      "explanation": "$LF = 600/1000 = 0.60$."
+    },
+    {
+      "id": "gr01-q16",
+      "chapter": 4,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A data centre draws a steady 100 MW for 24 hours. Find the energy consumed, in MWh.",
+      "answer": 2400,
+      "unit": "MWh",
+      "tolerance": 10,
+      "explanation": "$E = P\\times t = 100\\times 24 = 2400$ MWh."
+    }
+  ]
+}

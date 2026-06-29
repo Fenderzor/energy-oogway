@@ -1,0 +1,69 @@
+{
+  "chapterId": "et01",
+  "chapter": 3,
+  "track": "energy-systems",
+  "title": "Energy Technologies",
+  "source": "Energy Systems & Power Markets — Module 3",
+  "deckId": "et01",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "summary": "A useful way to read the whole energy system is by what each technology *does for the grid*, not just what it is. Three questions sort almost everything: **Can you control it?** (dispatchable vs variable), **How fast can it change?** (ramp rate), and **Can it store energy, and for how long?** (power vs energy capacity). Keeping those lenses in mind is more valuable to an analyst than memorising any single datasheet.\n\nOn the **generation** side, plants trade flexibility against cost. **Baseload** units (nuclear, sometimes large coal) are cheap to run but slow and inflexible. **Mid-merit and peaking** gas plants are the workhorses of flexibility: a **CCGT** (combined-cycle gas turbine) is efficient (~55–60%) and fairly flexible; an **OCGT** (open-cycle) is less efficient but starts fast, so it sets prices at the peak. Hydro — especially reservoir hydro — is the most flexible firm resource there is. Wind and solar are cheap and clean but **variable** and provide little **inertia**, the rotating-mass effect that historically kept grid frequency stable; replacing synchronous plants with inverter-based renewables makes inertia and **grid-forming** capability a growing concern (see gr01).\n\n**Storage** is the system's shock-absorber, and the key idea is that **power and energy are sized separately**. A battery rated '50 MW / 200 MWh' can deliver 50 MW for 4 hours — the **duration** ($E = P\\times t$) is what determines what job it can do. **Lithium-ion** dominates short-duration (≈1–4 h) applications: fast, efficient (round-trip ~85–95%), modular, but expensive per kWh for long durations. **Pumped hydro** is ~95% of the world's installed storage — cheap, long-lived, large, but geographically constrained. For **long-duration** storage (days to seasons), the contenders are **green hydrogen** (electrolyse water with surplus power, store the gas, burn it or run a fuel cell later — flexible but low round-trip efficiency, ~30–40%), **flow batteries**, **compressed-air (CAES)** and **thermal** storage. The metric that ties them together is **round-trip efficiency** (energy out ÷ energy in) and, for economics, **LCOS** (levelized cost of storage).\n\nThe third pillar is **demand-side flexibility** — instead of building supply to match demand, you flex demand to match supply. **Demand response** pays consumers (industry, EV charging, heat pumps, increasingly data centres) to shift or shed load at key moments. It is often the cheapest 'capacity' on the system and a direct bridge to the grid-and-compute theme: large flexible loads can be an asset, not just a burden.\n\nThe synthesis: a decarbonised system pairs cheap variable generation with a portfolio of **flexibility** — fast storage for minutes-to-hours, long-duration storage and flexible gas/hydrogen for the long lulls, and responsive demand to shave the peaks. Matching the *duration* of the problem to the *duration* of the technology is the core design skill.",
+  "equations": [
+    {
+      "name": "Round-trip efficiency",
+      "latex": "\\eta_{RT} = \\frac{E_{out}}{E_{in}}",
+      "rearrangements": ["E_{out} = \\eta_{RT}\\,E_{in}", "E_{in} = \\frac{E_{out}}{\\eta_{RT}}"],
+      "useWhen": "Comparing storage technologies, or finding how much energy is lost in a charge–discharge cycle. Li-ion ~85–95%, pumped hydro ~70–85%, hydrogen ~30–40%.",
+      "note": "Lower round-trip efficiency means more energy (and cost) wasted per cycle — a key reason hydrogen suits *rare, long* storage rather than daily cycling."
+    },
+    {
+      "name": "Storage energy capacity (duration)",
+      "latex": "E = P \\times t",
+      "rearrangements": ["t = \\frac{E}{P}", "P = \\frac{E}{t}"],
+      "useWhen": "Sizing or reading a storage asset. A '50 MW / 200 MWh' battery has duration $t = E/P = 4$ h — it can deliver its rated power for four hours. Power and energy are rated separately.",
+      "note": "Duration determines the *job*: ~1–4 h (Li-ion) for daily peaks; days–seasons (hydrogen, thermal) for long lulls."
+    },
+    {
+      "name": "Levelized cost of storage (LCOS)",
+      "latex": "LCOS = \\frac{\\text{annualized cost}}{\\text{energy discharged per year}}",
+      "rearrangements": ["LCOS \\propto \\frac{1}{\\eta_{RT}\\times\\text{cycles}}"],
+      "useWhen": "Comparing the €/MWh cost of *delivered* stored energy across technologies. Frequent cycling and high round-trip efficiency lower LCOS; rarely-used long-duration storage has high LCOS per MWh.",
+      "note": "The storage analogue of LCOE. Penalises low round-trip efficiency and few cycles — which is why cheap-per-kWh, rarely-cycled options still struggle economically."
+    }
+  ],
+  "glossary": [
+    { "term": "Dispatchable", "definition": "A plant whose output can be controlled and scheduled on demand (gas, hydro, nuclear-ish). The opposite of variable wind and solar — the property the grid most values for balancing." },
+    { "term": "Baseload / mid-merit / peaker", "definition": "Roles by how often a plant runs: baseload (cheap, steady, inflexible — nuclear), mid-merit (CCGT), peaker (runs only at peaks — OCGT). A spectrum of cost vs flexibility." },
+    { "term": "CCGT (combined-cycle gas turbine)", "definition": "Gas turbine + steam turbine recovering its exhaust heat; ~55–60% efficient and reasonably flexible. The efficient workhorse of dispatchable fossil generation." },
+    { "term": "OCGT (open-cycle gas turbine)", "definition": "A single gas turbine, no heat recovery; less efficient but starts fast. The classic peaker that often sets the marginal price. (See pm01.)" },
+    { "term": "Ramp rate", "definition": "How fast a plant can change output (MW/min). High ramp rates (OCGT, hydro, batteries) are essential for following variable renewables and demand swings." },
+    { "term": "Inertia", "definition": "Stored rotational kinetic energy in large synchronous generators that resists sudden frequency changes. Falls as inverter-based renewables replace spinning plants — a stability concern." },
+    { "term": "Grid-forming vs grid-following inverter", "definition": "Grid-following inverters need an existing grid voltage/frequency to sync to; grid-forming ones can *set* it, providing synthetic inertia and enabling very-high-renewable grids." },
+    { "term": "Round-trip efficiency", "definition": "Energy out ÷ energy in for a storage cycle. Li-ion ~85–95%, pumped hydro ~70–85%, hydrogen ~30–40%. Lower means more loss (and cost) per cycle." },
+    { "term": "Power vs energy capacity", "definition": "Storage is rated in MW (how fast it can deliver) *and* MWh (how much it holds), sized independently. Their ratio is the duration, $t = E/P$." },
+    { "term": "Storage duration", "definition": "How long a store can deliver rated power, $t = E/P$. Short (~1–4 h, Li-ion) handles daily peaks; long (days–seasons, hydrogen/thermal) handles weather lulls." },
+    { "term": "Lithium-ion battery", "definition": "The dominant short-duration storage: fast, high round-trip efficiency, modular, falling cost — but expensive per kWh for long durations, so best for ~1–4 h jobs." },
+    { "term": "Pumped hydro storage (PHS)", "definition": "Pumps water uphill when power is cheap, releases it through turbines when needed. ~95% of installed storage worldwide: cheap, durable, large, but site-constrained." },
+    { "term": "Green / blue / grey hydrogen", "definition": "Green = electrolysed with renewable power (clean); grey = from natural gas (emitting); blue = grey with carbon capture. Colour denotes the production route and emissions." },
+    { "term": "Electrolyser", "definition": "Splits water into hydrogen and oxygen using electricity. The on-ramp for green hydrogen and a flexible, surplus-soaking load (power-to-X)." },
+    { "term": "Fuel cell", "definition": "Converts hydrogen back to electricity electrochemically (no combustion). The discharge step for hydrogen used as long-duration storage or in transport." },
+    { "term": "Flow battery", "definition": "Stores energy in liquid electrolyte tanks; power and energy scale independently, with long life and easy long-duration sizing — promising for multi-hour storage." },
+    { "term": "Compressed-air energy storage (CAES)", "definition": "Stores energy by compressing air (often in caverns) and expanding it through a turbine later. A long-duration, geology-dependent option." },
+    { "term": "Thermal storage", "definition": "Stores energy as heat (molten salt, hot water, bricks) for later use or power. Cheap per kWh and well suited to long-duration and industrial heat." },
+    { "term": "LCOS (levelized cost of storage)", "definition": "Annualized cost ÷ energy discharged per year (€/MWh) — the storage analogue of LCOE. Rewards high round-trip efficiency and frequent cycling." },
+    { "term": "Demand response", "definition": "Paying consumers to shift or shed load (industry, EV charging, heat pumps, data centres) at key moments. Often the cheapest flexibility and 'capacity' on the system." },
+    { "term": "Demand-side flexibility", "definition": "Flexing demand to match supply rather than only building supply to match demand. A core, low-cost pillar of a high-renewable system." },
+    { "term": "State of charge (SoC)", "definition": "The fraction of a store's energy capacity currently filled. Operators dispatch storage to keep SoC ready for the next high-value charge or discharge." },
+    { "term": "Self-discharge", "definition": "Energy a store loses over time while idle. Low for pumped hydro, higher for some batteries — a key drawback for long-duration storage." },
+    { "term": "Black start", "definition": "The ability to restart generation without an external grid supply, to bring a collapsed system back up. Traditionally from hydro/diesel; now also batteries." },
+    { "term": "Power-to-X", "definition": "Using (surplus) electricity to make other energy carriers or feedstocks — hydrogen, ammonia, synthetic fuels, heat. Links the power system to industry and long-duration storage." },
+    { "term": "SMR (small modular reactor)", "definition": "Factory-built, smaller nuclear units aiming for lower cost and siting flexibility, including potential co-location with large loads like data centres. (See gr01.)" }
+  ],
+  "tips": [
+    "**Sort every technology by three questions:** dispatchable or variable? how fast does it ramp? can it store, and for how long? That framing beats memorising datasheets.",
+    "**Power (MW) and energy (MWh) are sized separately.** A storage asset's job is set by its *duration* $t = E/P$ — 4 h of Li-ion solves daily peaks, not a week-long wind lull.",
+    "**Match duration to the problem.** Short, frequent gaps → batteries; long, rare lulls → hydrogen/thermal. Round-trip efficiency matters less for rarely-used long-duration storage.",
+    "**Low round-trip efficiency suits rare use.** Hydrogen's ~30–40% would be ruinous for daily cycling but acceptable for seasonal storage that runs a few times a year.",
+    "**Inertia is the hidden service.** As synchronous plants retire, frequency stability and grid-forming inverters become real constraints — not just 'how many MWh of renewables'.",
+    "**Demand is a resource, not just a load.** Flexible demand (heat pumps, EVs, data centres) is often the cheapest balancing tool — the bridge to the grid-and-compute thesis in gr01."
+  ]
+}

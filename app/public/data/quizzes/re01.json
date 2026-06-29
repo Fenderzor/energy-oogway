@@ -1,0 +1,241 @@
+{
+  "chapterId": "re01",
+  "chapter": 2,
+  "track": "energy-systems",
+  "title": "Renewable Deployment",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "questions": [
+    {
+      "id": "re01-q01",
+      "chapter": 2,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "**Capacity factor** is best described as…",
+      "choices": [
+        "Actual annual output ÷ output if run at rated power all year",
+        "How efficiently fuel is converted to electricity",
+        "The plant's nameplate capacity in MW",
+        "The share of revenue from subsidies"
+      ],
+      "answerIndex": 0,
+      "explanation": "Capacity factor reflects resource and availability, not conversion efficiency."
+    },
+    {
+      "id": "re01-q02",
+      "chapter": 2,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The main weakness of **LCOE** as a comparison metric is that it…",
+      "choices": [
+        "Ignores when and where the energy is produced",
+        "Overstates fuel costs",
+        "Only works for fossil plants",
+        "Excludes capital costs"
+      ],
+      "answerIndex": 0,
+      "explanation": "LCOE is blind to timing (capture price) and location (grid/integration cost), so it can't fairly rank variable vs dispatchable sources."
+    },
+    {
+      "id": "re01-q03",
+      "chapter": 2,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "**Price cannibalization** of solar refers to…",
+      "choices": [
+        "Added solar depressing prices during sunny hours, cutting its own capture price",
+        "Panels physically degrading over time",
+        "Curtailment of wind by solar",
+        "Solar stealing subsidies from wind"
+      ],
+      "answerIndex": 0,
+      "explanation": "Because all solar produces at the same times, more of it lowers the price exactly when it sells — eroding the capture price (a falling value factor)."
+    },
+    {
+      "id": "re01-q04",
+      "chapter": 2,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "**Curtailment** is…",
+      "choices": [
+        "Deliberately reducing available renewable output the grid can't absorb",
+        "A type of subsidy",
+        "The efficiency loss in a turbine",
+        "A long-term supply contract"
+      ],
+      "answerIndex": 0,
+      "explanation": "When output exceeds what the grid can take or transmit, operators curtail it — increasingly common at high penetration."
+    },
+    {
+      "id": "re01-q05",
+      "chapter": 2,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "**Additionality** in a corporate green-power claim means…",
+      "choices": [
+        "The purchase actually causes new renewable capacity to be built",
+        "The buyer adds a battery on site",
+        "Extra panels are added each year",
+        "The PPA price rises with inflation"
+      ],
+      "answerIndex": 0,
+      "explanation": "Additionality asks whether the deal drives *new* capacity rather than re-labelling existing generation — central to credible claims."
+    },
+    {
+      "id": "re01-q06",
+      "chapter": 2,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Why does **offshore** wind typically have a higher capacity factor than **onshore**?",
+      "choices": [
+        "Stronger, steadier offshore wind and larger turbines",
+        "It is closer to demand centres",
+        "It receives larger subsidies",
+        "It has no maintenance downtime"
+      ],
+      "answerIndex": 0,
+      "explanation": "Higher and more consistent offshore wind speeds (and bigger machines) lift the capacity factor, despite higher capex."
+    },
+    {
+      "id": "re01-q07",
+      "chapter": 2,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Two projects have identical LCOE: a solar farm and a gas peaker. An analyst should conclude they are…",
+      "choices": [
+        "Not equivalent — one is variable, one is dispatchable",
+        "Exactly equivalent in value",
+        "Both baseload",
+        "Both worthless"
+      ],
+      "answerIndex": 0,
+      "explanation": "Equal LCOE says nothing about dispatchability or capture price; the gas peaker can produce on demand, the solar farm cannot."
+    },
+    {
+      "id": "re01-q08",
+      "chapter": 2,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A developer wants bankable, predictable revenue without merchant price risk. The most direct tool is…",
+      "choices": [
+        "A CfD or long-term PPA",
+        "Higher nameplate capacity",
+        "Curtailing output",
+        "Selling only on the balancing market"
+      ],
+      "answerIndex": 0,
+      "explanation": "CfDs and PPAs stabilise revenue around a fixed price, which is what lenders require to finance the project."
+    },
+    {
+      "id": "re01-q09",
+      "chapter": 2,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A solar developer reports projects stuck for years before they can be built. The most likely bottleneck is…",
+      "choices": [
+        "Grid-connection queues and permitting, not module cost",
+        "The price of silicon",
+        "A shortage of sunlight",
+        "Too few auctions"
+      ],
+      "answerIndex": 0,
+      "explanation": "Deployment today is grid- and permit-limited; turbine/panel cost is rarely the binding constraint."
+    },
+    {
+      "id": "re01-q10",
+      "chapter": 2,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Co-locating a battery with a solar farm primarily helps by…",
+      "choices": [
+        "Firming output and lifting the capture price",
+        "Increasing the panels' efficiency",
+        "Removing the need for a grid connection",
+        "Eliminating degradation"
+      ],
+      "answerIndex": 0,
+      "explanation": "Storage shifts energy from low-price sunny hours to higher-price hours, firming output and raising the revenue (capture price)."
+    },
+    {
+      "id": "re01-q11",
+      "chapter": 2,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "As solar penetration rises, its **value factor** tends to…",
+      "choices": [
+        "Fall below 1 and keep declining",
+        "Rise above 1",
+        "Stay fixed at 1",
+        "Become negative immediately"
+      ],
+      "answerIndex": 0,
+      "explanation": "Cannibalization drives the output-weighted capture price below the average, so the value factor falls as the technology scales."
+    },
+    {
+      "id": "re01-q12",
+      "chapter": 2,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "**Repowering** a wind site means…",
+      "choices": [
+        "Replacing old turbines with larger, more efficient modern ones",
+        "Adding a diesel backup generator",
+        "Selling the site to a utility",
+        "Curtailing it permanently"
+      ],
+      "answerIndex": 0,
+      "explanation": "Repowering boosts output on an already-permitted, grid-connected site — valuable when new permits are the bottleneck."
+    },
+    {
+      "id": "re01-q13",
+      "chapter": 2,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The capacity factor of a plant is…",
+      "choices": [
+        "$\\dfrac{E_{actual}}{P_{rated}\\times 8760}$",
+        "$P_{rated}\\times 8760 \\times E_{actual}$",
+        "$\\dfrac{P_{rated}}{E_{actual}}$",
+        "$\\dfrac{E_{actual}}{P_{rated}}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Actual energy divided by the maximum possible (rated power × 8760 hours in a year)."
+    },
+    {
+      "id": "re01-q14",
+      "chapter": 2,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "A quick estimate of LCOE is…",
+      "choices": [
+        "Annualized CAPEX + annual OPEX, divided by annual energy output",
+        "Annual energy output divided by total cost",
+        "Fuel cost minus subsidies",
+        "Capacity factor times price"
+      ],
+      "answerIndex": 0,
+      "explanation": "LCOE ≈ (annualized capital + operating cost) ÷ annual MWh — the cost per unit of energy delivered."
+    },
+    {
+      "id": "re01-q15",
+      "chapter": 2,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A 4 MW wind turbine generates 14,016 MWh in a year. Find its capacity factor (decimal).",
+      "answer": 0.40,
+      "unit": "",
+      "tolerance": 0.01,
+      "explanation": "$CF = 14016/(4\\times8760) = 14016/35040 = 0.40$."
+    },
+    {
+      "id": "re01-q16",
+      "chapter": 2,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A solar farm's total annualized cost is €900,000/yr and it produces 18,000 MWh/yr. Estimate its LCOE, €/MWh.",
+      "answer": 50,
+      "unit": "€/MWh",
+      "tolerance": 1,
+      "explanation": "$LCOE \\approx 900{,}000/18{,}000 = 50$ €/MWh."
+    }
+  ]
+}

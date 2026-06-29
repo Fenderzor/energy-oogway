@@ -1,0 +1,51 @@
+{
+  "chapterId": "al02",
+  "chapter": 2,
+  "track": "algebra",
+  "title": "Fractions, Ratios & Proportions",
+  "source": "Algebra & Maths Skills — Module 2",
+  "deckId": "al02",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "summary": "Fractions are where a lot of algebra confidence is won or lost, because they show up inside almost every formula (efficiency, density, rates, proportions). Master four moves and the fear goes away.\n\n**Adding and subtracting** need a **common denominator** — you can only combine fractions that are cut into the same-size pieces. To do $\\tfrac{1}{2} + \\tfrac{1}{4}$, rewrite the half as $\\tfrac{2}{4}$, then add the tops: $\\tfrac{2}{4} + \\tfrac{1}{4} = \\tfrac{3}{4}$. A safe universal denominator is the product of the two: $\\tfrac{a}{b} \\pm \\tfrac{c}{d} = \\tfrac{ad \\pm bc}{bd}$.\n\n**Multiplying** is the easy one — go straight across, tops × tops and bottoms × bottoms: $\\tfrac{2}{3} \\times \\tfrac{3}{4} = \\tfrac{6}{12} = \\tfrac{1}{2}$. Cancel common factors first to keep numbers small.\n\n**Dividing** means **flip the second fraction and multiply** (multiply by the reciprocal): $\\tfrac{3}{4} \\div \\tfrac{1}{2} = \\tfrac{3}{4} \\times \\tfrac{2}{1} = \\tfrac{6}{4} = \\tfrac{3}{2}$. 'Keep, change, flip.'\n\n**Simplifying** means dividing top and bottom by the same factor until they share none: $\\tfrac{12}{18} = \\tfrac{2}{3}$ (both ÷6). A fraction's value doesn't change when you scale top and bottom together — that's the same idea that lets you find equivalent fractions.\n\n**Ratios** compare quantities in parts. To split 200 in the ratio $3:2$, add the parts ($3+2 = 5$), find one part ($200 \\div 5 = 40$), then scale: the shares are $3 \\times 40 = 120$ and $2 \\times 40 = 80$. Ratios are just fractions in disguise.\n\n**Proportions** are two equal ratios, and they unlock a huge amount of energy-analysis arithmetic ('if 3 kg of fuel gives 40 MJ, how much do 7.5 kg give?'). Set them equal and **cross-multiply**: from $\\tfrac{a}{b} = \\tfrac{c}{d}$ you get $ad = bc$, then solve. **Percentages** are proportions out of 100: $15\\%$ of 80 is $\\tfrac{15}{100} \\times 80 = 12$. Treat 'percent' as '$\\div 100$' and the rest is multiplication.",
+  "equations": [
+    {
+      "name": "Add / subtract (common denominator)",
+      "latex": "\\frac{a}{b} \\pm \\frac{c}{d} = \\frac{ad \\pm bc}{bd}",
+      "rearrangements": ["\\frac{1}{2} + \\frac{1}{4} = \\frac{2}{4} + \\frac{1}{4} = \\frac{3}{4}"],
+      "useWhen": "Combining fractions with different denominators. Rewrite both over a shared bottom (their product always works), then add or subtract the tops only.",
+      "note": "Never add denominators. Only the numerators combine, once the denominators match."
+    },
+    {
+      "name": "Multiply / divide",
+      "latex": "\\frac{a}{b} \\times \\frac{c}{d} = \\frac{ac}{bd}, \\qquad \\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c}",
+      "rearrangements": ["\\frac{3}{4} \\div \\frac{1}{2} = \\frac{3}{4}\\times\\frac{2}{1} = \\frac{3}{2}"],
+      "useWhen": "Multiplying (straight across) or dividing (flip the divisor and multiply — 'keep, change, flip'). Cancel common factors before multiplying to keep numbers small.",
+      "note": "Dividing by a fraction makes things bigger when that fraction is < 1 — flipping is why."
+    },
+    {
+      "name": "Proportion (cross-multiply)",
+      "latex": "\\frac{a}{b} = \\frac{c}{d} \\;\\Rightarrow\\; ad = bc",
+      "rearrangements": ["\\frac{x}{12} = \\frac{3}{4} \\;\\Rightarrow\\; 4x = 36 \\;\\Rightarrow\\; x = 9"],
+      "useWhen": "Two ratios are equal and you need a missing value. Cross-multiply to clear the fractions, then solve the resulting equation.",
+      "note": "Proportional reasoning ('scale by the same factor') powers most unit conversions and 'if this then that' energy estimates."
+    }
+  ],
+  "glossary": [
+    { "term": "Numerator / denominator", "definition": "The top (numerator) and bottom (denominator) of a fraction. The denominator says how many equal pieces make a whole; the numerator how many you have." },
+    { "term": "Common denominator", "definition": "A shared bottom number that lets fractions be added or subtracted. The product of the denominators always works; the lowest common one keeps numbers small." },
+    { "term": "Reciprocal", "definition": "A fraction flipped upside-down: the reciprocal of $\\tfrac{c}{d}$ is $\\tfrac{d}{c}$. Dividing by a fraction = multiplying by its reciprocal." },
+    { "term": "Simplifying (lowest terms)", "definition": "Dividing numerator and denominator by their common factors until they share none, e.g. $\\tfrac{12}{18} = \\tfrac{2}{3}$. The value is unchanged." },
+    { "term": "Equivalent fractions", "definition": "Different-looking fractions of equal value, made by scaling top and bottom by the same factor: $\\tfrac{1}{2} = \\tfrac{2}{4} = \\tfrac{50}{100}$." },
+    { "term": "Ratio", "definition": "A comparison of quantities in parts, like $3:2$. Add the parts to find the total number of shares, then scale to split a quantity." },
+    { "term": "Proportion", "definition": "A statement that two ratios are equal. Solved by cross-multiplying. The basis of scaling, unit conversion and 'rule of three' problems." },
+    { "term": "Percentage", "definition": "A proportion out of 100. '$x$ percent' means $\\tfrac{x}{100}$; to take a percentage of something, multiply by that fraction." }
+  ],
+  "tips": [
+    "**Only add/subtract with a common denominator.** Multiplying and dividing don't need one — but adding does. Mixing these rules up is the most common fraction error.",
+    "**Divide = flip and multiply ('keep, change, flip').** Keep the first fraction, change ÷ to ×, flip the second. Then proceed as a normal multiplication.",
+    "**Cancel before you multiply.** Simplify common factors across the fractions first so you work with small numbers and avoid huge products to simplify later.",
+    "**Cross-multiply to solve proportions.** Whenever you see $\\tfrac{a}{b} = \\tfrac{c}{d}$ with one unknown, $ad = bc$ turns it into a one-line equation.",
+    "**Treat 'percent' as '÷100'.** $15\\%$ of a number is $\\tfrac{15}{100}\\times$ it. Percentage change = (change ÷ original) × 100.",
+    "**Sanity-check size.** Multiplying by a fraction below 1 makes things smaller; dividing by one makes them bigger. If your answer's size feels wrong, re-check the operation."
+  ]
+}

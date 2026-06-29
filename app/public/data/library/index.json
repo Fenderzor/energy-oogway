@@ -95,6 +95,119 @@
         "glossary",
         "tips"
       ]
+    },
+    {
+      "chapterId": "pm01",
+      "chapter": 1,
+      "track": "energy-systems",
+      "title": "Power Markets & Market Design",
+      "topics": "Merit order, marginal pricing, day-ahead/intraday/balancing, spreads, PPAs",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    },
+    {
+      "chapterId": "re01",
+      "chapter": 2,
+      "track": "energy-systems",
+      "title": "Renewable Deployment",
+      "topics": "LCOE, capacity factor, curtailment, cannibalization, auctions/CfDs, grid limits",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    },
+    {
+      "chapterId": "et01",
+      "chapter": 3,
+      "track": "energy-systems",
+      "title": "Energy Technologies",
+      "topics": "Generation roles, storage (batteries/H2/pumped hydro), duration, demand response",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    },
+    {
+      "chapterId": "gr01",
+      "chapter": 4,
+      "track": "energy-systems",
+      "title": "Grids & Grid-and-Compute",
+      "topics": "TSO/DSO, frequency, congestion/redispatch, zonal vs nodal, data-centre load",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    },
+    {
+      "chapterId": "al01",
+      "chapter": 1,
+      "track": "algebra",
+      "title": "Rearranging Formulas",
+      "topics": "Golden rule, inverse operations, isolating a variable, fractions, squares & roots, both-sides",
+      "sections": [
+        "summary",
+        "equations",
+        "glossary",
+        "tips"
+      ]
+    },
+    {
+      "chapterId": "al02",
+      "chapter": 2,
+      "track": "algebra",
+      "title": "Fractions, Ratios & Proportions",
+      "topics": "Common denominators, multiply/divide, simplifying, ratios, cross-multiplying, percentages",
+      "sections": ["summary", "equations", "glossary", "tips"]
+    },
+    {
+      "chapterId": "al03",
+      "chapter": 3,
+      "track": "algebra",
+      "title": "Powers, Roots & Indices",
+      "topics": "Index laws, negative & fractional powers, roots, scientific notation, unit prefixes",
+      "sections": ["summary", "equations", "glossary", "tips"]
+    },
+    {
+      "chapterId": "al04",
+      "chapter": 4,
+      "track": "algebra",
+      "title": "Logarithms & Exponentials",
+      "topics": "Log definition & laws, ln & e, solving exponential equations, decay, log scales",
+      "sections": ["summary", "equations", "glossary", "tips"]
+    },
+    {
+      "chapterId": "al05",
+      "chapter": 5,
+      "track": "algebra",
+      "title": "Linear & Simultaneous Equations",
+      "topics": "Solving linear, y = mx + c, substitution & elimination, two unknowns",
+      "sections": ["summary", "equations", "glossary", "tips"]
+    },
+    {
+      "chapterId": "al06",
+      "chapter": 6,
+      "track": "algebra",
+      "title": "Quadratics",
+      "topics": "Standard form, roots, factoring, quadratic formula, the discriminant",
+      "sections": ["summary", "equations", "glossary", "tips"]
+    },
+    {
+      "chapterId": "al07",
+      "chapter": 7,
+      "track": "algebra",
+      "title": "Rearranging Real Energy Formulas",
+      "topics": "Q=mcΔT, efficiency, Carnot, ideal gas, KE, exergy — rearrangement in context",
+      "sections": ["summary", "equations", "glossary", "tips"]
     }
   ]
 }

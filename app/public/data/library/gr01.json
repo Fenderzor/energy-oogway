@@ -1,0 +1,61 @@
+{
+  "chapterId": "gr01",
+  "chapter": 4,
+  "track": "energy-systems",
+  "title": "Grids & Grid-and-Compute",
+  "source": "Energy Systems & Power Markets — Module 4",
+  "deckId": "gr01",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "summary": "The grid is the part of the energy system that has quietly become *the* binding constraint — and it's the specialism you're building toward, so it's worth understanding deeply. Generation gets cheaper every year, but you can't use a megawatt you can't deliver, and you can't connect a project the grid can't host. Whoever understands grid constraints understands where value and risk actually sit.\n\nStart with the **actors and layers**. The **TSO (Transmission System Operator)** — TenneT in the Netherlands and much of Germany — runs the high-voltage backbone, keeps supply and demand balanced in real time, and maintains **frequency** (50 Hz in Europe) and system security. The **DSO (Distribution System Operator)** runs the lower-voltage local networks that deliver power to homes and businesses. Transmission moves bulk power long distances at high voltage to cut losses; distribution is the last-mile delivery. Increasingly, **HVDC** links (efficient over long distances and for sub-sea interconnectors) complement the AC grid.\n\nKeeping the system stable is a constant balancing act. Frequency must stay near 50 Hz; deviations are arrested and restored by the reserve products from pm01 (**FCR, aFRR, mFRR**). **Inertia** from spinning synchronous machines slows frequency swings, and as those plants retire the grid leans on faster reserves and grid-forming inverters (see et01). The network is planned to the **N-1 security criterion**: it must survive the loss of any single element without cascading. When the cheapest dispatch would overload a line, the TSO intervenes with **redispatch** — paying one plant down and another up to relieve **congestion**. The cost of that congestion management has exploded as renewables are often far from demand.\n\nCongestion is also where markets and physics meet. Europe mostly uses **zonal pricing** (one price per bidding zone, congestion handled out-of-market via redispatch); some systems use **nodal pricing / LMPs** (a price at every grid node that reflects local congestion directly). Cross-border capacity is shared via **flow-based market coupling**. The recurring theme: the grid, not generation, increasingly sets what's possible — hence multi-year **connection queues** for both new renewables and new loads.\n\nThat brings the frontier: **grid-and-compute**. AI and cloud data centres are enormous, fast-growing, and unusually **flexible** electrical loads, and they can sometimes be sited freely. That makes them a grid variable, not just a consumer. The emerging thesis — central to roles at TSOs and players like DNV and Northpool — is to **site compute where the grid and the renewable resource have headroom**, **co-locate** data centres with generation (behind-the-meter or near substations with spare capacity), and use their flexibility (shifting non-urgent compute, curtailing, or providing demand response) to *help* balance the system rather than strain it. Done well, a data centre becomes firming demand that monetises otherwise-curtailed renewables; done badly, it's a connection-queue-jamming peak that forces grid reinforcement. Reading which is which — connection capacity, congestion maps, flexibility value — is exactly the analyst skill this track is building.",
+  "equations": [
+    {
+      "name": "Load factor",
+      "latex": "LF = \\frac{P_{avg}}{P_{peak}}",
+      "rearrangements": ["P_{avg} = LF\\times P_{peak}", "E_{annual} = P_{avg}\\times 8760"],
+      "useWhen": "Judging how 'peaky' a load or system is. A high load factor (flat, steady demand) uses grid and generation capacity efficiently; a low one means expensive capacity sits idle most of the time.",
+      "note": "Data centres have a very high load factor (~0.9+) — steady, around-the-clock demand — which is part of what makes them attractive *and* heavy on the grid."
+    },
+    {
+      "name": "Energy from power over time",
+      "latex": "E = P \\times t",
+      "rearrangements": ["P = \\frac{E}{t}", "t = \\frac{E}{P}"],
+      "useWhen": "Converting a steady load or generation in MW to energy in MWh over a period — e.g. the daily energy a constant data-centre load draws.",
+      "note": "The same relation used to size storage duration in et01. For varying power, use the average over the period."
+    }
+  ],
+  "glossary": [
+    { "term": "TSO (Transmission System Operator)", "definition": "Operator of the high-voltage backbone (e.g. TenneT). Balances supply and demand in real time, maintains frequency and security, and procures reserves. The system's air-traffic control." },
+    { "term": "DSO (Distribution System Operator)", "definition": "Operator of the lower-voltage local networks delivering power to end users. Increasingly active as rooftop solar, EVs and heat pumps make distribution two-way." },
+    { "term": "Transmission vs distribution", "definition": "Transmission = bulk power over long distances at high voltage (low losses); distribution = local last-mile delivery at lower voltage. Different operators, voltages and roles." },
+    { "term": "HVAC vs HVDC", "definition": "High-voltage AC is the default grid; high-voltage DC is more efficient over long distances and essential for sub-sea interconnectors and tying asynchronous grids together." },
+    { "term": "Grid frequency (50 Hz)", "definition": "The European grid runs at 50 Hz; frequency rises if generation exceeds demand and falls if demand exceeds generation. Keeping it near 50 Hz is continuous real-time balancing." },
+    { "term": "Inertia", "definition": "Rotational energy in synchronous machines that slows frequency changes, buying time for reserves to act. Declines as renewables replace spinning plants. (See et01.)" },
+    { "term": "Congestion", "definition": "When the economically cheapest power flows would overload a transmission element. The grid bottleneck that forces market or operational intervention." },
+    { "term": "Redispatch", "definition": "The TSO paying one generator to reduce output and another (the 'wrong' side of a constraint) to increase it, to relieve congestion. Its cost has risen sharply with remote renewables." },
+    { "term": "N-1 security criterion", "definition": "The grid must withstand the loss of any single component (line, transformer, generator) without cascading failure. The core reliability standard driving spare capacity." },
+    { "term": "Zonal pricing", "definition": "One wholesale price per bidding zone; internal congestion is handled outside the market via redispatch. The European norm. (Contrast nodal.) (See pm01.)" },
+    { "term": "Nodal pricing (LMP)", "definition": "A locational marginal price at every grid node, directly reflecting local congestion and losses. Used in much of the US; sends sharp siting signals but is complex." },
+    { "term": "Flow-based market coupling", "definition": "The method coupling European zones that allocates cross-border capacity using the physics of power flows, rather than simple fixed transfer limits." },
+    { "term": "Connection queue", "definition": "The multi-year backlog of generation *and* load projects waiting for grid capacity and permission to connect. Now a primary constraint on both renewables and data centres." },
+    { "term": "Grid code", "definition": "The technical rules a connecting asset must meet (voltage ride-through, frequency response, reactive power). Increasingly demands grid-supporting behaviour from renewables and loads." },
+    { "term": "Reactive power / voltage support", "definition": "Power that does no net work but is needed to sustain grid voltage. An ancillary service the TSO procures; inverters and synchronous condensers can provide it." },
+    { "term": "Load factor", "definition": "Average load ÷ peak load. High (flat) load factor uses capacity efficiently; low (peaky) load means costly capacity sits idle much of the time." },
+    { "term": "Peak demand", "definition": "The system's maximum instantaneous load, which transmission and generation must be built to meet (with N-1 margin) even if it occurs only a few hours a year." },
+    { "term": "Grid flexibility", "definition": "The system's ability to adjust supply, demand or flows to handle variability and constraints — from storage, flexible generation, demand response and smart grid controls." },
+    { "term": "Demand flexibility / flexible load", "definition": "Loads that can shift, shed or modulate consumption — EV charging, heat pumps, industry and data centres. A growing grid resource and the heart of grid-and-compute." },
+    { "term": "Behind-the-meter", "definition": "Generation or storage on the customer's side of the grid connection (e.g. a solar array or battery serving an on-site data centre), reducing or reshaping the grid demand." },
+    { "term": "Co-location", "definition": "Siting a large load (like a data centre) directly with generation or at a substation with spare capacity, cutting transmission need and connection delay." },
+    { "term": "Grid-and-compute", "definition": "The thesis of siting and operating data-centre/AI load as a grid-aware, flexible resource — placed where grid and renewable headroom exist, helping balance rather than strain the system." },
+    { "term": "Data-centre load", "definition": "Large, fast-growing, around-the-clock electricity demand from AI/cloud computing. Often siteable and partly flexible, making it a grid variable, not just a consumer." },
+    { "term": "Smart grid", "definition": "A grid with digital sensing, communication and control that enables real-time visibility, demand response and active management of distributed resources." },
+    { "term": "Black start", "definition": "Restarting the grid from a full blackout using units that can energise without external supply (hydro, diesel, increasingly batteries). A key resilience service. (See et01.)" }
+  ],
+  "tips": [
+    "**The grid is the bottleneck, not generation.** Connection queues and congestion — not turbine cost — increasingly decide what gets built and where. Lead grid analysis with capacity and constraints.",
+    "**Know the TSO/DSO split.** TSO (TenneT) = high-voltage backbone, balancing, frequency, security; DSO = local distribution. Most balancing and interconnection questions are TSO-level.",
+    "**Redispatch cost is the price of congestion.** Rising redispatch spend signals that generation has outrun the wires — an argument for grid build-out, storage, or siting load near supply.",
+    "**Zonal vs nodal = how congestion is priced.** Zonal (Europe) hides it inside a zone and fixes it via redispatch; nodal (US LMP) prices it at every node and signals siting directly.",
+    "**Data centres are a grid variable, not just a load.** Siteable, flexible, high-load-factor demand can monetise curtailed renewables and provide demand response — *or* jam queues and force reinforcement. The analysis is which.",
+    "**Load factor reveals how hard capacity works.** A high load factor (steady demand, like a data centre) uses expensive grid and generation capacity efficiently; peaky load wastes it."
+  ]
+}

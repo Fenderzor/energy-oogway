@@ -1,0 +1,60 @@
+{
+  "chapterId": "al01",
+  "chapter": 1,
+  "track": "algebra",
+  "title": "Rearranging Formulas",
+  "source": "Algebra & Maths Skills — Module 1",
+  "deckId": "al01",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "summary": "Rearranging a formula — 'making a different letter the subject' — is the single most useful algebra skill in energy science, because the textbook almost never gives you the equation in the form you need. The good news: it runs on **one rule** and a short list of **inverse operations**, applied patiently.\n\n**The golden rule:** an equation is a balance. *Whatever you do to one side, you must do to the other.* If you add 5 on the left, add 5 on the right; if you divide the left by $t$, divide the *whole* right by $t$. Do that and the equality stays true — always.\n\n**The strategy: peel the onion.** To isolate a variable, undo the operations wrapped around it **in reverse order** — the opposite order to BIDMAS. Look at everything done *to* your target variable, then strip it away one layer at a time using the inverse operation. The inverses you need: addition ↔ subtraction, multiplication ↔ division, square ↔ square root, and (later) exponential ↔ logarithm.\n\n**Scenario 1 — something added or subtracted.** To make $a$ the subject of $v = u + at$: the $at$ term is *added*, so subtract it from both sides, $v - u = at$; then $a$ is *multiplied* by $t$, so divide both sides by $t$: $$a = \\frac{v - u}{t}.$$ Notice you subtract first, divide second — reverse BIDMAS.\n\n**Scenario 2 — the variable is multiplied or divided.** For density $\\rho = m/V$, to get $m$: $m$ is divided by $V$, so multiply both sides by $V$, giving $m = \\rho V$. To get $V$ instead, it's trickier because $V$ is *underneath*. Multiply both sides by $V$ first ($\\rho V = m$), then divide by $\\rho$: $$V = \\frac{m}{\\rho}.$$ **Rule of thumb: if your variable is in the denominator, multiply both sides by it to lift it up, then isolate.**\n\n**Scenario 3 — the variable is squared (or under a root).** For $A = \\pi r^2$, to get $r$: divide by $\\pi$ ($A/\\pi = r^2$), then take the square root of both sides: $$r = \\sqrt{\\tfrac{A}{\\pi}}.$$ Square and square-root are inverses, so they cancel. (In pure maths a square root is $\\pm$; for a physical quantity like a radius you keep the positive root.) If instead the variable is *under* a root, do the opposite — **square both sides** to remove the root.\n\n**Scenario 4 — the variable appears more than once / on both sides.** Collect it. To solve $5x - 3 = 2x + 9$: get all $x$ on one side (subtract $2x$): $3x - 3 = 9$; then the added/subtracted constant (add 3): $3x = 12$; then divide: $x = 4$. When the variable appears inside a bracket as a common factor, **factor it out** so it appears once, then divide.\n\n**The universal recipe:** (1) identify your target letter; (2) list what's been done to it; (3) undo those operations in reverse order, applying each step to *both whole sides*; (4) check by substituting numbers back in. With practice this becomes automatic — and every physics and thermodynamics formula in the rest of the app becomes something you can bend to your needs.",
+  "equations": [
+    {
+      "name": "Scenario: term added or subtracted",
+      "latex": "y = a + bx \\;\\Rightarrow\\; x = \\frac{y - a}{b}",
+      "rearrangements": ["a = y - bx", "b = \\frac{y - a}{x}"],
+      "useWhen": "Your variable is part of a term that is added to or subtracted from something else. **Undo the +/− first** (subtract or add the same on both sides), then undo any ×/÷.",
+      "note": "Reverse-BIDMAS: deal with +/− before ×/÷ when *isolating*. Subtract the whole extra term from both sides."
+    },
+    {
+      "name": "Scenario: variable in the denominator",
+      "latex": "y = \\frac{a}{x} \\;\\Rightarrow\\; x = \\frac{a}{y}",
+      "rearrangements": ["a = xy", "\\text{step 1: multiply both sides by } x \\Rightarrow xy = a"],
+      "useWhen": "The variable you want is *underneath* a fraction. Multiply both sides by it to bring it up to the top, then isolate as usual.",
+      "note": "Don't try to divide it out while it's in the denominator — lift it first with multiplication."
+    },
+    {
+      "name": "Scenario: variable squared / under a root",
+      "latex": "y = a x^2 \\;\\Rightarrow\\; x = \\sqrt{\\frac{y}{a}}",
+      "rearrangements": ["y = a\\sqrt{x} \\;\\Rightarrow\\; x = \\left(\\frac{y}{a}\\right)^2"],
+      "useWhen": "The variable is squared (take the square root last) or sits under a root (square both sides last). Square and root are inverses and cancel.",
+      "note": "Strip the ×/÷ around it first, then apply the root/square to the *whole* other side. Keep the positive root for physical quantities."
+    },
+    {
+      "name": "Scenario: variable on both sides",
+      "latex": "ax + b = cx + d \\;\\Rightarrow\\; x = \\frac{d - b}{a - c}",
+      "rearrangements": ["\\text{collect: } ax - cx = d - b", "\\text{factor: } x(a - c) = d - b"],
+      "useWhen": "The unknown appears more than once. Gather every term containing it on one side, factor it out so it appears once, then divide by its coefficient.",
+      "note": "Moving a term across the '=' flips its sign. Factoring turns repeated $x$'s into a single $x$ you can divide away."
+    }
+  ],
+  "glossary": [
+    { "term": "Subject of a formula", "definition": "The variable on its own, usually on the left, that the formula is solved for. 'Make $a$ the subject' = rearrange until $a =$ (everything else)." },
+    { "term": "Inverse operation", "definition": "The operation that undoes another: + and − are inverses; × and ÷ are inverses; squaring and square-rooting are inverses; exponentials and logs are inverses." },
+    { "term": "The golden rule (balance)", "definition": "Whatever you do to one side of an equation you must do to the other, so the two sides stay equal. The basis of every legal rearrangement step." },
+    { "term": "Term", "definition": "A part of an expression separated by + or − signs. In $u + at$, the terms are $u$ and $at$. You move whole terms across the equals sign." },
+    { "term": "Coefficient", "definition": "The number multiplying a variable. In $3x$ the coefficient is 3; you remove it by dividing both sides by it." },
+    { "term": "Like terms", "definition": "Terms with the same variable part, which can be combined: $5x$ and $2x$ are like terms ($5x - 2x = 3x$); $5x$ and $5$ are not." },
+    { "term": "Factoring out", "definition": "Writing a common factor outside a bracket: $ax - cx = x(a - c)$. Used to make a repeated variable appear only once so you can isolate it." },
+    { "term": "Reverse BIDMAS", "definition": "When isolating a variable you undo operations in the opposite order to BIDMAS — strip away +/− before ×/÷, and brackets/powers last." },
+    { "term": "LHS / RHS", "definition": "Left-hand side and right-hand side of an equation. A step must be applied to the whole LHS and the whole RHS to stay valid." },
+    { "term": "Cross-multiplying", "definition": "For $\\frac{a}{b} = \\frac{c}{d}$, a shortcut giving $ad = bc$. It's really just multiplying both sides by $b$ and by $d$." }
+  ],
+  "tips": [
+    "**Apply every step to the *whole* side.** If you divide by $t$, divide *all* of the other side by $t$, not just one term. This is the No. 1 source of rearrangement errors.",
+    "**Undo in reverse order (reverse BIDMAS).** Peel off additions/subtractions first, then multiplications/divisions, then powers/roots last — the opposite of how you'd evaluate.",
+    "**If the variable is in the denominator, lift it first.** Multiply both sides by it to bring it to the top, *then* isolate. Don't fight it while it's underneath.",
+    "**Moving a term across '=' flips its sign;** moving a factor across becomes the inverse operation (× becomes ÷). Keep a clear before/after each line.",
+    "**Squared variable ⇒ square-root last; variable under a root ⇒ square last.** Do the ×/÷ tidying first, then apply the root or square to the entire other side.",
+    "**Always sanity-check by substituting numbers.** Put simple values into your rearranged formula and the original — if both give the same result, your rearrangement is right."
+  ]
+}

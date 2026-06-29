@@ -55,6 +55,38 @@
       "chapter": 8,
       "description": "Exergy, dead state, exergy of heat, exergy destruction, second-law efficiency.",
       "cardCount": 10
+    },
+    {
+      "deckId": "pm01",
+      "title": "Power Markets & Market Design",
+      "chapter": 1,
+      "track": "energy-systems",
+      "description": "Merit order, marginal pricing, the day-ahead/intraday/balancing timeline, spreads, PPAs and negative prices.",
+      "cardCount": 12
+    },
+    {
+      "deckId": "re01",
+      "title": "Renewable Deployment",
+      "chapter": 2,
+      "track": "energy-systems",
+      "description": "LCOE, capacity factors, curtailment, cannibalization, auctions/CfDs, and the grid/permit bottlenecks of deploying wind and solar.",
+      "cardCount": 12
+    },
+    {
+      "deckId": "et01",
+      "title": "Energy Technologies",
+      "chapter": 3,
+      "track": "energy-systems",
+      "description": "Generation roles, storage (batteries, pumped hydro, hydrogen), duration vs power, round-trip efficiency, and demand-side flexibility.",
+      "cardCount": 12
+    },
+    {
+      "deckId": "gr01",
+      "title": "Grids & Grid-and-Compute",
+      "chapter": 4,
+      "track": "energy-systems",
+      "description": "TSO/DSO roles, frequency & inertia, congestion/redispatch, zonal vs nodal pricing, and siting flexible data-centre load on the grid.",
+      "cardCount": 12
     }
   ]
 }

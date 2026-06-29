@@ -1,0 +1,58 @@
+{
+  "chapterId": "al03",
+  "chapter": 3,
+  "track": "algebra",
+  "title": "Powers, Roots & Indices",
+  "source": "Algebra & Maths Skills — Module 3",
+  "deckId": "al03",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "summary": "Powers (indices/exponents) are shorthand for repeated multiplication, and energy science is full of them — areas, volumes, square laws, and especially **scientific notation** for the very large and very small. A handful of **index laws** handle everything.\n\n**Multiplying** powers of the same base: **add** the indices, $a^m \\times a^n = a^{m+n}$ (e.g. $2^3 \\times 2^2 = 2^5 = 32$). **Dividing**: **subtract** them, $a^m / a^n = a^{m-n}$ (e.g. $10^6/10^2 = 10^4$). **A power of a power**: **multiply** them, $(a^m)^n = a^{mn}$ (e.g. $(3^2)^2 = 3^4 = 81$). These three are the workhorses.\n\nTwo special values follow directly: anything to the power **0 is 1** ($a^0 = 1$, because $a^n/a^n = a^0$), and a **negative** index means **one over** the positive power, $a^{-n} = 1/a^n$ (so $2^{-3} = 1/8 = 0.125$).\n\n**Roots are fractional powers.** A square root is the power $\\tfrac12$: $a^{1/2} = \\sqrt{a}$, and an $n$-th root is $a^{1/n} = \\sqrt[n]{a}$. Combining the rules, $a^{m/n} = \\sqrt[n]{a^m} = (\\sqrt[n]{a})^m$ — so $8^{2/3} = (\\sqrt[3]{8})^2 = 2^2 = 4$ and $9^{3/2} = (\\sqrt{9})^3 = 27$. Reading $m/n$ as 'root by the bottom, power by the top' makes these painless.\n\n**Scientific (standard) notation** writes a number as a value between 1 and 10 times a power of ten, e.g. $3 \\times 10^4$. To multiply, multiply the fronts and **add** the exponents; to divide, divide the fronts and **subtract** them: $(3\\times10^4)(2\\times10^3) = 6\\times10^7$, and $(6\\times10^8)/(2\\times10^3) = 3\\times10^5$. This is exactly how you handle the kilo/mega/giga ($10^3/10^6/10^9$) prefixes that pervade energy units — a gigawatt is $10^9$ watts, a megajoule is $10^6$ joules.",
+  "equations": [
+    {
+      "name": "Multiply / divide same base",
+      "latex": "a^m \\times a^n = a^{m+n}, \\qquad \\frac{a^m}{a^n} = a^{m-n}",
+      "rearrangements": ["2^3 \\times 2^2 = 2^5 = 32", "10^6 / 10^2 = 10^4"],
+      "useWhen": "Combining powers that share a base. Add the indices when multiplying, subtract when dividing. Only works for the *same* base.",
+      "note": "Different bases can't be combined this way — $2^3\\times 3^2$ stays as is (or compute each: $8\\times 9$)."
+    },
+    {
+      "name": "Power of a power; zero & negative",
+      "latex": "(a^m)^n = a^{mn}, \\qquad a^0 = 1, \\qquad a^{-n} = \\frac{1}{a^n}",
+      "rearrangements": ["(3^2)^2 = 3^4 = 81", "2^{-3} = \\frac{1}{2^3} = 0.125"],
+      "useWhen": "Raising a power to another power (multiply indices), or interpreting a zero or negative index. A negative index flips the term to the denominator.",
+      "note": "$a^0 = 1$ for any non-zero $a$. A negative index does NOT make the number negative — it makes it a reciprocal."
+    },
+    {
+      "name": "Fractional powers = roots",
+      "latex": "a^{1/n} = \\sqrt[n]{a}, \\qquad a^{m/n} = \\left(\\sqrt[n]{a}\\right)^m",
+      "rearrangements": ["8^{2/3} = (\\sqrt[3]{8})^2 = 4", "9^{3/2} = (\\sqrt{9})^3 = 27"],
+      "useWhen": "Evaluating roots or fractional indices. Read $m/n$ as 'root by the denominator, power by the numerator' — usually easier to root first, then raise.",
+      "note": "$a^{1/2}=\\sqrt a$. Take the root first to keep numbers small, then apply the power."
+    },
+    {
+      "name": "Scientific notation arithmetic",
+      "latex": "(a\\times10^m)(b\\times10^n) = ab\\times10^{m+n}",
+      "rearrangements": ["(3\\times10^4)(2\\times10^3) = 6\\times10^7", "\\frac{6\\times10^8}{2\\times10^3} = 3\\times10^5"],
+      "useWhen": "Multiplying/dividing very large or small numbers, and converting unit prefixes (k=$10^3$, M=$10^6$, G=$10^9$). Handle the fronts and the powers of ten separately.",
+      "note": "Keep the front between 1 and 10; adjust the exponent if a product like $6\\times10^7$ would otherwise be $60\\times10^6$."
+    }
+  ],
+  "glossary": [
+    { "term": "Base", "definition": "The number being raised to a power. In $2^5$, the base is 2. Index laws only combine powers with the *same* base." },
+    { "term": "Index / exponent / power", "definition": "The small raised number saying how many times the base multiplies itself. In $2^5$, the index is 5 ($=2\\times2\\times2\\times2\\times2$)." },
+    { "term": "Index laws", "definition": "The rules for combining powers: add to multiply, subtract to divide, multiply for a power of a power." },
+    { "term": "Zero index", "definition": "$a^0 = 1$ for any non-zero $a$, because $a^n \\div a^n = a^{0}$ and also equals 1." },
+    { "term": "Negative index", "definition": "$a^{-n} = 1/a^n$ — a reciprocal, not a negative number. Moving a power between numerator and denominator flips the sign of its index." },
+    { "term": "Root", "definition": "The inverse of a power: $\\sqrt[n]{a}$ undoes raising to the $n$-th power. As an index it is a fraction: $a^{1/n}$." },
+    { "term": "Fractional index", "definition": "$a^{m/n} = \\sqrt[n]{a^m}$: the denominator is the root, the numerator is the power. Root first, then raise, to keep numbers small." },
+    { "term": "Scientific (standard) notation", "definition": "A number written as (value between 1 and 10) × a power of ten, e.g. $3\\times10^4$. Compact for very large/small quantities and unit prefixes." }
+  ],
+  "tips": [
+    "**Same base only.** Add/subtract indices only when the base matches. $2^3\\times2^2 = 2^5$, but $2^3\\times3^2$ must be worked out as $8\\times9$.",
+    "**A negative index is a reciprocal, not a negative number.** $2^{-3} = \\tfrac{1}{8}$, a positive value. It just moves the term to the denominator.",
+    "**For $a^{m/n}$, root first.** 'Bottom is the root, top is the power' — take the $n$-th root, then raise to $m$. $8^{2/3} = (\\sqrt[3]8)^2 = 4$ is easier than $\\sqrt[3]{64}$.",
+    "**In scientific notation, handle fronts and tens separately.** Multiply/divide the leading numbers, then add/subtract the powers of ten. Re-normalise so the front stays between 1 and 10.",
+    "**Know your prefixes as powers of ten.** k = $10^3$, M = $10^6$, G = $10^9$, m = $10^{-3}$. Unit conversions in energy are just index arithmetic.",
+    "**$x^0 = 1$, always (for $x \\neq 0$).** A surprisingly common slip is writing it as 0 — anything to the zero power is one."
+  ]
+}

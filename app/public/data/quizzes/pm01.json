@@ -1,0 +1,237 @@
+{
+  "chapterId": "pm01",
+  "chapter": 1,
+  "track": "energy-systems",
+  "title": "Power Markets & Market Design",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "questions": [
+    {
+      "id": "pm01-q01",
+      "chapter": 1,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The **merit order** ranks generators by…",
+      "choices": [
+        "Short-run marginal cost, cheapest first",
+        "Installed capacity, largest first",
+        "Age of the plant",
+        "Distance from the nearest city"
+      ],
+      "answerIndex": 0,
+      "explanation": "Plants are stacked by SRMC; the market dispatches up the stack until demand is met."
+    },
+    {
+      "id": "pm01-q02",
+      "chapter": 1,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "In a pay-as-clear market, the single clearing price is set by…",
+      "choices": [
+        "The marginal (last, most expensive) unit dispatched",
+        "The cheapest unit dispatched",
+        "The average of all bids",
+        "The largest generator"
+      ],
+      "answerIndex": 0,
+      "explanation": "The marginal unit's SRMC sets the price paid to *all* accepted sellers — the defining feature of marginal pricing."
+    },
+    {
+      "id": "pm01-q03",
+      "chapter": 1,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Electricity needs a *sequence* of markets (forward → day-ahead → intraday → balancing) chiefly because…",
+      "choices": [
+        "It can barely be stored and supply must match demand every instant",
+        "Regulators require four separate auctions by law",
+        "Each fuel type trades in its own market",
+        "Prices are fixed a year in advance"
+      ],
+      "answerIndex": 0,
+      "explanation": "Non-storability plus instantaneous balancing means players must keep re-balancing as forecasts sharpen toward delivery."
+    },
+    {
+      "id": "pm01-q04",
+      "chapter": 1,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "Negative wholesale prices typically occur when…",
+      "choices": [
+        "Inflexible must-run and subsidised output exceeds demand",
+        "Demand hits an all-time peak",
+        "A large power plant trips offline",
+        "Gas prices spike"
+      ],
+      "answerIndex": 0,
+      "explanation": "When output that can't (or won't) switch off exceeds demand, generators pay to keep running rather than shut down and restart."
+    },
+    {
+      "id": "pm01-q05",
+      "chapter": 1,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "A **capacity market** exists to…",
+      "choices": [
+        "Pay resources to be available at peak (resource adequacy)",
+        "Sell more energy at lower prices",
+        "Replace the day-ahead auction",
+        "Set carbon prices"
+      ],
+      "answerIndex": 0,
+      "explanation": "It rewards availability — the 'missing money' an energy-only market may not provide for rarely-used capacity."
+    },
+    {
+      "id": "pm01-q06",
+      "chapter": 1,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "To explain why tomorrow's 18:00 price is €90/MWh, the most direct step is to…",
+      "choices": [
+        "Identify the marginal unit and compute its SRMC",
+        "Add up every plant's capacity",
+        "Look only at total installed wind",
+        "Average all the day's prices"
+      ],
+      "answerIndex": 0,
+      "explanation": "The clearing price ≈ the SRMC of the price-setting (marginal) unit for that hour."
+    },
+    {
+      "id": "pm01-q07",
+      "chapter": 1,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Two coupled bidding zones suddenly show *different* day-ahead prices. The most likely cause is…",
+      "choices": [
+        "The interconnector between them has congested",
+        "One zone switched off its market",
+        "Both zones burned the same fuel",
+        "Demand was identical in both"
+      ],
+      "answerIndex": 0,
+      "explanation": "Market coupling equalises prices until the link hits its capacity limit; congestion then splits the prices."
+    },
+    {
+      "id": "pm01-q08",
+      "chapter": 1,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "Adding lots of near-zero-cost solar and wind tends to…",
+      "choices": [
+        "Lower average wholesale prices (the merit-order effect)",
+        "Raise the SRMC of every plant",
+        "Eliminate the need for a balancing market",
+        "Increase fuel costs for gas plants"
+      ],
+      "answerIndex": 0,
+      "explanation": "Cheap renewables displace expensive plants and shift the marginal unit leftward, pulling average prices down."
+    },
+    {
+      "id": "pm01-q09",
+      "chapter": 1,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A wind developer signs a 10-year fixed-price **PPA** mainly to…",
+      "choices": [
+        "Hedge spot-price volatility and secure financing",
+        "Avoid paying grid fees",
+        "Increase its CO₂ emissions allowance",
+        "Become the marginal unit"
+      ],
+      "answerIndex": 0,
+      "explanation": "A PPA locks in revenue, de-risking the project so banks will finance it — sidestepping volatile spot prices."
+    },
+    {
+      "id": "pm01-q10",
+      "chapter": 1,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "A rising CO₂ price that lifts the **clean spark spread above the clean dark spread** causes…",
+      "choices": [
+        "Gas to undercut coal in the merit order (fuel switching)",
+        "Coal to become cheaper than gas",
+        "Both plants to shut permanently",
+        "Wind to leave the market"
+      ],
+      "answerIndex": 0,
+      "explanation": "When gas's carbon-adjusted margin beats coal's, gas runs ahead of coal — fuel switching that lowers emissions."
+    },
+    {
+      "id": "pm01-q11",
+      "chapter": 1,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The short-run marginal cost of a thermal plant is…",
+      "choices": [
+        "$\\dfrac{P_{fuel}}{\\eta} + \\dfrac{e_f}{\\eta}P_{CO_2} + VOM$",
+        "$P_{fuel}\\,\\eta + e_f P_{CO_2}$",
+        "$\\dfrac{\\eta}{P_{fuel}} + VOM$",
+        "$P_{fuel} + P_{CO_2} + \\eta$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Fuel and carbon costs are divided by efficiency to express them per MWh of electricity, plus variable O&M."
+    },
+    {
+      "id": "pm01-q12",
+      "chapter": 1,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The **spark spread** of a gas plant is…",
+      "choices": [
+        "$P_{el} - \\dfrac{P_{gas}}{\\eta}$",
+        "$P_{el} - P_{gas}\\,\\eta$",
+        "$P_{gas} - \\dfrac{P_{el}}{\\eta}$",
+        "$P_{el} + \\dfrac{P_{gas}}{\\eta}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "Power price minus the efficiency-adjusted gas cost — the gross margin per MWh before carbon."
+    },
+    {
+      "id": "pm01-q13",
+      "chapter": 1,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The **clean** spark spread differs from the plain spark spread by…",
+      "choices": [
+        "Subtracting the CO₂ cost $\\dfrac{e_{gas}}{\\eta}P_{CO_2}$",
+        "Adding the CO₂ cost",
+        "Multiplying by efficiency",
+        "Ignoring the gas price"
+      ],
+      "answerIndex": 0,
+      "explanation": "The clean spark spread nets out the cost of emission allowances to give the true margin."
+    },
+    {
+      "id": "pm01-q14",
+      "chapter": 1,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "A gas plant burns fuel at €20/MWh$_{th}$, $\\eta = 0.50$, CO₂ price €100/t, gas CO₂ intensity 0.20 t/MWh$_{th}$ (ignore VOM). Find its SRMC, €/MWh.",
+      "answer": 80,
+      "unit": "€/MWh",
+      "tolerance": 1,
+      "explanation": "$SRMC = 20/0.5 + (0.20/0.5)\\times100 = 40 + 40 = 80$ €/MWh."
+    },
+    {
+      "id": "pm01-q15",
+      "chapter": 1,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Power price €75/MWh, gas €30/MWh$_{th}$, efficiency $\\eta = 0.50$. Find the spark spread, €/MWh.",
+      "answer": 15,
+      "unit": "€/MWh",
+      "tolerance": 0.5,
+      "explanation": "$SS = 75 - 30/0.50 = 75 - 60 = 15$ €/MWh."
+    },
+    {
+      "id": "pm01-q16",
+      "chapter": 1,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Power €90/MWh, gas €25/MWh$_{th}$, $\\eta = 0.50$, CO₂ price €80/t, gas intensity 0.20 t/MWh$_{th}$. Find the clean spark spread, €/MWh.",
+      "answer": 8,
+      "unit": "€/MWh",
+      "tolerance": 0.5,
+      "explanation": "$CSS = 90 - 25/0.5 - (0.20/0.5)\\times80 = 90 - 50 - 32 = 8$ €/MWh."
+    }
+  ]
+}

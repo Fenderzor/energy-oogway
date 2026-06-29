@@ -1,0 +1,58 @@
+{
+  "chapterId": "al05",
+  "chapter": 5,
+  "track": "algebra",
+  "title": "Linear & Simultaneous Equations",
+  "source": "Algebra & Maths Skills — Module 5",
+  "deckId": "al05",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "summary": "A **linear equation** is one where the unknown appears only to the first power (no squares, no roots) — its graph is a straight line. Solving one is pure rearrangement: collect the unknown on one side, the numbers on the other, then divide by its coefficient. To solve $2(x+3) = 14$: expand or divide first ($x + 3 = 7$), then subtract ($x = 4$).\n\n**Straight-line form.** Most linear relationships are written $y = mx + c$, where $m$ is the **gradient** (slope — how fast $y$ rises per unit $x$) and $c$ is the **intercept** (the value of $y$ when $x = 0$). Recognising this form lets you read a graph or a data trend instantly, and it appears constantly in energy work — calibration lines, cost-vs-output, linear approximations.\n\n**Simultaneous equations** come up whenever two unknowns are tied together by two conditions — two prices, two flows, a mix of two streams. You need *as many equations as unknowns*. There are two standard methods.\n\n**Substitution** works best when one equation already gives a variable on its own. From $y = 2x$ and $x + y = 12$: substitute the first into the second, $x + 2x = 12 \\Rightarrow 3x = 12 \\Rightarrow x = 4$, then back-substitute $y = 8$.\n\n**Elimination** works best when adding or subtracting the equations cancels a variable. For $x + y = 10$ and $x - y = 4$: **add** them and the $y$'s cancel, $2x = 14 \\Rightarrow x = 7$, then $y = 3$. If the coefficients don't match, scale one (or both) equations first so that one variable has equal-and-opposite (or equal) coefficients, then add (or subtract).\n\nThe universal recipe: (1) count unknowns and make sure you have that many equations; (2) pick substitution (a variable is already isolated) or elimination (adding/subtracting will cancel one); (3) solve for one variable; (4) back-substitute for the other; (5) check both original equations. Geometrically, the solution is the single point where the two straight lines cross.",
+  "equations": [
+    {
+      "name": "Linear equation — solve",
+      "latex": "ax + b = c \\;\\Rightarrow\\; x = \\frac{c - b}{a}",
+      "rearrangements": ["2(x+3)=14 \\;\\Rightarrow\\; x+3 = 7 \\;\\Rightarrow\\; x = 4"],
+      "useWhen": "The unknown appears once, to the first power. Undo the +/− then the ×/÷ (reverse BIDMAS) to isolate it.",
+      "note": "Expand brackets, or divide the whole equation by the bracket's multiplier first — either is valid."
+    },
+    {
+      "name": "Straight line",
+      "latex": "y = mx + c",
+      "rearrangements": ["m = \\frac{y - c}{x}", "c = y - mx", "x = \\frac{y - c}{m}"],
+      "useWhen": "Describing or reading any linear relationship. $m$ is the gradient (rise per unit run); $c$ is where the line meets the $y$-axis ($x=0$).",
+      "note": "Two points give the gradient $m = \\Delta y/\\Delta x$; one point plus $m$ gives $c$."
+    },
+    {
+      "name": "Simultaneous — elimination",
+      "latex": "\\begin{cases} x + y = 10 \\\\ x - y = 4 \\end{cases} \\;\\Rightarrow\\; 2x = 14",
+      "rearrangements": ["\\text{add the equations: } y \\text{ cancels} \\Rightarrow x = 7, \\; y = 3"],
+      "useWhen": "Adding or subtracting the two equations will cancel a variable. Scale one or both first if the coefficients don't already match.",
+      "note": "Add when a variable has equal-and-opposite signs; subtract when it has equal signs."
+    },
+    {
+      "name": "Simultaneous — substitution",
+      "latex": "y = 2x, \\; x + y = 12 \\;\\Rightarrow\\; x + 2x = 12",
+      "rearrangements": ["3x = 12 \\Rightarrow x = 4, \\; y = 8"],
+      "useWhen": "One equation already gives a variable by itself (or is easy to rearrange to). Put that expression into the other equation to leave one unknown.",
+      "note": "Always back-substitute to find the second variable, and check both original equations."
+    }
+  ],
+  "glossary": [
+    { "term": "Linear equation", "definition": "An equation whose unknown appears only to the first power (no $x^2$, $\\sqrt{x}$, etc.). Its graph is a straight line and it has a single solution." },
+    { "term": "Gradient (slope)", "definition": "The $m$ in $y = mx + c$: how much $y$ changes per unit increase in $x$, $m = \\Delta y/\\Delta x$. Steeper line = larger gradient." },
+    { "term": "Intercept", "definition": "The $c$ in $y = mx + c$: the value of $y$ where the line crosses the $y$-axis (i.e. when $x = 0$)." },
+    { "term": "Coefficient", "definition": "The number multiplying a variable. Removing it (by dividing) is the last step in isolating the unknown." },
+    { "term": "Simultaneous equations", "definition": "Two (or more) equations that must hold at once, linking the same unknowns. You need as many independent equations as unknowns." },
+    { "term": "Substitution method", "definition": "Solve one equation for a variable, then put that expression into the other, leaving a single-variable equation to solve." },
+    { "term": "Elimination method", "definition": "Add or subtract the equations (after scaling if needed) so one variable cancels, leaving a single-variable equation." },
+    { "term": "Back-substitution", "definition": "Once you have one variable, put its value into an original equation to find the other. Always finish by checking both equations." }
+  ],
+  "tips": [
+    "**Linear = unknown to the first power only.** No squares or roots — so the solution is a single value, found by plain rearrangement.",
+    "**Read $y = mx + c$ on sight:** $m$ is the slope (rise per run), $c$ is the start value at $x=0$. Most calibration and cost lines are in this form.",
+    "**Match the method to the equations.** Use substitution when a variable is already isolated; use elimination when adding/subtracting will cancel one.",
+    "**To eliminate, make coefficients match.** Multiply an equation through so one variable has equal (subtract) or equal-and-opposite (add) coefficients, then combine.",
+    "**Always back-substitute and check.** Find the second variable, then verify your pair satisfies *both* original equations — it catches sign slips.",
+    "**You need as many equations as unknowns.** Two unknowns need two independent equations; one equation alone can't pin down both."
+  ]
+}

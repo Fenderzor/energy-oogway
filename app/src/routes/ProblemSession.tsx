@@ -7,6 +7,7 @@ import { recordProblemAttempt } from '../lib/problemProgress'
 import { getStats, recordProblem } from '../lib/stats'
 import type { Stats } from '../lib/stats'
 import { currentUserId } from '../lib/user'
+import { DEFAULT_TRACK } from '../lib/tracks'
 import type { Difficulty, Problem } from '../types'
 
 const STARS: Record<Difficulty, string> = { 1: '⭐', 2: '⭐⭐', 3: '⭐⭐⭐', 4: '⭐⭐⭐⭐' }
@@ -60,13 +61,17 @@ export default function ProblemSession() {
         if (chapterId) {
           const set = await problemRepo.getChapter(chapterId)
           if (cancelled) return
-          setHeading(`Ch ${set.chapter} — ${set.title}`)
+          const isThermo = (set.track ?? DEFAULT_TRACK) === DEFAULT_TRACK
+          setHeading(isThermo ? `Ch ${set.chapter} — ${set.title}` : set.title)
           setProblems([...set.problems].sort((a, b) => a.difficulty - b.difficulty))
         } else if (level) {
           const d = Number(level) as Difficulty
           const list = await problemRepo.list()
+          // Difficulty buckets are thermo-only (see Practice).
           const sets = await Promise.all(
-            list.filter((c) => c.count > 0).map((c) => problemRepo.getChapter(c.chapterId)),
+            list
+              .filter((c) => c.count > 0 && (c.track ?? DEFAULT_TRACK) === DEFAULT_TRACK)
+              .map((c) => problemRepo.getChapter(c.chapterId)),
           )
           if (cancelled) return
           const all = sets.flatMap((s) => s.problems).filter((p) => p.difficulty === d)

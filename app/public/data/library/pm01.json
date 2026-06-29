@@ -1,0 +1,86 @@
+{
+  "chapterId": "pm01",
+  "chapter": 1,
+  "track": "energy-systems",
+  "title": "Power Markets & Market Design",
+  "source": "Energy Systems & Power Markets — Module 1",
+  "deckId": "pm01",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "summary": "Electricity is a commodity unlike any other: it can barely be stored, and supply must match demand **every instant** or the grid frequency drifts and the system collapses. That single fact shapes the whole market. Instead of one price, there is a **sequence of markets** running from years ahead down to real time, each one a chance to re-balance your position as forecasts sharpen.\n\nThe backbone is the **merit order**. At any moment, every available generator is ranked by its **short-run marginal cost (SRMC)** — the cost of producing one more MWh, dominated by fuel and CO$_2$ costs. Cheap-to-run plants (wind, solar, nuclear, run-of-river) sit at the left; expensive peakers (open-cycle gas, oil) at the right. The market stacks them up until supply meets demand, and the **last unit needed — the marginal unit — sets the price for everyone**. This is **marginal (pay-as-clear) pricing**: a wind farm that bid €0 still earns the clearing price set by, say, a gas plant. The gap between the clearing price and a plant's own SRMC is its **inframarginal rent** — how it recovers fixed and capital costs.\n\nThe **market timeline** has four main stages. **Forward / futures** markets (years to days ahead) let players hedge price risk financially. The **day-ahead market** is the main event: a single daily auction (in Europe, coupled across borders via **EPEX SPOT** and **Nord Pool** into one big optimisation, SDAC/EUPHEMIA) clears 24 hourly prices for tomorrow. The **intraday market** runs continuously after that, letting participants trade out forecast errors as the delivery hour approaches (gate closure). Finally the **balancing market** is the TSO's real-time tool: it activates reserves (FCR, aFRR, mFRR) to fix the residual mismatch, and the resulting **imbalance price** penalises anyone who deviated from their schedule.\n\nBecause renewables have near-zero SRMC, adding wind and solar pushes the whole merit order to the right — the **merit-order effect** — lowering average wholesale prices but also producing **negative prices** when must-run and subsidised output exceeds demand and it is cheaper to pay to keep running than to shut down. Two more market layers fix what energy-only pricing misses: **capacity markets** pay generators to *be available* (resource adequacy), and **ancillary-services / balancing markets** pay for the frequency control, reserves and voltage support that keep the system stable. Spanning bidding zones, **interconnectors** and **market coupling** let cheap power flow to expensive zones until a line **congests**, at which point prices split between zones. For long-term hedging and financing renewables, buyers and generators increasingly sign **Power Purchase Agreements (PPAs)** at a fixed price, sidestepping the spot market's volatility.\n\nThe analyst's core reflex: to explain or forecast a price, **find the marginal unit** and compute its SRMC; to judge a gas plant's economics, look at the **spark spread**; to read a renewables-heavy market, watch the **residual load** (demand minus wind and solar) — it is what the dispatchable fleet and the price actually respond to.",
+  "equations": [
+    {
+      "name": "Short-run marginal cost (SRMC)",
+      "latex": "SRMC = \\frac{P_{fuel}}{\\eta} + \\frac{e_f}{\\eta}\\,P_{CO_2} + VOM",
+      "rearrangements": [
+        "P_{fuel} = \\eta\\,(SRMC - VOM) - e_f P_{CO_2}",
+        "P_{CO_2} = \\frac{\\eta\\,(SRMC - VOM) - P_{fuel}}{e_f}"
+      ],
+      "useWhen": "Estimating the price-setting bid of a thermal plant. The day-ahead market clears at the SRMC of the **marginal unit**, so this *is* the wholesale price when a given plant is on the margin.",
+      "note": "$P_{fuel}$ in €/MWh$_{th}$ (per MWh of *fuel*), $\\eta$ the electrical efficiency, $e_f$ the fuel's CO$_2$ intensity (t/MWh$_{th}$), $P_{CO_2}$ the carbon price (€/t), $VOM$ variable O&M. Dividing by $\\eta$ converts fuel-side costs to per-MWh-electricity."
+    },
+    {
+      "name": "Spark spread",
+      "latex": "SS = P_{el} - \\frac{P_{gas}}{\\eta}",
+      "rearrangements": ["P_{el}^{breakeven} = \\frac{P_{gas}}{\\eta}"],
+      "useWhen": "The gross margin of a **gas** plant per MWh of electricity, before carbon. A positive spark spread means it is profitable to run; the sign flips a plant in or out of the merit order.",
+      "note": "Ignores CO$_2$. The 'dark spread' is the same idea for a coal plant ($P_{coal}$ instead of $P_{gas}$)."
+    },
+    {
+      "name": "Clean spark spread",
+      "latex": "CSS = P_{el} - \\frac{P_{gas}}{\\eta} - \\frac{e_{gas}}{\\eta}\\,P_{CO_2}",
+      "rearrangements": ["CSS = SS - \\frac{e_{gas}}{\\eta}P_{CO_2}"],
+      "useWhen": "The *true* gas-plant margin once the cost of emission allowances is included. Comparing the clean spark spread to the clean dark spread tells you whether gas or coal is 'in the money' — the fuel-switching dynamic that drives emissions.",
+      "note": "Subtract the carbon term from the plain spark spread. A high CO$_2$ price lifts the clean spark spread above the clean dark spread, pushing coal down the merit order."
+    },
+    {
+      "name": "Marginal (pay-as-clear) settlement",
+      "latex": "\\text{Revenue} = P_{clear}\\times Q",
+      "rearrangements": ["\\text{Inframarginal rent} = (P_{clear} - SRMC)\\times Q"],
+      "useWhen": "Settling a uniform-price auction: *every* accepted seller is paid the single clearing price, not their own bid. Use the rent form to see how a near-zero-cost unit (wind, nuclear) earns margin to cover fixed costs.",
+      "note": "Contrast with **pay-as-bid**, where each unit is paid its own offer. Pay-as-clear is the European day-ahead standard and rewards honest marginal-cost bidding."
+    },
+    {
+      "name": "Residual load",
+      "latex": "L_{res} = L - (P_{wind} + P_{solar})",
+      "rearrangements": ["L_{res} \\to 0 \\Rightarrow \\text{prices fall / go negative}"],
+      "useWhen": "Reading a renewables-heavy market. The dispatchable fleet and the price respond to *residual* load, not gross demand — low or negative residual load is when negative prices and curtailment appear.",
+      "note": "$L$ is total demand. Also called 'net load'. The classic 'duck curve' is the daily shape of residual load as solar swings."
+    }
+  ],
+  "glossary": [
+    { "term": "Merit order", "definition": "The ranking of generators by **short-run marginal cost**, from cheapest to most expensive. The market dispatches up the stack until supply meets demand." },
+    { "term": "Marginal unit (price setter)", "definition": "The last (most expensive) generator needed to meet demand. Its SRMC sets the single clearing price paid to *all* accepted sellers." },
+    { "term": "Marginal / pay-as-clear pricing", "definition": "A uniform-price auction: everyone who clears is paid the price of the marginal unit, regardless of their own bid. The European day-ahead standard." },
+    { "term": "Pay-as-bid", "definition": "Alternative settlement where each accepted seller receives its own offered price. Encourages strategic bidding rather than honest marginal cost." },
+    { "term": "Short-run marginal cost (SRMC)", "definition": "Cost of generating one more MWh now — mainly fuel/efficiency plus CO$_2$ cost plus variable O&M. The bid a rational plant submits." },
+    { "term": "Inframarginal rent", "definition": "Clearing price minus a plant's own SRMC, times its output. How cheap-to-run plants (wind, nuclear) recover fixed and capital costs under marginal pricing." },
+    { "term": "Day-ahead market", "definition": "The main daily auction: one round clears 24 hourly (or quarter-hourly) prices for the next day. In Europe, coupled across borders into a single optimisation." },
+    { "term": "Intraday market", "definition": "Continuous trading after the day-ahead auction, up to **gate closure**, used to correct forecast errors (e.g. a wind shortfall) close to delivery." },
+    { "term": "Balancing market", "definition": "The TSO's real-time mechanism: it activates reserves to match the final supply–demand mismatch and prices the imbalance back to those who deviated." },
+    { "term": "Imbalance price", "definition": "The price a party pays (or receives) for deviating from its scheduled position, derived from the cost of the balancing energy the TSO had to activate." },
+    { "term": "Gate closure", "definition": "The cut-off time after which schedules are fixed and only the TSO (via balancing) can act. Marks the handover from market to system operation." },
+    { "term": "Power exchange (EPEX SPOT, Nord Pool)", "definition": "The marketplaces that run day-ahead and intraday auctions for electricity. EPEX SPOT covers Central-West Europe; Nord Pool the Nordics/Baltics and beyond." },
+    { "term": "Market coupling (SDAC / EUPHEMIA)", "definition": "The algorithm that clears coupled European day-ahead markets together, using interconnector capacity to equalise prices between zones as far as the grid allows." },
+    { "term": "Bidding zone", "definition": "A geographic area with a single wholesale price, within which grid congestion is assumed negligible. Prices differ *between* zones when links congest." },
+    { "term": "Interconnector", "definition": "A transmission link between bidding zones (often an HVDC cable). Lets cheap power flow to expensive zones until the line hits its capacity limit." },
+    { "term": "Congestion", "definition": "When a transmission line cannot carry all the power the market wants to send across it. Forces prices to **split** between the constrained zones." },
+    { "term": "Negative prices", "definition": "Wholesale prices below zero, occurring when inflexible must-run and subsidised output exceeds demand: it is cheaper to pay to keep generating than to shut down and restart." },
+    { "term": "Merit-order effect", "definition": "The downward push on average wholesale prices from adding near-zero-cost wind and solar, which displace expensive plants and shift the marginal unit leftward." },
+    { "term": "Residual (net) load", "definition": "Demand minus wind and solar output — the load the dispatchable fleet must serve. Drives prices, ramping needs and curtailment more than gross demand." },
+    { "term": "Capacity market", "definition": "A mechanism that pays generators (and demand response) to *be available* at peak, ensuring resource adequacy that an energy-only market may under-reward." },
+    { "term": "Ancillary services", "definition": "Grid-stability products bought by the TSO: frequency reserves (FCR, aFRR, mFRR), voltage/reactive support, black-start — distinct from selling energy." },
+    { "term": "FCR / aFRR / mFRR", "definition": "Frequency reserves by speed: **FCR** (Frequency Containment, seconds, arrests the drop), **aFRR** (automatic restoration), **mFRR** (manual restoration, minutes)." },
+    { "term": "Spark spread", "definition": "A gas plant's gross margin per MWh of electricity: power price minus gas cost adjusted for efficiency. The 'clean' version also subtracts the CO$_2$ cost." },
+    { "term": "Power Purchase Agreement (PPA)", "definition": "A long-term contract to buy power at a pre-agreed price. **Physical** (delivers energy), **financial/virtual** (a price hedge as a contract-for-difference). Key to financing renewables." },
+    { "term": "Dispatchable vs variable / must-run", "definition": "**Dispatchable** plants can be ramped on demand (gas, hydro); **variable** renewables follow weather; **must-run** units (some CHP, nuclear) cannot easily switch off, contributing to negative prices." },
+    { "term": "Scarcity pricing", "definition": "Letting prices spike toward the cap when reserves run short, signalling the value of capacity and demand response. The energy-only alternative to a capacity market." }
+  ],
+  "tips": [
+    "**To explain any wholesale price, find the marginal unit.** The clearing price ≈ the SRMC of the last plant dispatched. Gas on the margin ⇒ price tracks gas + CO$_2$; renewables on the margin ⇒ price near zero.",
+    "**Divide fuel-side costs by efficiency.** A €30/MWh$_{th}$ gas price at $\\eta = 0.5$ costs €60/MWh$_{el}$. Forgetting the $1/\\eta$ is the most common SRMC and spark-spread mistake.",
+    "**Pay-as-clear ≠ pay-as-bid.** In the European day-ahead market everyone is paid the *clearing* price, so a €0-bid wind farm still earns the gas-set price — that margin is its inframarginal rent.",
+    "**Negative prices are a flexibility signal, not an error.** They appear when residual load is very low and must-run/subsidised output can't switch off. They reward storage, interconnection and flexible demand.",
+    "**Watch residual load, not demand.** In a renewables-heavy zone the dispatchable fleet and the price respond to demand *minus* wind and solar — that is where ramping, curtailment and price swings come from.",
+    "**Clean spark vs clean dark spread = fuel switching.** When a rising CO$_2$ price lifts the clean spark spread above the clean dark spread, gas undercuts coal in the merit order and emissions fall — a core decarbonisation lever."
+  ]
+}

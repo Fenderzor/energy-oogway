@@ -1,0 +1,69 @@
+{
+  "chapterId": "re01",
+  "chapter": 2,
+  "track": "energy-systems",
+  "title": "Renewable Deployment",
+  "source": "Energy Systems & Power Markets — Module 2",
+  "deckId": "re01",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "summary": "Renewables have won on cost — onshore wind and solar PV are now the cheapest new generation in most of the world — so the deployment story is no longer 'is it cheap enough?' but **'how do we build it fast, finance it, and fit it into the grid?'** Understanding that shift is the core of an energy analyst's job.\n\nThe headline metric is **LCOE (levelized cost of energy)**: the lifetime cost of a project divided by its lifetime output, both discounted, giving a single €/MWh figure to compare technologies. LCOE is powerful but treacherous — it hides *when* and *where* the energy is produced. A solar farm and a gas plant with the same LCOE are not equivalent: one generates only when the sun shines. So analysts pair LCOE with the **capacity factor** (actual output ÷ theoretical maximum if it ran flat-out all year): ~10–25% for solar PV, ~25–45% for onshore wind, ~40–60% for offshore wind, vs ~90% for nuclear. Capacity factor is *not* efficiency — it is about availability and resource, not how well fuel is converted.\n\nBecause wind and solar are **variable** (they follow the weather, not demand), large penetrations create two problems. First, **curtailment**: when output exceeds what the grid can absorb or transmit, operators dump some of it — wasted, but increasingly common. Second, **price cannibalization**: every extra solar panel pushes down the price *during sunny hours* (the merit-order effect, seen in [[project-energy-companion]]'s pm01), so a solar farm's **capture price** — the average price it actually earns, weighted by its own output — falls below the market average. The **value factor** (capture price ÷ average price) drops as a technology scales. This is why pure merchant exposure gets riskier with penetration, and why revenue-stabilising contracts matter.\n\nThose contracts are the financing backbone. A **feed-in tariff (FiT)** pays a fixed €/MWh — simple but expensive for governments. **Auctions / tenders** let developers compete to build for the lowest support level, driving costs down dramatically. A **Contract for Difference (CfD)** tops up (or claws back) the difference between a strike price and the market price, giving the developer revenue certainty while protecting consumers when prices are high. A corporate **PPA** does the same job privately. All exist because lenders finance renewables on *predictable* cash flows, and a subsidy-free merchant project facing cannibalised, volatile prices is hard to bank.\n\nFinally, deployment is increasingly **grid- and permit-limited, not cost-limited**. Projects wait years in **interconnection queues**, **permitting/consenting** is the critical-path bottleneck, and **system-integration costs** (grids, balancing, firming) rise with penetration even as generation LCOE falls. The frontier is hybridisation — **co-locating** solar, wind and storage to firm output and lift the capture price — and siting flexible demand (including data centres, see gr01) where the renewable resource and grid capacity actually exist.",
+  "equations": [
+    {
+      "name": "Levelized cost of energy (LCOE)",
+      "latex": "LCOE = \\frac{\\sum_t \\dfrac{I_t + M_t + F_t}{(1+r)^t}}{\\sum_t \\dfrac{E_t}{(1+r)^t}}",
+      "rearrangements": ["LCOE \\approx \\frac{\\text{annualized CAPEX} + \\text{annual OPEX}}{\\text{annual energy output}}"],
+      "useWhen": "Comparing the lifetime €/MWh cost of different technologies on a like-for-like basis. Use the simplified form for a quick back-of-envelope; the full form discounts costs $I_t,M_t,F_t$ (capex, O&M, fuel) and energy $E_t$ at rate $r$.",
+      "note": "LCOE ignores *when* (timing/capture price) and *where* (grid/integration cost) the energy is produced — never compare a variable and a dispatchable source on LCOE alone."
+    },
+    {
+      "name": "Capacity factor",
+      "latex": "CF = \\frac{E_{actual}}{P_{rated}\\times 8760}",
+      "rearrangements": ["E_{actual} = CF\\times P_{rated}\\times 8760", "P_{rated} = \\frac{E_{actual}}{CF\\times 8760}"],
+      "useWhen": "Turning a plant's nameplate MW into expected annual MWh, or sizing a project for a target output. 8760 = hours in a year.",
+      "note": "**Not efficiency.** CF measures how much of the year a plant effectively runs at full power (resource + availability), not how well it converts fuel."
+    },
+    {
+      "name": "Value (capture) factor",
+      "latex": "VF = \\frac{\\bar P_{capture}}{\\bar P_{market}}",
+      "rearrangements": ["\\bar P_{capture} = VF\\times \\bar P_{market}"],
+      "useWhen": "Judging the *revenue* quality of a variable renewable, not just its cost. $\\bar P_{capture}$ is the output-weighted average price the asset earns; a falling value factor signals cannibalization as the technology scales.",
+      "note": "VF < 1 for solar/wind (they earn below average because they all produce at the same times); VF can exceed 1 for dispatchable peakers."
+    }
+  ],
+  "glossary": [
+    { "term": "LCOE (levelized cost of energy)", "definition": "Lifetime discounted cost ÷ lifetime discounted output, in €/MWh. The standard cost-comparison metric — but blind to timing and location." },
+    { "term": "Capacity factor", "definition": "Actual annual output ÷ output if the plant ran at rated power all year. ~10–25% solar, ~25–45% onshore wind, ~40–60% offshore, ~90% nuclear. Not efficiency." },
+    { "term": "Capacity credit (firm capacity)", "definition": "The fraction of a variable plant's nameplate that can be relied on at peak for adequacy. Low for solar at a winter-evening peak, hence the need for firm capacity." },
+    { "term": "Variability / intermittency", "definition": "Output set by weather, not demand. The defining challenge of wind and solar — it drives curtailment, balancing needs and cannibalization." },
+    { "term": "Curtailment", "definition": "Deliberately reducing available renewable output when the grid can't absorb or transmit it. Rises with penetration and grid congestion; sometimes compensated." },
+    { "term": "Capture price", "definition": "The output-weighted average price a generator actually earns. For solar/wind it sits below the time-average market price because they all produce at once." },
+    { "term": "Value factor", "definition": "Capture price ÷ average market price. Falls below 1 and declines as a variable technology scales — the quantified form of cannibalization." },
+    { "term": "Cannibalization", "definition": "Each added solar/wind unit depresses the price in its own production hours (merit-order effect), eroding the revenue of all similar assets." },
+    { "term": "Contract for Difference (CfD)", "definition": "A two-way contract paying the gap between a strike price and the market price (and clawing back when prices are higher). Gives revenue certainty while protecting consumers." },
+    { "term": "Feed-in tariff (FiT)", "definition": "A fixed guaranteed €/MWh for renewable output. Simple and effective for early deployment, but costly and not market-responsive — largely superseded by auctions/CfDs." },
+    { "term": "Auction / tender", "definition": "Competitive procurement where developers bid the lowest support level (€/MWh or capacity) to win the right to build. The main driver of recent cost falls." },
+    { "term": "Corporate PPA", "definition": "A private long-term power-purchase contract (often a CfD-style hedge) that underwrites a project's revenue so it can be financed without state subsidy. (See pm01.)" },
+    { "term": "Subsidy-free / merchant", "definition": "A project relying on market (spot/PPA) revenue with no public support. Increasingly viable but exposed to cannibalized, volatile capture prices." },
+    { "term": "Additionality", "definition": "Whether a green purchase or PPA actually causes *new* renewable capacity to be built, rather than just re-labelling existing generation. Central to credible corporate claims." },
+    { "term": "Repowering", "definition": "Replacing ageing turbines (or panels) with larger, more efficient modern ones on an existing site — boosting output without new permits or land." },
+    { "term": "Interconnection / grid-connection queue", "definition": "The backlog of projects waiting for permission and capacity to connect to the grid. Now a primary bottleneck — often a multi-year wait." },
+    { "term": "Permitting / consenting", "definition": "Securing planning, environmental and land permissions. Frequently the critical path for deployment, especially for onshore wind and grid lines." },
+    { "term": "Power density (land use)", "definition": "Power (or energy) produced per unit land or sea area (W/m²). Solar and wind are far less dense than thermal plants, making siting and land a real constraint." },
+    { "term": "Offshore vs onshore wind", "definition": "Offshore has higher, steadier wind (higher capacity factor) and bigger turbines, but higher capex and grid-connection cost; onshore is cheaper but more permit-constrained." },
+    { "term": "Solar PV vs CSP", "definition": "PV converts light directly to electricity (cheap, modular, no storage by itself); CSP concentrates heat to drive a turbine and can include thermal storage for dispatchability." },
+    { "term": "System-integration cost", "definition": "The extra grid, balancing and firming costs renewables impose on the system, beyond their own LCOE. Rises with penetration — why 'cheapest LCOE' isn't the whole story." },
+    { "term": "Firming", "definition": "Combining variable generation with storage, demand response or other plants to deliver more predictable, schedulable ('firm') output." },
+    { "term": "Hybrid / co-located project", "definition": "Solar + wind + storage sharing one grid connection and site. Raises the capture price, smooths output and uses scarce connection capacity better." },
+    { "term": "Degradation", "definition": "The slow annual decline in a solar panel's (or battery's) output, typically ~0.5%/yr for PV — factored into lifetime energy and LCOE." },
+    { "term": "RES target / portfolio standard", "definition": "A policy mandate for a share of energy from renewables by a date (e.g. EU 2030 targets), creating the demand that auctions and CfDs deliver against." },
+    { "term": "Merit-order effect", "definition": "Near-zero-marginal-cost renewables push the supply stack right, lowering wholesale prices — the mechanism behind cannibalization. (See pm01.)" }
+  ],
+  "tips": [
+    "**Capacity factor ≠ efficiency.** A 20% solar CF doesn't mean 20%-efficient panels — it means the array averages 20% of its nameplate over the year. Use $CF\\times P\\times 8760$ to get annual MWh.",
+    "**LCOE compares cost, not value.** Two sources with equal LCOE differ hugely if one is dispatchable. Always pair LCOE with capacity factor and capture price before drawing conclusions.",
+    "**More solar lowers solar's own revenue.** Cannibalization means the capture price (and value factor) falls as penetration grows — the economic case shifts toward storage, hybridisation and flexible demand.",
+    "**Deployment is grid- and permit-limited now, not cost-limited.** Connection queues and consenting, not turbine prices, are the binding constraints — a key thing to flag in any deployment analysis.",
+    "**CfD vs PPA vs merchant = who carries price risk.** CfD (government), PPA (corporate offtaker), merchant (the developer). Financing follows whoever provides predictable cash flow.",
+    "**Curtailment is a feature of success.** Rising curtailment signals that generation has outpaced grid and flexibility — an argument for storage, interconnection and demand-side response, not for stopping deployment."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "chapterId": "al07",
+  "chapter": 7,
+  "track": "algebra",
+  "title": "Rearranging Real Energy Formulas",
+  "source": "Algebra & Maths Skills — Module 7 (capstone)",
+  "deckId": "al07",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "summary": "This capstone puts every earlier skill to work on the **actual formulas** you meet in thermodynamics and energy systems. Nothing new — just the same golden rule (do the same to both sides) and inverse operations from [[al01]], now applied where it counts. The point is to make these rearrangements feel routine, so the physics is the hard part, not the algebra.\n\n**Energy balance — $Q = mc\\,\\Delta T$.** To find a specific heat or a temperature rise, isolate the wanted letter. For $c$: it's multiplied by $m$ and $\\Delta T$, so divide by both, $c = \\dfrac{Q}{m\\,\\Delta T}$. For the rise: $\\Delta T = \\dfrac{Q}{mc}$. Same pattern every time — divide by everything multiplying your target.\n\n**Efficiency — $\\eta = \\dfrac{W}{Q}$.** A fraction, so the same denominator trick as density. For the work out, $W = \\eta Q$; for the heat in, $Q = \\dfrac{W}{\\eta}$ (lift $Q$ from the denominator by multiplying, then divide by $\\eta$).\n\n**Carnot efficiency — $\\eta = 1 - \\dfrac{T_C}{T_H}$.** This trips people up because the variable is buried in a subtracted fraction. Peel it in order: move the 1 ($\\dfrac{T_C}{T_H} = 1 - \\eta$), then multiply by $T_H$: $$T_C = T_H(1 - \\eta).$$ A clean example of 'undo the +/− before the ×/÷'.\n\n**Ideal gas — $pV = nRT$.** Whatever you want, divide by the product of the other three. $T = \\dfrac{pV}{nR}$, $n = \\dfrac{pV}{RT}$, $V = \\dfrac{nRT}{p}$ — all the same one-step move.\n\n**Kinetic energy — $KE = \\tfrac12 mv^2$** (a squared variable). Undo the $\\tfrac12$ and $m$ first, then the square last: $v = \\sqrt{\\dfrac{2\\,KE}{m}}$ — square-root applied to the *whole* right-hand side.\n\n**Exergy of heat — $X = \\left(1 - \\dfrac{T_0}{T}\\right)Q$.** Combines a bracket and a fraction, but it's still layers: divide by $Q$, then handle the bracket as in the Carnot case. The habit to carry away: **identify the target, list what's wrapped around it, and unwrap in reverse order — applying every step to both whole sides.** Do that and any energy formula bends to your needs.",
+  "equations": [
+    {
+      "name": "Energy balance Q = m c ΔT",
+      "latex": "Q = mc\\,\\Delta T",
+      "rearrangements": ["c = \\frac{Q}{m\\,\\Delta T}", "\\Delta T = \\frac{Q}{mc}", "m = \\frac{Q}{c\\,\\Delta T}"],
+      "useWhen": "Heating/cooling problems. Divide by everything multiplying the letter you want — $c$, $m$ and $\\Delta T$ are all just factors.",
+      "note": "Use absolute or relative temperatures consistently; $\\Delta T$ is the same in K or °C."
+    },
+    {
+      "name": "Efficiency η = W / Q",
+      "latex": "\\eta = \\frac{W}{Q}",
+      "rearrangements": ["W = \\eta Q", "Q = \\frac{W}{\\eta}"],
+      "useWhen": "Any input/output efficiency. For $Q$ (in the denominator), multiply both sides by $Q$ first, then divide by $\\eta$.",
+      "note": "$\\eta$ is dimensionless (0–1). The same shape as COP, capacity factor and value factor."
+    },
+    {
+      "name": "Carnot efficiency η = 1 − T_C/T_H",
+      "latex": "\\eta = 1 - \\frac{T_C}{T_H}",
+      "rearrangements": ["T_C = T_H(1 - \\eta)", "T_H = \\frac{T_C}{1 - \\eta}"],
+      "useWhen": "Finding a reservoir temperature from an efficiency. Undo the '$1-$' first (move it across), then deal with the fraction.",
+      "note": "Temperatures must be **absolute (K)**. A buried subtracted fraction — peel the +/− before the ×/÷."
+    },
+    {
+      "name": "Ideal gas & kinetic energy",
+      "latex": "pV = nRT, \\qquad KE = \\tfrac{1}{2}mv^2",
+      "rearrangements": ["T = \\frac{pV}{nR}", "n = \\frac{pV}{RT}", "v = \\sqrt{\\frac{2\\,KE}{m}}"],
+      "useWhen": "Gas-law rearrangements (divide by the product of the others) and any squared-variable formula (strip the factors, then square-root last).",
+      "note": "For $v$: multiply by 2, divide by $m$, then take the root of the *whole* side. Keep the positive root."
+    }
+  ],
+  "glossary": [
+    { "term": "Specific heat (c)", "definition": "Energy to raise 1 kg of a substance by 1 K, in $Q = mc\\,\\Delta T$. Rearranged: $c = Q/(m\\,\\Delta T)$." },
+    { "term": "Thermal efficiency (η)", "definition": "Useful work out ÷ heat in, $\\eta = W/Q$. Dimensionless, between 0 and 1; rearranges like any fraction." },
+    { "term": "Carnot efficiency", "definition": "The ceiling efficiency between two reservoirs, $\\eta = 1 - T_C/T_H$ (temperatures in kelvin). Rearranges to $T_C = T_H(1-\\eta)$." },
+    { "term": "Coefficient of performance (COP)", "definition": "Heat moved ÷ work in for a heat pump/fridge. A Carnot heat pump has $COP = T_H/(T_H - T_C)$ — another fraction to rearrange." },
+    { "term": "Ideal-gas law", "definition": "$pV = nRT$. Any one variable is found by dividing by the product of the others; $R$ is the gas constant." },
+    { "term": "Kinetic energy", "definition": "$KE = \\tfrac12 mv^2$. To get speed, isolate $v^2$ then square-root: $v = \\sqrt{2\\,KE/m}$." },
+    { "term": "Exergy of heat", "definition": "Work potential of heat from a reservoir at $T$: $X = (1 - T_0/T)Q$. A bracket-and-fraction rearrangement combining earlier scenarios." },
+    { "term": "Absolute temperature", "definition": "Temperature in kelvin (K). Efficiency, gas-law and exergy formulas require it — a frequent source of errors if °C is used by mistake." }
+  ],
+  "tips": [
+    "**Same recipe every time:** identify the target letter, list what's wrapped around it, unwrap in reverse order, apply each step to both whole sides, then check with numbers.",
+    "**Fractions: lift the denominator first.** For $\\eta = W/Q$, get $Q$ by multiplying both sides by $Q$ before dividing by $\\eta$ — exactly like density in [[al01]].",
+    "**Subtracted fractions (Carnot, exergy): undo the '1−' first.** Move the constant across, *then* clear the fraction. $\\eta = 1 - T_C/T_H \\Rightarrow T_C = T_H(1-\\eta)$.",
+    "**Squared variable ⇒ root it last.** In $KE = \\tfrac12 mv^2$, remove $\\tfrac12$ and $m$, then square-root the whole other side to get $v$.",
+    "**Use kelvin in efficiency, gas-law and exergy formulas.** Rearranging is pointless if the temperature units are wrong — convert °C to K first.",
+    "**Rearrange symbolically before plugging in numbers.** You get a reusable formula, fewer rounding errors, and a clear check of your algebra."
+  ]
+}

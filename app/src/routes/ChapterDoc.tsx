@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import Page from '../components/Page'
 import Rich from '../components/Rich'
 import { libraryRepo } from '../lib/repositories/libraryRepo'
+import { DEFAULT_TRACK } from '../lib/tracks'
 import type { ChapterDoc } from '../types'
 
 type TabId = 'summary' | 'equations' | 'glossary' | 'tips'
@@ -74,15 +75,18 @@ export default function ChapterDocPage() {
     )
   }
 
+  const isThermo = (doc.track ?? DEFAULT_TRACK) === DEFAULT_TRACK
+  const heading = isThermo ? `Ch ${doc.chapter} — ${doc.title}` : doc.title
+
   return (
-    <Page title={`Ch ${doc.chapter} — ${doc.title}`} subtitle={doc.source}>
+    <Page title={heading} subtitle={doc.source}>
       <div className="doc-toolbar">
         <Link className="back-link" to="/library">
           ← Library
         </Link>
         {doc.deckId && (
           <Link className="concept-link" to={`/learn/${doc.deckId}`}>
-            📘 Study Ch {doc.chapter}
+            📘 Study{isThermo ? ` Ch ${doc.chapter}` : ''}
           </Link>
         )}
       </div>

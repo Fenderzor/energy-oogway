@@ -1,0 +1,130 @@
+{
+  "deckId": "pm01",
+  "title": "Power Markets & Market Design",
+  "chapter": 1,
+  "track": "energy-systems",
+  "source": "Energy Systems & Power Markets — Module 1",
+  "description": "Merit order, marginal pricing, the day-ahead/intraday/balancing timeline, spreads, PPAs and negative prices.",
+  "owner": "local",
+  "version": 1,
+  "forkedFrom": null,
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "cards": [
+    {
+      "id": "pm01-001",
+      "type": "basic",
+      "front": "What is the *merit order*?",
+      "back": "Generators ranked by **short-run marginal cost**, cheapest first. The market dispatches up the stack until supply meets demand; the last unit needed sets the price.",
+      "tags": ["merit order"],
+      "level": "intro"
+    },
+    {
+      "id": "pm01-002",
+      "type": "basic",
+      "front": "Under *marginal (pay-as-clear) pricing*, what does a wind farm that bid €0 earn?",
+      "back": "The **clearing price** set by the marginal unit — not its own €0 bid. Everyone who clears is paid the same price; the gap over the plant's own cost is its **inframarginal rent**.",
+      "tags": ["marginal pricing", "inframarginal rent"],
+      "level": "core"
+    },
+    {
+      "id": "pm01-003",
+      "type": "basic",
+      "front": "Name the four stages of the electricity market timeline, earliest to latest.",
+      "back": "1) **Forward / futures** (hedging, years–days ahead) → 2) **Day-ahead** auction → 3) **Intraday** (continuous, correct forecast errors) → 4) **Balancing** (TSO, real time).",
+      "tags": ["market timeline"],
+      "level": "core"
+    },
+    {
+      "id": "pm01-004",
+      "type": "basic",
+      "front": "Why does electricity need a *sequence* of markets rather than one price?",
+      "back": "Power can barely be stored and supply must match demand every instant. Each successive market lets participants re-balance as forecasts (especially wind/solar) sharpen toward delivery.",
+      "tags": ["why markets"],
+      "level": "intro"
+    },
+    {
+      "id": "pm01-005",
+      "type": "mcq",
+      "front": "In a renewables-heavy hour, what most directly sets whether the price is high, low, or negative?",
+      "choices": [
+        "Residual load = demand − wind − solar",
+        "Gross electricity demand alone",
+        "The total installed capacity",
+        "The number of bidding zones"
+      ],
+      "answerIndex": 0,
+      "back": "The dispatchable fleet and the price respond to **residual (net) load**. When it falls toward zero, the marginal unit moves left and prices drop — sometimes below zero.",
+      "tags": ["residual load", "negative prices"],
+      "level": "core"
+    },
+    {
+      "id": "pm01-006",
+      "type": "basic",
+      "front": "Why do *negative* wholesale prices occur?",
+      "back": "When inflexible **must-run** and subsidised output exceeds demand, it can be cheaper to *pay* to keep generating than to shut down and restart. A signal that flexibility (storage, interconnection, flexible demand) is scarce.",
+      "tags": ["negative prices"],
+      "level": "core"
+    },
+    {
+      "id": "pm01-007",
+      "type": "basic",
+      "front": "What is the *spark spread*, and why does its sign matter?",
+      "back": "A gas plant's gross margin per MWh: $SS = P_{el} - P_{gas}/\\eta$. A positive spread means running is profitable; the sign flips a plant in or out of the merit order.",
+      "tags": ["spark spread"],
+      "level": "core"
+    },
+    {
+      "id": "pm01-008",
+      "type": "basic",
+      "front": "What does the *clean* spark spread add, and what does it reveal vs the clean dark spread?",
+      "back": "It subtracts the CO$_2$ cost: $CSS = P_{el} - P_{gas}/\\eta - (e_{gas}/\\eta)P_{CO_2}$. When a rising carbon price lifts the clean spark spread above the clean *dark* (coal) spread, gas undercuts coal — fuel switching that cuts emissions.",
+      "tags": ["clean spark spread", "fuel switching"],
+      "level": "advanced"
+    },
+    {
+      "id": "pm01-009",
+      "type": "mcq",
+      "front": "Two adjacent bidding zones normally share one price. When do their prices *split*?",
+      "choices": [
+        "When the interconnector between them congests (hits its capacity limit)",
+        "Whenever demand rises in either zone",
+        "Only overnight",
+        "When both zones use the same fuel"
+      ],
+      "answerIndex": 0,
+      "back": "Market coupling equalises prices as long as the link has spare capacity. Once it **congests**, cheap power can't fully reach the expensive zone and prices diverge.",
+      "tags": ["interconnector", "congestion"],
+      "level": "core"
+    },
+    {
+      "id": "pm01-010",
+      "type": "basic",
+      "front": "What does a *capacity market* pay for, and why add it to an energy-only market?",
+      "back": "It pays generators/demand-response to **be available** at peak, securing resource adequacy that energy-only prices may under-reward (the 'missing money' problem). The energy-only alternative is **scarcity pricing**.",
+      "tags": ["capacity market"],
+      "level": "advanced"
+    },
+    {
+      "id": "pm01-011",
+      "type": "numeric",
+      "front": "Gas plant: power price €70/MWh, gas €24/MWh$_{th}$, efficiency $\\eta = 0.40$. Find the spark spread, €/MWh.",
+      "back": "$SS = 70 - 24/0.40 = 70 - 60 = 10$ €/MWh. (Divide the fuel price by efficiency first!)",
+      "answer": 10,
+      "unit": "€/MWh",
+      "tolerance": 0.5,
+      "tags": ["spark spread", "calculation"],
+      "level": "core"
+    },
+    {
+      "id": "pm01-012",
+      "type": "numeric",
+      "front": "The day-ahead auction clears at €55/MWh, set by a gas peaker. A wind farm with ~€0 SRMC clears too. What inframarginal rent (€/MWh) does the wind farm earn?",
+      "back": "Rent $= P_{clear} - SRMC = 55 - 0 = 55$ €/MWh. Under pay-as-clear it is paid the full clearing price, leaving €55/MWh to cover fixed/capital costs.",
+      "answer": 55,
+      "unit": "€/MWh",
+      "tolerance": 1,
+      "tags": ["inframarginal rent", "calculation"],
+      "level": "core"
+    }
+  ]
+}

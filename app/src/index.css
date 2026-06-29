@@ -219,6 +219,17 @@ a {
   margin-top: 6px;
 }
 
+/* Track grouping (e.g. Thermodynamics vs Energy Systems) */
+.track-section + .track-section {
+  margin-top: 22px;
+}
+.track-section > .section-title {
+  margin-bottom: 10px;
+}
+.track-subsection + .track-subsection {
+  margin-top: 16px;
+}
+
 .news-headline {
   font-size: 1.02rem;
 }

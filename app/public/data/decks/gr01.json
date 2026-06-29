@@ -1,0 +1,137 @@
+{
+  "deckId": "gr01",
+  "title": "Grids & Grid-and-Compute",
+  "chapter": 4,
+  "track": "energy-systems",
+  "source": "Energy Systems & Power Markets — Module 4",
+  "description": "TSO/DSO roles, frequency & inertia, congestion/redispatch, zonal vs nodal pricing, and siting flexible data-centre load on the grid.",
+  "owner": "local",
+  "version": 1,
+  "forkedFrom": null,
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "cards": [
+    {
+      "id": "gr01-001",
+      "type": "basic",
+      "front": "What's the split between a **TSO** and a **DSO**?",
+      "back": "**TSO** (e.g. TenneT) runs the **high-voltage backbone** — real-time balancing, frequency (50 Hz), security, reserves. **DSO** runs the **lower-voltage local** networks delivering power the last mile to end users.",
+      "tags": ["TSO", "DSO"],
+      "level": "intro"
+    },
+    {
+      "id": "gr01-002",
+      "type": "basic",
+      "front": "Why transmit power at **high voltage**, and where does **HVDC** win?",
+      "back": "High voltage cuts current and therefore **resistive losses** over long distances. **HVDC** is more efficient over very long distances and is essential for **sub-sea interconnectors** and linking asynchronous grids.",
+      "tags": ["transmission", "HVDC"],
+      "level": "core"
+    },
+    {
+      "id": "gr01-003",
+      "type": "basic",
+      "front": "What does it mean that European grid **frequency** must stay near 50 Hz?",
+      "back": "Frequency **rises** when generation exceeds demand and **falls** when demand exceeds generation. Holding it at 50 Hz is continuous real-time balancing, done with reserves (FCR/aFRR/mFRR) and cushioned by inertia.",
+      "tags": ["frequency", "balancing"],
+      "level": "core"
+    },
+    {
+      "id": "gr01-004",
+      "type": "basic",
+      "front": "What is **congestion**, and how does a TSO fix it with **redispatch**?",
+      "back": "Congestion = the cheapest power flows would **overload a line**. **Redispatch**: the TSO pays one plant down and another (on the right side of the constraint) up to relieve it. Its cost has soared as renewables sit far from demand.",
+      "tags": ["congestion", "redispatch"],
+      "level": "core"
+    },
+    {
+      "id": "gr01-005",
+      "type": "mcq",
+      "front": "The **N-1 security criterion** requires that the grid…",
+      "choices": [
+        "Survives the loss of any single element without cascading",
+        "Runs at exactly 1 Hz",
+        "Has exactly one generator",
+        "Never uses redispatch"
+      ],
+      "answerIndex": 0,
+      "back": "N-1 means losing any one component (line, transformer, generator) must not cause a cascade — the core reliability standard that drives spare capacity.",
+      "tags": ["N-1"],
+      "level": "core"
+    },
+    {
+      "id": "gr01-006",
+      "type": "mcq",
+      "front": "**Zonal** vs **nodal** pricing — the key difference?",
+      "choices": [
+        "Zonal = one price per zone (congestion via redispatch); nodal = a price at every node reflecting local congestion",
+        "Zonal is only for gas; nodal only for solar",
+        "Nodal has no congestion",
+        "They are identical"
+      ],
+      "answerIndex": 0,
+      "back": "Europe is mostly **zonal** (internal congestion handled out-of-market by redispatch); much of the US is **nodal/LMP**, pricing congestion at each node and signalling where to site.",
+      "tags": ["zonal", "nodal"],
+      "level": "advanced"
+    },
+    {
+      "id": "gr01-007",
+      "type": "basic",
+      "front": "Why is the **grid**, not generation, often the binding constraint today?",
+      "back": "Generation keeps getting cheaper, but projects (and large new loads) wait years in **connection queues**, and **congestion/redispatch** costs are rising. You can't use power you can't deliver or connect.",
+      "tags": ["connection queue", "bottleneck"],
+      "level": "core"
+    },
+    {
+      "id": "gr01-008",
+      "type": "basic",
+      "front": "State the **grid-and-compute** thesis.",
+      "back": "Site and operate data-centre/AI load as a **grid-aware, flexible resource**: place it where grid and renewable headroom exist, **co-locate** with generation, and use its flexibility to help **balance** the system — turning a heavy load into firming demand.",
+      "tags": ["grid-and-compute"],
+      "level": "advanced"
+    },
+    {
+      "id": "gr01-009",
+      "type": "mcq",
+      "front": "Why are AI/cloud **data centres** a 'grid variable', not just a consumer?",
+      "choices": [
+        "They're large, often siteable, and partly flexible (can shift/curtail load)",
+        "They never use much power",
+        "They only run at night",
+        "They generate their own frequency"
+      ],
+      "answerIndex": 0,
+      "back": "Because they're huge, frequently free to locate, and partly flexible, data centres can be placed and operated to *help* the grid (demand response, soaking up curtailed renewables) — or to strain it.",
+      "tags": ["data-centre load"],
+      "level": "advanced"
+    },
+    {
+      "id": "gr01-010",
+      "type": "basic",
+      "front": "What is **behind-the-meter** generation/storage?",
+      "back": "Generation or storage on the **customer's side** of the grid connection (e.g. a solar array or battery serving an on-site data centre). It reshapes or reduces the load the grid actually sees.",
+      "tags": ["behind-the-meter"],
+      "level": "core"
+    },
+    {
+      "id": "gr01-011",
+      "type": "numeric",
+      "front": "A system has an average load of 600 MW and a peak load of 1000 MW. Find its load factor (decimal).",
+      "back": "$LF = P_{avg}/P_{peak} = 600/1000 = 0.60$.",
+      "answer": 0.60,
+      "unit": "",
+      "tolerance": 0.01,
+      "tags": ["load factor", "calculation"],
+      "level": "core"
+    },
+    {
+      "id": "gr01-012",
+      "type": "numeric",
+      "front": "A data centre draws a steady 100 MW for 24 hours. How much energy does it consume, in MWh?",
+      "back": "$E = P\\times t = 100\\times 24 = 2400$ MWh.",
+      "answer": 2400,
+      "unit": "MWh",
+      "tolerance": 10,
+      "tags": ["energy", "calculation"],
+      "level": "intro"
+    }
+  ]
+}

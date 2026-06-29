@@ -103,6 +103,74 @@
         "3": 3,
         "4": 3
       }
+    },
+    {
+      "chapterId": "al01",
+      "chapter": 1,
+      "track": "algebra",
+      "title": "Rearranging Formulas",
+      "topics": "Isolating a variable, fractions, squares & roots, both-sides, multi-step",
+      "count": 12,
+      "byDifficulty": {
+        "1": 3,
+        "2": 3,
+        "3": 4,
+        "4": 2
+      }
+    },
+    {
+      "chapterId": "al02",
+      "chapter": 2,
+      "track": "algebra",
+      "title": "Fractions, Ratios & Proportions",
+      "topics": "Add/subtract, multiply/divide, simplify, ratios, proportions, percentages",
+      "count": 12,
+      "byDifficulty": { "1": 3, "2": 3, "3": 4, "4": 2 }
+    },
+    {
+      "chapterId": "al03",
+      "chapter": 3,
+      "track": "algebra",
+      "title": "Powers, Roots & Indices",
+      "topics": "Index laws, negative & fractional powers, roots, scientific notation",
+      "count": 12,
+      "byDifficulty": { "1": 3, "2": 3, "3": 4, "4": 2 }
+    },
+    {
+      "chapterId": "al04",
+      "chapter": 4,
+      "track": "algebra",
+      "title": "Logarithms & Exponentials",
+      "topics": "Log values & laws, solving exponentials, decay fractions",
+      "count": 12,
+      "byDifficulty": { "1": 3, "2": 3, "3": 4, "4": 2 }
+    },
+    {
+      "chapterId": "al05",
+      "chapter": 5,
+      "track": "algebra",
+      "title": "Linear & Simultaneous Equations",
+      "topics": "Linear solving, y = mx + c, substitution & elimination",
+      "count": 12,
+      "byDifficulty": { "1": 3, "2": 3, "3": 4, "4": 2 }
+    },
+    {
+      "chapterId": "al06",
+      "chapter": 6,
+      "track": "algebra",
+      "title": "Quadratics",
+      "topics": "Roots, factoring, quadratic formula, discriminant",
+      "count": 12,
+      "byDifficulty": { "1": 3, "2": 3, "3": 4, "4": 2 }
+    },
+    {
+      "chapterId": "al07",
+      "chapter": 7,
+      "track": "algebra",
+      "title": "Rearranging Real Energy Formulas",
+      "topics": "Q=mcΔT, efficiency, Carnot, ideal gas, KE, exergy",
+      "count": 12,
+      "byDifficulty": { "1": 3, "2": 3, "3": 4, "4": 2 }
     }
   ]
 }

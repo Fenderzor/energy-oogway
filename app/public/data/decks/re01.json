@@ -1,0 +1,130 @@
+{
+  "deckId": "re01",
+  "title": "Renewable Deployment",
+  "chapter": 2,
+  "track": "energy-systems",
+  "source": "Energy Systems & Power Markets — Module 2",
+  "description": "LCOE, capacity factors, curtailment, cannibalization, auctions/CfDs, and the grid/permit bottlenecks of deploying wind and solar.",
+  "owner": "local",
+  "version": 1,
+  "forkedFrom": null,
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "cards": [
+    {
+      "id": "re01-001",
+      "type": "basic",
+      "front": "What does **LCOE** measure, and what does it hide?",
+      "back": "Lifetime discounted cost ÷ lifetime discounted output (€/MWh) — the standard cost comparison. It **hides timing and location**: when and where the energy is produced, so it can't fairly compare a variable source with a dispatchable one.",
+      "tags": ["LCOE"],
+      "level": "core"
+    },
+    {
+      "id": "re01-002",
+      "type": "basic",
+      "front": "Why is **capacity factor** not the same as efficiency?",
+      "back": "Capacity factor = actual output ÷ output if run at full power all year — it's about **resource and availability**, not fuel conversion. A 20% solar CF means the array averages 20% of nameplate, nothing about panel efficiency.",
+      "tags": ["capacity factor"],
+      "level": "core"
+    },
+    {
+      "id": "re01-003",
+      "type": "mcq",
+      "front": "Roughly rank typical capacity factors, highest first.",
+      "choices": [
+        "Nuclear > offshore wind > onshore wind > solar PV",
+        "Solar PV > onshore wind > nuclear",
+        "Onshore wind > nuclear > offshore wind",
+        "Solar PV > offshore wind > nuclear"
+      ],
+      "answerIndex": 0,
+      "back": "Nuclear ~90% > offshore wind ~40–60% > onshore wind ~25–45% > solar PV ~10–25%. Higher, steadier resource (and fewer stops) means a higher capacity factor.",
+      "tags": ["capacity factor"],
+      "level": "core"
+    },
+    {
+      "id": "re01-004",
+      "type": "basic",
+      "front": "What is **price cannibalization** for renewables?",
+      "back": "Every added solar/wind unit pushes the price down *in its own production hours* (the merit-order effect), so the technology's **capture price** falls below the market average. Quantified by a declining **value factor**.",
+      "tags": ["cannibalization", "value factor"],
+      "level": "advanced"
+    },
+    {
+      "id": "re01-005",
+      "type": "basic",
+      "front": "Define **capture price** and **value factor**.",
+      "back": "**Capture price** = the output-weighted average price an asset actually earns. **Value factor** = capture price ÷ average market price. For solar/wind, VF < 1 and falls as they scale.",
+      "tags": ["capture price", "value factor"],
+      "level": "core"
+    },
+    {
+      "id": "re01-006",
+      "type": "basic",
+      "front": "What is **curtailment**, and why does it rise with penetration?",
+      "back": "Deliberately cutting available renewable output when the grid can't absorb or move it. As wind/solar grow and hit grid limits, the hours of surplus multiply — a signal that storage, interconnection and flexible demand are needed.",
+      "tags": ["curtailment"],
+      "level": "core"
+    },
+    {
+      "id": "re01-007",
+      "type": "mcq",
+      "front": "A **Contract for Difference (CfD)** mainly does what for a renewable project?",
+      "choices": [
+        "Stabilises revenue around a strike price (and claws back when prices are high)",
+        "Guarantees the plant always runs first",
+        "Removes the need for a grid connection",
+        "Raises its capacity factor"
+      ],
+      "answerIndex": 0,
+      "back": "A CfD pays the gap between a strike price and the market price, and refunds the difference when prices exceed it — revenue certainty for the developer, consumer protection on the upside. That predictability is what lets banks finance it.",
+      "tags": ["CfD", "financing"],
+      "level": "core"
+    },
+    {
+      "id": "re01-008",
+      "type": "basic",
+      "front": "Why did **auctions** drive renewable costs down so fast?",
+      "back": "Developers compete to build for the **lowest support level**, so the cheapest, best-sited projects win. Competitive pressure (plus falling tech costs) collapsed bid prices — replacing generous fixed feed-in tariffs.",
+      "tags": ["auctions", "feed-in tariff"],
+      "level": "core"
+    },
+    {
+      "id": "re01-009",
+      "type": "basic",
+      "front": "What is today's binding constraint on renewable deployment — and what isn't?",
+      "back": "**Not cost** (wind/solar are already cheapest). The binding constraints are **grid connection queues** and **permitting/consenting**, plus rising **system-integration costs**. Deployment is grid- and permit-limited.",
+      "tags": ["grid queue", "permitting"],
+      "level": "advanced"
+    },
+    {
+      "id": "re01-010",
+      "type": "basic",
+      "front": "Why **co-locate** (hybridise) solar, wind and storage on one site?",
+      "back": "It firms the output, raises the **capture price**, smooths variability, and reuses scarce grid-connection capacity — better economics and grid value than a stand-alone variable plant.",
+      "tags": ["hybrid", "firming"],
+      "level": "advanced"
+    },
+    {
+      "id": "re01-011",
+      "type": "numeric",
+      "front": "A 4 MW wind turbine generates 14,016 MWh in a year. Find its capacity factor (decimal).",
+      "back": "$CF = 14016 / (4\\times8760) = 14016/35040 = 0.40$ (40%).",
+      "answer": 0.40,
+      "unit": "",
+      "tolerance": 0.01,
+      "tags": ["capacity factor", "calculation"],
+      "level": "core"
+    },
+    {
+      "id": "re01-012",
+      "type": "numeric",
+      "front": "A solar farm has total annualized cost €1,000,000/yr and produces 20,000 MWh/yr. Estimate its LCOE, €/MWh.",
+      "back": "$LCOE \\approx \\text{annual cost}/\\text{annual energy} = 1{,}000{,}000/20{,}000 = 50$ €/MWh.",
+      "answer": 50,
+      "unit": "€/MWh",
+      "tolerance": 1,
+      "tags": ["LCOE", "calculation"],
+      "level": "core"
+    }
+  ]
+}

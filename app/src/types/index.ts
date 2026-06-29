@@ -74,6 +74,8 @@ export interface DeckSummary {
   chapter?: number
   description?: string
   cardCount: number
+  /** Learning track id; absent ⇒ default thermodynamics track. */
+  track?: string
 }
 
 export interface DeckIndex {
@@ -103,6 +105,8 @@ export interface GlossaryTerm {
 export interface ChapterDoc {
   chapterId: string // "ch01"
   chapter: number
+  /** Learning track id; absent ⇒ default thermodynamics track. */
+  track?: string
   title: string
   source?: string
   /** Linked flashcard deck, e.g. "ch01". */
@@ -124,6 +128,8 @@ export interface ChapterDocSummary {
   topics?: string
   /** Which blocks have content: any of "summary" | "equations" | "glossary" | "tips". */
   sections: string[]
+  /** Learning track id; absent ⇒ default thermodynamics track. */
+  track?: string
 }
 
 export interface LibraryIndex {
@@ -169,6 +175,8 @@ export interface ProblemSet {
   title: string
   updatedAt: string
   problems: Problem[]
+  /** Learning track id; absent ⇒ default thermodynamics track. */
+  track?: string
 }
 
 export interface ProblemSetSummary {
@@ -178,6 +186,8 @@ export interface ProblemSetSummary {
   topics?: string
   count: number
   byDifficulty: Record<Difficulty, number>
+  /** Learning track id; absent ⇒ default thermodynamics track. */
+  track?: string
 }
 
 export interface ProblemIndex {
@@ -260,6 +270,8 @@ export interface QuizBank {
   title: string
   updatedAt: string
   questions: QuizQuestion[]
+  /** Learning track id; absent ⇒ default thermodynamics track. */
+  track?: string
 }
 
 export interface QuizBankSummary {
@@ -268,6 +280,8 @@ export interface QuizBankSummary {
   title: string
   count: number
   byCategory: Record<QuizCategory, number>
+  /** Learning track id; absent ⇒ default thermodynamics track. */
+  track?: string
 }
 
 export interface QuizIndex {

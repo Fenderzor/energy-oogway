@@ -8,6 +8,7 @@ import type { QuizAttempt } from '../lib/quizScores'
 import { recordQuiz } from '../lib/stats'
 import type { Stats } from '../lib/stats'
 import { currentUserId } from '../lib/user'
+import { DEFAULT_TRACK } from '../lib/tracks'
 import type { QuizBank, QuizCategory, QuizQuestion } from '../types'
 
 const CATS: QuizCategory[] = ['concept', 'applied', 'equation', 'problem']
@@ -130,13 +131,18 @@ export default function QuizSession() {
         if (chapterId) {
           const bank = await quizRepo.getBank(chapterId)
           if (cancelled) return
-          setHeading(`Ch ${bank.chapter} Quiz`)
+          setHeading(
+            bank.track && bank.track !== DEFAULT_TRACK ? bank.title : `Ch ${bank.chapter} Quiz`,
+          )
           setBanks([bank])
           setQuestions(sampleChapterQuiz(bank))
         } else {
+          // The Full Exam is the thermodynamics exam — keep other tracks out of it.
           const list = await quizRepo.list()
           const loaded = await Promise.all(
-            list.filter((c) => c.count > 0).map((c) => quizRepo.getBank(c.chapterId)),
+            list
+              .filter((c) => c.count > 0 && (c.track ?? DEFAULT_TRACK) === DEFAULT_TRACK)
+              .map((c) => quizRepo.getBank(c.chapterId)),
           )
           if (cancelled) return
           setBanks(loaded)

@@ -1,0 +1,51 @@
+{
+  "chapterId": "al04",
+  "chapter": 4,
+  "track": "algebra",
+  "title": "Logarithms & Exponentials",
+  "source": "Algebra & Maths Skills — Module 4",
+  "deckId": "al04",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "summary": "Logarithms look intimidating but they answer one simple question: **'what power do I raise the base to, to get this number?'** They are the inverse of exponentials, and they're the tool you reach for whenever the unknown is *in the exponent* — radioactive decay, charging curves, compound growth, pH and decibel scales.\n\n**Definition.** $\\log_b(x) = y$ means exactly $b^y = x$. So $\\log_{10}(1000) = 3$ because $10^3 = 1000$, and $\\log_2(8) = 3$ because $2^3 = 8$. Reading a log as 'the power that makes this number' is the whole idea. Two bases dominate: base **10** (the 'common' log, often just $\\log$) and base **$e \\approx 2.718$** (the 'natural' log, written $\\ln$). Because they are inverses, $\\log_b(b^x) = x$ and $b^{\\log_b x} = x$ — they undo each other, so $\\ln(e^4) = 4$.\n\n**The log laws** mirror the index laws (because logs *are* exponents):\n- **Product:** $\\log(ab) = \\log a + \\log b$ — a log turns multiplication into addition.\n- **Quotient:** $\\log(a/b) = \\log a - \\log b$.\n- **Power:** $\\log(a^n) = n\\log a$ — this one is the key to solving exponential equations, because it pulls the exponent down to the front.\n\n**Solving exponential equations.** When the unknown sits in the exponent, take the log of both sides and use the power law to bring it down. To solve $2^x = 16$: $\\log(2^x) = \\log 16 \\Rightarrow x\\log 2 = \\log 16 \\Rightarrow x = \\log 16/\\log 2 = 4$. With base 10 it's even quicker: $10^x = 1000 \\Rightarrow x = \\log_{10} 1000 = 3$. The recipe: isolate the power, take logs of both sides, drop the exponent, divide.\n\n**Why energy cares.** Exponential **decay** ($N = N_0 e^{-\\lambda t}$, or half-life form $N = N_0(\\tfrac12)^{t/T}$) governs radioactivity and capacitor/thermal relaxation; exponential **growth** governs compounding and (recently) AI-load demand. **Log scales** compress huge ranges into readable numbers — every step on the decibel, Richter or pH scale is a factor of ten (or, for dB, ten to the one-tenth). When data spans many orders of magnitude, plotting its log is how you make sense of it.",
+  "equations": [
+    {
+      "name": "Definition of a logarithm",
+      "latex": "\\log_b(x) = y \\;\\Longleftrightarrow\\; b^y = x",
+      "rearrangements": ["\\log_{10}(1000) = 3 \\;(10^3 = 1000)", "\\log_2(8) = 3 \\;(2^3 = 8)"],
+      "useWhen": "Translating between exponential and log form. Ask: 'the base to what power gives x?' That power is the logarithm.",
+      "note": "$\\log$ usually means base 10; $\\ln$ means base $e\\approx 2.718$. Logs and exponentials are inverses: each undoes the other."
+    },
+    {
+      "name": "Log laws (mirror the index laws)",
+      "latex": "\\log(ab) = \\log a + \\log b, \\quad \\log\\!\\tfrac{a}{b} = \\log a - \\log b, \\quad \\log(a^n) = n\\log a",
+      "rearrangements": ["\\log 2 + \\log 50 = \\log 100 = 2", "\\ln(e^4) = 4\\ln e = 4"],
+      "useWhen": "Combining or splitting logs. The power law (pulling the exponent to the front) is what lets you solve for an unknown stuck in an exponent.",
+      "note": "These work for any consistent base. A log turns × into +, ÷ into −, and powers into multipliers."
+    },
+    {
+      "name": "Solving an exponential equation",
+      "latex": "b^x = k \\;\\Rightarrow\\; x = \\frac{\\log k}{\\log b}",
+      "rearrangements": ["2^x = 16 \\;\\Rightarrow\\; x = \\frac{\\log 16}{\\log 2} = 4", "10^x = 1000 \\;\\Rightarrow\\; x = 3"],
+      "useWhen": "The unknown is in the exponent. Isolate the power, take logs of both sides, use the power law to drop the exponent, then divide.",
+      "note": "Any base works for the logs as long as you use the same one top and bottom. For base-10 or base-$e$ targets, read the log directly."
+    }
+  ],
+  "glossary": [
+    { "term": "Logarithm", "definition": "The power a base must be raised to in order to give a number: $\\log_b x$ is 'the exponent that turns $b$ into $x$'. The inverse of exponentiation." },
+    { "term": "Base of a log", "definition": "The number being raised to a power. $\\log_2$ asks about powers of 2; $\\log_{10}$ about powers of 10." },
+    { "term": "Common log (log)", "definition": "Logarithm base 10, written $\\log$. $\\log 1000 = 3$. Natural for the powers-of-ten scales used across science." },
+    { "term": "Natural log (ln)", "definition": "Logarithm base $e\\approx2.718$, written $\\ln$. The natural partner of the exponential $e^x$ that describes continuous growth and decay." },
+    { "term": "Euler's number e", "definition": "The constant $e\\approx 2.718$, the base of natural growth. $e^x$ is its own rate of change, which is why it appears in decay and growth laws." },
+    { "term": "Power law of logs", "definition": "$\\log(a^n) = n\\log a$ — brings an exponent down to a multiplier. The single most useful rule for solving exponential equations." },
+    { "term": "Exponential growth/decay", "definition": "Change proportional to current size: growth $N_0 e^{kt}$, decay $N_0 e^{-\\lambda t}$ or half-life form $N_0(\\tfrac12)^{t/T}$. Logs invert them to find the time." },
+    { "term": "Logarithmic scale", "definition": "A scale where equal steps mean equal *ratios* (factors), not equal differences — decibels, pH, Richter. Compresses many orders of magnitude into a readable range." }
+  ],
+  "tips": [
+    "**Read a log as a question:** '$\\log_b x$ = the power that turns $b$ into $x$.' $\\log_2 8 = 3$ because $2^3 = 8$. This single reframe removes most of the mystery.",
+    "**Logs and exponentials cancel.** $\\log_b(b^x) = x$ and $b^{\\log_b x} = x$. So $\\ln(e^4) = 4$ and $10^{\\log 7} = 7$ — use this to undo whichever one traps your variable.",
+    "**Unknown in the exponent ⇒ take logs.** Then the power law $\\log(a^n)=n\\log a$ drops the exponent to the front, turning it into an ordinary linear equation.",
+    "**Log laws mirror index laws.** × becomes +, ÷ becomes −, powers become multipliers — because a logarithm *is* an exponent.",
+    "**Know the easy values.** $\\log_{10}10^n = n$, $\\ln e^n = n$, $\\log 1 = 0$ (any base). Spotting these saves reaching for a calculator.",
+    "**Log scales mean ratios.** Each unit step is a fixed factor (×10 for pH/Richter). A difference of 2 on such a scale is a factor of 100, not 'twice as much'."
+  ]
+}

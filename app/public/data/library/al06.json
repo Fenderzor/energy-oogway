@@ -1,0 +1,58 @@
+{
+  "chapterId": "al06",
+  "chapter": 6,
+  "track": "algebra",
+  "title": "Quadratics",
+  "source": "Algebra & Maths Skills — Module 6",
+  "deckId": "al06",
+  "updatedAt": "2026-06-18T00:00:00Z",
+  "summary": "A **quadratic** is an equation where the highest power of the unknown is **2**, written in standard form $ax^2 + bx + c = 0$. Its graph is a parabola, and it can have **two, one, or no** real solutions — which is itself useful information (it tells you, for instance, whether a projectile reaches a height or a process has a feasible operating point).\n\n**Method 1 — square roots**, when there's no $bx$ term. If $ax^2 = k$, just isolate $x^2$ and take the root: $2x^2 - 8 = 0 \\Rightarrow x^2 = 4 \\Rightarrow x = \\pm 2$. Remember the $\\pm$: every positive number has two square roots. (For a physical quantity you usually keep the meaningful one.)\n\n**Method 2 — factoring**, the quickest route when the numbers are friendly. Write the quadratic as a product of two brackets that multiply back to it, then use the fact that **if a product is zero, one of the factors must be zero**. For $x^2 + 5x + 6 = 0$, find two numbers that multiply to $+6$ and add to $+5$ (that's $+2$ and $+3$): $(x+2)(x+3) = 0$, so $x = -2$ or $x = -3$. The roots are where the parabola crosses the $x$-axis.\n\n**Method 3 — the quadratic formula**, which *always* works, even when factoring won't: $$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}.$$ Read $a, b, c$ straight off the standard form and substitute carefully (mind the signs). For $2x^2 + 3x - 2 = 0$: $a=2, b=3, c=-2$, so $x = \\dfrac{-3 \\pm \\sqrt{9 + 16}}{4} = \\dfrac{-3 \\pm 5}{4}$, giving $x = \\tfrac12$ or $x = -2$.\n\n**The discriminant**, $b^2 - 4ac$, is the part under the root and it tells you the *number* of real solutions before you finish: positive ⇒ **two** real roots, zero ⇒ **one** (repeated) root, negative ⇒ **no** real roots (the parabola misses the axis). Checking the discriminant first can save you work — and tells you something physical about whether a solution exists at all.\n\nStrategy: get it into $ax^2 + bx + c = 0$ first; if there's no $bx$ term use roots; try quick factoring; otherwise reach for the formula. Always expect up to two answers, and decide which are physically meaningful.",
+  "equations": [
+    {
+      "name": "Standard form & solve by roots",
+      "latex": "ax^2 + c = 0 \\;\\Rightarrow\\; x = \\pm\\sqrt{-\\tfrac{c}{a}}",
+      "rearrangements": ["2x^2 - 8 = 0 \\;\\Rightarrow\\; x^2 = 4 \\;\\Rightarrow\\; x = \\pm 2"],
+      "useWhen": "There is no middle ($bx$) term. Isolate $x^2$, then take the square root of both sides — and keep the $\\pm$.",
+      "note": "Every positive number has two square roots; choose the physically meaningful sign for real quantities."
+    },
+    {
+      "name": "Factoring (zero-product rule)",
+      "latex": "x^2 + (p+q)x + pq = (x+p)(x+q) = 0",
+      "rearrangements": ["x^2 + 5x + 6 = (x+2)(x+3) = 0 \\;\\Rightarrow\\; x = -2 \\text{ or } -3"],
+      "useWhen": "The quadratic factors nicely. Find two numbers that multiply to $c$ and add to $b$; set each bracket to zero (a product is zero only if a factor is).",
+      "note": "The roots are where the parabola crosses the $x$-axis. Quick when $a=1$ and the numbers are tidy."
+    },
+    {
+      "name": "Quadratic formula",
+      "latex": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+      "rearrangements": ["2x^2+3x-2=0:\\; x = \\frac{-3\\pm\\sqrt{25}}{4} = \\tfrac12 \\text{ or } -2"],
+      "useWhen": "Always works — especially when factoring isn't obvious. Read $a,b,c$ from $ax^2+bx+c=0$ and substitute carefully, watching signs.",
+      "note": "The $\\pm$ gives the two roots. Compute the discriminant $b^2-4ac$ first to know how many real roots to expect."
+    },
+    {
+      "name": "Discriminant (how many roots)",
+      "latex": "\\Delta = b^2 - 4ac",
+      "rearrangements": ["\\Delta > 0:\\text{ two roots}", "\\Delta = 0:\\text{ one root}", "\\Delta < 0:\\text{ no real roots}"],
+      "useWhen": "Checking, before solving, whether real solutions exist. The sign of $b^2-4ac$ tells you two / one / none.",
+      "note": "A negative discriminant means the parabola never crosses the $x$-axis — no real solution (physically, the target isn't reached)."
+    }
+  ],
+  "glossary": [
+    { "term": "Quadratic equation", "definition": "An equation whose highest power of the unknown is 2, in standard form $ax^2 + bx + c = 0$ with $a \\neq 0$. Its graph is a parabola." },
+    { "term": "Standard form", "definition": "$ax^2 + bx + c = 0$ — get the quadratic into this shape first so you can read off $a$, $b$, $c$ for factoring or the formula." },
+    { "term": "Root / solution", "definition": "A value of $x$ that satisfies the equation; graphically, where the parabola crosses the $x$-axis. A quadratic has up to two." },
+    { "term": "Factoring", "definition": "Writing the quadratic as a product of two brackets, e.g. $(x+2)(x+3)$. Then the zero-product rule gives the roots directly." },
+    { "term": "Zero-product rule", "definition": "If a product equals zero, at least one factor is zero. So $(x+p)(x+q)=0$ means $x=-p$ or $x=-q$." },
+    { "term": "Quadratic formula", "definition": "$x = \\dfrac{-b \\pm \\sqrt{b^2-4ac}}{2a}$ — solves any quadratic from its coefficients, whether or not it factors." },
+    { "term": "Discriminant", "definition": "$b^2 - 4ac$, the part under the root. Positive ⇒ two real roots, zero ⇒ one, negative ⇒ none." },
+    { "term": "Parabola", "definition": "The U-shaped graph of a quadratic. It opens upward if $a>0$, downward if $a<0$; the roots are its $x$-axis crossings." }
+  ],
+  "tips": [
+    "**Get to standard form first.** Move everything to one side as $ax^2 + bx + c = 0$ before reading off $a$, $b$, $c$ — sign mistakes here ruin the formula.",
+    "**No middle term ⇒ use roots.** If there's no $bx$, isolate $x^2$ and square-root both sides. Keep the $\\pm$ — there are two roots.",
+    "**Try factoring when numbers are tidy:** two values multiplying to $c$ and adding to $b$. If you can't spot them quickly, switch to the formula.",
+    "**The formula never fails.** $x = \\frac{-b\\pm\\sqrt{b^2-4ac}}{2a}$ works for every quadratic. Substitute with brackets to keep negative signs correct.",
+    "**Check the discriminant first.** $b^2 - 4ac$ tells you two / one / no real roots before you commit — and flags when no real solution exists.",
+    "**Expect two answers, then choose.** Decide which root is physically meaningful (a length, time or mass can't be negative)."
+  ]
+}
