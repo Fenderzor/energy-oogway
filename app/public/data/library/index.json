@@ -205,8 +205,8 @@
       "chapterId": "al07",
       "chapter": 7,
       "track": "algebra",
-      "title": "Rearranging Real Energy Formulas",
-      "topics": "Q=mcΔT, efficiency, Carnot, ideal gas, KE, exergy — rearrangement in context",
+      "title": "Rearranging Thermodynamic Formulas",
+      "topics": "The 7 rearrangement patterns applied to thermo formulas from Ch 1–8",
       "sections": ["summary", "equations", "glossary", "tips"]
     }
   ]

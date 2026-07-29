@@ -2,8 +2,8 @@
   "chapterId": "al07",
   "chapter": 7,
   "track": "algebra",
-  "title": "Rearranging Real Energy Formulas",
-  "updatedAt": "2026-06-18T00:00:00Z",
+  "title": "Rearranging Thermodynamic Formulas",
+  "updatedAt": "2026-07-12T00:00:00Z",
   "problems": [
     {
       "id": "al07-p001",
@@ -183,6 +183,224 @@
       "hints": ["Rearrange to $Q = W/\\eta$.", "$600/0.4$."],
       "solution": "Rearrange for $Q$ and substitute:\n\n$$Q = \\frac{W}{\\eta} = \\frac{600}{0.4} = 1500\\ \\text{MW}$$\n\nSo 1500 MW of heat in yields 600 MW of work — and 900 MW is rejected.",
       "equationsUsed": ["Q = \\frac{W}{\\eta}"],
+      "conceptLink": "al07"
+    },
+    {
+      "id": "al07-p013",
+      "chapter": 7,
+      "difficulty": 2,
+      "title": "Hydrostatic pressure: make depth the subject",
+      "tags": ["pattern-1", "hydrostatic", "rearrange", "symbolic"],
+      "kind": "open",
+      "scenario": "The pressure at depth $h$ in a liquid is\n\n$$P = P_{atm} + \\rho g h.$$\n\nMake $h$ the subject.",
+      "hints": [
+        "The $\\rho g h$ term is *added* — deal with $P_{atm}$ first.",
+        "Subtract $P_{atm}$ from both sides, then divide by the product $\\rho g$."
+      ],
+      "solution": "Move the added term across, then isolate the factor $h$ (Pattern 1):\n\n$$P = P_{atm} + \\rho g h$$\n$$P - P_{atm} = \\rho g h \\quad(\\text{subtract } P_{atm})$$\n$$h = \\frac{P - P_{atm}}{\\rho g} \\quad(\\text{divide by } \\rho g)$$",
+      "equationsUsed": ["h = \\frac{P - P_{atm}}{\\rho g}"],
+      "conceptLink": "al07"
+    },
+    {
+      "id": "al07-p014",
+      "chapter": 7,
+      "difficulty": 2,
+      "title": "Hydrostatic pressure: find the depth",
+      "tags": ["pattern-1", "hydrostatic", "rearrange"],
+      "kind": "numeric",
+      "scenario": "Using $P = P_{atm} + \\rho g h$, a diver measures an absolute pressure of **150 kPa**. Take $P_{atm} = 100\\ \\text{kPa}$, $\\rho = 1000\\ \\text{kg/m}^3$, $g = 9.81\\ \\text{m/s}^2$.\n\nFind the depth $h$, in metres.",
+      "answer": 5.1,
+      "unit": "m",
+      "tolerance": 0.1,
+      "hints": [
+        "Rearrange to $h = (P - P_{atm})/(\\rho g)$.",
+        "Work in pascals: $150\\,000 - 100\\,000 = 50\\,000\\ \\text{Pa}$.",
+        "$h = 50\\,000/(1000\\times9.81)$."
+      ],
+      "solution": "Rearrange, then substitute in SI units:\n\n$$h = \\frac{P - P_{atm}}{\\rho g} = \\frac{(150 - 100)\\times10^3}{1000\\times9.81} = \\frac{50\\,000}{9810} = 5.1\\ \\text{m}$$",
+      "equationsUsed": ["h = \\frac{P - P_{atm}}{\\rho g}"],
+      "conceptLink": "al07"
+    },
+    {
+      "id": "al07-p015",
+      "chapter": 7,
+      "difficulty": 2,
+      "title": "Ideal-gas law: find the mass",
+      "tags": ["pattern-1", "ideal gas", "rearrange"],
+      "kind": "numeric",
+      "scenario": "From the ideal-gas law $pV = mRT$, a tank holds gas at $p = 200\\ \\text{kPa}$, $V = 0.5\\ \\text{m}^3$, $T = 300\\ \\text{K}$, with $R = 0.287\\ \\text{kJ/(kg·K)}$.\n\nFind the mass $m$, in kg.",
+      "answer": 1.16,
+      "unit": "kg",
+      "tolerance": 0.03,
+      "hints": [
+        "$m$ is multiplied by $R$ and $T$ — divide both sides by their product (Pattern 1).",
+        "$m = \\dfrac{pV}{RT}$.",
+        "Keep $p$ in kPa and $R$ in kJ/(kg·K) so the units give kg."
+      ],
+      "solution": "Isolate $m$ by dividing out $R$ and $T$:\n\n$$m = \\frac{pV}{RT} = \\frac{200\\times0.5}{0.287\\times300} = \\frac{100}{86.1} = 1.16\\ \\text{kg}$$",
+      "equationsUsed": ["m = \\frac{pV}{RT}"],
+      "conceptLink": "al07"
+    },
+    {
+      "id": "al07-p016",
+      "chapter": 7,
+      "difficulty": 2,
+      "title": "Quality: make x the subject",
+      "tags": ["pattern-6", "quality", "mixture", "symbolic"],
+      "kind": "open",
+      "scenario": "Any property of a saturated liquid–vapour mixture obeys\n\n$$h = h_f + x\\,h_{fg}.$$\n\nMake the quality $x$ the subject.",
+      "hints": [
+        "The $x\\,h_{fg}$ term is added to $h_f$ — subtract $h_f$ first.",
+        "Then $x$ is multiplied by $h_{fg}$ — divide by it."
+      ],
+      "solution": "Undo the addition, then the multiplication (Pattern 6):\n\n$$h = h_f + x\\,h_{fg}$$\n$$h - h_f = x\\,h_{fg} \\quad(\\text{subtract } h_f)$$\n$$x = \\frac{h - h_f}{h_{fg}} \\quad(\\text{divide by } h_{fg})$$\n\nThe identical rearrangement gives $x$ from $v$, $u$ or $s$ — just swap the property.",
+      "equationsUsed": ["x = \\frac{h - h_f}{h_{fg}}"],
+      "conceptLink": "al07"
+    },
+    {
+      "id": "al07-p017",
+      "chapter": 7,
+      "difficulty": 3,
+      "title": "Quality: find x from enthalpy",
+      "tags": ["pattern-6", "quality", "mixture"],
+      "kind": "numeric",
+      "scenario": "Wet steam at 200 kPa has specific enthalpy $h = 2000\\ \\text{kJ/kg}$. From the tables, $h_f = 504.7$ and $h_{fg} = 2201.6\\ \\text{kJ/kg}$.\n\nFind the quality $x$.",
+      "answer": 0.679,
+      "unit": "",
+      "tolerance": 0.01,
+      "hints": [
+        "Rearrange $h = h_f + x\\,h_{fg}$ to $x = (h - h_f)/h_{fg}$.",
+        "$x = (2000 - 504.7)/2201.6$."
+      ],
+      "solution": "Rearrange for quality and substitute:\n\n$$x = \\frac{h - h_f}{h_{fg}} = \\frac{2000 - 504.7}{2201.6} = \\frac{1495.3}{2201.6} = 0.679$$\n\nSo about 68% of the mass is vapour.",
+      "equationsUsed": ["x = \\frac{h - h_f}{h_{fg}}"],
+      "conceptLink": "al07"
+    },
+    {
+      "id": "al07-p018",
+      "chapter": 7,
+      "difficulty": 3,
+      "title": "Mass flow rate: make velocity the subject",
+      "tags": ["pattern-2", "mass flow", "rearrange", "symbolic"],
+      "kind": "open",
+      "scenario": "The mass flow rate through a duct is\n\n$$\\dot m = \\frac{A\\,V}{v},$$\n\nwhere $A$ is area, $V$ the velocity and $v$ the specific volume. Make $V$ the subject.",
+      "hints": [
+        "$V$ is on top, divided by $v$. Multiply both sides by $v$ first to clear the fraction.",
+        "Then divide by $A$."
+      ],
+      "solution": "Clear the denominator, then isolate $V$:\n\n$$\\dot m = \\frac{AV}{v}$$\n$$\\dot m\\,v = AV \\quad(\\text{multiply both sides by } v)$$\n$$V = \\frac{\\dot m\\,v}{A} \\quad(\\text{divide by } A)$$",
+      "equationsUsed": ["V = \\frac{\\dot m\\,v}{A}"],
+      "conceptLink": "al07"
+    },
+    {
+      "id": "al07-p019",
+      "chapter": 7,
+      "difficulty": 3,
+      "title": "Nozzle exit velocity (root pattern)",
+      "tags": ["pattern-4", "SFEE", "root"],
+      "kind": "numeric",
+      "scenario": "In an adiabatic nozzle with negligible inlet velocity, the energy balance is $h_1 = h_2 + \\dfrac{V_2^2}{2}$.\n\nThe enthalpy drop is $h_1 - h_2 = 20\\ \\text{kJ/kg}$ and the inlet velocity is $V_1 = 30\\ \\text{m/s}$ (so keep it: $h_1 + \\tfrac{V_1^2}{2} = h_2 + \\tfrac{V_2^2}{2}$). Find the exit velocity $V_2$, in m/s.",
+      "answer": 202,
+      "unit": "m/s",
+      "tolerance": 3,
+      "hints": [
+        "Rearrange to $V_2 = \\sqrt{V_1^2 + 2(h_1 - h_2)}$ — isolate $V_2^2$, then root last (Pattern 4).",
+        "Convert the enthalpy drop to J/kg: $20\\ \\text{kJ/kg} = 20\\,000\\ \\text{J/kg}$.",
+        "$V_2 = \\sqrt{30^2 + 2(20\\,000)}$."
+      ],
+      "solution": "Isolate $V_2^2$, then take the square root (Pattern 4):\n\n$$\\frac{V_2^2}{2} = (h_1 - h_2) + \\frac{V_1^2}{2} \\;\\Rightarrow\\; V_2 = \\sqrt{V_1^2 + 2(h_1 - h_2)}$$\n\n$$V_2 = \\sqrt{30^2 + 2(20\\,000)} = \\sqrt{900 + 40\\,000} = \\sqrt{40\\,900} = 202\\ \\text{m/s}$$\n\n(The enthalpy drop must be in J/kg to match $V^2$ in m²/s².)",
+      "equationsUsed": ["V_2 = \\sqrt{V_1^2 + 2(h_1 - h_2)}"],
+      "conceptLink": "al07"
+    },
+    {
+      "id": "al07-p020",
+      "chapter": 7,
+      "difficulty": 4,
+      "title": "Carnot heat pump: make the cold temperature the subject",
+      "tags": ["pattern-2", "COP", "rearrange", "symbolic"],
+      "kind": "open",
+      "scenario": "A Carnot heat pump has\n\n$$COP = \\frac{T_H}{T_H - T_L}.$$\n\nMake the cold-reservoir temperature $T_L$ the subject.",
+      "hints": [
+        "$T_L$ is inside the denominator — multiply both sides by $(T_H - T_L)$ first to lift it out.",
+        "Expand: $COP\\,(T_H - T_L) = T_H$, then gather the $T_L$ terms.",
+        "$COP\\cdot T_H - COP\\cdot T_L = T_H \\Rightarrow COP\\cdot T_L = COP\\cdot T_H - T_H$."
+      ],
+      "solution": "Lift $T_L$ out of the denominator, then collect it (Patterns 2 + collect):\n\n$$COP = \\frac{T_H}{T_H - T_L}$$\n$$COP\\,(T_H - T_L) = T_H \\quad(\\text{multiply by the denominator})$$\n$$COP\\cdot T_H - COP\\cdot T_L = T_H$$\n$$COP\\cdot T_L = COP\\cdot T_H - T_H = T_H(COP - 1)$$\n$$T_L = \\frac{T_H(COP - 1)}{COP} = T_H\\left(1 - \\frac{1}{COP}\\right)$$\n\nCheck: $T_H = 300\\ \\text{K}$, $COP = 10$ gives $T_L = 300(0.9) = 270\\ \\text{K}$.",
+      "equationsUsed": ["T_L = T_H\\left(1 - \\frac{1}{COP}\\right)"],
+      "conceptLink": "al07"
+    },
+    {
+      "id": "al07-p021",
+      "chapter": 7,
+      "difficulty": 4,
+      "title": "Isentropic relation: make P₂ the subject (exponent inversion)",
+      "tags": ["pattern-5", "isentropic", "exponent", "symbolic"],
+      "kind": "open",
+      "scenario": "The isentropic ideal-gas relation is\n\n$$\\frac{T_2}{T_1} = \\left(\\frac{P_2}{P_1}\\right)^{(k-1)/k}.$$\n\nMake $P_2$ the subject. *(This is the Chapter-7 rearrangement that trips everyone up.)*",
+      "hints": [
+        "$P_2$ is trapped inside a fractional power $(k-1)/k$. To undo a power, raise both sides to its **reciprocal**.",
+        "The reciprocal of $(k-1)/k$ is $k/(k-1)$.",
+        "Raising both sides to $k/(k-1)$ cancels the exponent on the right, leaving $P_2/P_1$."
+      ],
+      "solution": "The unknown sits inside a fractional power, so raise both sides to the **reciprocal** exponent $\\dfrac{k}{k-1}$ (Pattern 5):\n\n$$\\frac{T_2}{T_1} = \\left(\\frac{P_2}{P_1}\\right)^{(k-1)/k}$$\n$$\\left(\\frac{T_2}{T_1}\\right)^{k/(k-1)} = \\frac{P_2}{P_1} \\quad(\\text{raise both sides to } \\tfrac{k}{k-1})$$\n$$P_2 = P_1\\left(\\frac{T_2}{T_1}\\right)^{k/(k-1)}$$\n\nJust as a square root undoes a square, the reciprocal power undoes the power — the exponents multiply to 1.",
+      "equationsUsed": ["P_2 = P_1\\left(\\frac{T_2}{T_1}\\right)^{k/(k-1)}"],
+      "conceptLink": "al07"
+    },
+    {
+      "id": "al07-p022",
+      "chapter": 7,
+      "difficulty": 4,
+      "title": "Isentropic relation: find P₂",
+      "tags": ["pattern-5", "isentropic", "exponent"],
+      "kind": "numeric",
+      "scenario": "Air is compressed isentropically from $T_1 = 300\\ \\text{K}$, $P_1 = 100\\ \\text{kPa}$ to $T_2 = 500\\ \\text{K}$, with $k = 1.4$.\n\nUsing $P_2 = P_1\\left(\\dfrac{T_2}{T_1}\\right)^{k/(k-1)}$, find $P_2$, in kPa.",
+      "answer": 598,
+      "unit": "kPa",
+      "tolerance": 8,
+      "hints": [
+        "The exponent is $k/(k-1) = 1.4/0.4 = 3.5$.",
+        "$T_2/T_1 = 500/300 = 1.667$.",
+        "$P_2 = 100\\times(1.667)^{3.5}$."
+      ],
+      "solution": "Substitute into the rearranged relation ($k/(k-1) = 1.4/0.4 = 3.5$):\n\n$$P_2 = P_1\\left(\\frac{T_2}{T_1}\\right)^{k/(k-1)} = 100\\left(\\frac{500}{300}\\right)^{3.5} = 100\\times(1.6667)^{3.5}$$\n\n$$= 100\\times5.98 = 598\\ \\text{kPa}$$\n\nHaving rearranged for $P_2$ symbolically first, the numbers drop straight in.",
+      "equationsUsed": ["P_2 = P_1\\left(\\frac{T_2}{T_1}\\right)^{k/(k-1)}"],
+      "conceptLink": "al07"
+    },
+    {
+      "id": "al07-p023",
+      "chapter": 7,
+      "difficulty": 3,
+      "title": "Entropy: make T₂ the subject (log → exp)",
+      "tags": ["pattern-7", "entropy", "logarithm", "symbolic"],
+      "kind": "open",
+      "scenario": "At constant pressure the entropy change of an ideal gas is\n\n$$\\Delta s = c_p \\ln\\frac{T_2}{T_1}.$$\n\nMake $T_2$ the subject.",
+      "hints": [
+        "First divide both sides by $c_p$ to isolate the logarithm.",
+        "$T_2$ is trapped inside $\\ln(\\cdot)$ — undo the log by exponentiating both sides ($e^{(\\cdot)}$).",
+        "$e^{\\ln(T_2/T_1)} = T_2/T_1$."
+      ],
+      "solution": "Isolate the log, then undo it with the exponential (Pattern 7):\n\n$$\\Delta s = c_p\\ln\\frac{T_2}{T_1}$$\n$$\\frac{\\Delta s}{c_p} = \\ln\\frac{T_2}{T_1} \\quad(\\text{divide by } c_p)$$\n$$e^{\\Delta s/c_p} = \\frac{T_2}{T_1} \\quad(\\text{exponentiate both sides})$$\n$$T_2 = T_1\\,e^{\\Delta s/c_p} \\quad(\\text{multiply by } T_1)$$\n\n$\\ln$ and $e^{(\\cdot)}$ are inverses, just like square and square-root.",
+      "equationsUsed": ["T_2 = T_1\\,e^{\\Delta s/c_p}"],
+      "conceptLink": "al07"
+    },
+    {
+      "id": "al07-p024",
+      "chapter": 7,
+      "difficulty": 3,
+      "title": "Entropy: find T₂",
+      "tags": ["pattern-7", "entropy", "logarithm"],
+      "kind": "numeric",
+      "scenario": "Air is heated at constant pressure with an entropy change $\\Delta s = 0.5\\ \\text{kJ/(kg·K)}$ from $T_1 = 300\\ \\text{K}$. Take $c_p = 1.005\\ \\text{kJ/(kg·K)}$.\n\nUsing $T_2 = T_1\\,e^{\\Delta s/c_p}$, find $T_2$, in K.",
+      "answer": 493,
+      "unit": "K",
+      "tolerance": 4,
+      "hints": [
+        "The exponent is $\\Delta s/c_p = 0.5/1.005 = 0.4975$.",
+        "$T_2 = 300\\times e^{0.4975}$.",
+        "$e^{0.4975} \\approx 1.645$."
+      ],
+      "solution": "Substitute into the rearranged relation:\n\n$$T_2 = T_1\\,e^{\\Delta s/c_p} = 300\\times e^{0.5/1.005} = 300\\times e^{0.4975} = 300\\times1.645 = 493\\ \\text{K}$$\n\nThe exponential is what frees a variable out of a logarithm — the same inverse pair you use for decay and growth.",
+      "equationsUsed": ["T_2 = T_1\\,e^{\\Delta s/c_p}"],
       "conceptLink": "al07"
     }
   ]

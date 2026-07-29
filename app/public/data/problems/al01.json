@@ -224,6 +224,56 @@
       "solution": "Combine the fractions, then invert (the variable is in the denominator):\n\n$$\\frac{1}{R} = \\frac{1}{3} + \\frac{1}{6} = \\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6} = \\frac{1}{2}$$\n$$R = 2\\ \\Omega$$\n\nBecause $1/R = 1/2$, taking the reciprocal of both sides gives $R = 2$.",
       "equationsUsed": ["\\frac{1}{R} = \\frac{1}{R_1} + \\frac{1}{R_2}"],
       "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p013",
+      "chapter": 1,
+      "difficulty": 3,
+      "title": "Isolate a variable under a root",
+      "tags": ["rearrange", "root", "square", "symbolic"],
+      "kind": "open",
+      "scenario": "Make $b$ the subject of\n\n$$c = \\sqrt{a^2 + b^2}.$$",
+      "hints": [
+        "The whole right side is under a root — square both sides first to remove it.",
+        "Then $b^2$ is added to $a^2$; subtract $a^2$, and root last."
+      ],
+      "solution": "Square to kill the root, then isolate $b$ and root once at the end:\n\n$$c = \\sqrt{a^2 + b^2}$$\n$$c^2 = a^2 + b^2 \\quad(\\text{square both sides})$$\n$$b^2 = c^2 - a^2 \\quad(\\text{subtract } a^2)$$\n$$b = \\sqrt{c^2 - a^2} \\quad(\\text{take the root})$$\n\nSquare first (to undo the given root), then root last (to free $b$) — the two roots are doing different jobs.",
+      "equationsUsed": ["b = \\sqrt{c^2 - a^2}"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p014",
+      "chapter": 1,
+      "difficulty": 4,
+      "title": "Variable in a denominator with a sum",
+      "tags": ["rearrange", "denominator", "symbolic"],
+      "kind": "open",
+      "scenario": "Make $x$ the subject of\n\n$$y = \\frac{a}{b + x}.$$",
+      "hints": [
+        "$x$ is buried in the denominator — multiply both sides by $(b + x)$ to lift it out.",
+        "You get $y(b + x) = a$; isolate the $(b+x)$ group, then subtract $b$.",
+        "$b + x = a/y$."
+      ],
+      "solution": "Lift the whole denominator, then peel it apart:\n\n$$y = \\frac{a}{b + x}$$\n$$y(b + x) = a \\quad(\\text{multiply by } b + x)$$\n$$b + x = \\frac{a}{y} \\quad(\\text{divide by } y)$$\n$$x = \\frac{a}{y} - b \\quad(\\text{subtract } b)$$\n\nThe trick is treating $(b+x)$ as a single block until it's out of the denominator.",
+      "equationsUsed": ["x = \\frac{a}{y} - b"],
+      "conceptLink": "al01"
+    },
+    {
+      "id": "al01-p015",
+      "chapter": 1,
+      "difficulty": 4,
+      "title": "Variable on both sides (in a fraction)",
+      "tags": ["rearrange", "both-sides", "factor", "symbolic"],
+      "kind": "open",
+      "scenario": "Make $x$ the subject of\n\n$$\\frac{x - a}{x + a} = k.$$",
+      "hints": [
+        "Clear the fraction first: multiply both sides by $(x + a)$.",
+        "Now $x$ appears on both sides — expand, then collect all $x$ terms on one side.",
+        "Factor $x$ out: $x(1 - k) = a(1 + k)$."
+      ],
+      "solution": "Clear the fraction, gather the $x$'s, then factor and divide:\n\n$$\\frac{x - a}{x + a} = k$$\n$$x - a = k(x + a) \\quad(\\text{multiply by } x + a)$$\n$$x - a = kx + ka$$\n$$x - kx = a + ka \\quad(\\text{collect } x \\text{ on the left})$$\n$$x(1 - k) = a(1 + k) \\quad(\\text{factor out } x)$$\n$$x = \\frac{a(1 + k)}{1 - k} \\quad(\\text{divide by } 1 - k)$$\n\nWhen the unknown appears twice, factoring it out so it appears once is the move that unlocks it.",
+      "equationsUsed": ["x = \\frac{a(1 + k)}{1 - k}"],
+      "conceptLink": "al01"
     }
   ]
 }

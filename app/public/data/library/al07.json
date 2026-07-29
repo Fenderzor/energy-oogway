@@ -2,57 +2,84 @@
   "chapterId": "al07",
   "chapter": 7,
   "track": "algebra",
-  "title": "Rearranging Real Energy Formulas",
-  "source": "Algebra & Maths Skills — Module 7 (capstone)",
-  "deckId": "al07",
-  "updatedAt": "2026-06-18T00:00:00Z",
-  "summary": "This capstone puts every earlier skill to work on the **actual formulas** you meet in thermodynamics and energy systems. Nothing new — just the same golden rule (do the same to both sides) and inverse operations from [[al01]], now applied where it counts. The point is to make these rearrangements feel routine, so the physics is the hard part, not the algebra.\n\n**Energy balance — $Q = mc\\,\\Delta T$.** To find a specific heat or a temperature rise, isolate the wanted letter. For $c$: it's multiplied by $m$ and $\\Delta T$, so divide by both, $c = \\dfrac{Q}{m\\,\\Delta T}$. For the rise: $\\Delta T = \\dfrac{Q}{mc}$. Same pattern every time — divide by everything multiplying your target.\n\n**Efficiency — $\\eta = \\dfrac{W}{Q}$.** A fraction, so the same denominator trick as density. For the work out, $W = \\eta Q$; for the heat in, $Q = \\dfrac{W}{\\eta}$ (lift $Q$ from the denominator by multiplying, then divide by $\\eta$).\n\n**Carnot efficiency — $\\eta = 1 - \\dfrac{T_C}{T_H}$.** This trips people up because the variable is buried in a subtracted fraction. Peel it in order: move the 1 ($\\dfrac{T_C}{T_H} = 1 - \\eta$), then multiply by $T_H$: $$T_C = T_H(1 - \\eta).$$ A clean example of 'undo the +/− before the ×/÷'.\n\n**Ideal gas — $pV = nRT$.** Whatever you want, divide by the product of the other three. $T = \\dfrac{pV}{nR}$, $n = \\dfrac{pV}{RT}$, $V = \\dfrac{nRT}{p}$ — all the same one-step move.\n\n**Kinetic energy — $KE = \\tfrac12 mv^2$** (a squared variable). Undo the $\\tfrac12$ and $m$ first, then the square last: $v = \\sqrt{\\dfrac{2\\,KE}{m}}$ — square-root applied to the *whole* right-hand side.\n\n**Exergy of heat — $X = \\left(1 - \\dfrac{T_0}{T}\\right)Q$.** Combines a bracket and a fraction, but it's still layers: divide by $Q$, then handle the bracket as in the Carnot case. The habit to carry away: **identify the target, list what's wrapped around it, and unwrap in reverse order — applying every step to both whole sides.** Do that and any energy formula bends to your needs.",
+  "title": "Rearranging Thermodynamic Formulas",
+  "source": "Algebra & Maths Skills — Module 7 (the applied core)",
+  "updatedAt": "2026-07-12T00:00:00Z",
+  "summary": "This is the module that matters most: rearranging the **actual formulas** you meet in thermodynamics. The textbook almost never gives an equation in the form you need, so the skill of bending it to your target variable is the difference between getting stuck and getting the answer. The good news — under the surface it's the **same 7 patterns over and over**. Learn to recognise which one you're looking at, and every formula becomes routine.\n\nThe universal recipe never changes: **identify your target letter, list what's wrapped around it, undo those operations in reverse order, applying every step to both whole sides.** What changes is the *last wrapper* you have to peel — and that's what the 7 patterns name.\n\n**Pattern 1 — isolate a factor (divide it out).** Your target is one factor in a product. Divide both sides by everything else. $Q = mc\\Delta T \\Rightarrow c = \\dfrac{Q}{m\\Delta T}$; $pV = mRT \\Rightarrow T = \\dfrac{pV}{mR}$. One move, works for the ideal-gas law, energy balances, exergy of a reservoir.\n\n**Pattern 2 — variable in a denominator (lift it first).** If the target sits *underneath* a fraction, multiply both sides by it to bring it up, then isolate. $\\eta = \\dfrac{W}{Q} \\Rightarrow Q = \\dfrac{W}{\\eta}$; same for $COP = \\dfrac{Q_L}{W}$ and $\\rho = \\dfrac{m}{V}$.\n\n**Pattern 3 — a subtracted fraction (undo the '1−' first).** The classic trap: Carnot efficiency $\\eta = 1 - \\dfrac{T_L}{T_H}$. Move the constant across *before* touching the fraction: $\\dfrac{T_L}{T_H} = 1-\\eta$, then $T_L = T_H(1-\\eta)$. The exergy factor $\\left(1-\\dfrac{T_0}{T}\\right)$ and second-law efficiency work the same way.\n\n**Pattern 4 — squared or under a root (do the root/square last).** Strip the factors, *then* apply the inverse. $KE = \\tfrac12 mv^2 \\Rightarrow v = \\sqrt{\\dfrac{2KE}{m}}$; a nozzle's $h_1 = h_2 + \\dfrac{V_2^2}{2} \\Rightarrow V_2 = \\sqrt{2(h_1-h_2)}$.\n\n**Pattern 5 — variable in an exponent (raise to the reciprocal power).** This is the one that stops people cold in Chapter 7. The isentropic relation $\\dfrac{T_2}{T_1} = \\left(\\dfrac{P_2}{P_1}\\right)^{(k-1)/k}$ hides $P_2$ inside a fractional power. To free it, **raise both sides to the reciprocal exponent** $\\dfrac{k}{k-1}$: $P_2 = P_1\\left(\\dfrac{T_2}{T_1}\\right)^{k/(k-1)}$. A power is undone by the reciprocal power, just as a square is undone by a square root.\n\n**Pattern 6 — a mixture / table relation (solve for quality).** Every saturated-mixture property has the form $y = y_f + x\\,y_{fg}$ (for $y = v, u, h, s$). Make the quality the subject: $x = \\dfrac{y - y_f}{y_{fg}}$ — subtract $y_f$, divide by $y_{fg}$.\n\n**Pattern 7 — variable inside a log (undo with exp), or collect terms.** When the unknown is trapped in a logarithm — the entropy relation $\\Delta s = c_p\\ln\\dfrac{T_2}{T_1}$ (const $P$) — **exponentiate both sides**: $T_2 = T_1\\,e^{\\Delta s/c_p}$. Logs and exponentials are inverses, exactly like square/root. And for an energy or entropy balance ($Q - W = \\Delta U$), you just collect and move terms across the '='.\n\nCarry away the reflex: **name the pattern, then apply its inverse last.** Rearrange symbolically *before* plugging numbers — you get a reusable formula and a clean check. And in every efficiency, gas-law, entropy or exergy formula, temperatures are **absolute (kelvin)**.",
   "equations": [
     {
-      "name": "Energy balance Q = m c ΔT",
+      "name": "Pattern 1 — isolate a factor (divide it out)",
       "latex": "Q = mc\\,\\Delta T",
-      "rearrangements": ["c = \\frac{Q}{m\\,\\Delta T}", "\\Delta T = \\frac{Q}{mc}", "m = \\frac{Q}{c\\,\\Delta T}"],
-      "useWhen": "Heating/cooling problems. Divide by everything multiplying the letter you want — $c$, $m$ and $\\Delta T$ are all just factors.",
-      "note": "Use absolute or relative temperatures consistently; $\\Delta T$ is the same in K or °C."
+      "rearrangements": ["c = \\frac{Q}{m\\,\\Delta T}", "\\Delta T = \\frac{Q}{mc}", "pV = mRT \\;\\Rightarrow\\; T = \\frac{pV}{mR},\\ \\ m = \\frac{pV}{RT}"],
+      "useWhen": "Your target is one factor in a product. Divide both sides by everything else that multiplies it — one move.",
+      "note": "Same pattern for $pV = mRT$, boundary work $W_b = P\\,\\Delta V$, and exergy of heat $X = T_0 S_{gen}$."
     },
     {
-      "name": "Efficiency η = W / Q",
+      "name": "Pattern 2 — variable in a denominator (lift it first)",
       "latex": "\\eta = \\frac{W}{Q}",
-      "rearrangements": ["W = \\eta Q", "Q = \\frac{W}{\\eta}"],
-      "useWhen": "Any input/output efficiency. For $Q$ (in the denominator), multiply both sides by $Q$ first, then divide by $\\eta$.",
-      "note": "$\\eta$ is dimensionless (0–1). The same shape as COP, capacity factor and value factor."
+      "rearrangements": ["Q = \\frac{W}{\\eta}", "COP_R = \\frac{Q_L}{W} \\;\\Rightarrow\\; W = \\frac{Q_L}{COP_R}", "\\rho = \\frac{m}{V} \\;\\Rightarrow\\; V = \\frac{m}{\\rho}"],
+      "useWhen": "The target sits underneath a fraction. Multiply both sides by it to bring it to the top, then isolate as usual.",
+      "note": "Don't try to divide it out while it's in the denominator — lift it up with multiplication first."
     },
     {
-      "name": "Carnot efficiency η = 1 − T_C/T_H",
-      "latex": "\\eta = 1 - \\frac{T_C}{T_H}",
-      "rearrangements": ["T_C = T_H(1 - \\eta)", "T_H = \\frac{T_C}{1 - \\eta}"],
-      "useWhen": "Finding a reservoir temperature from an efficiency. Undo the '$1-$' first (move it across), then deal with the fraction.",
-      "note": "Temperatures must be **absolute (K)**. A buried subtracted fraction — peel the +/− before the ×/÷."
+      "name": "Pattern 3 — a subtracted fraction (undo the '1−' first)",
+      "latex": "\\eta = 1 - \\frac{T_L}{T_H}",
+      "rearrangements": ["\\frac{T_L}{T_H} = 1 - \\eta", "T_L = T_H(1 - \\eta)", "T_H = \\frac{T_L}{1 - \\eta}"],
+      "useWhen": "The unknown is buried in a fraction that is being subtracted (Carnot efficiency, the exergy factor $1-T_0/T$, second-law efficiency). Move the constant across the '=' first, then clear the fraction.",
+      "note": "Peeling the +/− before the ×/÷ is reverse-BIDMAS. Temperatures absolute (K)."
     },
     {
-      "name": "Ideal gas & kinetic energy",
-      "latex": "pV = nRT, \\qquad KE = \\tfrac{1}{2}mv^2",
-      "rearrangements": ["T = \\frac{pV}{nR}", "n = \\frac{pV}{RT}", "v = \\sqrt{\\frac{2\\,KE}{m}}"],
-      "useWhen": "Gas-law rearrangements (divide by the product of the others) and any squared-variable formula (strip the factors, then square-root last).",
-      "note": "For $v$: multiply by 2, divide by $m$, then take the root of the *whole* side. Keep the positive root."
+      "name": "Pattern 4 — squared or under a root (root/square last)",
+      "latex": "KE = \\tfrac{1}{2} m v^2",
+      "rearrangements": ["v = \\sqrt{\\frac{2\\,KE}{m}}", "h_1 = h_2 + \\frac{V_2^2}{2} \\;\\Rightarrow\\; V_2 = \\sqrt{2(h_1 - h_2)}"],
+      "useWhen": "The target is squared (take the root last) or under a root (square last). Strip away the surrounding ×/÷ first, then apply the inverse to the *whole* other side.",
+      "note": "Square and square-root are inverses. Keep the positive root for a physical quantity (speed, radius)."
+    },
+    {
+      "name": "Pattern 5 — variable in an exponent (raise to the reciprocal power)",
+      "latex": "\\frac{T_2}{T_1} = \\left(\\frac{P_2}{P_1}\\right)^{(k-1)/k}",
+      "rearrangements": ["P_2 = P_1\\left(\\frac{T_2}{T_1}\\right)^{k/(k-1)}", "\\text{raise both sides to the reciprocal power } \\tfrac{k}{k-1}"],
+      "useWhen": "The unknown is trapped inside a fractional power — the isentropic ideal-gas relations of Chapter 7. Raise both sides to the reciprocal exponent to free it.",
+      "note": "$\\tfrac{k}{k-1}$ is the reciprocal of $\\tfrac{k-1}{k}$; raising to it cancels the power, just as a square root cancels a square. The single trickiest rearrangement in the thermo course."
+    },
+    {
+      "name": "Pattern 6 — mixture / table relation (solve for quality)",
+      "latex": "y = y_f + x\\,y_{fg}",
+      "rearrangements": ["x = \\frac{y - y_f}{y_{fg}}", "y = h,\\ u,\\ v,\\ \\text{or } s"],
+      "useWhen": "Finding the quality $x$ of a saturated liquid–vapour mixture from any of its properties. Subtract the saturated-liquid value $y_f$, then divide by $y_{fg}$.",
+      "note": "The same relation gives $x$ from $v$, $u$, $h$ or $s$ — whichever the tables and problem hand you."
+    },
+    {
+      "name": "Pattern 7 — variable in a log (undo with exp), or collect terms",
+      "latex": "\\Delta s = c_p \\ln\\frac{T_2}{T_1}\\ \\ (\\text{const }P)",
+      "rearrangements": ["T_2 = T_1\\,e^{\\Delta s / c_p}", "Q - W = \\Delta U \\;\\Rightarrow\\; W = Q - \\Delta U"],
+      "useWhen": "The unknown is inside a logarithm — exponentiate both sides to free it. Or, in an energy/entropy balance, simply collect and move terms across the '='.",
+      "note": "$\\ln$ and $e^{(\\cdot)}$ are inverses (see [[al04]]). For balances, moving a term across the '=' flips its sign."
     }
   ],
   "glossary": [
-    { "term": "Specific heat (c)", "definition": "Energy to raise 1 kg of a substance by 1 K, in $Q = mc\\,\\Delta T$. Rearranged: $c = Q/(m\\,\\Delta T)$." },
-    { "term": "Thermal efficiency (η)", "definition": "Useful work out ÷ heat in, $\\eta = W/Q$. Dimensionless, between 0 and 1; rearranges like any fraction." },
-    { "term": "Carnot efficiency", "definition": "The ceiling efficiency between two reservoirs, $\\eta = 1 - T_C/T_H$ (temperatures in kelvin). Rearranges to $T_C = T_H(1-\\eta)$." },
-    { "term": "Coefficient of performance (COP)", "definition": "Heat moved ÷ work in for a heat pump/fridge. A Carnot heat pump has $COP = T_H/(T_H - T_C)$ — another fraction to rearrange." },
-    { "term": "Ideal-gas law", "definition": "$pV = nRT$. Any one variable is found by dividing by the product of the others; $R$ is the gas constant." },
-    { "term": "Kinetic energy", "definition": "$KE = \\tfrac12 mv^2$. To get speed, isolate $v^2$ then square-root: $v = \\sqrt{2\\,KE/m}$." },
-    { "term": "Exergy of heat", "definition": "Work potential of heat from a reservoir at $T$: $X = (1 - T_0/T)Q$. A bracket-and-fraction rearrangement combining earlier scenarios." },
-    { "term": "Absolute temperature", "definition": "Temperature in kelvin (K). Efficiency, gas-law and exergy formulas require it — a frequent source of errors if °C is used by mistake." }
+    { "term": "The 7 rearrangement patterns", "definition": "Isolate a factor · lift a denominator · undo a subtracted fraction · root/square last · reciprocal power for an exponent · quality from a mixture relation · exp to undo a log (and collect terms in balances). Name the pattern, apply its inverse last." },
+    { "term": "Make the subject", "definition": "Rearrange until your target variable stands alone on one side, $\\text{target} = (\\text{everything else})$. The core skill this module drills." },
+    { "term": "Hydrostatic pressure", "definition": "$P = P_{atm} + \\rho g h$. To find depth, isolate $h$: $h = (P - P_{atm})/(\\rho g)$ — a Pattern-1 isolate-a-factor after moving $P_{atm}$." },
+    { "term": "Ideal-gas law", "definition": "$pV = mRT$. Divide by the product of the others to get any single variable (Pattern 1). $R$ is the specific gas constant." },
+    { "term": "Thermal efficiency (η)", "definition": "$\\eta = W/Q$; a fraction, so the heat in $Q = W/\\eta$ comes from lifting the denominator (Pattern 2)." },
+    { "term": "Carnot efficiency", "definition": "$\\eta = 1 - T_L/T_H$ (kelvin). The subtracted-fraction case (Pattern 3): $T_L = T_H(1-\\eta)$." },
+    { "term": "Coefficient of performance (COP)", "definition": "Heat moved ÷ work in for a fridge/heat pump. Carnot heat pump $COP = T_H/(T_H - T_L)$ — a denominator and a difference to rearrange." },
+    { "term": "Isentropic relation", "definition": "$T_2/T_1 = (P_2/P_1)^{(k-1)/k}$. Solving for $P_2$ needs the reciprocal power $k/(k-1)$ (Pattern 5) — the trickiest thermo rearrangement." },
+    { "term": "Quality (x)", "definition": "Vapour mass fraction of a saturated mixture, from $y = y_f + x\\,y_{fg}$ ⇒ $x = (y - y_f)/y_{fg}$ (Pattern 6). Works for $v, u, h, s$." },
+    { "term": "Steady-flow energy (velocity)", "definition": "For an adiabatic nozzle $h_1 = h_2 + V_2^2/2$; the exit speed $V_2 = \\sqrt{2(h_1 - h_2)}$ is a Pattern-4 root." },
+    { "term": "Mass flow rate", "definition": "$\\dot m = AV/v$ (area × velocity ÷ specific volume). Rearranges to $V = \\dot m v/A$ — Pattern 1/2." },
+    { "term": "Entropy change (ideal gas)", "definition": "$\\Delta s = c_p\\ln(T_2/T_1) - R\\ln(P_2/P_1)$. At constant $P$, freeing $T_2$ needs the exponential (Pattern 7): $T_2 = T_1 e^{\\Delta s/c_p}$." },
+    { "term": "Gouy–Stodola relation", "definition": "$X_{dest} = T_0\\,S_{gen}$; the entropy generation $S_{gen} = X_{dest}/T_0$ is a one-step isolate (Pattern 1)." },
+    { "term": "Absolute temperature", "definition": "Kelvin. Efficiency, gas-law, entropy and exergy formulas all require it — converting °C wrong is a top source of rearrangement errors." }
   ],
   "tips": [
-    "**Same recipe every time:** identify the target letter, list what's wrapped around it, unwrap in reverse order, apply each step to both whole sides, then check with numbers.",
-    "**Fractions: lift the denominator first.** For $\\eta = W/Q$, get $Q$ by multiplying both sides by $Q$ before dividing by $\\eta$ — exactly like density in [[al01]].",
-    "**Subtracted fractions (Carnot, exergy): undo the '1−' first.** Move the constant across, *then* clear the fraction. $\\eta = 1 - T_C/T_H \\Rightarrow T_C = T_H(1-\\eta)$.",
-    "**Squared variable ⇒ root it last.** In $KE = \\tfrac12 mv^2$, remove $\\tfrac12$ and $m$, then square-root the whole other side to get $v$.",
-    "**Use kelvin in efficiency, gas-law and exergy formulas.** Rearranging is pointless if the temperature units are wrong — convert °C to K first.",
-    "**Rearrange symbolically before plugging in numbers.** You get a reusable formula, fewer rounding errors, and a clear check of your algebra."
+    "**Name the pattern first.** Before touching the algebra, ask which of the 7 you're looking at — that tells you the *last* inverse to apply (divide, lift, move the 1−, root, reciprocal power, mixture, or exp).",
+    "**Exponent ⇒ reciprocal power.** To free a variable inside $(\\cdot)^{(k-1)/k}$, raise both sides to $k/(k-1)$. This is the Chapter-7 isentropic move and the one worth drilling until automatic.",
+    "**Log ⇒ exponential.** If the unknown is inside $\\ln(\\cdot)$, apply $e^{(\\cdot)}$ to both sides. $\\Delta s = c_p\\ln(T_2/T_1) \\Rightarrow T_2 = T_1 e^{\\Delta s/c_p}$.",
+    "**Subtracted fraction: kill the constant first.** For $\\eta = 1 - T_L/T_H$, move the 1 across *before* clearing the fraction. Reaching for the fraction first is the classic mistake.",
+    "**Denominator: lift, don't divide.** If your target is underneath, multiply both sides by it first, then isolate. Never try to divide it away while it's still in the denominator.",
+    "**Rearrange symbolically, then substitute.** Get the formula into $\\text{target} = \\ldots$ before any numbers — reusable, fewer rounding errors, and easy to sanity-check.",
+    "**Kelvin, always.** Any formula with efficiency, the gas law, entropy or exergy needs absolute temperature — convert °C → K before you rearrange or substitute."
   ]
 }

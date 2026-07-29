@@ -110,12 +110,12 @@
       "track": "algebra",
       "title": "Rearranging Formulas",
       "topics": "Isolating a variable, fractions, squares & roots, both-sides, multi-step",
-      "count": 12,
+      "count": 15,
       "byDifficulty": {
         "1": 3,
         "2": 3,
-        "3": 4,
-        "4": 2
+        "3": 5,
+        "4": 4
       }
     },
     {
@@ -167,10 +167,10 @@
       "chapterId": "al07",
       "chapter": 7,
       "track": "algebra",
-      "title": "Rearranging Real Energy Formulas",
-      "topics": "Q=mcΔT, efficiency, Carnot, ideal gas, KE, exergy",
-      "count": 12,
-      "byDifficulty": { "1": 3, "2": 3, "3": 4, "4": 2 }
+      "title": "Rearranging Thermodynamic Formulas",
+      "topics": "The 7 patterns on thermo formulas: hydrostatic, ideal gas, quality, Carnot, isentropic, entropy",
+      "count": 24,
+      "byDifficulty": { "1": 3, "2": 7, "3": 9, "4": 5 }
     }
   ]
 }
