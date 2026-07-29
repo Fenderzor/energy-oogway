@@ -46,8 +46,8 @@
       "deckId": "ch07",
       "title": "Ch 7 — Entropy",
       "chapter": 7,
-      "description": "Entropy, the increase principle, T ds relations, and isentropic processes.",
-      "cardCount": 13
+      "description": "Entropy, the increase principle, T ds relations, isentropic processes (incl. variable specific heats & Pr/vr), and steady-flow work.",
+      "cardCount": 18
     },
     {
       "deckId": "ch08",

@@ -160,6 +160,66 @@
       "solution": "**Step 1 — convert units:** $T_H = 295\\ \\text{K}$, $T_L = 268\\ \\text{K}$; heat demand $\\dot Q_H = 60\\,000/3600 = 16.67\\ \\text{kW}$ (the steady loss must be replaced).\n\n**Step 2 — best COP:**\n\n$$COP_{HP,rev} = \\frac{T_H}{T_H - T_L} = \\frac{295}{295 - 268} = \\frac{295}{27} = 10.93$$\n\n**Step 3 — minimum power:**\n\n$$\\dot W = \\frac{\\dot Q_H}{COP_{HP,rev}} = \\frac{16.67}{10.93} = 1.525\\ \\text{kW}$$\n\nA small temperature gap gives a huge COP — only ~1.5 kW of electricity replaces 16.7 kW of heat loss.",
       "equationsUsed": ["COP_{HP,rev} = \\frac{T_H}{T_H - T_L}", "\\dot W = \\frac{\\dot Q_H}{COP_{HP,rev}}"],
       "conceptLink": "ch06"
+    },
+    {
+      "id": "ch06-p009",
+      "chapter": 6,
+      "difficulty": 3,
+      "title": "Reversed-Carnot air conditioner for a house",
+      "tags": ["Carnot", "air conditioner", "COP"],
+      "kind": "numeric",
+      "scenario": "An air conditioner operating on the **reversed Carnot cycle** removes heat from a house at **750 kJ/min** to keep it at **24°C**, while the outdoor air is at **35°C**.\n\nFind the **minimum power** required to operate it, in kW.",
+      "answer": 0.463,
+      "unit": "kW",
+      "tolerance": 0.02,
+      "hints": [
+        "The *house* is the cold reservoir here (heat is being removed from it) — convert both temperatures to kelvin.",
+        "$COP_{R,rev} = T_L/(T_H-T_L)$, and convert $\\dot Q_L$ to kW: $750/60$.",
+        "$\\dot W = \\dot Q_L/COP_{R,rev}$."
+      ],
+      "solution": "**Reservoir temperatures** — the house (cold side) is $T_L = 297.15\\ \\text{K}$, outdoors (hot side, where heat is dumped) is $T_H = 308.15\\ \\text{K}$:\n\n$$COP_{R,rev} = \\frac{T_L}{T_H-T_L} = \\frac{297.15}{308.15-297.15} = \\frac{297.15}{11} = 27.0$$\n\n**Cooling load in kW:**\n\n$$\\dot Q_L = \\frac{750}{60} = 12.5\\ \\text{kW}$$\n\n**Minimum power:**\n\n$$\\dot W = \\frac{\\dot Q_L}{COP_{R,rev}} = \\frac{12.5}{27.0} = 0.463\\ \\text{kW}$$\n\nBecause the indoor–outdoor temperature gap is small, the Carnot COP is huge — real air conditioners need far more than this ideal minimum, but it sets the theoretical floor.",
+      "equationsUsed": ["COP_{R,rev} = \\frac{T_L}{T_H-T_L}", "\\dot W = \\frac{\\dot Q_L}{COP_{R,rev}}"],
+      "conceptLink": "ch06"
+    },
+    {
+      "id": "ch06-p010",
+      "chapter": 6,
+      "difficulty": 4,
+      "title": "Finding the cold-space temperature from a Carnot COP",
+      "tags": ["Carnot", "refrigerator", "COP", "multi-step"],
+      "kind": "numeric",
+      "scenario": "A Carnot refrigerator operates in a room at **25°C**. It consumes **500 W** of power and has a COP of **4.5**.\n\nFind the **temperature of the refrigerated space**, in °C.",
+      "answer": -29.2,
+      "unit": "°C",
+      "tolerance": 0.5,
+      "hints": [
+        "This time you're given the COP and must work *backwards* to find a reservoir temperature — the reverse of the usual direction.",
+        "Start from $COP_{R,rev} = T_L/(T_H-T_L)$ and rearrange algebraically to isolate $T_L$.",
+        "$COP(T_H - T_L) = T_L \\;\\Rightarrow\\; COP\\cdot T_H = T_L(1+COP) \\;\\Rightarrow\\; T_L = \\dfrac{COP\\cdot T_H}{1+COP}$."
+      ],
+      "solution": "Rearranging the Carnot refrigerator COP for the **cold-reservoir temperature** (rather than the COP itself) takes a bit more algebra than usual:\n\n$$COP_{R,rev} = \\frac{T_L}{T_H-T_L}$$\n\n$$COP\\,(T_H-T_L) = T_L \\;\\Rightarrow\\; COP\\cdot T_H - COP\\cdot T_L = T_L \\;\\Rightarrow\\; COP\\cdot T_H = T_L(1+COP)$$\n\n$$T_L = \\frac{COP\\cdot T_H}{1+COP}$$\n\nWith $T_H = 298.15\\ \\text{K}$ (25°C) and $COP = 4.5$:\n\n$$T_L = \\frac{4.5\\times298.15}{1+4.5} = \\frac{1341.7}{5.5} = 243.9\\ \\text{K} = -29.2°C$$\n\nNotice the 500 W power figure wasn't even needed for this part — it would only matter for finding the *cooling rate* ($\\dot Q_L = COP\\times\\dot W = 2.25\\ \\text{kW}$), a separate question.",
+      "equationsUsed": ["COP_{R,rev} = \\frac{T_L}{T_H-T_L}", "T_L = \\frac{COP\\cdot T_H}{1+COP}"],
+      "conceptLink": "ch06"
+    },
+    {
+      "id": "ch06-p011",
+      "chapter": 6,
+      "difficulty": 4,
+      "title": "Refrigerator cooling a water stream",
+      "tags": ["refrigerator", "energy balance", "sensible heat", "multi-step"],
+      "kind": "numeric",
+      "scenario": "A refrigerator cools a continuous stream of water from **23°C to 5°C**. It rejects **570 kJ/min** of heat at the condenser and draws **2.65 kW** of power. Take $c_{water} = 4.18\\ \\text{kJ/(kg·°C)}$, $\\rho_{water} = 1\\ \\text{kg/L}$.\n\nFind the **rate at which water is cooled**, in L/min.",
+      "answer": 5.46,
+      "unit": "L/min",
+      "tolerance": 0.15,
+      "hints": [
+        "First find the cooling rate $\\dot Q_L$ from the refrigeration-cycle energy balance: $\\dot Q_H = \\dot Q_L + \\dot W$, so $\\dot Q_L = \\dot Q_H - \\dot W$ (convert $\\dot W$ to kJ/min).",
+        "Then use $\\dot Q_L$ as the sensible-heat rate removed from the water: $\\dot Q_L = \\dot m\\,c\\,\\Delta T$.",
+        "Since $\\rho_{water}=1\\ \\text{kg/L}$, the mass flow rate in kg/min equals the volume flow rate in L/min."
+      ],
+      "solution": "**Step 1 — cooling rate from the cycle's energy balance.** For any refrigerator, heat rejected equals heat absorbed plus work input:\n\n$$\\dot Q_H = \\dot Q_L + \\dot W \\;\\Rightarrow\\; \\dot Q_L = \\dot Q_H - \\dot W$$\n\nConvert the power to kJ/min: $\\dot W = 2.65\\times60 = 159\\ \\text{kJ/min}$.\n\n$$\\dot Q_L = 570 - 159 = 411\\ \\text{kJ/min}$$\n\n**Step 2 — water flow rate** from the sensible-heat relation:\n\n$$\\dot Q_L = \\dot m\\,c\\,\\Delta T \\;\\Rightarrow\\; \\dot m = \\frac{\\dot Q_L}{c\\,\\Delta T} = \\frac{411}{4.18\\times(23-5)} = \\frac{411}{75.24} = 5.46\\ \\text{L/min}$$\n\n(As a bonus, this also gives the COP: $COP = \\dot Q_L/\\dot W = 411/159 = 2.58$.)",
+      "equationsUsed": ["\\dot Q_H = \\dot Q_L + \\dot W", "\\dot Q_L = \\dot m c \\Delta T"],
+      "conceptLink": "ch06"
     }
   ]
 }

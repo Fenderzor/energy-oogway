@@ -160,6 +160,66 @@
       "solution": "Chain the two devices: electricity → motor → pump → fluid. The overall efficiency is the product:\n\n$$\\eta_{overall} = \\eta_{motor}\\,\\eta_{pump} = 0.90 \\times 0.70 = 0.63$$\n\nThe electrical input needed for 4.0 kW of useful output is:\n\n$$\\dot W_{elec} = \\frac{\\dot W_{useful}}{\\eta_{overall}} = \\frac{4.0}{0.63} = 6.35\\ \\text{kW}$$\n\nLosses compound — each stage takes its cut, so the grid must supply far more than the useful 4 kW.",
       "equationsUsed": ["\\eta_{overall} = \\eta_{motor}\\,\\eta_{pump}", "\\dot W_{elec} = \\frac{\\dot W_{useful}}{\\eta_{overall}}"],
       "conceptLink": "ch02"
+    },
+    {
+      "id": "ch02-p009",
+      "chapter": 2,
+      "difficulty": 3,
+      "title": "Power lost to friction in a pump",
+      "tags": ["pump", "friction loss", "mechanical energy"],
+      "kind": "numeric",
+      "scenario": "A pump supplies **20 kW** of shaft power to raise water at $\\dot m$ corresponding to $\\dot V = 0.030\\ \\text{m}^3/\\text{s}$ to a reservoir **45 m** higher. Take $\\rho = 1000\\ \\text{kg/m}^3$, $g = 9.81\\ \\text{m/s}^2$.\n\nFind the mechanical power **converted to thermal energy by friction** (i.e., the loss), in kW.",
+      "answer": 6.76,
+      "unit": "kW",
+      "tolerance": 0.2,
+      "hints": [
+        "First find the *ideal* (useful) power actually needed to raise the water: $\\dot W_{ideal} = \\dot m g\\Delta z$.",
+        "$\\dot m = \\rho\\dot V$.",
+        "The loss is simply the gap between what's supplied and what's usefully delivered: $\\dot W_{loss} = \\dot W_{shaft} - \\dot W_{ideal}$."
+      ],
+      "solution": "The mass flow rate is:\n\n$$\\dot m = \\rho\\dot V = 1000\\times0.030 = 30\\ \\text{kg/s}$$\n\nThe *useful* (ideal) power needed to lift this water is:\n\n$$\\dot W_{ideal} = \\dot m g\\Delta z = 30\\times9.81\\times45 = 13\\,244\\ \\text{W} = 13.24\\ \\text{kW}$$\n\nThe pump is supplied 20 kW of shaft power, but only 13.24 kW does useful work on the water — the rest is dissipated by friction (turbulence, internal losses) and appears as a small temperature rise:\n\n$$\\dot W_{loss} = \\dot W_{shaft} - \\dot W_{ideal} = 20 - 13.24 = 6.76\\ \\text{kW}$$",
+      "equationsUsed": ["\\dot W_{ideal} = \\dot m g \\Delta z", "\\dot W_{loss} = \\dot W_{shaft} - \\dot W_{ideal}"],
+      "conceptLink": "ch02"
+    },
+    {
+      "id": "ch02-p010",
+      "chapter": 2,
+      "difficulty": 4,
+      "title": "Pump efficiency with a diameter change",
+      "tags": ["pump", "efficiency", "mass flow", "multi-step"],
+      "kind": "numeric",
+      "scenario": "An oil pump ($\\rho = 860\\ \\text{kg/m}^3$) draws **44 kW** of electric power and delivers a flow rate of **0.10 m³/s**. The inlet pipe diameter is **8 cm** and the outlet is **12 cm**. The pressure rise across the pump is **500 kPa**, and the motor driving the pump is **90% efficient**. Elevation change is negligible.\n\nFind the **mechanical efficiency of the pump** itself (as a decimal), accounting for the change in kinetic energy caused by the diameter change.",
+      "answer": 0.918,
+      "unit": "",
+      "tolerance": 0.02,
+      "hints": [
+        "First find the shaft power actually delivered to the pump: $\\dot W_{shaft} = \\dot W_{elec}\\times\\eta_{motor}$.",
+        "Find inlet/outlet velocities from continuity: $V = \\dot V/A$, with $A = \\pi D^2/4$. The bigger outlet pipe means the fluid *slows down*.",
+        "The fluid's mechanical energy gain per unit mass is $\\Delta e = \\Delta P/\\rho + (V_{out}^2-V_{in}^2)/2$ — note the KE term is *negative* here. Pump efficiency = $\\dot m\\Delta e / \\dot W_{shaft}$."
+      ],
+      "solution": "**Shaft power into the pump** (after the motor's own losses):\n\n$$\\dot W_{shaft} = \\dot W_{elec}\\times\\eta_{motor} = 44\\times0.90 = 39.6\\ \\text{kW}$$\n\n**Velocities from continuity.** Pipe areas: $A_{in} = \\pi(0.08)^2/4 = 0.005027\\ \\text{m}^2$, $A_{out} = \\pi(0.12)^2/4 = 0.011310\\ \\text{m}^2$.\n\n$$V_{in} = \\frac{0.10}{0.005027} = 19.89\\ \\text{m/s}, \\qquad V_{out} = \\frac{0.10}{0.011310} = 8.84\\ \\text{m/s}$$\n\nThe fluid *decelerates* through the pump since the outlet pipe is wider.\n\n**Mechanical energy gained by the fluid** (pressure rise minus the kinetic-energy loss):\n\n$$\\Delta e = \\frac{\\Delta P}{\\rho} + \\frac{V_{out}^2-V_{in}^2}{2} = \\frac{500\\,000}{860} + \\frac{8.84^2-19.89^2}{2} = 581.4 - 158.8 = 422.6\\ \\text{J/kg}$$\n\nWith $\\dot m = \\rho\\dot V = 860\\times0.10 = 86\\ \\text{kg/s}$, the useful power delivered to the fluid is:\n\n$$\\dot W_{useful} = \\dot m\\,\\Delta e = 86\\times422.6 = 36.34\\ \\text{kW}$$\n\n**Pump efficiency:**\n\n$$\\eta_{pump} = \\frac{\\dot W_{useful}}{\\dot W_{shaft}} = \\frac{36.34}{39.6} = 0.918$$\n\nThe kinetic-energy drop *works against* the pressure rise — ignoring it (a common mistake) would overstate the useful power and thus the efficiency.",
+      "equationsUsed": ["\\dot W_{shaft} = \\dot W_{elec}\\eta_{motor}", "\\Delta e = \\frac{\\Delta P}{\\rho} + \\frac{V_{out}^2-V_{in}^2}{2}", "\\eta_{pump} = \\frac{\\dot m\\Delta e}{\\dot W_{shaft}}"],
+      "conceptLink": "ch02"
+    },
+    {
+      "id": "ch02-p011",
+      "chapter": 2,
+      "difficulty": 4,
+      "title": "Elevator with a counterweight",
+      "tags": ["counterweight", "power", "multi-step"],
+      "kind": "numeric",
+      "scenario": "A fully loaded elevator cabin has a mass of **800 kg**. Its weight is partially balanced by a **400 kg** counterweight connected over a pulley at the top of the shaft (frictionless, massless cables). The cabin rises at a **constant speed of 1.2 m/s**. Take $g = 9.81\\ \\text{m/s}^2$.\n\nFind the **minimum power** required from the motor, in kW.",
+      "answer": 4.71,
+      "unit": "kW",
+      "tolerance": 0.1,
+      "hints": [
+        "At *constant* speed there's no acceleration, so the motor only needs to overcome the *net* weight difference between the cabin and the counterweight.",
+        "The counterweight already balances part of the cabin's weight — the motor only lifts the imbalance.",
+        "$\\dot W = (m_{cabin} - m_{cw})\\,g\\,V$."
+      ],
+      "solution": "Because the cabin moves at **constant speed**, there's no net acceleration — the motor only has to supply the force needed to overcome the weight *not* already balanced by the counterweight:\n\n$$F_{net} = (m_{cabin} - m_{cw})\\,g = (800-400)\\times9.81 = 3924\\ \\text{N}$$\n\nPower is force times speed:\n\n$$\\dot W = F_{net}\\times V = 3924\\times1.2 = 4709\\ \\text{W} = 4.71\\ \\text{kW}$$\n\nWithout the counterweight, the motor would need to lift the *full* 800 kg — nearly double the power. This is exactly why elevators use counterweights: the motor only ever handles the imbalance, not the total load.",
+      "equationsUsed": ["F_{net} = (m_{cabin}-m_{cw})g", "\\dot W = F_{net}V"],
+      "conceptLink": "ch02"
     }
   ]
 }

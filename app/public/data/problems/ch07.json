@@ -182,6 +182,146 @@
       "solution": "**Step 1 — isentropic exit temperature** $((k-1)/k = 0.2857)$:\n\n$$T_{2s} = 750\\left(\\frac{100}{700}\\right)^{0.2857} = 750 \\times 0.5735 = 430.1\\ \\text{K}$$\n\n**Step 2 — ideal (isentropic) work:**\n\n$$w_s = c_p(T_1 - T_{2s}) = 1.005(750 - 430.1) = 321.5\\ \\text{kJ/kg}$$\n\n**Step 3 — actual work** via the isentropic efficiency:\n\n$$w = \\eta_T\\, w_s = 0.88 \\times 321.5 = 283\\ \\text{kJ/kg}$$",
       "equationsUsed": ["T_{2s} = T_1\\left(\\frac{P_2}{P_1}\\right)^{(k-1)/k}", "w_s = c_p(T_1 - T_{2s})", "w = \\eta_T\\, w_s"],
       "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p010",
+      "chapter": 7,
+      "difficulty": 3,
+      "title": "A reversible air conditioner: zero net entropy",
+      "tags": ["entropy generation", "reversible", "Rankine"],
+      "kind": "numeric",
+      "scenario": "A **completely reversible** air conditioner provides **36,000 Btu/h** of cooling to a space kept at **70°F**, rejecting heat to outdoor air at **110°F**.\n\nFind the **rate of entropy increase of the outdoor air** (the hot reservoir), in Btu/(h·R).",
+      "answer": 67.97,
+      "unit": "Btu/(h·R)",
+      "tolerance": 1,
+      "hints": [
+        "Convert both temperatures to Rankine: add 459.67.",
+        "For a *reversible* device, $\\dot Q_H/T_H = \\dot Q_L/T_L$ — use this to find $\\dot Q_H$ first.",
+        "Then the hot reservoir's entropy gain is simply $\\dot S_H = \\dot Q_H/T_H$."
+      ],
+      "solution": "**Convert to Rankine:** $T_L = 70+459.67 = 529.67\\ \\text{R}$, $T_H = 110+459.67 = 569.67\\ \\text{R}$.\n\n**Find the heat rejected**, using the reversible-cycle relation $\\dot Q_H/T_H = \\dot Q_L/T_L$:\n\n$$\\dot Q_H = \\dot Q_L\\,\\frac{T_H}{T_L} = 36{,}000\\times\\frac{569.67}{529.67} = 38{,}719\\ \\text{Btu/h}$$\n\n**Entropy rate of the hot reservoir** (it only *receives* heat, so this is simple):\n\n$$\\dot S_H = \\frac{\\dot Q_H}{T_H} = \\frac{38{,}719}{569.67} = 67.97\\ \\text{Btu/(h·R)}$$\n\nThe cold space loses entropy at exactly $\\dot S_L = -\\dot Q_L/T_L = -67.97\\ \\text{Btu/(h·R)}$ — for this **reversible** device the two exactly cancel, giving **zero** net entropy generation, right at the second-law limit. Any real (irreversible) air conditioner would generate a small positive total.",
+      "equationsUsed": ["\\frac{\\dot Q_H}{T_H} = \\frac{\\dot Q_L}{T_L}", "\\dot S_H = \\frac{\\dot Q_H}{T_H}"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p011",
+      "chapter": 7,
+      "difficulty": 4,
+      "title": "Entropy rate during isothermal compression",
+      "tags": ["entropy", "isothermal", "multi-step"],
+      "kind": "numeric",
+      "scenario": "A compressor draws **40 kW** of power to compress air from $P_1$ to $P_2$. The air temperature is held **constant at 25°C** throughout, because heat is continuously rejected to the surroundings during the compression.\n\nFind the **rate of entropy change of the air**, in kW/K.",
+      "answer": -0.134,
+      "unit": "kW/K",
+      "tolerance": 0.005,
+      "hints": [
+        "The air's temperature doesn't change, so for an ideal gas $\\Delta u = 0$ — use the energy balance to find the heat transfer rate first.",
+        "$\\dot Q - \\dot W = \\Delta \\dot U = 0 \\;\\Rightarrow\\; \\dot Q = \\dot W$. With 40 kW of work going *into* the air, heat must leave the air at the same rate.",
+        "For an internally reversible process at *constant* temperature, entropy change is simply $\\dot S = \\dot Q/T$ — no need for the pressure ratio at all."
+      ],
+      "solution": "**Find the heat transfer rate.** Since the temperature doesn't change and air is an ideal gas, its internal energy doesn't change either: $\\Delta \\dot U = 0$. The energy balance then gives:\n\n$$\\dot Q - \\dot W = \\Delta \\dot U = 0 \\;\\Rightarrow\\; \\dot Q = \\dot W$$\n\nWork is done *on* the air (compression), so from the air's perspective $\\dot W = -40\\ \\text{kW}$, and therefore $\\dot Q = -40\\ \\text{kW}$ — heat leaves the air at 40 kW, exactly balancing the work put in.\n\n**Entropy rate.** For a process at constant temperature, the entropy change is $\\dot S = \\dot Q/T$ directly — you don't need to know the pressure ratio at all:\n\n$$\\dot S_{air} = \\frac{\\dot Q}{T} = \\frac{-40}{298.15} = -0.134\\ \\text{kW/K}$$\n\nThe air's entropy *falls* as it's compressed — consistent with $\\Delta s = -R\\ln(P_2/P_1)$, which would give the identical answer if you worked it out from the pressure ratio instead.",
+      "equationsUsed": ["\\dot Q - \\dot W = \\Delta \\dot U", "\\dot S = \\frac{\\dot Q}{T}\\ (\\text{constant } T)"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p012",
+      "chapter": 7,
+      "difficulty": 3,
+      "title": "Entropy change with variable specific heats (s° table)",
+      "tags": ["variable specific heats", "s-degree", "ideal gas"],
+      "kind": "numeric",
+      "scenario": "Air is compressed from **100 kPa, 17°C** (290 K) to **600 kPa, 57°C** (330 K). Rather than assume constant specific heats, use the **exact** air-table method.\n\nFrom Table A-17: $s^\\circ(290\\ \\text{K}) = 1.66802$ and $s^\\circ(330\\ \\text{K}) = 1.79783\\ \\text{kJ/(kg·K)}$. Take $R = 0.287\\ \\text{kJ/(kg·K)}$.\n\nFind the specific entropy change $\\Delta s$, in kJ/(kg·K).",
+      "answer": -0.384,
+      "unit": "kJ/(kg·K)",
+      "tolerance": 0.005,
+      "hints": [
+        "Use the exact (variable-specific-heat) form: $\\Delta s = s_2^\\circ - s_1^\\circ - R\\ln(P_2/P_1)$.",
+        "$s^\\circ$ already accounts for the temperature change; the log term adds the pressure effect.",
+        "$s_2^\\circ - s_1^\\circ = 1.79783 - 1.66802$, and $\\ln(600/100) = \\ln 6$."
+      ],
+      "solution": "The exact method reads the temperature part of entropy from the table ($s^\\circ$) and adds the pressure term:\n\n$$\\Delta s = s_2^\\circ - s_1^\\circ - R\\ln\\frac{P_2}{P_1}$$\n\n$$= (1.79783 - 1.66802) - 0.287\\ln\\frac{600}{100} = 0.12981 - 0.287(1.7918)$$\n\n$$= 0.12981 - 0.51424 = -0.384\\ \\text{kJ/(kg·K)}$$\n\nThe entropy *decreases* because the pressure rise (which lowers entropy) outweighs the small temperature rise. Here $\\Delta T$ is small so constant-$c_p$ would give nearly the same answer — but for large $\\Delta T$ this $s^\\circ$ method is the accurate one to use.",
+      "equationsUsed": ["\\Delta s = s_2^\\circ - s_1^\\circ - R\\ln\\frac{P_2}{P_1}"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p013",
+      "chapter": 7,
+      "difficulty": 3,
+      "title": "Isentropic compression via relative specific volume",
+      "tags": ["relative specific volume", "isentropic", "variable specific heats"],
+      "kind": "numeric",
+      "scenario": "Air is compressed **isentropically** in a car engine from **22°C** (295 K), with a compression ratio $V_1/V_2 = 8$. Because the temperature change is large, use the **relative specific volume** method (variable specific heats).\n\nFrom Table A-17, at 295 K the relative specific volume is $v_{r1} = 647.9$.\n\nFind $v_{r2}$ at the final state. *(You would then read $T_2$ off the table at this $v_r$ — the book gives $T_2 = 662.7$ K.)*",
+      "answer": 80.99,
+      "unit": "",
+      "tolerance": 0.5,
+      "hints": [
+        "For an isentropic process, $\\dfrac{v_2}{v_1} = \\dfrac{v_{r2}}{v_{r1}}$.",
+        "The compression ratio is $V_1/V_2 = 8$, so $v_2/v_1 = 1/8$.",
+        "$v_{r2} = v_{r1}\\times(v_2/v_1) = 647.9/8$."
+      ],
+      "solution": "The relative specific volume tracks the isentropic volume ratio directly:\n\n$$\\frac{v_2}{v_1} = \\frac{v_{r2}}{v_{r1}} \\quad\\Rightarrow\\quad v_{r2} = v_{r1}\\,\\frac{v_2}{v_1} = 647.9\\times\\frac{1}{8} = 80.99$$\n\nReading the air table at $v_r = 80.99$ gives $T_2 = 662.7$ K — so the air heats up by about 368°C during compression. Using the constant-$k$ relation $T_2 = T_1(V_1/V_2)^{k-1} = 295(8)^{0.4} = 677$ K would be a few percent off, because $k$ isn't really constant over such a large temperature rise. The $v_r$ method avoids that error.",
+      "equationsUsed": ["\\frac{v_2}{v_1} = \\frac{v_{r2}}{v_{r1}}", "v_{r2} = v_{r1}\\,\\frac{v_2}{v_1}"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p014",
+      "chapter": 7,
+      "difficulty": 4,
+      "title": "Compressor work: isentropic vs isothermal",
+      "tags": ["compressor work", "reversible steady-flow work", "ideal gas"],
+      "kind": "numeric",
+      "scenario": "Air is compressed steadily and reversibly from **100 kPa, 300 K** to **900 kPa** in a piston-free steady-flow compressor. Take $R = 0.287\\ \\text{kJ/(kg·K)}$, $k = 1.4$.\n\nFind the work input, in kJ/kg, for **isentropic** compression. *(Compare it in your solution to the isothermal case.)*",
+      "answer": 263,
+      "unit": "kJ/kg",
+      "tolerance": 4,
+      "hints": [
+        "Isentropic reversible compressor work: $w = \\dfrac{kRT_1}{k-1}\\left[(P_2/P_1)^{(k-1)/k} - 1\\right]$.",
+        "$(k-1)/k = 0.4/1.4 = 0.2857$ and $P_2/P_1 = 9$.",
+        "$9^{0.2857} \\approx 1.873$."
+      ],
+      "solution": "Apply the reversible isentropic compressor-work relation:\n\n$$w = \\frac{kRT_1}{k-1}\\left[\\left(\\frac{P_2}{P_1}\\right)^{(k-1)/k} - 1\\right] = \\frac{1.4\\times0.287\\times300}{0.4}\\left[9^{0.2857} - 1\\right]$$\n\n$$= 301.35\\times(1.8734 - 1) = 301.35\\times0.8734 = 263\\ \\text{kJ/kg}$$\n\nBy comparison, **isothermal** compression over the same pressure ratio needs only $w = RT\\ln(P_2/P_1) = 0.287\\times300\\times\\ln 9 = 189\\ \\text{kJ/kg}$ — about 28% less. The isothermal path keeps the specific volume small (via cooling), and since $w \\propto \\int v\\,dP$, that directly cuts the work. This is the whole motivation for intercooling.",
+      "equationsUsed": ["w = \\frac{kRT_1}{k-1}\\left[(P_2/P_1)^{(k-1)/k} - 1\\right]", "w_{isothermal} = RT\\ln\\frac{P_2}{P_1}"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p015",
+      "chapter": 7,
+      "difficulty": 4,
+      "title": "Two-stage compression with intercooling",
+      "tags": ["intercooling", "multistage", "compressor work"],
+      "kind": "numeric",
+      "scenario": "Air is compressed from **100 kPa, 300 K** to **900 kPa** using **ideal two-stage compression with intercooling** back to 300 K between stages. Each stage is polytropic with $n = 1.3$. Take $R = 0.287\\ \\text{kJ/(kg·K)}$.\n\nFind the **total** work input, in kJ/kg. *(First find the optimal intermediate pressure.)*",
+      "answer": 215,
+      "unit": "kJ/kg",
+      "tolerance": 4,
+      "hints": [
+        "Optimal intermediate pressure (equal pressure ratio per stage): $P_x = \\sqrt{P_1 P_2} = \\sqrt{100\\times900}$.",
+        "Each stage has the same pressure ratio $P_x/P_1 = 3$, and (with intercooling to the same $T_1$) does the same work.",
+        "Total $w = 2\\times\\dfrac{nRT_1}{n-1}\\left[(P_x/P_1)^{(n-1)/n} - 1\\right]$, with $(n-1)/n = 0.2308$."
+      ],
+      "solution": "**Step 1 — optimal intermediate pressure** (the geometric mean minimizes total work):\n\n$$P_x = \\sqrt{P_1 P_2} = \\sqrt{100\\times900} = 300\\ \\text{kPa}$$\n\nEach stage then has pressure ratio $P_x/P_1 = P_2/P_x = 3$.\n\n**Step 2 — total work.** With intercooling back to $T_1 = 300$ K, both stages start at the same temperature and do identical work:\n\n$$w = 2\\times\\frac{nRT_1}{n-1}\\left[\\left(\\frac{P_x}{P_1}\\right)^{(n-1)/n} - 1\\right] = 2\\times\\frac{1.3\\times0.287\\times300}{0.3}\\left[3^{0.2308} - 1\\right]$$\n\n$$= 2\\times373.1\\times(1.2887 - 1) = 2\\times373.1\\times0.2887 = 215\\ \\text{kJ/kg}$$\n\nSingle-stage polytropic compression to 900 kPa would need about 246 kJ/kg, so intercooling saves ~31 kJ/kg — it pulls the work down toward the isothermal limit.",
+      "equationsUsed": ["P_x = \\sqrt{P_1 P_2}", "w = 2\\cdot\\frac{nRT_1}{n-1}\\left[(P_x/P_1)^{(n-1)/n} - 1\\right]"],
+      "conceptLink": "ch07"
+    },
+    {
+      "id": "ch07-p016",
+      "chapter": 7,
+      "difficulty": 4,
+      "title": "Nozzle isentropic efficiency → exit velocity",
+      "tags": ["nozzle", "isentropic efficiency", "multi-step"],
+      "kind": "numeric",
+      "scenario": "Air at **200 kPa, 950 K** enters an adiabatic nozzle at low velocity and discharges at **110 kPa**. The nozzle's isentropic efficiency is **0.92**. Use high-temperature averages $k = 1.349$ and $c_p = 1.11\\ \\text{kJ/(kg·K)}$.\n\nFind the **actual exit velocity**, in m/s.",
+      "answer": 527,
+      "unit": "m/s",
+      "tolerance": 8,
+      "hints": [
+        "Step 1: isentropic exit temperature $T_{2s} = T_1(P_2/P_1)^{(k-1)/k}$, with $(k-1)/k = 0.349/1.349$.",
+        "Step 2: ideal exit velocity from energy balance $V_{2s} = \\sqrt{2c_p(T_1 - T_{2s})}$ (mind the ×1000 for kJ→J).",
+        "Step 3: actual velocity $V_{2a} = \\sqrt{\\eta_N}\\,V_{2s}$."
+      ],
+      "solution": "**Step 1 — isentropic exit temperature:**\n\n$$T_{2s} = T_1\\left(\\frac{P_2}{P_1}\\right)^{(k-1)/k} = 950\\left(\\frac{110}{200}\\right)^{0.349/1.349} = 950\\times0.857 = 814\\ \\text{K}$$\n\n**Step 2 — ideal (isentropic) exit velocity** from the adiabatic energy balance $h_1 = h_2 + V_2^2/2$ with negligible inlet velocity:\n\n$$V_{2s} = \\sqrt{2c_p(T_1 - T_{2s})} = \\sqrt{2\\times1.11\\times(950-814)\\times1000} = \\sqrt{301{,}920} = 549\\ \\text{m/s}$$\n\n(the ×1000 converts kJ/kg to m²/s²).\n\n**Step 3 — actual exit velocity** from the nozzle efficiency ($\\eta_N = V_{2a}^2/V_{2s}^2$):\n\n$$V_{2a} = \\sqrt{\\eta_N}\\,V_{2s} = \\sqrt{0.92}\\times549 = 527\\ \\text{m/s}$$\n\nFriction makes the real jet slower (and the exit gas ~11 K hotter) than the isentropic ideal — kinetic energy that was lost to irreversibility.",
+      "equationsUsed": ["T_{2s} = T_1(P_2/P_1)^{(k-1)/k}", "V_{2s} = \\sqrt{2c_p(T_1 - T_{2s})}", "V_{2a} = \\sqrt{\\eta_N}\\,V_{2s}"],
+      "conceptLink": "ch07"
     }
   ]
 }

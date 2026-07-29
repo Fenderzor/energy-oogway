@@ -162,6 +162,66 @@
       "solution": "**Step 1 — tank volume** from the initial state ($PV = mRT$):\n\n$$V = \\frac{m_1 R T_1}{P_1} = \\frac{5.0 \\times 0.287 \\times 300}{200} = \\frac{430.5}{200} = 2.1525\\ \\text{m}^3$$\n\n**Step 2 — final mass** at the new state (same $V$):\n\n$$m_2 = \\frac{P_2 V}{R T_2} = \\frac{500 \\times 2.1525}{0.287 \\times 350} = \\frac{1076.25}{100.45} = 10.71\\ \\text{kg}$$\n\n**Step 3 — mass added:**\n\n$$\\Delta m = m_2 - m_1 = 10.71 - 5.0 = 5.71\\ \\text{kg}$$",
       "equationsUsed": ["V = \\frac{m_1 R T_1}{P_1}", "m_2 = \\frac{P_2 V}{R T_2}", "\\Delta m = m_2 - m_1"],
       "conceptLink": "ch03"
+    },
+    {
+      "id": "ch03-p009",
+      "chapter": 3,
+      "difficulty": 3,
+      "title": "CO₂ density and flow rate at two states",
+      "tags": ["ideal gas", "density", "mass flow"],
+      "kind": "numeric",
+      "scenario": "Carbon dioxide ($M = 44.01\\ \\text{kg/kmol}$, $R_u = 8.314\\ \\text{kJ/(kmol·K)}$) enters a pipe at **3000 kPa** and **500 K** with a mass flow rate $\\dot m = 2.0\\ \\text{kg/s}$. It is cooled at constant pressure and leaves at **450 K**.\n\nFind the **volume flow rate at the exit**, in m³/s.",
+      "answer": 0.0567,
+      "unit": "m³/s",
+      "tolerance": 0.002,
+      "hints": [
+        "First find CO₂'s specific gas constant: $R = R_u/M$.",
+        "At the exit state, get the density from the ideal-gas law: $\\rho_2 = P/(RT_2)$ (pressure is unchanged).",
+        "Volume flow rate is mass flow rate divided by density: $\\dot V_2 = \\dot m/\\rho_2$."
+      ],
+      "solution": "**Gas constant for CO₂:**\n\n$$R = \\frac{R_u}{M} = \\frac{8.314}{44.01} = 0.1889\\ \\text{kJ/(kg·K)}$$\n\n**Exit density** (pressure stays at 3000 kPa, only temperature drops):\n\n$$\\rho_2 = \\frac{P}{RT_2} = \\frac{3000}{0.1889\\times450} = 35.29\\ \\text{kg/m}^3$$\n\n**Exit volume flow rate** — the mass flow is steady (unchanged along the pipe), so:\n\n$$\\dot V_2 = \\frac{\\dot m}{\\rho_2} = \\frac{2.0}{35.29} = 0.0567\\ \\text{m}^3/\\text{s}$$\n\nNote the volume flow rate *shrinks* as the gas cools at constant pressure — cooler gas is denser, so the same mass occupies less volume per second.",
+      "equationsUsed": ["R = \\frac{R_u}{M}", "\\rho = \\frac{P}{RT}", "\\dot V = \\frac{\\dot m}{\\rho}"],
+      "conceptLink": "ch03"
+    },
+    {
+      "id": "ch03-p010",
+      "chapter": 3,
+      "difficulty": 4,
+      "title": "Quality and density of a steam mixture in a tank",
+      "tags": ["quality", "tables", "mass", "multi-step"],
+      "kind": "numeric",
+      "scenario": "A rigid tank of **1.8 m³** contains steam at **220°C**. One-third of the *volume* is saturated liquid and the rest is saturated vapor.\n\nAt 220°C, the saturation table gives $v_f = 0.001190\\ \\text{m}^3/\\text{kg}$ and $v_g = 0.086094\\ \\text{m}^3/\\text{kg}$.\n\nFind the **quality** of the mixture (as a decimal). *(Note: the volume split is by volume, not mass — the liquid, being much denser, holds most of the mass despite its small share of the volume.)*",
+      "answer": 0.0269,
+      "unit": "",
+      "tolerance": 0.002,
+      "hints": [
+        "Find the mass of each phase *separately* from its own volume and specific volume: $m = V/v$.",
+        "$V_{liquid} = 0.6\\ \\text{m}^3$, $V_{vapor} = 1.2\\ \\text{m}^3$ (one-third and two-thirds of 1.8 m³).",
+        "Quality is vapor mass over *total* mass: $x = m_g/(m_f+m_g)$."
+      ],
+      "solution": "**Split the volume:** one-third liquid, two-thirds vapor:\n\n$$V_f = \\tfrac{1}{3}(1.8) = 0.6\\ \\text{m}^3, \\qquad V_g = \\tfrac{2}{3}(1.8) = 1.2\\ \\text{m}^3$$\n\n**Mass of each phase**, using $m = V/v$:\n\n$$m_f = \\frac{0.6}{0.001190} = 504.2\\ \\text{kg}, \\qquad m_g = \\frac{1.2}{0.086094} = 13.94\\ \\text{kg}$$\n\n**Total mass and quality:**\n\n$$m_{total} = 504.2 + 13.94 = 518.1\\ \\text{kg}$$\n\n$$x = \\frac{m_g}{m_{total}} = \\frac{13.94}{518.1} = 0.0269$$\n\nOnly 2.7% of the *mass* is vapor, even though vapor fills two-thirds of the *volume* — the huge density gap between liquid and vapor is the whole story. (The mixture density is $m_{total}/V = 518.1/1.8 = 287.9\\ \\text{kg/m}^3$, and the pressure is simply the saturation pressure at 220°C, 2320 kPa — no calculation needed since it's a two-phase mixture.)",
+      "equationsUsed": ["m = \\frac{V}{v}", "x = \\frac{m_g}{m_f + m_g}"],
+      "conceptLink": "ch03"
+    },
+    {
+      "id": "ch03-p011",
+      "chapter": 3,
+      "difficulty": 4,
+      "title": "Temperature where a mixture fully vaporizes",
+      "tags": ["quality", "interpolation", "saturation"],
+      "kind": "numeric",
+      "scenario": "A rigid tank of **1.8 m³** holds **40 kg** of a saturated liquid–vapor water mixture. It is slowly heated; since the tank is rigid, the *overall* specific volume $v = V/m$ never changes. The mixture becomes **saturated vapor only** exactly when $v$ equals $v_g$ at that temperature.\n\nFrom the saturation table: at 250°C, $v_g = 0.050037\\ \\text{m}^3/\\text{kg}$; at 260°C, $v_g = 0.042115\\ \\text{m}^3/\\text{kg}$.\n\nUsing linear interpolation, find the **temperature** at which the tank contains saturated vapor only, in °C.",
+      "answer": 256,
+      "unit": "°C",
+      "tolerance": 2,
+      "hints": [
+        "First find the fixed overall specific volume: $v = V/m$.",
+        "This $v$ lands between the two given $v_g$ values — interpolate for the temperature where $v_g$ equals it.",
+        "Linear interpolation: $T = T_a + \\dfrac{v_{g,a}-v}{v_{g,a}-v_{g,b}}(T_b-T_a)$."
+      ],
+      "solution": "**Fixed specific volume** (constant throughout, since $V$ and $m$ don't change in a rigid tank):\n\n$$v = \\frac{V}{m} = \\frac{1.8}{40} = 0.045\\ \\text{m}^3/\\text{kg}$$\n\nThis value sits between $v_g(250°C)=0.050037$ and $v_g(260°C)=0.042115$, so the fully-vapor state occurs somewhere in that range. **Interpolate linearly:**\n\n$$T = 250 + \\frac{0.050037-0.045}{0.050037-0.042115}\\times(260-250) = 250 + \\frac{0.005037}{0.007922}\\times10 = 250+6.4 = 256.4°C$$\n\nSo the liquid fully vaporizes at about **256°C**. Below this temperature the tank still holds some liquid (quality < 1); above it, the vapor would be superheated.",
+      "equationsUsed": ["v = \\frac{V}{m}", "T = T_a + \\frac{v_{g,a}-v}{v_{g,a}-v_{g,b}}(T_b-T_a)"],
+      "conceptLink": "ch03"
     }
   ]
 }

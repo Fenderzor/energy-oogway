@@ -70,6 +70,48 @@ Difficulty target = the Utrecht example exam (multi-part, integrative) — see
 (hard on mobile): qualitative open-reasoning questions, and h-s/T-s diagram
 sketching.
 
+**Practice problems enriched from the real textbook (2026-07-01).** Added 23 new
+complex problems across `problems/ch01.json`–`ch08.json` (65→88 total), mined
+directly from the actual Cengel end-of-chapter "Problems" sections in
+`External Material/Thermodynamics book (...).pdf` (page ranges: ch01 p63–74,
+ch02 p121–132, ch03 p173–184, ch04 p218–234, ch05 p272–294, ch06 p332–346,
+ch07 p414–436, ch08 p484–498 — 0-indexed `pypdf`/`pdfplumber` pages; extract via
+a `.py` script file, not inline `-c`, since the Windows-native `python3` needs
+Windows-style paths and inline quoting breaks easily in bash). Selection targeted
+the previously-thin **difficulty-4 ("Master's")** tier and genuinely multi-step
+problems (2–3 chained concepts, e.g. two force balances, or COP→energy-balance→
+sensible-heat). Every numeric answer was hand-verified against the book's own
+printed answers using a Python check before writing the JSON (all matched within
+rounding). Kept the established convention: all thermo problems are `kind:
+"numeric"` (no `open`/`mcq` introduced here) with progressive hints + full worked
+solutions. New thermo difficulty totals (used by the **thermo-only** "Problems by
+difficulty" buckets): 16/22/30/20 for ⭐/⭐⭐/⭐⭐⭐/⭐⭐⭐⭐. Build = 146 precache
+entries (unchanged, since problems aren't precache-listed individually); tsc +
+build clean; preview-verified bucket counts and KaTeX rendering pre/post
+solution-reveal.
+
+**Ch 7 gap-fill — variable specific heats & relative properties (2026-07-05).**
+User (working real book problems) flagged that Ch 7 was missing the variable-
+specific-heat / relative-property material. Read the full Ch 7 instructional text
+(pdfplumber pages 347–413) and filled Priority 1+2 gaps across all four systems:
+**Library** +6 equations (exact ideal-gas $\\Delta s = s_2^\\circ - s_1^\\circ -
+R\\ln(P_2/P_1)$ via tabulated $s^\\circ$; relative pressure/volume isentropic
+$P_{r2}/P_{r1}$, $v_{r2}/v_{r1}$; reversible steady-flow work $-\\int v\\,dP$;
+reversible compressor work isentropic/polytropic/isothermal; multistage
+intercooling $P_x=\\sqrt{P_1P_2}$; nozzle isentropic efficiency added to the
+turbine/compressor eqn) → 13 eqns, 18 glossary, 10 tips; summary narrative rewritten
+to cover exact vs approximate + steady-flow work; fixed the old misleading "for
+high accuracy use $s^\\circ$" note that never gave the equation. **Deck** +5 cards
+(13→18). **Quiz** +8 Q (20→28, 7/7/7/7). **Problems** +5 (11→16, byDiff 2/3/6/5):
+$s^\\circ$ entropy (Ex 7-9, −0.384), $v_r$ compression (Ex 7-10, $v_{r2}$=80.99),
+compressor isentropic-vs-isothermal (Ex 7-13, 263 kJ/kg), two-stage intercooling
+(Ex 7-13d, $P_x$=300, 215 kJ/kg), nozzle efficiency exit velocity (Ex 7-16, 527 m/s)
+— every numeric checked against the book's printed answers. New thermo difficulty
+totals 16/22/32/23. tsc+build clean (146 precache), preview + console verified.
+Same method applies if other chapters turn out to have gaps: read the full chapter
+text (not just Problems), diff against the library/deck/quiz, fill across all
+systems, hand-verify every numeric.
+
 ## Deployment (done, free)
 - GitHub: **`github.com/Fenderzor/energy-oogway`** (public). Local git remote `origin` set.
 - Hosted on **Vercel**, **Root Directory = `app`**, build `npm run build`, output

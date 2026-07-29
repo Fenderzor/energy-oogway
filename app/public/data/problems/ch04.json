@@ -182,6 +182,66 @@
       "solution": "**Step 1 (constant volume), 300 → 450 K:**\n\n$$Q_1 = m c_v \\Delta T = 0.8 \\times 0.718 \\times 150 = 86.2\\ \\text{kJ}$$\n\n**Step 2 (constant pressure):** doubling the volume at constant pressure doubles the absolute temperature, so $T_3 = 2 \\times 450 = 900$ K, and\n\n$$Q_2 = m c_p \\Delta T = 0.8 \\times 1.005 \\times (900 - 450) = 361.8\\ \\text{kJ}$$\n\n**Total:**\n\n$$Q = Q_1 + Q_2 = 86.2 + 361.8 = 448\\ \\text{kJ}$$\n\nUsing $c_v$ for the rigid step and $c_p$ for the constant-pressure step is the key decision.",
       "equationsUsed": ["Q_1 = m c_v \\Delta T", "Q_2 = m c_p \\Delta T", "\\frac{V_2}{T_2} = \\frac{V_3}{T_3}"],
       "conceptLink": "ch04"
+    },
+    {
+      "id": "ch04-p010",
+      "chapter": 4,
+      "difficulty": 3,
+      "title": "Boundary work of boiling steam (table values given)",
+      "tags": ["boundary work", "phase change", "tables"],
+      "kind": "numeric",
+      "scenario": "**5 kg** of saturated water *vapor* at **150 kPa** is heated at constant pressure until its temperature reaches **200°C** (now superheated).\n\nFrom the steam tables: $v_g = 1.1593\\ \\text{m}^3/\\text{kg}$ at 150 kPa (saturated), and $v = 1.4443\\ \\text{m}^3/\\text{kg}$ at 150 kPa, 200°C (superheated).\n\nFind the **boundary work** done by the steam.",
+      "answer": 214,
+      "unit": "kJ",
+      "tolerance": 3,
+      "hints": [
+        "Constant pressure means the simple boundary-work shortcut applies: $W_b = P(V_2-V_1)$.",
+        "Get the volumes from the given specific volumes: $V = mv$.",
+        "$W_b = Pm(v_2 - v_1)$."
+      ],
+      "solution": "At **constant pressure**, boundary work is simply $W_b = P(V_2-V_1) = Pm(v_2-v_1)$ — no integration needed, even though this is a real substance (not an ideal gas):\n\n$$W_b = P\\,m\\,(v_2 - v_1) = 150\\times5\\times(1.4443 - 1.1593)$$\n\n$$W_b = 150\\times5\\times0.2850 = 213.8\\ \\text{kJ} \\approx 214\\ \\text{kJ}$$\n\nThe constant-pressure shortcut for boundary work doesn't care whether the substance is an ideal gas or a real fluid like steam — only the specific volumes at the two states matter.",
+      "equationsUsed": ["W_b = P(V_2-V_1)", "V = mv"],
+      "conceptLink": "ch04"
+    },
+    {
+      "id": "ch04-p011",
+      "chapter": 4,
+      "difficulty": 4,
+      "title": "Ice melting in warm water (calorimetry with phase change)",
+      "tags": ["calorimetry", "phase change", "latent heat", "multi-step"],
+      "kind": "numeric",
+      "scenario": "**130 kg** of ice at **−5°C** is poured into **1000 kg** of water at **20°C** in an **insulated** tank. Find the **final equilibrium temperature**, in °C.\n\nTake $c_{ice} = 2.11$, $c_{water} = 4.18\\ \\text{kJ/(kg·K)}$, and the latent heat of fusion of ice $h_{if} = 333.7\\ \\text{kJ/kg}$.",
+      "answer": 8.2,
+      "unit": "°C",
+      "tolerance": 0.3,
+      "hints": [
+        "The ice goes through **three** stages on the way to the final temperature: warming to 0°C, melting at 0°C, then warming further as liquid water to $T_f$. Each stage needs its own term.",
+        "Insulated tank → total energy is conserved: heat lost by the warm water = heat gained by the ice (all three stages combined).",
+        "$m_w c_w (20-T_f) = m_{ice}c_{ice}(0-(-5)) + m_{ice}h_{if} + m_{ice}c_w(T_f-0)$. Solve the single linear equation for $T_f$."
+      ],
+      "solution": "The insulated tank means the total energy is conserved: heat lost by the warm water exactly equals the heat gained by the ice — but the ice's side has **three** distinct terms (warming as a solid, melting, then warming as liquid):\n\n$$\\underbrace{m_w c_w (20-T_f)}_{\\text{water cools}} = \\underbrace{m_{ice}c_{ice}(0-(-5))}_{\\text{ice warms to }0°C} + \\underbrace{m_{ice}h_{if}}_{\\text{ice melts}} + \\underbrace{m_{ice}c_w(T_f-0)}_{\\text{melt water warms}}$$\n\nSubstituting $m_w=1000$, $m_{ice}=130$:\n\n$$1000(4.18)(20-T_f) = 130(2.11)(5) + 130(333.7) + 130(4.18)(T_f)$$\n\n$$83\\,600 - 4180\\,T_f = 1372 + 43\\,381 + 543.4\\,T_f$$\n\n$$83\\,600 - 44\\,753 = 4180\\,T_f + 543.4\\,T_f$$\n\n$$38\\,847 = 4723.4\\,T_f \\quad\\Rightarrow\\quad T_f = 8.2°C$$\n\nMissing the melting term (the biggest single contributor here) is the classic mistake — always check for a phase change hiding inside a calorimetry problem.",
+      "equationsUsed": ["m_w c_w (T_{w1}-T_f) = m_{ice}c_{ice}\\Delta T_{ice} + m_{ice}h_{if} + m_{ice}c_w T_f"],
+      "conceptLink": "ch04"
+    },
+    {
+      "id": "ch04-p012",
+      "chapter": 4,
+      "difficulty": 4,
+      "title": "Resistance heater with heat loss (isobaric, kWh)",
+      "tags": ["electrical work", "enthalpy", "heat loss", "unit conversion"],
+      "kind": "numeric",
+      "scenario": "**15 kg** of air in a piston–cylinder is heated from **25°C to 95°C** at a **constant pressure of 300 kPa**, using an electric resistance heater inside the cylinder. During the process, **60 kJ** of heat is lost to the surroundings. Take $c_p = 1.005\\ \\text{kJ/(kg·K)}$.\n\nFind the **electrical energy supplied**, in kWh.",
+      "answer": 0.310,
+      "unit": "kWh",
+      "tolerance": 0.01,
+      "hints": [
+        "Electrical work is the energy *input*; the heat loss is energy *output*. Both cross the boundary along with the (implicit) boundary work.",
+        "For a constant-pressure process, $W_{elec} - Q_{loss} = \\Delta U + W_b = \\Delta H$ — so $W_{elec} = \\Delta H + Q_{loss}$.",
+        "Find $\\Delta H = m c_p \\Delta T$ first, in kJ, then add the loss, then convert kJ → kWh (1 kWh = 3600 kJ)."
+      ],
+      "solution": "**Enthalpy change** (constant pressure, so this bundles in the boundary work automatically):\n\n$$\\Delta H = m\\,c_p\\,\\Delta T = 15\\times1.005\\times70 = 1055.25\\ \\text{kJ}$$\n\n**Energy balance.** Electrical work comes *in*; heat loss goes *out*; the net raises the enthalpy:\n\n$$W_{elec} - Q_{loss} = \\Delta H \\quad\\Rightarrow\\quad W_{elec} = \\Delta H + Q_{loss} = 1055.25 + 60 = 1115.25\\ \\text{kJ}$$\n\n**Convert to kWh** (1 kWh = 3600 kJ):\n\n$$W_{elec} = \\frac{1115.25}{3600} = 0.310\\ \\text{kWh}$$\n\nThe heat loss doesn't reduce the electrical energy needed — it *adds* to it, since the heater must make up for what escapes as well as raise the enthalpy.",
+      "equationsUsed": ["W_{elec} = \\Delta H + Q_{loss}", "\\Delta H = m c_p \\Delta T", "1\\ \\text{kWh} = 3600\\ \\text{kJ}"],
+      "conceptLink": "ch04"
     }
   ]
 }

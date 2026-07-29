@@ -143,6 +143,46 @@
       "solution": "**Step 1 — equilibrium temperature** (insulated, equal $c$):\n\n$$T_{eq} = \\frac{2(360) + 3(300)}{5} = \\frac{1620}{5} = 324\\ \\text{K}$$\n\n**Step 2 — entropy generated:**\n\n$$S_{gen} = 2(4.18)\\ln\\frac{324}{360} + 3(4.18)\\ln\\frac{324}{300} = 8.36(-0.1054) + 12.54(0.0770) = 0.0843\\ \\text{kJ/K}$$\n\n**Step 3 — exergy destroyed:**\n\n$$X_{dest} = T_0\\,S_{gen} = 300 \\times 0.0843 = 25.3\\ \\text{kJ}$$\n\nMixing two streams at different temperatures is irreversible, so it quietly destroys ~25 kJ of work potential.",
       "equationsUsed": ["T_{eq} = \\frac{m_1 T_1 + m_2 T_2}{m_1 + m_2}", "S_{gen} = m_1 c\\ln\\frac{T_{eq}}{T_1} + m_2 c\\ln\\frac{T_{eq}}{T_2}", "X_{dest} = T_0\\,S_{gen}"],
       "conceptLink": "ch08"
+    },
+    {
+      "id": "ch08-p009",
+      "chapter": 8,
+      "difficulty": 4,
+      "title": "Irreversibility of an actual heat engine",
+      "tags": ["reversible work", "irreversibility", "second-law efficiency", "multi-step"],
+      "kind": "numeric",
+      "scenario": "A heat engine receives heat from a source at **1100 K** at a rate of **400 kW**, and rejects waste heat to a medium at **320 K**. Its measured (actual) power output is **120 kW**. The environment is at $T_0 = 298\\ \\text{K}$.\n\nFind the **rate of irreversibility** (the wasted work potential), in kW.",
+      "answer": 164,
+      "unit": "kW",
+      "tolerance": 5,
+      "hints": [
+        "The 'reversible power' uses the Carnot efficiency between the *actual* source and sink temperatures — **not** $T_0$. $T_0$ only matters if the sink happens to be the environment itself.",
+        "$\\dot W_{rev} = \\eta_{th,rev}\\,\\dot Q_H$, with $\\eta_{th,rev} = 1 - T_L/T_H$ using $T_H=1100\\ \\text{K}$, $T_L=320\\ \\text{K}$.",
+        "Irreversibility is simply the gap between the best-possible and the actual: $\\dot I = \\dot W_{rev} - \\dot W_{act}$."
+      ],
+      "solution": "**Reversible (best-possible) power**, using the *actual* reservoir temperatures (1100 K and 320 K — not the dead-state $T_0$, which plays no role here since neither reservoir *is* the environment):\n\n$$\\eta_{th,rev} = 1 - \\frac{T_L}{T_H} = 1 - \\frac{320}{1100} = 0.7091$$\n\n$$\\dot W_{rev} = \\eta_{th,rev}\\,\\dot Q_H = 0.7091\\times400 = 283.6\\ \\text{kW}$$\n\n**Irreversibility** — the gap between what's ideally possible and what's actually delivered:\n\n$$\\dot I = \\dot W_{rev} - \\dot W_{act} = 283.6 - 120 = 163.6\\ \\text{kW} \\approx 164\\ \\text{kW}$$\n\n(As a bonus, the second-law efficiency is $\\eta_{II} = \\dot W_{act}/\\dot W_{rev} = 120/283.6 = 0.423$.) A common mistake is using $T_0$ in place of $T_L$ in the Carnot efficiency here — but $T_0$ only enters when the *environment itself* is one of the reservoirs.",
+      "equationsUsed": ["\\eta_{th,rev} = 1 - \\frac{T_L}{T_H}", "\\dot W_{rev} = \\eta_{th,rev}\\dot Q_H", "\\dot I = \\dot W_{rev} - \\dot W_{act}"],
+      "conceptLink": "ch08"
+    },
+    {
+      "id": "ch08-p010",
+      "chapter": 8,
+      "difficulty": 4,
+      "title": "Why resistance heating wastes exergy",
+      "tags": ["reversible work", "heat pump", "irreversibility", "multi-step"],
+      "kind": "numeric",
+      "scenario": "A house loses heat at **35,000 kJ/h** when the outside temperature is **4°C**. It is heated by **electric resistance heaters** and kept at **25°C**.\n\nFind the **reversible (minimum possible) work input** for this heating, in kW. *(The actual electrical input, by contrast, equals the full heat demand — a resistance heater has no 'COP' advantage.)*",
+      "answer": 0.685,
+      "unit": "kW",
+      "tolerance": 0.03,
+      "hints": [
+        "The heat *demand* rate is $\\dot Q_H = 35{,}000/3600$ kW — this is what the resistance heater actually consumes (its 'COP' is effectively 1).",
+        "The *minimum* work to deliver this heat would come from a reversible (Carnot) heat pump between the house (298 K) and outdoors (277 K): $COP_{rev} = T_H/(T_H-T_L)$.",
+        "$\\dot W_{rev} = \\dot Q_H/COP_{rev}$."
+      ],
+      "solution": "**Heat demand rate** (this is exactly what the resistance heater draws as electricity, since it converts electricity to heat 1-for-1):\n\n$$\\dot Q_H = \\frac{35{,}000}{3600} = 9.722\\ \\text{kW}$$\n\n**Best possible way to deliver it** — a reversible heat pump between the house (298 K) and outdoor air (277 K):\n\n$$COP_{rev} = \\frac{T_H}{T_H-T_L} = \\frac{298.15}{298.15-277.15} = 14.20$$\n\n$$\\dot W_{rev} = \\frac{\\dot Q_H}{COP_{rev}} = \\frac{9.722}{14.20} = 0.685\\ \\text{kW}$$\n\nThe resistance heater needs the full **9.72 kW**, while a reversible heat pump could deliver the same warmth for just **0.685 kW** — the other **9.04 kW** is pure waste (the irreversibility), even though *both* methods satisfy the first law perfectly. This is exactly why heat pumps beat resistance heating.",
+      "equationsUsed": ["COP_{rev} = \\frac{T_H}{T_H-T_L}", "\\dot W_{rev} = \\frac{\\dot Q_H}{COP_{rev}}"],
+      "conceptLink": "ch08"
     }
   ]
 }

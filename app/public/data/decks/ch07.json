@@ -115,6 +115,46 @@
       "tolerance": 0.05,
       "tags": ["entropy", "calculation"],
       "level": "core"
+    },
+    {
+      "id": "ch07-014",
+      "type": "basic",
+      "front": "Entropy change of an ideal gas with **variable** specific heats (large ΔT)?",
+      "back": "$s_2 - s_1 = s_2^\\circ - s_1^\\circ - R\\ln\\dfrac{P_2}{P_1}$, where $s^\\circ(T) = \\int_0^T c_p\\,dT/T$ is read straight from the ideal-gas table (A-17). Use this instead of constant-$c_p$ when the temperature change is large.",
+      "tags": ["variable specific heats", "s-degree"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch07-015",
+      "type": "basic",
+      "front": "For an **isentropic** ideal-gas process with variable specific heats, how do you relate the end states?",
+      "back": "Use the tabulated **relative pressure** and **relative specific volume** (functions of $T$ only): $\\left(\\dfrac{P_2}{P_1}\\right)_s = \\dfrac{P_{r2}}{P_{r1}}$ and $\\left(\\dfrac{v_2}{v_1}\\right)_s = \\dfrac{v_{r2}}{v_{r1}}$. Read $P_{r1}/v_{r1}$ at $T_1$, scale by the ratio, read $T_2$ back off the table.",
+      "tags": ["relative pressure", "relative specific volume", "isentropic"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch07-016",
+      "type": "basic",
+      "front": "Reversible work to compress an ideal gas — isentropic vs isothermal?",
+      "back": "Isentropic: $w = \\dfrac{kRT_1}{k-1}\\left[(P_2/P_1)^{(k-1)/k} - 1\\right]$. Isothermal: $w = RT\\ln(P_2/P_1)$. Isothermal costs the **least** work (cooling keeps $v$ small); isentropic the most.",
+      "tags": ["compressor work"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch07-017",
+      "type": "basic",
+      "front": "Optimal intermediate pressure for two-stage compression with intercooling?",
+      "back": "$P_x = \\sqrt{P_1 P_2}$ — the geometric mean. This makes the pressure ratio (and the work) equal across both stages, minimizing total work. Cooling between stages shrinks $v$ in stage 2.",
+      "tags": ["intercooling", "multistage"],
+      "level": "advanced"
+    },
+    {
+      "id": "ch07-018",
+      "type": "basic",
+      "front": "Isentropic efficiency of a **nozzle**?",
+      "back": "$\\eta_N = \\dfrac{\\text{actual exit KE}}{\\text{isentropic exit KE}} = \\dfrac{V_{2a}^2}{V_{2s}^2} = \\dfrac{h_1 - h_{2a}}{h_1 - h_{2s}}$. So the actual exit velocity is $V_{2a} = \\sqrt{\\eta_N}\\,V_{2s}$.",
+      "tags": ["isentropic efficiency", "nozzle"],
+      "level": "advanced"
     }
   ]
 }

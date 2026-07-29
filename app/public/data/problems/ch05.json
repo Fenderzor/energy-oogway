@@ -160,6 +160,66 @@
       "solution": "Apply the steady-flow energy balance with $\\dot Q = -15\\ \\text{kW}$ (heat leaves):\n\n$$\\dot Q - \\dot W = \\dot m\\,(h_2 - h_1)$$\n\n$$\\dot W = \\dot Q - \\dot m\\,(h_2 - h_1) = -15 - 0.20(503.02 - 300.19)$$\n\n$$\\dot W = -15 - 0.20(202.83) = -15 - 40.57 = -55.6\\ \\text{kW}$$\n\nThe negative sign confirms work is supplied *to* the compressor, so the **power input is 55.6 kW**. (Both the enthalpy rise *and* the heat loss must be paid for by the shaft work.)",
       "equationsUsed": ["\\dot Q - \\dot W = \\dot m\\,(h_2 - h_1)", "\\dot W = \\dot Q - \\dot m\\,(h_2 - h_1)"],
       "conceptLink": "ch05"
+    },
+    {
+      "id": "ch05-p009",
+      "chapter": 5,
+      "difficulty": 3,
+      "title": "Heated air in a pipe (continuity + ideal gas)",
+      "tags": ["continuity", "ideal gas", "multi-step"],
+      "kind": "numeric",
+      "scenario": "Air enters a **16 cm**-diameter pipe steadily at **200 kPa, 20°C** with velocity **5 m/s**. It is heated as it flows and leaves at **180 kPa, 40°C**. Take $R = 0.287\\ \\text{kJ/(kg·K)}$.\n\nFind the **exit velocity**, in m/s.",
+      "answer": 5.93,
+      "unit": "m/s",
+      "tolerance": 0.15,
+      "hints": [
+        "First find the mass flow rate at the inlet: $\\dot m = AV_1/v_1$, with $v_1 = RT_1/P_1$ and $A = \\pi D^2/4$.",
+        "Mass flow rate is the *same* at exit (steady flow, no branches) — use it to find $V_2$.",
+        "$V_2 = \\dot m\\,v_2/A$, with $v_2 = RT_2/P_2$ at the exit state."
+      ],
+      "solution": "**Pipe area:**\n\n$$A = \\frac{\\pi D^2}{4} = \\frac{\\pi(0.16)^2}{4} = 0.02011\\ \\text{m}^2$$\n\n**Inlet mass flow rate.** Specific volume at inlet ($T_1=293.15\\ \\text{K}$):\n\n$$v_1 = \\frac{RT_1}{P_1} = \\frac{0.287\\times293.15}{200} = 0.4207\\ \\text{m}^3/\\text{kg}$$\n\n$$\\dot m = \\frac{AV_1}{v_1} = \\frac{0.02011\\times5}{0.4207} = 0.2390\\ \\text{kg/s}$$\n\n**Exit velocity.** The mass flow rate doesn't change along the pipe. At the exit ($T_2=313.15\\ \\text{K}$):\n\n$$v_2 = \\frac{RT_2}{P_2} = \\frac{0.287\\times313.15}{180} = 0.4993\\ \\text{m}^3/\\text{kg}$$\n\n$$V_2 = \\frac{\\dot m\\,v_2}{A} = \\frac{0.2390\\times0.4993}{0.02011} = 5.93\\ \\text{m/s}$$\n\nEven with a constant-diameter pipe, the velocity **rises** slightly because the heated (less dense) air needs to move faster to pass the same mass through the same area.",
+      "equationsUsed": ["\\dot m = \\frac{AV}{v}", "v = \\frac{RT}{P}"],
+      "conceptLink": "ch05"
+    },
+    {
+      "id": "ch05-p010",
+      "chapter": 5,
+      "difficulty": 4,
+      "title": "Adiabatic nozzle: exit area from an ideal gas",
+      "tags": ["nozzle", "ideal gas", "continuity", "multi-step"],
+      "kind": "numeric",
+      "scenario": "Air enters an **adiabatic nozzle** steadily at **300 kPa, 200°C, 45 m/s**, with inlet area **110 cm²**, and leaves at **100 kPa, 180 m/s**. Take $R = 0.287\\ \\text{kJ/(kg·K)}$, $c_p = 1.005\\ \\text{kJ/(kg·K)}$.\n\nFind the **exit area**, in cm².",
+      "answer": 79.9,
+      "unit": "cm²",
+      "tolerance": 2,
+      "hints": [
+        "First find the inlet mass flow rate from continuity: $\\dot m = A_1V_1/v_1$, with $v_1 = RT_1/P_1$.",
+        "Adiabatic, no work → the SFEE reduces to $c_p(T_1-T_2) = (V_2^2-V_1^2)/2$. Solve for $T_2$ (watch the kJ vs J unit split).",
+        "With $T_2$, get $v_2 = RT_2/P_2$, then $A_2 = \\dot m\\,v_2/V_2$."
+      ],
+      "solution": "**Inlet mass flow rate.** With $T_1 = 473.15\\ \\text{K}$:\n\n$$v_1 = \\frac{RT_1}{P_1} = \\frac{0.287\\times473.15}{300} = 0.4526\\ \\text{m}^3/\\text{kg}$$\n\n$$\\dot m = \\frac{A_1V_1}{v_1} = \\frac{0.0110\\times45}{0.4526} = 1.094\\ \\text{kg/s}$$\n\n**Exit temperature.** Adiabatic and no work, so the SFEE trades enthalpy for kinetic energy:\n\n$$c_p(T_1-T_2) = \\frac{V_2^2-V_1^2}{2}$$\n\n$$T_2 = T_1 - \\frac{V_2^2-V_1^2}{2\\,c_p\\times1000} = 473.15 - \\frac{180^2-45^2}{2\\times1.005\\times1000} = 473.15 - 15.11 = 458.0\\ \\text{K}$$\n\n(dividing by $1000$ converts the $c_p$ term to J so it matches the $V^2$ units).\n\n**Exit area.** Specific volume at exit:\n\n$$v_2 = \\frac{RT_2}{P_2} = \\frac{0.287\\times458.0}{100} = 1.3146\\ \\text{m}^3/\\text{kg}$$\n\n$$A_2 = \\frac{\\dot m\\,v_2}{V_2} = \\frac{1.094\\times1.3146}{180} = 0.000799\\ \\text{m}^2 = 79.9\\ \\text{cm}^2$$\n\nThe nozzle narrows even though the gas cools — the huge speed-up (45→180 m/s) dominates over the modest density increase.",
+      "equationsUsed": ["\\dot m = \\frac{AV}{v}", "c_p(T_1-T_2) = \\frac{V_2^2-V_1^2}{2}", "v = \\frac{RT}{P}"],
+      "conceptLink": "ch05"
+    },
+    {
+      "id": "ch05-p011",
+      "chapter": 5,
+      "difficulty": 4,
+      "title": "Steam turbine with kinetic energy included",
+      "tags": ["turbine", "quality", "kinetic energy", "multi-step"],
+      "kind": "numeric",
+      "scenario": "Steam enters an adiabatic turbine at **4 MPa, 500°C** ($h_1 = 3445.3\\ \\text{kJ/kg}$) with velocity **80 m/s**, and leaves at **30 kPa**, quality **0.92**, velocity **50 m/s**. At 30 kPa: $h_f = 289.23$, $h_{fg} = 2336.1\\ \\text{kJ/kg}$. Mass flow rate is **12 kg/s**.\n\nUnlike the simpler turbine problem earlier in this chapter, **do not neglect kinetic energy** here. Find the **power output**, in MW.",
+      "answer": 12.1,
+      "unit": "MW",
+      "tolerance": 0.2,
+      "hints": [
+        "Find the exit enthalpy from the quality: $h_2 = h_f + x\\,h_{fg}$.",
+        "This time keep the kinetic-energy term in the SFEE: $w_{out} = (h_1-h_2) + (V_1^2-V_2^2)/2$.",
+        "Watch units — $(V_1^2-V_2^2)/2$ comes out in J/kg; divide by 1000 to match $h_1-h_2$ in kJ/kg. Then multiply by $\\dot m$."
+      ],
+      "solution": "**Exit enthalpy** from the given quality:\n\n$$h_2 = h_f + x\\,h_{fg} = 289.23 + 0.92\\times2336.1 = 2438.4\\ \\text{kJ/kg}$$\n\n**Specific work**, keeping the kinetic-energy term this time:\n\n$$w_{out} = (h_1-h_2) + \\frac{V_1^2-V_2^2}{2} = (3445.3-2438.4) + \\frac{80^2-50^2}{2\\times1000}$$\n\n$$w_{out} = 1006.9 + 1.95 = 1008.8\\ \\text{kJ/kg}$$\n\n**Power output:**\n\n$$\\dot W = \\dot m\\,w_{out} = 12\\times1008.8 = 12\\,106\\ \\text{kW} = 12.1\\ \\text{MW}$$\n\nThe kinetic-energy correction here is tiny (~0.2% of the total) — but the *skill* of correctly including and unit-converting it, rather than blindly neglecting it, is what this problem tests.",
+      "equationsUsed": ["h_2 = h_f + x\\,h_{fg}", "w_{out} = (h_1-h_2) + \\frac{V_1^2-V_2^2}{2}", "\\dot W = \\dot m\\,w_{out}"],
+      "conceptLink": "ch05"
     }
   ]
 }

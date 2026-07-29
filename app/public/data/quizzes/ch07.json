@@ -273,6 +273,118 @@
       "unit": "kJ/K",
       "tolerance": 0.01,
       "explanation": "$S_{gen} = \\frac{Q}{T_L} - \\frac{Q}{T_H} = \\frac{300}{300} - \\frac{300}{600} = 1.0 - 0.5 = 0.5$ kJ/K."
+    },
+    {
+      "id": "ch07-q21",
+      "chapter": 7,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "For an ideal gas, you should abandon the constant-specific-heat $\\Delta s$ formulas and use the exact $s^\\circ$ table method when…",
+      "choices": [
+        "The temperature change is large (specific heats vary significantly)",
+        "The pressure is constant",
+        "The gas is monatomic",
+        "The process is isothermal"
+      ],
+      "answerIndex": 0,
+      "explanation": "Constant-$c_p$ is fine for modest $\\Delta T$; for large temperature swings $c_p$ varies and the exact $s^\\circ$ method is needed. Monatomic gases have truly constant $c_p$, so they never need it."
+    },
+    {
+      "id": "ch07-q22",
+      "chapter": 7,
+      "category": "concept",
+      "kind": "mcq",
+      "prompt": "The relative pressure $P_r$ and relative specific volume $v_r$ are tabulated functions of…",
+      "choices": [
+        "Temperature only",
+        "Pressure only",
+        "Both temperature and pressure",
+        "Specific volume only"
+      ],
+      "answerIndex": 0,
+      "explanation": "$P_r$ and $v_r$ depend on temperature alone (they derive from $s^\\circ(T)$), which is exactly why they're tabulated against $T$ and make isentropic calculations easy."
+    },
+    {
+      "id": "ch07-q23",
+      "chapter": 7,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "An ideal gas is compressed isentropically and you're given a **volume (compression) ratio** $V_1/V_2$, with a large temperature change. The most convenient accurate tool is…",
+      "choices": [
+        "Relative specific volume: $v_{r2} = v_{r1}(v_2/v_1)$, then read $T_2$",
+        "$\\Delta s = c_v\\ln(T_2/T_1) + R\\ln(v_2/v_1)$ with constant $c_v$",
+        "The Clausius inequality",
+        "$w = -\\int v\\,dP$"
+      ],
+      "answerIndex": 0,
+      "explanation": "With a volume ratio and large $\\Delta T$, scale $v_{r1}$ by the volume ratio and read $T_2$ off the table — accurate and iteration-free (the classic engine-compression calculation)."
+    },
+    {
+      "id": "ch07-q24",
+      "chapter": 7,
+      "category": "applied",
+      "kind": "mcq",
+      "prompt": "For a given pressure ratio, which reversible compression of an ideal gas requires the **least** work?",
+      "choices": [
+        "Isothermal ($Pv = $ const)",
+        "Isentropic ($Pv^k = $ const)",
+        "Polytropic with $n = 1.3$",
+        "They all require the same work"
+      ],
+      "answerIndex": 0,
+      "explanation": "Work $\\propto \\int v\\,dP$; keeping the gas cool (isothermal) holds $v$ smallest, so it costs the least. Isentropic costs the most. This is why real compressors use intercooling to approach the isothermal limit."
+    },
+    {
+      "id": "ch07-q25",
+      "chapter": 7,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The exact entropy change of an ideal gas (variable specific heats) is…",
+      "choices": [
+        "$s_2 - s_1 = s_2^\\circ - s_1^\\circ - R\\ln\\dfrac{P_2}{P_1}$",
+        "$s_2 - s_1 = s_2^\\circ - s_1^\\circ$",
+        "$s_2 - s_1 = c_p\\ln\\dfrac{T_2}{T_1} - R\\ln\\dfrac{P_2}{P_1}$",
+        "$s_2 - s_1 = s_2^\\circ - s_1^\\circ + R\\ln\\dfrac{P_2}{P_1}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "$s^\\circ$ carries the temperature dependence (from the table); the $-R\\ln(P_2/P_1)$ term adds the pressure dependence."
+    },
+    {
+      "id": "ch07-q26",
+      "chapter": 7,
+      "category": "equation",
+      "kind": "mcq",
+      "prompt": "The isentropic efficiency of a **nozzle** is…",
+      "choices": [
+        "$\\eta_N = \\dfrac{V_{2a}^2}{V_{2s}^2} = \\dfrac{h_1 - h_{2a}}{h_1 - h_{2s}}$",
+        "$\\eta_N = \\dfrac{h_1 - h_{2s}}{h_1 - h_{2a}}$",
+        "$\\eta_N = \\dfrac{V_{2s}^2}{V_{2a}^2}$",
+        "$\\eta_N = \\dfrac{h_{2s} - h_1}{h_{2a} - h_1}$"
+      ],
+      "answerIndex": 0,
+      "explanation": "A nozzle's job is to make kinetic energy, so its efficiency is actual exit KE ÷ ideal (isentropic) exit KE, equal to the enthalpy-drop ratio."
+    },
+    {
+      "id": "ch07-q27",
+      "chapter": 7,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Air is heated at **constant pressure** from 300 K to 320 K. From the air table, $s^\\circ(300) = 1.70203$ and $s^\\circ(320) = 1.76690\\ \\text{kJ/(kg·K)}$. Find $\\Delta s$, in kJ/(kg·K).",
+      "answer": 0.0649,
+      "unit": "kJ/(kg·K)",
+      "tolerance": 0.002,
+      "explanation": "At constant pressure the $-R\\ln(P_2/P_1)$ term is zero, so $\\Delta s = s_2^\\circ - s_1^\\circ = 1.76690 - 1.70203 = 0.0649$ kJ/(kg·K)."
+    },
+    {
+      "id": "ch07-q28",
+      "chapter": 7,
+      "category": "problem",
+      "kind": "numeric",
+      "prompt": "Air is compressed **isothermally** and reversibly from 100 kPa to 800 kPa at 300 K. Take $R = 0.287\\ \\text{kJ/(kg·K)}$. Find the compressor work input, in kJ/kg.",
+      "answer": 179,
+      "unit": "kJ/kg",
+      "tolerance": 3,
+      "explanation": "$w = RT\\ln(P_2/P_1) = 0.287 \\times 300 \\times \\ln 8 = 86.1 \\times 2.079 = 179$ kJ/kg."
     }
   ]
 }
